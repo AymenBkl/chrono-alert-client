@@ -1,0 +1,40 @@
+.big-text {
+    text-align: left;
+    font: normal normal bold 40px/52px Roboto;
+    display: block;
+    width: 100%;
+    color: white;
+    margin-top: 94px;
+}
+
+.small-text {
+    font: normal normal normal 22px/30px Roboto;
+    text-align: left;
+    display: block;
+    width: 100%;
+    color: white;
+}
+
+.main-content {
+    padding-left: 60px;
+}
+.cover-image-holder {
+    vertical-align: middle;
+    margin-bottom: 65px;
+}
+.cover-image-holder img {
+    width: 100%;
+}
+
+.button-start {
+    margin-top: 51px;
+}
+.button-start button {
+    background-color: #0050FC;
+    color: white;
+    font-size: 30px;
+    font: normal normal bold 20px/37px Roboto;
+    padding: 15px;
+    border-radius: 10px;
+    width: 221px;
+}
