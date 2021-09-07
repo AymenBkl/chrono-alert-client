@@ -18,7 +18,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { MostFollowedModelsComponent } from './pages/home/most-followed-models/most-followed-models.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
-import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   imports: [
@@ -30,7 +30,7 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
     }),
     FormsModule,
     ReactiveFormsModule,
-    IvyCarouselModule
+    CarouselModule
   ],
   declarations: [
     AppComponent,
