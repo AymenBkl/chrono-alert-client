@@ -1,12 +1,21 @@
-import { Routes, RouterModule } from '@angular/router';
-import { AffiliatesComponent } from './pages/affiliates/affiliates.component';
-import { HomeComponent } from './pages/home/home.component';
+import { Routes } from "@angular/router";
+import { HomePageComponent } from "./layouts/home-page/home-page.component";
 
-
-export const clientRoutes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component:HomeComponent },
-  { path: 'affiliates', component:AffiliatesComponent },
-];
-
-
+export const AppRoutes: Routes = [
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
+  }, {
+    path: '',
+    component: HomePageComponent,
+    children: [
+        {
+      path: '',
+      loadChildren: './layouts/home-page/home-page.module#HomePageLayoutModule'
+  }]},
+  {
+    path: '**',
+    redirectTo: 'home'
+  }
+]

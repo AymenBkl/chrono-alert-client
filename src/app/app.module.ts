@@ -3,7 +3,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 
-import { clientRoutes } from './app-routing.module';
+import { AppRoutes} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
@@ -25,34 +25,25 @@ import { FaqComponent } from './pages/faq/faq.component';
 import { ContactusComponent } from './pages/contactus/contactus.component';
 import { HomePageComponent } from './layouts/home-page/home-page.component';
 
+import { NavbarModule } from 'src/app/components/nav/nav.module';
+import { FooterModule } from './components/footer/footer.module';
+
 @NgModule({
   imports: [
     CommonModule,
     BrowserAnimationsModule,
     BrowserModule,
-    RouterModule.forRoot(clientRoutes, {
+    RouterModule.forRoot(AppRoutes, {
       useHash: false
     }),
     FormsModule,
     ReactiveFormsModule,
-    CarouselModule
+    CarouselModule,
+    NavbarModule,
+    FooterModule
   ],
   declarations: [
     AppComponent,
-    HomeComponent,
-    NavComponent,
-    CoverComponent,
-    FooterComponent,
-    InfoComponent,
-    ApplicationComponent,
-    HowItWorksComponent,
-    PlansComponent,
-    MostFollowedModelsComponent,
-    ReviewsComponent,
-    AffiliatesComponent,
-    AboutusComponent,
-    FaqComponent,
-    ContactusComponent,
     HomePageComponent
   ],
   
