@@ -10,7 +10,7 @@
     </div>
     <div class="row">
         <div class="col-12 col-plans">
-            <div class="card card-plan">
+            <div class="card card-plan" [ngClass]="{'big-card-plan': selectedPlan == 0}" (click)="selectPlan(0)">
                 <div class="card-title">
                     <p>FREE</p>
                 </div>
@@ -29,7 +29,7 @@
                     </button>
                 </div>
             </div>
-            <div class="card card-plan big-card-plan">
+            <div class="card card-plan" [ngClass]="{'big-card-plan': selectedPlan == 1}" (click)="selectPlan(1)">
                 <div class="card-title">
                     <p>STANDARD</p>
                 </div>
@@ -48,7 +48,7 @@
                     </button>
                 </div>
             </div>
-            <div class="card card-plan">
+            <div class="card card-plan" [ngClass]="{'big-card-plan': selectedPlan == 2}" (click)="selectPlan(2)">
                 <div class="card-title">
                     <p>PRO</p>
                 </div>

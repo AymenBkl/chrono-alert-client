@@ -14,8 +14,21 @@ import { InfoComponent } from './pages/home/info/info.component';
 import { ApplicationComponent } from './pages/home/application/application.component';
 import { HowItWorksComponent } from './pages/home/how-it-works/how-it-works.component';
 import { PlansComponent } from './components/plans/plans.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { MostFollowedModelsComponent } from './pages/home/most-followed-models/most-followed-models.component';
 
 @NgModule({
+  imports: [
+    CommonModule,
+    BrowserAnimationsModule,
+    BrowserModule,
+    RouterModule.forRoot(clientRoutes, {
+      useHash: false
+    }),
+    FormsModule,
+    ReactiveFormsModule
+  ],
   declarations: [
     AppComponent,
     HomeComponent,
@@ -25,15 +38,10 @@ import { PlansComponent } from './components/plans/plans.component';
     InfoComponent,
     ApplicationComponent,
     HowItWorksComponent,
-    PlansComponent
+    PlansComponent,
+    MostFollowedModelsComponent
   ],
-  imports: [
-    BrowserAnimationsModule,
-    BrowserModule,
-    RouterModule.forRoot(clientRoutes, {
-      useHash: false
-    }),
-  ],
+  
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

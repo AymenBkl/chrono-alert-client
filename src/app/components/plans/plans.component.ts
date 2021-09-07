@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlansComponent implements OnInit {
 
+  selectedPlan = 1;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  selectPlan(index) {
+    this.selectedPlan = index;
   }
 
 }
