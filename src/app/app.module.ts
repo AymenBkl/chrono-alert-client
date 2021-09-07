@@ -10,6 +10,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { RouterModule } from '@angular/router';
 import { CoverComponent } from './pages/home/cover/cover.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { InfoComponent } from './pages/home/info/info.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FooterComponent } from './components/footer/footer.component';
     HomeComponent,
     NavComponent,
     CoverComponent,
-    FooterComponent
+    FooterComponent,
+    InfoComponent
   ],
   imports: [
     BrowserAnimationsModule,
