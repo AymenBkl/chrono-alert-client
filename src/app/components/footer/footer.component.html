@@ -17,4 +17,97 @@
             </div>
         </div>
     </div>
+    <div class="row footer-sections">
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="footer-section">
+                <p>Links</p>
+                <ul class="list-group">
+                    <li class="list-group-item"><a [routerLink]="['/home']" [routerLinkActive]="['is-active']">Home</a></li>
+                    <li class="list-group-item"><a [routerLink]="['/aboutus']" [routerLinkActive]="['is-active']">About Us</a></li>
+                    <li class="list-group-item"><a [routerLink]="['/affiliates']" [routerLinkActive]="['is-active']">Affiliates</a></li>
+                    <li class="list-group-item"><a [routerLink]="['/faq']" [routerLinkActive]="['is-active']">FAQ</a></li>
+                    <li class="list-group-item"><a [routerLink]="['/contactus']" [routerLinkActive]="['is-active']">Contact Us</a></li>
+                  </ul>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="footer-section">
+                <p>Privacy</p>
+                <ul class="list-group">
+                    <li class="list-group-item"><a [routerLink]="['/home']" [routerLinkActive]="['is-active']">Privacy Policy</a></li>
+                    <li class="list-group-item"><a [routerLink]="['/aboutus']" [routerLinkActive]="['is-active']">Terms Of Use</a></li>
+                    <li class="list-group-item"><a [routerLink]="['/home']" [routerLinkActive]="['is-active']">Terms Of Service</a></li>
+                  </ul>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="footer-section">
+                <p>Third Section</p>
+                <ul class="list-group">
+                    <li class="list-group-item"><a [routerLink]="['/home']" [routerLinkActive]="['is-active']">Title 1</a></li>
+                    <li class="list-group-item"><a [routerLink]="['/aboutus']" [routerLinkActive]="['is-active']">Title 2</a></li>
+                    <li class="list-group-item"><a [routerLink]="['/home']" [routerLinkActive]="['is-active']">Title 3</a></li>
+                  </ul>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="footer-section">
+            <p>Fourth Section</p>
+                <ul class="list-group">
+                    <li class="list-group-item"><a [routerLink]="['/home']" [routerLinkActive]="['is-active']">Title 1</a></li>
+                    <li class="list-group-item"><a [routerLink]="['/aboutus']" [routerLinkActive]="['is-active']">Title 2</a></li>
+                    <li class="list-group-item"><a [routerLink]="['/home']" [routerLinkActive]="['is-active']">Title 3</a></li>
+                  </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row bottom-footer">
+        <div class="col-4">
+            <div class="copy-right">
+                <p>Copyright {{year}} © CHRONOALERTS</p>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="social-holder">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/aymenxyzbkl/">
+                            <img src="../../../assets/img/facebook.svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/aymen_bkll/">
+                            <img src="../../../assets/img/instagram.svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../../../assets/img/linkedin.svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../../../assets/img/twitter.svg">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="links-holder">
+                <ul>
+                    <li>
+                        <a [routerLink]="['/privacy']">
+                            Privacy
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/support']">
+                            Support
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
