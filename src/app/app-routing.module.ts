@@ -12,7 +12,7 @@ export const AppRoutes: Routes = [
     children: [
         {
       path: '',
-      loadChildren: './layouts/home-page/home-page.module#HomePageLayoutModule'
+      loadChildren: ()=> import('./layouts/home-page/home-page.module').then(module => module.HomePageLayoutModule),
   }]},
   {
     path: '**',
