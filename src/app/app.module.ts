@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 import { CoverComponent } from './pages/home/cover/cover.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { InfoComponent } from './pages/home/info/info.component';
+import { ApplicationComponent } from './pages/home/application/application.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { InfoComponent } from './pages/home/info/info.component';
     NavComponent,
     CoverComponent,
     FooterComponent,
-    InfoComponent
+    InfoComponent,
+    ApplicationComponent
   ],
   imports: [
     BrowserAnimationsModule,
