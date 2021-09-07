@@ -13,6 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { InfoComponent } from './pages/home/info/info.component';
 import { ApplicationComponent } from './pages/home/application/application.component';
 import { HowItWorksComponent } from './pages/home/how-it-works/how-it-works.component';
+import { PlansComponent } from './components/plans/plans.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HowItWorksComponent } from './pages/home/how-it-works/how-it-works.comp
     FooterComponent,
     InfoComponent,
     ApplicationComponent,
-    HowItWorksComponent
+    HowItWorksComponent,
+    PlansComponent
   ],
   imports: [
     BrowserAnimationsModule,
