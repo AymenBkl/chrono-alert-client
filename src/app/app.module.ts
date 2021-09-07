@@ -17,6 +17,7 @@ import { PlansComponent } from './components/plans/plans.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { MostFollowedModelsComponent } from './pages/home/most-followed-models/most-followed-models.component';
+import { ReviewsComponent } from './components/reviews/reviews.component';
 
 @NgModule({
   imports: [
@@ -39,7 +40,8 @@ import { MostFollowedModelsComponent } from './pages/home/most-followed-models/m
     ApplicationComponent,
     HowItWorksComponent,
     PlansComponent,
-    MostFollowedModelsComponent
+    MostFollowedModelsComponent,
+    ReviewsComponent
   ],
   
   providers: [],

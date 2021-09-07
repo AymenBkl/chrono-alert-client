@@ -7,7 +7,7 @@
 }
 
 .models-holder {
-    text-align: center;
+    text-align: left;
 }
 
 .model-holder {
@@ -19,11 +19,12 @@
     height: 318px;
     justify-content: center;
     align-items: center;
-    margin-left: 30px;
+    margin-left: 50px;
     margin-top: 20px;
 }
 
 .model-holder img {
     text-align: center;
     margin: 0 auto;
+    width: 90%;
 }
