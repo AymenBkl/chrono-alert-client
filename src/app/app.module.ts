@@ -19,6 +19,11 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { MostFollowedModelsComponent } from './pages/home/most-followed-models/most-followed-models.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { AffiliatesComponent } from './pages/affiliates/affiliates.component';
+import { AboutusComponent } from './pages/aboutus/aboutus.component';
+import { FaqComponent } from './pages/faq/faq.component';
+import { ContactusComponent } from './pages/contactus/contactus.component';
+import { HomePageComponent } from './layouts/home-page/home-page.component';
 
 @NgModule({
   imports: [
@@ -43,7 +48,12 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     HowItWorksComponent,
     PlansComponent,
     MostFollowedModelsComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    AffiliatesComponent,
+    AboutusComponent,
+    FaqComponent,
+    ContactusComponent,
+    HomePageComponent
   ],
   
   providers: [],
