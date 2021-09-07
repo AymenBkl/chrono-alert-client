@@ -12,6 +12,7 @@ import { CoverComponent } from './pages/home/cover/cover.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { InfoComponent } from './pages/home/info/info.component';
 import { ApplicationComponent } from './pages/home/application/application.component';
+import { HowItWorksComponent } from './pages/home/how-it-works/how-it-works.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ApplicationComponent } from './pages/home/application/application.compo
     CoverComponent,
     FooterComponent,
     InfoComponent,
-    ApplicationComponent
+    ApplicationComponent,
+    HowItWorksComponent
   ],
   imports: [
     BrowserAnimationsModule,
