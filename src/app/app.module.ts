@@ -13,7 +13,6 @@ import { HomePageComponent } from './layouts/home-page/home-page.component';
 
 import { NavbarModule } from 'src/app/components/nav/nav.module';
 import { FooterModule } from './components/footer/footer.module';
-import { OurMemembersComponent } from './pages/aboutus/our-memembers/our-memembers.component';
 
 @NgModule({
   imports: [
@@ -32,7 +31,6 @@ import { OurMemembersComponent } from './pages/aboutus/our-memembers/our-memembe
   declarations: [
     AppComponent,
     HomePageComponent,
-    OurMemembersComponent,
   ],
   
   providers: [],
