@@ -20,6 +20,7 @@ import { WhoWeAreComponent } from '../../pages/aboutus/who-we-are/who-we-are.com
 import { OurMemembersComponent } from "src/app/pages/aboutus/our-memembers/our-memembers.component";
 import { ProgramComponent } from "src/app/pages/affiliates/program/program.component";
 import { StartComponent } from "src/app/pages/affiliates/start/start.component";
+import { ContactusformComponent } from "src/app/pages/contactus/contactusform/contactusform.component";
 
 @NgModule({
   imports: [
@@ -45,7 +46,9 @@ import { StartComponent } from "src/app/pages/affiliates/start/start.component";
     WhoWeAreComponent,
     OurMemembersComponent,
     ProgramComponent,
-    StartComponent
+    StartComponent,
+    ContactusformComponent,
+
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

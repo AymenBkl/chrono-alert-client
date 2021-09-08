@@ -13,8 +13,6 @@ import { HomePageComponent } from './layouts/home-page/home-page.component';
 
 import { NavbarModule } from 'src/app/components/nav/nav.module';
 import { FooterModule } from './components/footer/footer.module';
-import { ContactusComponent } from './pages/contactus/contactus/contactus.component';
-import { SendsuccessComponent } from './pages/contactus/sendsuccess/sendsuccess.component';
 
 @NgModule({
   imports: [
@@ -33,8 +31,6 @@ import { SendsuccessComponent } from './pages/contactus/sendsuccess/sendsuccess.
   declarations: [
     AppComponent,
     HomePageComponent,
-    ContactusComponent,
-    SendsuccessComponent,
   ],
   
   providers: [],
