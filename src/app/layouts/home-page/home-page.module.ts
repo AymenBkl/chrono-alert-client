@@ -16,7 +16,7 @@ import { HowItWorksComponent } from "src/app/pages/home/how-it-works/how-it-work
 import { InfoComponent } from "src/app/pages/home/info/info.component";
 import { MostFollowedModelsComponent } from "src/app/pages/home/most-followed-models/most-followed-models.component";
 import { clientRoutes } from "./home-page.routing";
-
+import { WhoWeAreComponent } from '../../pages/aboutus/who-we-are/who-we-are.component';
 
 @NgModule({
   imports: [
@@ -39,7 +39,7 @@ import { clientRoutes } from "./home-page.routing";
     AboutusComponent,
     FaqComponent,
     ContactusComponent,
-    
+    WhoWeAreComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

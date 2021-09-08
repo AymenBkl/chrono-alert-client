@@ -30,7 +30,7 @@ import { FooterModule } from './components/footer/footer.module';
   ],
   declarations: [
     AppComponent,
-    HomePageComponent
+    HomePageComponent,
   ],
   
   providers: [],
