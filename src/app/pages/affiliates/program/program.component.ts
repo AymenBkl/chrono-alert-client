@@ -7,11 +7,14 @@ import { AfterViewInit, Component, ElementRef, HostListener, OnInit, Renderer2, 
 })
 export class ProgramComponent implements OnInit, AfterViewInit {
   @ViewChild('circle') circle: ElementRef;
+
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     this.setHeight();
   }
+
   constructor(private renderer: Renderer2) { }
+  
   ngAfterViewInit(): void {
     this.setHeight();
   }
