@@ -18,6 +18,8 @@ import { MostFollowedModelsComponent } from "src/app/pages/home/most-followed-mo
 import { clientRoutes } from "./home-page.routing";
 import { WhoWeAreComponent } from '../../pages/aboutus/who-we-are/who-we-are.component';
 import { OurMemembersComponent } from "src/app/pages/aboutus/our-memembers/our-memembers.component";
+import { ProgramComponent } from "src/app/pages/affiliates/program/program.component";
+import { StartComponent } from "src/app/pages/affiliates/start/start.component";
 
 @NgModule({
   imports: [
@@ -41,7 +43,9 @@ import { OurMemembersComponent } from "src/app/pages/aboutus/our-memembers/our-m
     FaqComponent,
     ContactusComponent,
     WhoWeAreComponent,
-    OurMemembersComponent
+    OurMemembersComponent,
+    ProgramComponent,
+    StartComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
