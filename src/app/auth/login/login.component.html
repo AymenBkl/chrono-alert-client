@@ -5,20 +5,20 @@
                 <p>ACCOUNT LOGIN</p>
             </div>
             <div class="form-login">
-                <form>
+                <form novalidate [formGroup]="loginForm">
                     <div class="form-group">
                         <input type="email" class="form-control input-login" id="inputEmail"
-                            aria-describedby="emailError" placeholder="E-mail Address">
-                        <small id="emailError" class="form-text text-danger"></small>
+                            aria-describedby="emailError" placeholder="E-mail Address" formControlName="email"  [ngClass]="{'error-border':formErrors && formErrors.email}">
+                        <small id="emailError" class="form-text text-danger" *ngIf="formErrors && formErrors.email">{{formErrors.email}}</small>
                     </div>
                     <div class="input-group">
                         <input [type]="showPassword ? 'text' : 'password'"  class="form-control input-login" id="inputpassword"
-                            aria-describedby="passwordError" placeholder="Password">
+                            aria-describedby="passwordError" placeholder="Password" formControlName="password" [ngClass]="{'error-border':formErrors && formErrors.password}">
                         <span class="input-group-text addon-right">
                             <img src="../../../assets/img/show.svg" *ngIf="!showPassword" (click)="showHidePassword(true)">    
                             <img src="../../../assets/img/hide.svg" *ngIf="showPassword" (click)="showHidePassword(false)">  
                         </span>    
-                        <small id="passwordError" class="form-text text-danger"></small>
+                        <small id="passwordError" class="form-text text-danger" *ngIf="formErrors && formErrors.password">{{formErrors.password}}</small>
                     </div>
                     <div class="form-check login-checkbox">
                         <input class="form-check-input" type="checkbox" value="" id="remember-me-checkbox" checked>
@@ -26,11 +26,16 @@
                             Rememeber Me
                         </label>
                     </div>
-                    <div class="login-forget-password">
-                        <a [routerLink]="['/auth/reset-password']">Forget Password ?</a>
+                    <div class="login-forget-password" >
+                        <a [routerLink]="['/auth/reset-password']" >Forget Password ?</a>
                     </div>
                     <div class="login-button-div">
-                        <button type="submit" class="btn"> SIGN IN </button>
+                        <button type="submit" class="btn" [disabled]="submitted || loginForm.invalid" (click)="logIn()"> 
+                            <span *ngIf="!submitted">SIGN IN</span>
+                          <div class="spinner-border" role="status" *ngIf="submitted">
+                            <span class="visually-hidden">Loading...</span>
+                          </div> 
+                        </button>
                     </div>
                     <div class="auth-login-register">
                         <span>Not registered yet,&nbsp;&nbsp;</span>

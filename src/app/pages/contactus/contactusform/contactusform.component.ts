@@ -16,12 +16,6 @@ export class ContactusformComponent implements OnInit {
   submitted = false;
   validationErrors: {errmsg , errcode};
   hide = true;
-  contact = {
-    name: '',
-    email: '',
-    subject:'',
-    message:''
-  };
   showForm:boolean = true;
   constructor(private formBuilder: FormBuilder) { }
 
@@ -40,7 +34,6 @@ export class ContactusformComponent implements OnInit {
     this.contactUsForm.valueChanges
       .subscribe(user => {
         this.formErrors = onValueChanged(user, this.contactUsForm);
-        console.log(this.formErrors);
       });
   }
 
