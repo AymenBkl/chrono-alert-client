@@ -69,10 +69,9 @@ let validationMessages = {
 
 };
 
-export function onValueChanged(data: any, contactUsForm: FormGroup) {
-    console.log(contactUsForm);
-    if (!contactUsForm) { return; }
-    const form = contactUsForm;
+export function onValueChanged(data: any, registerForm: FormGroup) {
+    if (!registerForm) { return; }
+    const form = registerForm;
     for (const field in formErrors) {
         if (formErrors.hasOwnProperty(field)) {
             // clear previous error message (if any)

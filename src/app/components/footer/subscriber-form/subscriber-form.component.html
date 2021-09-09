@@ -1,0 +1,33 @@
+<div class="email-signup">
+    <p>Sign up to get updates !</p>
+        <form novalidate [formGroup]="subscriberForm">
+            <div class="input-group mb-3 input-group-lg">
+            <input type="text" class="form-control" placeholder="Your Email Address" aria-label="Your Email Address" aria-describedby="subEmailError" formControlName="email" [ngClass]="{'error-border':formErrors && formErrors.email}">            
+            <div class="input-group-append">
+              <button class="btn" type="button" [disabled]='submitted || subscriberForm.invalid' (click)="subscribe()">
+                <span *ngIf="!submitted">Sign Up</span>
+                <div class="spinner-border" role="status" *ngIf="submitted">
+                  <span class="visually-hidden">Loading...</span>
+                </div> 
+              </button>
+            </div>
+            </div>
+            <small id="subEmailError" class="form-text text-danger" *ngIf="formErrors && formErrors.email">{{formErrors.email}}</small>
+        </form>
+</div>
+
+<button #sendSuccessModalSubscriber type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#successSentModalSubscriber" hidden>
+</button>
+
+<!-- Modal Success Sent -->
+<div  class="modal fade" id="successSentModalSubscriber" data-bs-backdrop="true" data-bs-keyboard="false" tabindex="-1" aria-labelledby="successSentModalSubscriberLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #closeButtonSubscriber hidden></button>
+      <div class="modal-body">
+        <app-sent-subscribe (closeModal)="closeSuccessModal()"></app-sent-subscribe>
+      </div>
+      
+    </div>
+  </div>
+</div>

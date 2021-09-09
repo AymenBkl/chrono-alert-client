@@ -3,7 +3,6 @@ import { FormGroup } from '@angular/forms';
 // tslint:disable-next-line: prefer-const
 let formErrors = {
     email: '',
-    password:''
 };
 
 // tslint:disable-next-line: prefer-const
@@ -12,18 +11,11 @@ let validationMessages = {
         required: 'Email is required',
         email:'Please Enter A Valid Email'
     },
-    password : {
-        required: 'Password is required.',
-        minlength: 'Password must be at least 6 characters long.',
-
-    },
-
-
 };
 
-export function onValueChanged(data: any, loginForm: FormGroup) {
-    if (!loginForm) { return; }
-    const form = loginForm;
+export function onValueChanged(data: any, subscriberForm: FormGroup) {
+    if (!subscriberForm) { return; }
+    const form = subscriberForm;
     for (const field in formErrors) {
         if (formErrors.hasOwnProperty(field)) {
             // clear previous error message (if any)
