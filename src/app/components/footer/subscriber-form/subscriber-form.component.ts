@@ -1,5 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { LandingPageResponse } from 'src/app/layouts/home-page/interfaces/response';
+import { LandingPageService } from 'src/app/layouts/home-page/services/landing-page.service';
 import { onValueChanged } from './valueChanges';
 
 @Component({
@@ -16,7 +18,8 @@ export class SubscriberFormComponent implements OnInit {
   submitted = false;
   validationErrors: {errmsg , errcode};
   showForm:boolean = true;
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,
+              private landingPageService: LandingPageService) { }
 
   ngOnInit(): void {
     this.getSubmitSubscriber();
@@ -37,11 +40,23 @@ export class SubscriberFormComponent implements OnInit {
     if (this.checkValidSubscriber()){
       this.submitted = true;
       this.submitSentSubscriber();
-      setTimeout(() => {
-        this.submitted = false;
-        this.showForm = false;
-        this.openSuccessModal();
-      },3000)
+      this.landingPageService.addSubscriber(this.subscriberForm.value.email)
+        .then((result: LandingPageResponse) => {
+          console.log(result);
+          this.submitted = false;
+          if (result && result.status == 200){
+            this.showForm = false;
+            this.openSuccessModal();
+          }
+          else {
+            this.landingPageService.showErrorMessage();
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+          this.submitted = false;
+          this.landingPageService.showErrorMessage();
+        })
     }
     
   }

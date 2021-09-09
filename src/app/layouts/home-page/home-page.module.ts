@@ -24,13 +24,17 @@ import { ContactusformComponent } from "src/app/pages/contactus/contactusform/co
 import { FaqHolderComponent } from 'src/app/pages/faq/faq-holder/faq-holder.component';
 import { SearchFaqPipe } from './pipes/search-faq.pipe';
 import { SendsuccessComponent } from "src/app/pages/contactus/sendsuccess/sendsuccess.component";
+import { LandingPageService } from "./services/landing-page.service";
+import { HttpClientModule } from '@angular/common/http'
+import { ErrorModalComponent } from "./components/error-modal/error-modal.component";
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(clientRoutes),
     FormsModule,
     ReactiveFormsModule,
-    CarouselModule
+    CarouselModule,
+    HttpClientModule
   ],
   declarations: [
     HomeComponent,
@@ -52,7 +56,11 @@ import { SendsuccessComponent } from "src/app/pages/contactus/sendsuccess/sendsu
     ContactusformComponent,
     FaqHolderComponent,
     SearchFaqPipe,
-    SendsuccessComponent
+    SendsuccessComponent,
+    ErrorModalComponent
+  ],
+  providers:[
+    LandingPageService
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
