@@ -40,4 +40,8 @@ export class ContactusformComponent implements OnInit {
       });
   }
 
+  sendContactUs(){
+    this.submitted = true;
+  }
+
 }

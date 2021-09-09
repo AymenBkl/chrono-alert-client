@@ -23,8 +23,13 @@
                       <small id="messageError" class="form-text text-danger" *ngIf="formErrors && formErrors.message">{{formErrors.message}}</small>
                     </div>
                     <div class="button-div">
-                        <button type="submit" class="btn"> SEND </button>
-                    </div>
+                        <button type="submit" class="btn" [disabled]='contactUsForm.invalid || submitted' (click)="sendContactUs()">
+                          <span *ngIf="!submitted">SEND</span>
+                          <div class="spinner-border" role="status" *ngIf="submitted">
+                            <span class="visually-hidden">Loading...</span>
+                          </div> 
+                        </button>
+                          </div>
                   </form>
             </div>
         </div>

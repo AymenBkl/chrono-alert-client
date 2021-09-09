@@ -12,6 +12,7 @@ import { authRoutes } from "./auth-page.routing";
     RouterModule.forChild(authRoutes),
     FormsModule,
     ReactiveFormsModule,
+    
   ],
   declarations: [
     RegisterComponent,
