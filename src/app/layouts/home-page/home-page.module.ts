@@ -22,6 +22,7 @@ import { ProgramComponent } from "src/app/pages/affiliates/program/program.compo
 import { StartComponent } from "src/app/pages/affiliates/start/start.component";
 import { ContactusformComponent } from "src/app/pages/contactus/contactusform/contactusform.component";
 import { FaqHolderComponent } from 'src/app/pages/faq/faq-holder/faq-holder.component';
+import { SearchFaqPipe } from './pipes/search-faq.pipe';
 @NgModule({
   imports: [
     CommonModule,
@@ -48,7 +49,8 @@ import { FaqHolderComponent } from 'src/app/pages/faq/faq-holder/faq-holder.comp
     ProgramComponent,
     StartComponent,
     ContactusformComponent,
-    FaqHolderComponent
+    FaqHolderComponent,
+    SearchFaqPipe
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

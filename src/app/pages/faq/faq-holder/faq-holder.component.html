@@ -16,15 +16,14 @@
         <div class="col-12">
             <div class="search-bar">
                 <div class="input-group">
-                    <input type="text" class="form-control input-faq" id="inputSearch"  placeholder="Help Me With...">
-                    <span class="input-group-text addon-right"><img src="../../../../assets/img/search.svg"></span>
-                         
+                    <input type="text" class="form-control input-faq" id="inputSearch"  placeholder="Help Me With..." [(ngModel)]="searchFaq" >
+                    <span class="input-group-text addon-right"><img src="../../../../assets/img/search.svg"></span>      
                   </div>
             </div>
         </div>
     </div>
     <div class="row faqs-holder" *ngIf="!selectedFaq">
-        <div class="col-12 col-lg-3 faq-col" *ngFor="let faq of faqs" >
+        <div class="col-12 col-lg-3 faq-col" *ngFor="let faq of faqs | searchFaqPipe:searchFaq" >
             <div class="faq-item-holder">
                 <p class="faq-big-title">{{faq.title}}</p>
                 <p class="faq-sub-title" (click)="selectFaq(faq)">{{faq.subTitle}}</p>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FAQ } from 'src/app/layouts/home-page/interfaces/faq';
 
 @Component({
   selector: 'app-faq-holder',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FaqHolderComponent implements OnInit {
 
-  faqs = [{
+  faqs : FAQ[] = [{
     title:'Getting Started',
     subTitle:'What is ChronoAlerts? Lorem ipsum dolor sit amet? Consectetur adipiscing elit? Donec mauris tortor?',
     innerTittle:'What is ChronoAlerts?',
@@ -32,13 +33,14 @@ export class FaqHolderComponent implements OnInit {
     innerContent:'Lorem ipsum dolor sit amet? Consectetur adipiscing elit? Donec mauris tortor. Lorem ipsum dolor sit amet? Consectetur adipiscing elit? Donec mauris tortor'
   }]
 
-  selectedFaq:any;
+  selectedFaq:FAQ;
+  searchFaq:string = '';
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  selectFaq(faq) {
+  selectFaq(faq: FAQ) {
     this.selectedFaq = faq;
   }
 
