@@ -32,7 +32,6 @@ export class SubscriberFormComponent implements OnInit {
     this.subscriberForm.valueChanges
       .subscribe(user => {
         this.formErrors = onValueChanged(user, this.subscriberForm);
-        console.log(this.formErrors);
     });
   }
 
@@ -41,7 +40,6 @@ export class SubscriberFormComponent implements OnInit {
       this.submitted = true;
       this.landingPageService.addSubscriber(this.subscriberForm.value.email)
         .then((result: LandingPageResponse) => {
-          console.log(result);
           this.submitted = false;
           if (result && result.status == 200){
             this.showForm = false;
@@ -49,11 +47,13 @@ export class SubscriberFormComponent implements OnInit {
             this.openSuccessModal();
           }
           else {
+            this.validationErrors = {errcode:0,errmsg:result.msg};
             this.landingPageService.showErrorMessage();
           }
         })
-        .catch((err) => {
+        .catch((err:LandingPageResponse) => {
           console.log(err);
+          this.validationErrors = {errcode:0,errmsg:err.msg};
           this.submitted = false;
           this.landingPageService.showErrorMessage();
         })
@@ -93,7 +93,6 @@ export class SubscriberFormComponent implements OnInit {
       subscriber:this.subscriberForm.value,
       date:new Date().getTime()
     }
-    console.log(subscriberSent)
     localStorage.setItem('subscriber',JSON.stringify(subscriberSent))
   }
 

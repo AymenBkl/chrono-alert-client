@@ -2,7 +2,7 @@
     <p>Sign up to get updates !</p>
         <form novalidate [formGroup]="subscriberForm" *ngIf="showForm">
             <div class="input-group mb-3 input-group-lg">
-            <input type="text" class="form-control" placeholder="Your Email Address" aria-label="Your Email Address" aria-describedby="subEmailError" formControlName="email" [ngClass]="{'error-border':formErrors && formErrors.email}">            
+            <input type="text" class="form-control" placeholder="Your Email Address" aria-label="Your Email Address" aria-describedby="subEmailError" formControlName="email" [ngClass]="{'error-border':(formErrors && formErrors.email) || (validationErrors && validationErrors.errmsg)}">            
             <div class="input-group-append">
               <button class="btn" type="button" [disabled]='submitted || subscriberForm.invalid' (click)="subscribe()">
                 <span *ngIf="!submitted">Sign Up</span>
@@ -13,6 +13,7 @@
             </div>
             </div>
             <small id="subEmailError" class="form-text text-danger" *ngIf="formErrors && formErrors.email">{{formErrors.email}}</small>
+            <small id="subEmailError" class="form-text text-danger" *ngIf="validationErrors && validationErrors.errmsg">{{validationErrors.errmsg}}</small>
         </form>
         <div class="subscriber-sent" *ngIf="!showForm">
             <p>You are already subscribed to the ChronoAlerts newsletter.</p>

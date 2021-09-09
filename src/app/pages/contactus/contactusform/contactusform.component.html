@@ -22,8 +22,9 @@
                       <textarea  class="form-control input-contact-us" id="inputMessage" aria-describedby="messageError" placeholder="Message..." rows="4" cols="50" formControlName="message" [ngClass]="{'error-border':formErrors && formErrors.message}"></textarea>
                       <small id="messageError" class="form-text text-danger" *ngIf="formErrors && formErrors.message">{{formErrors.message}}</small>
                     </div>
+                    <small id="validationError" class="form-text text-danger" *ngIf="validationErrors && validationErrors.errmsg">{{validationErrors.errmsg}}</small>
                     <div class="button-div">
-                        <button type="submit" class="btn" [disabled]='contactUsForm.invalid || submitted' (click)="sendContactUs()">
+                        <button type="submit" class="btn" [disabled]='contactUsForm.invalid || submitted' (click)="sendContactUs()" [ngClass]="{'error-border':validationErrors && validationErrors.errmsg}">
                           <span *ngIf="!submitted">SEND</span>
                           <div class="spinner-border" role="status" *ngIf="submitted">
                             <span class="visually-hidden">Loading...</span>

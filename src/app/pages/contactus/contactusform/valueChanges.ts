@@ -34,7 +34,6 @@ let validationMessages = {
 };
 
 export function onValueChanged(data: any, contactUsForm: FormGroup) {
-    console.log(contactUsForm);
     if (!contactUsForm) { return; }
     const form = contactUsForm;
     for (const field in formErrors) {

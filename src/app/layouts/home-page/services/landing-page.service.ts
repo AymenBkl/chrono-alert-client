@@ -27,7 +27,7 @@ export class LandingPageService {
 
   addContact(contact:Contact) {
     return new Promise((resolve,reject) => {
-      this.httpClient.post<LandingPageResponse>(environment.baseUrl + 'landing-page/contact',{contact:contact})
+      this.httpClient.post<LandingPageResponse>(environment.baseUrl + 'landing-page/contact',contact)
       .subscribe(result => {
         resolve(result);
       },err => {

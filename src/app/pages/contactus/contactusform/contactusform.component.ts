@@ -1,5 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { LandingPageResponse } from 'src/app/layouts/home-page/interfaces/response';
+import { LandingPageService } from 'src/app/layouts/home-page/services/landing-page.service';
 import { onValueChanged } from './valueChanges';
 
 @Component({
@@ -17,7 +19,8 @@ export class ContactusformComponent implements OnInit {
   validationErrors: {errmsg , errcode};
   hide = true;
   showForm:boolean = true;
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,
+              private landingPageService: LandingPageService) { }
 
 
   ngOnInit(): void {
@@ -39,13 +42,24 @@ export class ContactusformComponent implements OnInit {
 
   sendContactUs(){
     if (this.checkValidSentContact()){
-      this.submitted = true;
-      this.submitSentContact();
-      setTimeout(() => {
-        this.submitted = false;
-        this.showForm = false;
-        this.openSuccessModal();
-      },3000)
+      this.landingPageService.addContact(this.contactUsForm.value)
+        .then((result: LandingPageResponse) => {
+          this.submitted = true;
+          if (result && result.status == 200){
+            this.showForm = false;
+            this.openSuccessModal();
+            this.submitSentContact();
+          }
+          else {
+            this.validationErrors = {errcode:0,errmsg:result.msg};
+            this.landingPageService.showErrorMessage();
+          }
+        })
+        .catch((err:LandingPageResponse) => {
+          this.validationErrors = {errcode:0,errmsg:err.msg};
+          this.submitted = true;
+          this.landingPageService.showErrorMessage();
+        })
     }
     
   }
@@ -82,7 +96,6 @@ export class ContactusformComponent implements OnInit {
       contact:this.contactUsForm.value,
       date:new Date().getTime()
     }
-    console.log(contactSent)
     localStorage.setItem('contact',JSON.stringify(contactSent))
   }
 
