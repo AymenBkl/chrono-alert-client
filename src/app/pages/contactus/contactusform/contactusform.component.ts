@@ -38,31 +38,42 @@ export class ContactusformComponent implements OnInit {
   }
 
   sendContactUs(){
-    this.submitted = true;
-    this.submitSentContact();
-    setTimeout(() => {
-      this.submitted = false;
-      this.openSuccessModal();
-    },3000)
+    if (this.checkValidSentContact()){
+      this.submitted = true;
+      this.submitSentContact();
+      setTimeout(() => {
+        this.submitted = false;
+        this.showForm = false;
+        this.openSuccessModal();
+      },3000)
+    }
+    
   }
 
   getSubmitContact() {
+    if (this.checkValidSentContact()){
+      localStorage.removeItem('contact');
+      this.showForm = true;
+      this.buildContactUsForm();
+    }
+    else {
+      this.showForm = false;
+    }
+  }
+
+  checkValidSentContact(){
     var contact = localStorage.getItem('contact');
     if (contact && contact != null){
       var parsedContact = JSON.parse(contact);
       if ((new Date().getTime() - parsedContact.date) < (1 * 24 * 60 * 60 * 1000)) {
-        this.showForm = false;
+        return false;
       }
       else {
-        localStorage.removeItem('contact');
-        this.showForm = true;
-        this.buildContactUsForm();
+        return true;
       }
     }
     else {
-      localStorage.removeItem('contact');
-      this.showForm = true;
-      this.buildContactUsForm();
+      return true;
     }
   }
 

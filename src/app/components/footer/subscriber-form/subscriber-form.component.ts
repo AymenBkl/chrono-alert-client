@@ -15,10 +15,11 @@ export class SubscriberFormComponent implements OnInit {
   formErrors: any;
   submitted = false;
   validationErrors: {errmsg , errcode};
+  showForm:boolean = true;
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-    this.buildSubscriberForm()
+    this.getSubmitSubscriber();
   }
 
   buildSubscriberForm() {
@@ -33,11 +34,52 @@ export class SubscriberFormComponent implements OnInit {
   }
 
   subscribe(){
-    this.submitted = true;
-    setTimeout(() => {
-      this.submitted = false;
-      this.openSuccessModal();
-    },3000)
+    if (this.checkValidSubscriber()){
+      this.submitted = true;
+      this.submitSentSubscriber();
+      setTimeout(() => {
+        this.submitted = false;
+        this.showForm = false;
+        this.openSuccessModal();
+      },3000)
+    }
+    
+  }
+
+  getSubmitSubscriber() {
+    if (this.checkValidSubscriber()){
+      localStorage.removeItem('subscriber');
+      this.showForm = true;
+      this.buildSubscriberForm();
+    }
+    else {
+      this.showForm = false;
+    }
+  }
+
+  checkValidSubscriber() {
+    var subscriber = localStorage.getItem('subscriber');
+    if (subscriber && subscriber != null){
+      var parsedSubscriber = JSON.parse(subscriber);
+      if ((new Date().getTime() - parsedSubscriber.date) < (1 * 24 * 60 * 60 * 1000)) {
+        return false;
+      }
+      else {
+        return true;
+      }
+    }
+    else {
+      return true;
+    }
+  }
+
+  submitSentSubscriber(){
+    var subscriberSent = {
+      subscriber:this.subscriberForm.value,
+      date:new Date().getTime()
+    }
+    console.log(subscriberSent)
+    localStorage.setItem('subscriber',JSON.stringify(subscriberSent))
   }
 
   openSuccessModal(){

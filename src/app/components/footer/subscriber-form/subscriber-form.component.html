@@ -1,6 +1,6 @@
 <div class="email-signup">
     <p>Sign up to get updates !</p>
-        <form novalidate [formGroup]="subscriberForm">
+        <form novalidate [formGroup]="subscriberForm" *ngIf="showForm">
             <div class="input-group mb-3 input-group-lg">
             <input type="text" class="form-control" placeholder="Your Email Address" aria-label="Your Email Address" aria-describedby="subEmailError" formControlName="email" [ngClass]="{'error-border':formErrors && formErrors.email}">            
             <div class="input-group-append">
@@ -14,6 +14,9 @@
             </div>
             <small id="subEmailError" class="form-text text-danger" *ngIf="formErrors && formErrors.email">{{formErrors.email}}</small>
         </form>
+        <div class="subscriber-sent" *ngIf="!showForm">
+            <p>You are already subscribed to the ChronoAlerts newsletter.</p>
+        </div>
 </div>
 
 <button #sendSuccessModalSubscriber type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#successSentModalSubscriber" hidden>
