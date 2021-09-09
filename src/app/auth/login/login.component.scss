@@ -15,7 +15,7 @@
 .input-login {
     height: 50px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
-    border-radius: 10px ;
+    border-radius: 10px !important;
     margin-top: 25px;
 }
 
@@ -56,8 +56,7 @@ textarea {
 .login-button-div {
     width: 100%;
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .login-col {
@@ -71,7 +70,7 @@ textarea {
     color: #2E2E2E;
     display: inline-block;
     width: 50%;
-    margin-top: 15px;
+    margin-top: 30px;
 }
 
 .login-forget-password {
@@ -100,6 +99,8 @@ textarea {
     font: normal normal normal 16px/19px Roboto;
     letter-spacing: 0px;
     color: #2E2E2E;
+    margin-bottom: 50px;
+
 }
 
 .auth-login-register span {
@@ -109,4 +110,31 @@ textarea {
 .auth-login-register a {
     display: inline-block;
     color: #015AE7;
+}
+
+.addon-right {
+    width: 50px;
+    background: transparent;
+    color: #B0B0B0;
+    position: absolute;
+    right: 13px;
+    padding: 13px;
+    border: none;
+    top: 25px;
+    filter: invert(100%) sepia(0%) saturate(3362%) hue-rotate(259deg) brightness(75%) contrast(76%);
+}
+
+.input-group {
+    width: auto !important;
+    border-radius: 10px !important;
+    position: relative ;
+}
+
+.addon-right img {
+    width: 100%;
+    filter: invert(100%) sepia(0%) saturate(3362%) hue-rotate(259deg) brightness(75%) contrast(76%);
+}
+
+.addon-right img:hover {
+    cursor: pointer;
 }
