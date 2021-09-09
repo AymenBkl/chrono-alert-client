@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-
+  
+  showPassword:boolean = false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  showHidePassword(show:boolean) {
+    this.showPassword = show;
   }
 
 }

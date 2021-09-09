@@ -1,0 +1,129 @@
+.register-title {
+    font: normal normal bold 36px/43px Roboto;
+    letter-spacing: 0px;
+    color: #004FD4;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.form-register {
+    width: 100%;
+    margin-top: 60px;
+}
+
+.input-register {
+    height: 50px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 10px !important;
+    margin-top: 25px;
+}
+
+::placeholder {
+    color:#B0B0B0;
+}
+
+:-ms-input-placeholder {
+    color:#B0B0B0;
+}
+
+::-ms-input-placeholder {
+    color:#B0B0B0;
+}
+
+.register-image {
+    width: 100%;
+    text-align: center;
+}
+
+.register-image img {
+    width: 80%;
+}
+
+.form-register button {
+    width: 131px;
+    height: 47px;
+    background: #015AE7 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    font: normal normal bold 16px/19px Roboto;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+textarea {
+    height: auto !important;
+}
+
+.register-button-div {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.register-col {
+    display: flex;
+    align-items: center;
+}
+
+.half-width {
+    width: 48%;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.third-width {
+    display: inline-block;
+    width: 32%;
+    margin-left: 5px;
+}
+
+
+
+
+
+.auth-register-register {
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+    display: inline-block;
+    font: normal normal normal 16px/19px Roboto;
+    letter-spacing: 0px;
+    color: #2E2E2E;
+    margin-bottom: 50px;
+
+}
+
+.auth-register-register span {
+    display: inline-block;
+}
+
+.auth-register-register a {
+    display: inline-block;
+    color: #015AE7;
+}
+
+.addon-right {
+    width: 50px;
+    background: transparent;
+    color: #B0B0B0;
+    position: absolute;
+    right: 13px;
+    padding: 13px;
+    border: none;
+    top: 25px;
+    filter: invert(100%) sepia(0%) saturate(3362%) hue-rotate(259deg) brightness(75%) contrast(76%);
+}
+
+.input-group {
+    width: auto !important;
+    border-radius: 10px !important;
+    position: relative ;
+}
+
+.addon-right img {
+    width: 100%;
+    filter: invert(100%) sepia(0%) saturate(3362%) hue-rotate(259deg) brightness(75%) contrast(76%);
+}
+
+.addon-right img:hover {
+    cursor: pointer;
+}

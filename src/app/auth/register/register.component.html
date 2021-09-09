@@ -1,1 +1,76 @@
-<p>register works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <div class="register-title">
+                <p>ACCOUNT REGISTER</p>
+            </div>
+            <div class="form-register">
+                <form>
+                    <div class="form-group half-width">
+                        <input type="text" class="form-control input-register" id="inputFirstName"
+                            aria-describedby="firstNameError" placeholder="First Name">
+                        <small id="firstNameError" class="form-text text-danger"></small>
+                    </div>
+                    <div class="form-group half-width">
+                        <input type="text" class="form-control input-register" id="inputLastName"
+                            aria-describedby="lastNameError" placeholder="Last Name">
+                        <small id="lastNameError" class="form-text text-danger"></small>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control input-register" id="inputEmail"
+                            aria-describedby="emailError" placeholder="E-mail Address">
+                        <small id="emailError" class="form-text text-danger"></small>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control input-register" id="inputAddress"
+                            aria-describedby="AddressError" placeholder="Address">
+                        <small id="AddressError" class="form-text text-danger"></small>
+                    </div>
+                    <div class="form-group third-width">
+                        <input type="text" class="form-control input-register" id="inputCountry"
+                            aria-describedby="CountryError" placeholder="Country">
+                        <small id="countryError" class="form-text text-danger"></small>
+                    </div>
+                    <div class="form-group third-width">
+                        <input type="text" class="form-control input-register" id="inputCity"
+                            aria-describedby="cityError" placeholder="City">
+                        <small id="cityError" class="form-text text-danger"></small>
+                    </div>
+                    <div class="form-group third-width">
+                        <input type="text" class="form-control input-register" id="inputpostCode"
+                            aria-describedby="postCodeError" placeholder="Postal Code">
+                        <small id="postCodeError" class="form-text text-danger"></small>
+                    </div>
+                    <div class="input-group">
+                        <input [type]="showPassword ? 'text' : 'password'"  class="form-control input-register" id="inputpassword"
+                            aria-describedby="passwordError" placeholder="Password">
+                        <span class="input-group-text addon-right">
+                            <img src="../../../assets/img/show.svg" *ngIf="!showPassword" (click)="showHidePassword(true)">    
+                            <img src="../../../assets/img/hide.svg" *ngIf="showPassword" (click)="showHidePassword(false)">  
+                        </span>    
+                        <small id="passwordError" class="form-text text-danger"></small>
+                    </div>
+                    <div class="input-group">
+                        <input [type]="showPassword ? 'text' : 'password'"  class="form-control input-register" id="inputconfirmpassword"
+                            aria-describedby="confirmPasswordError" placeholder="Confirm Password">   
+                        <small id="confirmPasswordError" class="form-text text-danger"></small>
+                    </div>
+                    <div class="register-button-div">
+                        <button type="submit" class="btn"> SIGN UP </button>
+                    </div>
+                    <div class="auth-register-register">
+                        <span>Not registered yet,&nbsp;&nbsp;</span>
+                        <a [routerLink]="['/auth/login']">
+                            Sign In Now
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-12 col-lg-6 register-col">
+            <div class="register-image">
+                <img src="../../../assets/img/SignUp.svg">
+            </div>
+        </div>
+    </div>
+</div>
