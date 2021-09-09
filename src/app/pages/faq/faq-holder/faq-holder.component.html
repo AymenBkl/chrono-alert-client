@@ -23,4 +23,32 @@
             </div>
         </div>
     </div>
+    <div class="row faqs-holder" *ngIf="!selectedFaq">
+        <div class="col-12 col-lg-3 faq-col" *ngFor="let faq of faqs" >
+            <div class="faq-item-holder">
+                <p class="faq-big-title">{{faq.title}}</p>
+                <p class="faq-sub-title" (click)="selectFaq(faq)">{{faq.subTitle}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="row selected-faq-holder" *ngIf="selectedFaq && selectedFaq != null">
+        <div class="col-12 col-lg-6">
+            <div class="faq-back" (click)="unSelectFaq()">
+                <img src="../../../../assets/img/left-arrow.svg">
+                <p>Back To Faq</p>
+            </div>
+            <div class="selected-faq-content">
+                <p class="faq-big-title">{{selectedFaq.innerTittle}}</p>
+                <p class="faq-inner-sub-title">{{selectedFaq.innerContent}}</p>
+            </div>
+            <div class="faq-helpfull">
+                <span class="helpfull">Was this helpful?</span>
+                <span class="faq-button first">YES</span>
+                <span class="faq-button">NO</span>
+            </div>
+        </div>
+        <div class="col-12 col-lg-6 col-selected-faq">
+            <img src="../../../../assets/img/logo.svg">
+        </div>
+    </div>
 </div>

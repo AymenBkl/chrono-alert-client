@@ -88,3 +88,118 @@
     filter: invert(100%) sepia(0%) saturate(3362%) hue-rotate(259deg) brightness(75%) contrast(76%);
 
 }
+
+.faq-col {
+    text-align: left;
+}
+
+.faq-sub-title:hover {
+    cursor: pointer;
+}
+.faq-item-holder {
+    width: 100%;
+    text-align: left;
+}
+
+.faq-big-title {
+    font: normal normal bold 23px/25px Roboto;
+    letter-spacing: 0px;
+    color: #0B1834;
+}
+
+.faq-sub-title {
+    margin-top: 5px;
+    font: normal normal normal 18px/23px Roboto;
+    letter-spacing: 0px;
+    color: #808080;
+    width: 80%;
+}
+
+.faq-inner-sub-title {
+    margin-top: 5px;
+    font: normal normal normal 18px/23px Roboto;
+    letter-spacing: 0px;
+    color: #808080;
+    width: 100%;
+}
+
+.faqs-holder {
+    background: #F2F7FF 0% 0% no-repeat padding-box;
+    border-radius: 40px;
+    margin-top: -25px;
+    padding-left: 15px;
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+.selected-faq-holder {
+    background: #F2F7FF 0% 0% no-repeat padding-box;
+    border-radius: 40px;
+    margin-top: -25px;
+    padding-left: 13px;
+    padding-top: 36px;
+    padding-bottom: 60px;
+}
+
+.row:last-child {
+    margin-bottom: 60px;
+}
+
+.col-selected-faq {
+    display: flex;
+    align-items: center;
+}
+
+.faq-back {
+    font: normal normal normal 21px/38px Roboto;
+    letter-spacing: 0px;
+    color: #0052D9;
+    display: block;
+}
+
+.faq-back:hover {
+    cursor: pointer;
+}
+
+.faq-back img {
+    width: 20px;
+    height: 18px;
+    display: inline-block;
+    filter: invert(22%) sepia(45%) saturate(4167%) hue-rotate(209deg) brightness(99%) contrast(111%);
+}
+
+.faq-back p {
+    margin-left: 15px;
+    display: inline-block;
+}
+
+.selected-faq-content {
+    margin-top: 30px;
+}
+
+.faq-helpfull {
+    margin-top: 40px;
+}
+
+.helpfull {
+    font: normal normal bold 22px/27px Roboto;
+    letter-spacing: 0px;
+    color: #0B1834;
+}
+
+.faq-button {
+    font: normal normal normal 22px/27px Roboto;
+    letter-spacing: 0px;
+    color: #0159E5;
+}
+
+.faq-button.first {
+    margin-left: 40px;
+    margin-right: 20px;
+}
+
+.faq-button:hover {
+    cursor: pointer;
+}
+
+
