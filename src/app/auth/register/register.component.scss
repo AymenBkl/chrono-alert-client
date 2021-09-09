@@ -16,7 +16,6 @@
     height: 50px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border-radius: 10px !important;
-    margin-top: 25px;
 }
 
 ::placeholder {
@@ -76,11 +75,8 @@ textarea {
     margin-left: 5px;
 }
 
-.input-group {
-    height: 60px;
-}
-.form-group {
-    height: 60px;
+.input-group,.form-group,.half-width,.third-width {
+    height: 80px;
 }
 
 
