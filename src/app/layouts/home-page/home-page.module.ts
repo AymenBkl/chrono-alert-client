@@ -21,7 +21,7 @@ import { OurMemembersComponent } from "src/app/pages/aboutus/our-memembers/our-m
 import { ProgramComponent } from "src/app/pages/affiliates/program/program.component";
 import { StartComponent } from "src/app/pages/affiliates/start/start.component";
 import { ContactusformComponent } from "src/app/pages/contactus/contactusform/contactusform.component";
-
+import { FaqHolderComponent } from 'src/app/pages/faq/faq-holder/faq-holder.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -48,7 +48,7 @@ import { ContactusformComponent } from "src/app/pages/contactus/contactusform/co
     ProgramComponent,
     StartComponent,
     ContactusformComponent,
-
+    FaqHolderComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
