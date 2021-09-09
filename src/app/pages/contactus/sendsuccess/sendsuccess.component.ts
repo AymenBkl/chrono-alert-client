@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-sendsuccess',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SendsuccessComponent implements OnInit {
 
+  @Output('closeModal') closeModalEmitter: EventEmitter<boolean> = new EventEmitter<boolean>(false);
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  closeModal(){
+    this.closeModalEmitter.emit(true);
   }
 
 }

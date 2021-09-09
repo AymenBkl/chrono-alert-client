@@ -40,3 +40,21 @@
         </div>
     </div>
 </div>
+
+
+<button #sendSuccessModal type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#successSentModal" hidden>
+  Launch static backdrop modal
+</button>
+
+<!-- Modal Success Sent -->
+<div  class="modal fade" id="successSentModal" data-bs-backdrop="true" data-bs-keyboard="false" tabindex="-1" aria-labelledby="successSentModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #closeButton hidden></button>
+      <div class="modal-body">
+        <app-sendsuccess (closeModal)="closeSuccessModal()"></app-sendsuccess>
+      </div>
+      
+    </div>
+  </div>
+</div>

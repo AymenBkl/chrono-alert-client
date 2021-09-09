@@ -14,8 +14,6 @@ import { HomePageComponent } from './layouts/home-page/home-page.component';
 import { NavbarModule } from 'src/app/components/nav/nav.module';
 import { FooterModule } from './components/footer/footer.module';
 import { AuthPageComponent } from './layouts/auth-page/auth-page.component';
-import { NavComponent } from './components/nav/nav.component';
-import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   imports: [

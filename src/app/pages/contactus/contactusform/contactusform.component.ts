@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { onValueChanged } from './valueChanges';
 
@@ -9,6 +9,8 @@ import { onValueChanged } from './valueChanges';
 })
 export class ContactusformComponent implements OnInit {
 
+  @ViewChild('sendSuccessModal') sendSuccessModal:ElementRef;
+  @ViewChild('closeButton') closeButton:ElementRef;
   contactUsForm: FormGroup;
   formErrors: any;
   submitted = false;
@@ -19,8 +21,9 @@ export class ContactusformComponent implements OnInit {
     email: '',
     subject:'',
     message:''
-  }
-  constructor(private formBuilder: FormBuilder,) { }
+  };
+  constructor(private formBuilder: FormBuilder) { }
+
 
   ngOnInit(): void {
     this.buildContactUsForm();
@@ -42,6 +45,21 @@ export class ContactusformComponent implements OnInit {
 
   sendContactUs(){
     this.submitted = true;
+    setTimeout(() => {
+      this.submitted = false;
+      this.openSuccessModal();
+    },3000)
   }
+
+
+  openSuccessModal(){
+    this.sendSuccessModal.nativeElement.click();
+  }
+
+  closeSuccessModal(){
+    this.closeButton.nativeElement.click();
+  }
+  
+
 
 }
