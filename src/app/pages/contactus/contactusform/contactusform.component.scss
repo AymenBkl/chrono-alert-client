@@ -33,10 +33,11 @@
 .contact-us-image {
     width: 100%;
     text-align: center;
+    padding-left: 30px;
 }
 
 .contact-us-image img {
-    width: 80%;
+    width: 100%;
 }
 
 .form-contact-us button {
@@ -80,4 +81,31 @@ textarea {
 
 .modal-content {
     border-radius: 20px;
+}
+
+.sent-contact-us-image-holder {
+    width: 100%;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.sent-contact-us-image-holder img {
+    width: 30%;
+}
+
+.sent-contact-us-text {
+    margin-top: 30px;
+    font: normal normal bold 30px/37px Roboto;
+    letter-spacing: 0px;
+    color: #0B1834;
+    text-align: center;
+}
+
+.sent-contact-us-note {
+    font: normal normal normal 20px/24px Roboto;
+    letter-spacing: 0px;
+    color: #808080;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }

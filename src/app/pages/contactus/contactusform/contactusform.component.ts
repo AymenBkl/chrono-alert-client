@@ -22,11 +22,12 @@ export class ContactusformComponent implements OnInit {
     subject:'',
     message:''
   };
+  showForm:boolean = true;
   constructor(private formBuilder: FormBuilder) { }
 
 
   ngOnInit(): void {
-    this.buildContactUsForm();
+    this.getSubmitContact();
   }
 
   buildContactUsForm() {
@@ -45,10 +46,40 @@ export class ContactusformComponent implements OnInit {
 
   sendContactUs(){
     this.submitted = true;
+    this.submitSentContact();
     setTimeout(() => {
       this.submitted = false;
       this.openSuccessModal();
     },3000)
+  }
+
+  getSubmitContact() {
+    var contact = localStorage.getItem('contact');
+    if (contact && contact != null){
+      var parsedContact = JSON.parse(contact);
+      if ((new Date().getTime() - parsedContact.date) < (1 * 24 * 60 * 60 * 1000)) {
+        this.showForm = false;
+      }
+      else {
+        localStorage.removeItem('contact');
+        this.showForm = true;
+        this.buildContactUsForm();
+      }
+    }
+    else {
+      localStorage.removeItem('contact');
+      this.showForm = true;
+      this.buildContactUsForm();
+    }
+  }
+
+  submitSentContact(){
+    var contactSent = {
+      contact:this.contactUsForm.value,
+      date:new Date().getTime()
+    }
+    console.log(contactSent)
+    localStorage.setItem('contact',JSON.stringify(contactSent))
   }
 
 
@@ -59,6 +90,8 @@ export class ContactusformComponent implements OnInit {
   closeSuccessModal(){
     this.closeButton.nativeElement.click();
   }
+
+
   
 
 

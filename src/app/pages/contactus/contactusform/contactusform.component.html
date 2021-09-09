@@ -1,10 +1,10 @@
 <div class="container">
     <div class="row">
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-lg-5">
             <div class="contact-us-title">
                 <p>CONTACT US</p>
             </div>
-            <div class="form-contact-us">
+            <div class="form-contact-us" *ngIf="showForm">
                 <form novalidate [formGroup]="contactUsForm">
                     <div class="form-group">
                         <input type="text" class="form-control input-contact-us" id="inputName" aria-describedby="nameError" placeholder="Name" formControlName="name" [ngClass]="{'error-border':formErrors && formErrors.name}">
@@ -32,8 +32,19 @@
                           </div>
                   </form>
             </div>
+            <div class="sent-contact-us" *ngIf="!showForm">
+              <div class="sent-contact-us-image-holder">
+                <img src="../../../../assets/img/check-sent-success.svg">
+              </div>
+              <div class="sent-contact-us-text">
+                You Message Has Been Sent Successfully.
+              </div>
+              <div class="sent-contact-us-note">
+                Please Wait 24 Hours To Try Again !
+              </div>
+            </div>
         </div>
-        <div class="col-12 col-lg-6 contact-us-col">
+        <div class="col-12 col-lg-7 contact-us-col">
             <div class="contact-us-image">
                 <img src="../../../../assets/img/ContactUs.svg">
             </div>
