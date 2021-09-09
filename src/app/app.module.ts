@@ -13,6 +13,10 @@ import { HomePageComponent } from './layouts/home-page/home-page.component';
 
 import { NavbarModule } from 'src/app/components/nav/nav.module';
 import { FooterModule } from './components/footer/footer.module';
+import { AuthPageComponent } from './pages/auth-page/auth-page.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { LoginComponent } from './auth/login/login.component';
+import { ResetPasswordComponent } from './auth/reset-password/reset-password.component';
 
 @NgModule({
   imports: [
@@ -31,6 +35,10 @@ import { FooterModule } from './components/footer/footer.module';
   declarations: [
     AppComponent,
     HomePageComponent,
+    AuthPageComponent,
+    RegisterComponent,
+    LoginComponent,
+    ResetPasswordComponent,
   ],
   
   providers: [],
