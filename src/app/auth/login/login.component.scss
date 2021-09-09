@@ -145,6 +145,11 @@ textarea {
     height: 80px;
 }
 
+small {
+    font: normal normal normal 16px/19px Roboto;
+    letter-spacing: 0px;
+}
+
 .error-border {
     border-color:  #df4759;
     width: 100% !important;
