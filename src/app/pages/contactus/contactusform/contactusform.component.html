@@ -5,22 +5,22 @@
                 <p>CONTACT US</p>
             </div>
             <div class="form-contact-us">
-                <form>
+                <form novalidate [formGroup]="contactUsForm">
                     <div class="form-group">
-                        <input type="text" class="form-control input-contact-us" id="inputName" aria-describedby="nameError" placeholder="Name">
-                        <small id="nameError" class="form-text text-danger"></small>
+                        <input type="text" class="form-control input-contact-us" id="inputName" aria-describedby="nameError" placeholder="Name" formControlName="name" [ngClass]="{'error-border':formErrors && formErrors.name}">
+                        <small id="nameError" class="form-text text-danger" *ngIf="formErrors && formErrors.name">{{formErrors.name}}</small>
                       </div>
                       <div class="form-group">
-                        <input type="email" class="form-control input-contact-us" id="inputEmail" aria-describedby="emailError" placeholder="E-mail Address">
-                        <small id="emailError" class="form-text text-danger"></small>
+                        <input type="email" class="form-control input-contact-us" id="inputEmail" aria-describedby="emailError" placeholder="E-mail Address" formControlName="email" [ngClass]="{'error-border':formErrors && formErrors.email}">
+                        <small id="emailError" class="form-text text-danger" *ngIf="formErrors && formErrors.email">{{formErrors.email}}</small>
                       </div>
                       <div class="form-group">
-                        <input type="text" class="form-control input-contact-us" id="inputSubject" aria-describedby="subjectError" placeholder="Subject">
-                        <small id="subjectError" class="form-text text-danger"></small>
+                        <input type="text" class="form-control input-contact-us" id="inputSubject" aria-describedby="subjectError" placeholder="Subject" formControlName="subject" [ngClass]="{'error-border':formErrors && formErrors.subject}">
+                        <small id="subjectError" class="form-text text-danger" *ngIf="formErrors && formErrors.subject">{{formErrors.subject}}</small>
                       </div>
                     <div class="form-group">
-                      <textarea  class="form-control input-contact-us" id="inputMessage" aria-describedby="messageError" placeholder="Message..." rows="4" cols="50"></textarea>
-                      <small id="messageError" class="form-text text-danger"></small>
+                      <textarea  class="form-control input-contact-us" id="inputMessage" aria-describedby="messageError" placeholder="Message..." rows="4" cols="50" formControlName="message" [ngClass]="{'error-border':formErrors && formErrors.message}"></textarea>
+                      <small id="messageError" class="form-text text-danger" *ngIf="formErrors && formErrors.message">{{formErrors.message}}</small>
                     </div>
                     <div class="button-div">
                         <button type="submit" class="btn"> SEND </button>
