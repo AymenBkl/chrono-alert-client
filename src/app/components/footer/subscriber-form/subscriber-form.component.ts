@@ -39,13 +39,13 @@ export class SubscriberFormComponent implements OnInit {
   subscribe(){
     if (this.checkValidSubscriber()){
       this.submitted = true;
-      this.submitSentSubscriber();
       this.landingPageService.addSubscriber(this.subscriberForm.value.email)
         .then((result: LandingPageResponse) => {
           console.log(result);
           this.submitted = false;
           if (result && result.status == 200){
             this.showForm = false;
+            this.submitSentSubscriber();
             this.openSuccessModal();
           }
           else {

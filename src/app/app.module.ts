@@ -14,6 +14,7 @@ import { HomePageComponent } from './layouts/home-page/home-page.component';
 import { NavbarModule } from 'src/app/components/nav/nav.module';
 import { FooterModule } from './components/footer/footer.module';
 import { AuthPageComponent } from './layouts/auth-page/auth-page.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -27,7 +28,8 @@ import { AuthPageComponent } from './layouts/auth-page/auth-page.component';
     ReactiveFormsModule,
     CarouselModule,
     NavbarModule,
-    FooterModule
+    FooterModule,
+    HttpClientModule
   ],
   declarations: [
     AppComponent,

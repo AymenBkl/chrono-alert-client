@@ -26,7 +26,7 @@ import { SearchFaqPipe } from './pipes/search-faq.pipe';
 import { SendsuccessComponent } from "src/app/pages/contactus/sendsuccess/sendsuccess.component";
 import { LandingPageService } from "./services/landing-page.service";
 import { HttpClientModule } from '@angular/common/http'
-import { ErrorModalComponent } from "./components/error-modal/error-modal.component";
+import { ErrorModalLandingPageComponent } from "src/app/components/error-modal-landing-page/error-modal-landing-page.component";
 @NgModule({
   imports: [
     CommonModule,
@@ -57,7 +57,6 @@ import { ErrorModalComponent } from "./components/error-modal/error-modal.compon
     FaqHolderComponent,
     SearchFaqPipe,
     SendsuccessComponent,
-    ErrorModalComponent
   ],
   providers:[
     LandingPageService
