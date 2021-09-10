@@ -165,6 +165,24 @@ export class AuthService {
   
   }
 
+  submitNewPassword(hash:string,password:string){
+    return new Promise((resolve,reject) => {
+      if (!this.isAuthenticated){
+      this.httpClient.post<AuthResponse>(environment.baseUrl + 'auth/resetpassword?hash=' + hash,{password:password})
+        .subscribe(result => {
+          console.log(result);
+          resolve(result);
+        },err => {
+          reject(err);
+          console.log(err);
+        }) 
+      }
+      else {
+        this.router.navigate(['/dashboard-client']);
+      }
+    })
+  }
+
 
   updateUser(user: string, updateUser: User) {
     return new Promise((resolve, reject) => {

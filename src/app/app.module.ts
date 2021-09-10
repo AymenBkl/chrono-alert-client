@@ -42,7 +42,6 @@ import { NewPasswordComponent } from './auth/reset-password/new-password/new-pas
     HomePageComponent,
     AuthPageComponent,
     DashboardClientComponent,
-    NewPasswordComponent,
   ],
   
   providers: [
