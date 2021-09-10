@@ -1,5 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { NgxSpinnerService } from "ngx-spinner";
+import { AuthResponse } from 'src/app/interfaces/response';
+import { LandingPageService } from 'src/app/layouts/home-page/services/landing-page.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-verify-now',
@@ -9,16 +13,35 @@ import { NgxSpinnerService } from "ngx-spinner";
 export class VerifyNowComponent implements OnInit {
 
   @Input('hash') hash:string;
-  constructor(private ngxSpinnerService: NgxSpinnerService) { }
+  emailSubmitted:boolean = false;
+  constructor(private ngxSpinnerService: NgxSpinnerService,
+              private authService: AuthService,
+              private landingPageService: LandingPageService,
+              private router: Router) { }
 
   ngOnInit(): void {
-    this.showSpinner();
+    this.activateEmail();
   }
 
-  showSpinner(){
+  activateEmail(){
     if (this.hash && this.hash != ''){
       this.ngxSpinnerService.show();
+      this.authService.verifyEmail(this.hash)
+        .then((result:AuthResponse) => {
+          this.ngxSpinnerService.hide();
+          if (result && result.status == 200){
+            this.router.navigate(['/dashboard-client']);
+          }
+          else {
+            this.emailSubmitted = true;
+          }
+        })
+        .catch(err => {
+          this.ngxSpinnerService.hide();
+          this.emailSubmitted = true;
+        })
     }
   }
+
 
 }

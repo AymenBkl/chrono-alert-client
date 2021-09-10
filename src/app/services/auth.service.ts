@@ -121,11 +121,8 @@ export class AuthService {
       if (this.user.emailVerified == false){
         this.httpClient.get<AuthService>(environment.baseUrl + 'auth/sendverificationemail')
           .subscribe(result => {
-            console.log(result);
             resolve(result);
           },err => {
-
-            console.log(err);
             reject(err);
           })
       }
@@ -134,6 +131,20 @@ export class AuthService {
       }
     })
     
+  }
+
+  verifyEmail(hash:string) {
+    return new Promise((resolve,reject) => {
+      this.httpClient.get<AuthResponse>(environment.baseUrl + 'auth/verifyemail?hash=' + hash)
+        .subscribe(result => {
+          console.log(result);
+          resolve(result);
+        },err => {
+          reject(err);
+          console.log(err);
+        })
+        
+    })
   }
 
 
