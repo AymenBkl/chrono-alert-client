@@ -1,0 +1,46 @@
+
+.sent-image-holder {
+    width: 100%;
+    text-align: center;
+    /* padding: 100px; */
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-top: 50px;
+}
+
+.sent-image-holder img {
+    width: 100%;
+}
+
+.sent-text-holder {
+    text-align: center;
+}
+.sent-big-text {
+    font: normal normal bold 30px/37px Roboto;
+    letter-spacing: 0px;
+    color: #0B1834;
+    margin-top: 50px;
+}
+
+.sent-small-text {
+    font: normal normal normal 20px/24px Roboto;
+    letter-spacing: 0px;
+    color: #808080;
+}
+
+.confirm-button {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.confirm-button button {
+    background: #015AE7 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    font: normal normal bold 16px/19px Roboto;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    width: 131px;
+    height: 47px;
+}

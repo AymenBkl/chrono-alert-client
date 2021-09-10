@@ -10,6 +10,7 @@ import { AuthService } from "src/app/services/auth.service";
 import { VerifyEmailComponent } from "src/app/auth/verify-email/verify-email.component";
 import { NgxSpinnerModule } from "ngx-spinner";
 import { VerifyNowComponent } from "src/app/auth/verify-email/verify-now/verify-now.component";
+import { SendSuccessComponent } from "src/app/auth/verify-email/send-success/send-success.component";
 @NgModule({
   imports: [
     CommonModule,
@@ -23,7 +24,8 @@ import { VerifyNowComponent } from "src/app/auth/verify-email/verify-now/verify-
     LoginComponent,
     ResetPasswordComponent,
     VerifyEmailComponent ,
-    VerifyNowComponent
+    VerifyNowComponent,
+    SendSuccessComponent
   ],
   providers:[
   ],
