@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthResponse } from 'src/app/interfaces/response';
 import { LandingPageService } from 'src/app/layouts/home-page/services/landing-page.service';
 import { AuthService } from 'src/app/services/auth.service';
@@ -20,7 +21,8 @@ export class LoginComponent implements OnInit {
   hide = true;
   constructor(private formBuilder: FormBuilder,
               private authService: AuthService,
-              private landingPageService: LandingPageService) { }
+              private landingPageService: LandingPageService,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.buildLoginForm();
@@ -47,7 +49,18 @@ export class LoginComponent implements OnInit {
       .then((result:AuthResponse) => {
         this.submitted = false;
         if (result && result.status == 200){
-
+          this.router.navigate(['/dashboard-client/'])
+        }
+        else if (result && result.status == 401){
+          if (result.err && (result.err.error.err.name == 'IncorrectPasswordError' || result.err.error.err.name == 'IncorrectUsernameError')){
+            this.validationErrors = {errcode:11002,errmsg:result.err.error.err.message};
+          }
+          else if (result.err && (result.err.error.err.name == 'AttemptTooSoonError' || result.err.error.err.name == 'TooManyAttemptsError') ){
+            this.validationErrors = {errcode:11003,errmsg:result.err.error.err.message};
+          }
+        }
+        else {
+          this.landingPageService.showErrorMessage();
         }
       })
       .catch((err) => {

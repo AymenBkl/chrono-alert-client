@@ -8,19 +8,22 @@ import { ResetPasswordComponent } from "src/app/auth/reset-password/reset-passwo
 import { authRoutes } from "./auth-page.routing";
 import { AuthService } from "src/app/services/auth.service";
 import { VerifyEmailComponent } from "src/app/auth/verify-email/verify-email.component";
+import { NgxSpinnerModule } from "ngx-spinner";
+import { VerifyNowComponent } from "src/app/auth/verify-email/verify-now/verify-now.component";
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(authRoutes),
     FormsModule,
     ReactiveFormsModule,
-    
+    NgxSpinnerModule
   ],
   declarations: [
     RegisterComponent,
     LoginComponent,
     ResetPasswordComponent,
-    VerifyEmailComponent 
+    VerifyEmailComponent ,
+    VerifyNowComponent
   ],
   providers:[
     AuthService

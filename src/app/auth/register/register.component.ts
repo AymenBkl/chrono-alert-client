@@ -53,7 +53,7 @@ export class RegisterComponent implements OnInit {
         .then((result:AuthResponse) => {
           this.submitted = false;
           if (result && result.status == 201){
-            this.router.navigate(['/auth/verify-email'])
+            this.router.navigate(['/dashboard-client/'])
           }
           else if (result && result.err && result.err.error.err){
             this.validationErrors = {errcode:result.err.error.err.errCode,errmsg:result.err.error.err.msg}

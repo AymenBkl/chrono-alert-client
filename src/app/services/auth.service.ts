@@ -82,7 +82,7 @@ export class AuthService {
           if (response && response.status == 200) {
             this.storageService.saveToken(response.msg);
             this.setUserCredentials(response.user)
-            resolve(response.user);
+            resolve(response);
           }
           else {
             resolve(false);

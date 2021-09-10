@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row">
+    <div class="row" *ngIf="!hash || (hash && hash == '')">
         <div class="col-12 col-lg-12">
             <div class="verify-email-title">
                 <p>VERIFY EMAIL</p>
@@ -21,4 +21,8 @@
             </div>
         </div>
     </div>
+    <div class="row" *ngIf="hash && hash != ''">
+        <app-verify-now [hash]="hash"></app-verify-now>
+    </div>
 </div>
+
