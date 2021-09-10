@@ -19,7 +19,8 @@ import { LandingPageService } from './layouts/home-page/services/landing-page.se
 import { DashboardClientComponent } from './layouts/dashboard-client/dashboard-client.component';
 import { InterceptorService, UnauthorizedInterceptor } from './services/interceptor.service';
 import { AuthService } from './services/auth.service';
-import { AuthGuardService, AuthGuardVerifyEmailService } from './services/auth-guard.service';
+import { AuthGuardService, AuthGuardVerifyEmailService, UnLoggedGuardService } from './services/auth-guard.service';
+import { NewPasswordComponent } from './auth/reset-password/new-password/new-password.component';
 
 @NgModule({
   imports: [
@@ -41,12 +42,14 @@ import { AuthGuardService, AuthGuardVerifyEmailService } from './services/auth-g
     HomePageComponent,
     AuthPageComponent,
     DashboardClientComponent,
+    NewPasswordComponent,
   ],
   
   providers: [
     AuthService,
     AuthGuardService,
     AuthGuardVerifyEmailService,
+    UnLoggedGuardService,
     LandingPageService,
     {
       provide: HTTP_INTERCEPTORS,

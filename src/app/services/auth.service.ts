@@ -118,7 +118,7 @@ export class AuthService {
 
   sendVerificationEmail(){
     return new Promise((resolve,reject) => {
-      if (this.user.emailVerified == false){
+      if (this.user && this.user.emailVerified == false){
         this.httpClient.get<AuthService>(environment.baseUrl + 'auth/sendverificationemail')
           .subscribe(result => {
             resolve(result);
@@ -142,9 +142,27 @@ export class AuthService {
         },err => {
           reject(err);
           console.log(err);
-        })
-        
+        }) 
     })
+  }
+
+  sendResetPasswordEmail(email:string){
+    return new Promise((resolve,reject) => {
+      if (!this.isAuthenticated){
+      this.httpClient.get<AuthResponse>(environment.baseUrl + 'auth/sendresetpasswordemail?email=' + email)
+        .subscribe(result => {
+          console.log(result);
+          resolve(result);
+        },err => {
+          reject(err);
+          console.log(err);
+        }) 
+      }
+      else {
+        this.router.navigate(['/dashboard-client']);
+      }
+    })
+  
   }
 
 

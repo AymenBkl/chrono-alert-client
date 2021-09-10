@@ -40,6 +40,43 @@ export class AuthGuardService implements CanActivate {
     }
   }
 }
+
+@Injectable({
+  providedIn: 'root'
+})
+export class UnLoggedGuardService implements CanActivate {
+
+  constructor(private router: Router,
+    private authService: AuthService,
+    private storageService: StorageService) { }
+
+  async canActivate(): Promise<boolean> {
+    const user = this.storageService.getUser();
+    if (user){
+      const newUser:any = await Promise.resolve(this.authService.checkJWT(user.email));
+      console.log(newUser);
+      if (this.authService.isAuthenticated) {
+        if (newUser && newUser != false && newUser.emailVerified == true){
+          this.router.navigate(['/dashboard-client']);
+          return Promise.resolve(false);
+        }
+        else if (newUser && newUser != false && newUser.emailVerified == false){
+          this.router.navigate(['/auth/verify-email']);
+          return Promise.resolve(false);
+        }
+        else {
+          return Promise.resolve(true);
+        }
+      }
+      else {
+        return Promise.resolve(true);
+      }
+    }
+    else {
+      return Promise.resolve(true);
+    }
+  }
+}
 @Injectable({
   providedIn: 'root'
 })
