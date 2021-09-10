@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthResponse } from 'src/app/interfaces/response';
 import { LandingPageService } from 'src/app/layouts/home-page/services/landing-page.service';
 import { AuthService } from 'src/app/services/auth.service';
@@ -21,7 +22,8 @@ export class RegisterComponent implements OnInit {
   hide = true;
   constructor(private formBuilder: FormBuilder,
               private authService:AuthService,
-              private landingPageService: LandingPageService) { }
+              private landingPageService: LandingPageService,
+              private router:Router) { }
 
   ngOnInit(): void {
     this.buildregisterForm();
@@ -52,7 +54,7 @@ export class RegisterComponent implements OnInit {
         .then((result:AuthResponse) => {
           this.submitted = false;
           if (result && result.status == 201){
-
+            this.router.navigate(['/auth/verify-email'])
           }
           else if (result && result.err && result.err.error.err){
             this.validationErrors = {errcode:result.err.error.err.errCode,errmsg:result.err.error.err.msg}

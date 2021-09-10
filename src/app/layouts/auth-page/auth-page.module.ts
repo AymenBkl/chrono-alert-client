@@ -7,6 +7,7 @@ import { LoginComponent } from "src/app/auth/login/login.component";
 import { ResetPasswordComponent } from "src/app/auth/reset-password/reset-password.component";
 import { authRoutes } from "./auth-page.routing";
 import { AuthService } from "src/app/services/auth.service";
+import { VerifyEmailComponent } from "src/app/auth/verify-email/verify-email.component";
 @NgModule({
   imports: [
     CommonModule,
@@ -18,7 +19,8 @@ import { AuthService } from "src/app/services/auth.service";
   declarations: [
     RegisterComponent,
     LoginComponent,
-    ResetPasswordComponent, 
+    ResetPasswordComponent,
+    VerifyEmailComponent 
   ],
   providers:[
     AuthService
