@@ -16,6 +16,7 @@ import { FooterModule } from './components/footer/footer.module';
 import { AuthPageComponent } from './layouts/auth-page/auth-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LandingPageService } from './layouts/home-page/services/landing-page.service';
+import { DashboardClientComponent } from './layouts/dashboard-client/dashboard-client.component';
 
 @NgModule({
   imports: [
@@ -36,6 +37,7 @@ import { LandingPageService } from './layouts/home-page/services/landing-page.se
     AppComponent,
     HomePageComponent,
     AuthPageComponent,
+    DashboardClientComponent,
   ],
   
   providers: [LandingPageService],

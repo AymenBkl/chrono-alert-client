@@ -13,9 +13,9 @@ export class AuthGuardService implements CanActivate {
     private storageService: StorageService) { }
 
   async canActivate(): Promise<boolean> {
-    const admin = this.storageService.getAdmin();
-    if (admin){
-      await Promise.resolve(this.authService.checkJWT(admin.username));
+    const user = this.storageService.getUser();
+    if (user){
+      await Promise.resolve(this.authService.checkJWT(user.username));
       if (this.authService.isAuthenticated) {
         return Promise.resolve(true);
       }

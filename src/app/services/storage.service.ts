@@ -18,21 +18,21 @@ export class StorageService {
 
   removeToken(){
     localStorage.removeItem('token');
-    this.removeAdmin();
+    this.removeUser();
   }
 
   saveUser(user: User){
     localStorage.setItem('user',JSON.stringify(user));
   }
 
-  removeAdmin(){
-    localStorage.removeItem('admin');
+  removeUser(){
+    localStorage.removeItem('user');
   }
 
-  getAdmin(): User{
-    const admin = JSON.parse(localStorage.getItem('admin'));
-    if (admin) {
-      return admin;
+  getUser(): User{
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (user) {
+      return user;
     }
     else {
       return null;
