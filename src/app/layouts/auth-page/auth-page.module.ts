@@ -6,6 +6,7 @@ import { RegisterComponent } from "src/app/auth/register/register.component";
 import { LoginComponent } from "src/app/auth/login/login.component";
 import { ResetPasswordComponent } from "src/app/auth/reset-password/reset-password.component";
 import { authRoutes } from "./auth-page.routing";
+import { AuthService } from "src/app/services/auth.service";
 @NgModule({
   imports: [
     CommonModule,
@@ -18,6 +19,9 @@ import { authRoutes } from "./auth-page.routing";
     RegisterComponent,
     LoginComponent,
     ResetPasswordComponent, 
+  ],
+  providers:[
+    AuthService
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
