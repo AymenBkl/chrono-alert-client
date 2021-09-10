@@ -17,12 +17,6 @@
                         <small id="lastNameError" class="form-text text-danger" *ngIf="formErrors && formErrors.lastName">{{formErrors.lastName}}</small>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control input-register" id="inputuserName"
-                            aria-describedby="userNameError" placeholder="UserName" formControlName="username"  [ngClass]="{'error-border':formErrors && formErrors.username}">
-                        <small id="userNameError" class="form-text text-danger" *ngIf="formErrors && formErrors.username">{{formErrors.username}}</small>
-                        <small class="form-text text-danger" *ngIf="validationErrors && validationErrors.errcode == 11001">{{validationErrors.errmsg}}</small>
-                    </div>
-                    <div class="form-group">
                         <input type="email" class="form-control input-register" id="inputEmail"
                             aria-describedby="emailError" placeholder="E-mail Address"  formControlName="email"  [ngClass]="{'error-border':formErrors && formErrors.email}">
                         <small id="emailError" class="form-text text-danger" *ngIf="(formErrors && formErrors.email)">{{formErrors.email}}</small>

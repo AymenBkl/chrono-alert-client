@@ -14,9 +14,10 @@ import { HomePageComponent } from './layouts/home-page/home-page.component';
 import { NavbarModule } from 'src/app/components/nav/nav.module';
 import { FooterModule } from './components/footer/footer.module';
 import { AuthPageComponent } from './layouts/auth-page/auth-page.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LandingPageService } from './layouts/home-page/services/landing-page.service';
 import { DashboardClientComponent } from './layouts/dashboard-client/dashboard-client.component';
+import { InterceptorService, UnauthorizedInterceptor } from './services/interceptor.service';
 
 @NgModule({
   imports: [
@@ -40,7 +41,20 @@ import { DashboardClientComponent } from './layouts/dashboard-client/dashboard-c
     DashboardClientComponent,
   ],
   
-  providers: [LandingPageService],
+  providers: [
+    LandingPageService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorService,
+      multi: true,
+
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: UnauthorizedInterceptor,
+      multi: true
+    },
+  ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 

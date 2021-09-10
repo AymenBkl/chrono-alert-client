@@ -19,7 +19,7 @@ import { HomeClientComponent } from "src/app/dashboard-client/home-client/home-c
   ],
   providers:[
     AuthService,
-    AuthGuardService
+    AuthGuardService,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

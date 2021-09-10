@@ -4,6 +4,7 @@ export interface User {
     lastName:string;
     imageURL:string;
     username:string;
+    email:string;
     address:string;
     city:string;
     country:string;

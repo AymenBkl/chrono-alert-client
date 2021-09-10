@@ -15,9 +15,20 @@ export class AuthGuardService implements CanActivate {
   async canActivate(): Promise<boolean> {
     const user = this.storageService.getUser();
     if (user){
-      await Promise.resolve(this.authService.checkJWT(user.username));
+      const newUser:any = await Promise.resolve(this.authService.checkJWT(user.email));
+      console.log(newUser);
       if (this.authService.isAuthenticated) {
-        return Promise.resolve(true);
+        if (newUser && newUser != false && newUser.emailVerified == true){
+          return Promise.resolve(true);
+        }
+        else if (newUser && newUser != false && newUser.emailVerified == false){
+          this.router.navigate(['/auth/verify-email']);
+          return Promise.resolve(false);
+        }
+        else {
+          this.router.navigate(['/auth']);
+          return Promise.resolve(false);
+        }
       }
       else {
         this.router.navigate(['/auth']);

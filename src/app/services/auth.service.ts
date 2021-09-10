@@ -20,7 +20,7 @@ export class AuthService {
 
 
 
-  checkJWT(username: string) {
+  checkJWT(email: string) {
     return new Promise((resolve, reject) => {
       const token = this.storageService.getToken();
       if (token) {
@@ -29,9 +29,9 @@ export class AuthService {
           .subscribe(response => {
             console.log(response);
             if (response.token === 'TOKEN VALID' && response.status === 200) {
-              if (response.user.username == username) {
+              if (response.user.email == email) {
                 this.setUserCredentials(response.user);
-                resolve(true);
+                resolve(response.user);
               }
               else {
                 this.destroyUserCredentials();
@@ -76,7 +76,7 @@ export class AuthService {
   login(password: string, username: string) {
     return new Promise((resolve, reject) => {
       this.destroyLoginSub();
-      this.loginSubscription = this.httpClient.post<AuthResponse>(environment.baseUrl + 'auth/login', { password: password, username: username })
+      this.loginSubscription = this.httpClient.post<AuthResponse>(environment.baseUrl + 'auth/login', { password: password, email: username })
         .subscribe(response => {
           console.log(response);
           if (response && response.status == 200) {

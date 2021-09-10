@@ -36,7 +36,6 @@ export class RegisterComponent implements OnInit {
       confirmPassword:[{value:'',disabled:this.submitted}, [Validators.required, Validators.minLength(6)]],
       firstName : [{value:'',disabled:this.submitted}, [Validators.required, Validators.minLength(3),Validators.maxLength(20)]],
       lastName : [{value:'',disabled:this.submitted}, [Validators.required, Validators.minLength(3),Validators.maxLength(20)]],
-      username : [{value:'',disabled:this.submitted}, [Validators.required, Validators.minLength(5),Validators.maxLength(20)]],
     },
     {
       validators : MustMatch('password', 'confirmPassword')
