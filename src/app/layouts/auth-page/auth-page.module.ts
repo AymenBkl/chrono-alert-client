@@ -11,6 +11,7 @@ import { VerifyEmailComponent } from "src/app/auth/verify-email/verify-email.com
 import { NgxSpinnerModule } from "ngx-spinner";
 import { VerifyNowComponent } from "src/app/auth/verify-email/verify-now/verify-now.component";
 import { SendSuccessComponent } from "src/app/auth/verify-email/send-success/send-success.component";
+import { LogoutComponent } from "src/app/auth/logout/logout.component";
 @NgModule({
   imports: [
     CommonModule,
@@ -25,7 +26,8 @@ import { SendSuccessComponent } from "src/app/auth/verify-email/send-success/sen
     ResetPasswordComponent,
     VerifyEmailComponent ,
     VerifyNowComponent,
-    SendSuccessComponent
+    SendSuccessComponent,
+    LogoutComponent
   ],
   providers:[
   ],

@@ -8,25 +8,28 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarClient" aria-controls="navBarClient" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navBarClient">
+      <div class="collapse navbar-collapse" id="navBarClient" >
         <ul class="navbar-nav list-links">
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="!isLoggedIn">
             <a class="nav-link active" aria-current="page" [routerLink]="['/home']" [routerLinkActive]="['is-active']">Home</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="!isLoggedIn">
             <a class="nav-link" [routerLink]="['/aboutus']" [routerLinkActive]="['is-active']">About Us</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="!isLoggedIn">
             <a class="nav-link active" aria-current="page"  [routerLink]="['/affiliates']" [routerLinkActive]="['is-active']">Affiliates</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="!isLoggedIn">
             <a class="nav-link" [routerLink]="['/faq']" [routerLinkActive]="['is-active']">FAQ</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="!isLoggedIn">
             <a class="nav-link" [routerLink]="['/contactus']" [routerLinkActive]="['is-active']">Contact Us</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="!isLoggedIn">
             <a class="nav-link" [routerLink]="['/auth/login']" [routerLinkActive]="['is-active']">Log In</a>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn">
+            <a class="nav-link" [routerLink]="['/auth/logout']" [routerLinkActive]="['is-active']">Log Out</a>
           </li>
           
         </ul>
