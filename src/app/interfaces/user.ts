@@ -10,6 +10,8 @@ export interface User {
     postalCode:string;
     description:string;
     role:string;
+    status:string;
+    emailVerified:boolean;
     createdAt:string;
   }
   

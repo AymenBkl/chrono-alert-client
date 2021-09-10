@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthResponse } from 'src/app/interfaces/response';
+import { LandingPageService } from 'src/app/layouts/home-page/services/landing-page.service';
+import { AuthService } from 'src/app/services/auth.service';
 import { MustMatch } from './must-matchValdiator';
 import { onValueChanged } from './valueChanges';
 
@@ -16,7 +19,9 @@ export class RegisterComponent implements OnInit {
   submitted = false;
   validationErrors: {errmsg , errcode};
   hide = true;
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,
+              private authService:AuthService,
+              private landingPageService: LandingPageService) { }
 
   ngOnInit(): void {
     this.buildregisterForm();
@@ -30,11 +35,6 @@ export class RegisterComponent implements OnInit {
       firstName : [{value:'',disabled:this.submitted}, [Validators.required, Validators.minLength(3),Validators.maxLength(20)]],
       lastName : [{value:'',disabled:this.submitted}, [Validators.required, Validators.minLength(3),Validators.maxLength(20)]],
       username : [{value:'',disabled:this.submitted}, [Validators.required, Validators.minLength(5),Validators.maxLength(20)]],
-      city : [{value:'',disabled:this.submitted}, [Validators.required, Validators.minLength(4),Validators.maxLength(20)]],
-      country : [{value:'',disabled:this.submitted}, [Validators.required, Validators.minLength(2),Validators.maxLength(20)]],
-      address : [{value:'',disabled:this.submitted}, [Validators.required, Validators.minLength(6),Validators.maxLength(20)]],
-      postalCode: [{value:'',disabled:this.submitted}, [Validators.required, Validators.minLength(5),Validators.maxLength(20)]],
-
     },
     {
       validators : MustMatch('password', 'confirmPassword')
@@ -43,6 +43,35 @@ export class RegisterComponent implements OnInit {
       .subscribe(user => {
         this.formErrors = onValueChanged(user, this.registerForm);
       });
+  }
+
+  register(){
+    if (this.registerForm.valid){
+      this.submitted = true;
+      this.authService.registerUser(this.registerForm.value)
+        .then((result:AuthResponse) => {
+          this.submitted = false;
+          if (result && result.status == 201){
+
+          }
+          else if (result && result.err && result.err.error.err){
+            this.validationErrors = {errcode:result.err.error.err.errCode,errmsg:result.err.error.err.msg}
+          }
+          else {
+            this.landingPageService.showErrorMessage();
+          }
+        })
+        .catch((err) => {
+          this.submitted = false;
+          if (err.error.err.errCode == 11000 || err.error.err.errCode == 11001){
+            this.validationErrors = {errcode:err.error.err.errCode,errmsg:err.error.err.msg};
+          }
+          else {
+            this.landingPageService.showErrorMessage();
+          }
+          console.log(this.validationErrors)
+        })
+    }
   }
 
   showHidePassword(show:boolean) {

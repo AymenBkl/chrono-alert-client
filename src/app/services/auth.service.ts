@@ -95,8 +95,27 @@ export class AuthService {
     })
   }
 
+  registerUser(user:User){
+    return new Promise((resolve,reject) => {
+      this.httpClient.post<AuthResponse>(environment.baseUrl + 'auth/register',user)
+        .subscribe((result) => {
+          console.log(result);
+          if (result && result.status == 201){
+            this.storageService.saveToken(result.msg);
+            this.setUserCredentials(result.user);
+            resolve(result);
+          }
+          else {
+            resolve(result);
+          }
+        },err => {
+          reject(err)
+        })
+    })
+  }
 
-  updateAdmin(user: string, updateUser: User) {
+
+  updateUser(user: string, updateUser: User) {
     return new Promise((resolve, reject) => {
       this.destroyUserSub();
       this.updateUserSub = this.httpClient.post<AuthResponse>(environment.baseUrl + 'auth/updateuser', { userId: user, updateUser: updateUser })
