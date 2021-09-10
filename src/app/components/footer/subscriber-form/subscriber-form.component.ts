@@ -53,7 +53,7 @@ export class SubscriberFormComponent implements OnInit {
         })
         .catch((err:LandingPageResponse) => {
           this.submitted = false;
-          if (err.error.err && err.error.err.code == 11000 && err.error.err.keyPattern.email){
+          if (err.error.err.errCode == 11000){
             this.validationErrors = {errcode:0,errmsg:'Email Already Exists'};
           }
           else {
