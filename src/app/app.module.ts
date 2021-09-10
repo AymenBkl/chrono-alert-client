@@ -18,6 +18,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LandingPageService } from './layouts/home-page/services/landing-page.service';
 import { DashboardClientComponent } from './layouts/dashboard-client/dashboard-client.component';
 import { InterceptorService, UnauthorizedInterceptor } from './services/interceptor.service';
+import { AuthService } from './services/auth.service';
+import { AuthGuardService, AuthGuardVerifyEmailService } from './services/auth-guard.service';
 
 @NgModule({
   imports: [
@@ -42,6 +44,9 @@ import { InterceptorService, UnauthorizedInterceptor } from './services/intercep
   ],
   
   providers: [
+    AuthService,
+    AuthGuardService,
+    AuthGuardVerifyEmailService,
     LandingPageService,
     {
       provide: HTTP_INTERCEPTORS,

@@ -26,7 +26,6 @@ import { VerifyNowComponent } from "src/app/auth/verify-email/verify-now/verify-
     VerifyNowComponent
   ],
   providers:[
-    AuthService
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

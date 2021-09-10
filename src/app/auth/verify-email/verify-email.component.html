@@ -8,11 +8,19 @@
                 <p class="verify-email-big-text">
                     Please Verify Your Email
                 </p>
-                <p class="verify-email-small-text">
+                <p class="verify-email-small-text" *ngIf="!emailSent">
                     In order to access your dashboard you need to verify your email first
                 </p>
-                <div class="verify-email-button-div">
-                    <button type="submit" class="btn"> RESEND VERIFICATION EMAIL </button>
+                <p class="verify-email-small-text" *ngIf="emailSent">
+                    We sent an email please check your InBox. In case didn't receive any email try again.
+                </p>
+                <div class="verify-email-button-div" [disabled]="submitted" (click)="sendEmail()">
+                    <button type="submit" class="btn"> 
+                        <span *ngIf="!submitted">RESEND VERIFICATION EMAIL </span>
+                          <div class="spinner-border" role="status" *ngIf="submitted">
+                            <span class="visually-hidden">Loading...</span>
+                          </div> 
+                    </button>
                 </div>
             </div>
         </div>

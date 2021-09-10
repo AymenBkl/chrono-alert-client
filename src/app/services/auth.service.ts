@@ -5,6 +5,7 @@ import { environment } from '../../environments/environment';
 import { Subscription } from 'rxjs';
 import { AuthResponse } from '../interfaces/response';
 import { StorageService } from './storage.service';
+import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
@@ -16,7 +17,8 @@ export class AuthService {
   loginSubscription: Subscription;
   postImageSub: Subscription;
   constructor(private httpClient: HttpClient,
-    private storageService: StorageService) { }
+    private storageService: StorageService,
+    private router: Router) { }
 
 
 
@@ -114,6 +116,26 @@ export class AuthService {
     })
   }
 
+  sendVerificationEmail(){
+    return new Promise((resolve,reject) => {
+      if (this.user.emailVerified == false){
+        this.httpClient.get<AuthService>(environment.baseUrl + 'auth/sendverificationemail')
+          .subscribe(result => {
+            console.log(result);
+            resolve(result);
+          },err => {
+
+            console.log(err);
+            reject(err);
+          })
+      }
+      else {
+        this.router.navigate(['/dashboard-client']);
+      }
+    })
+    
+  }
+
 
   updateUser(user: string, updateUser: User) {
     return new Promise((resolve, reject) => {
@@ -183,6 +205,7 @@ export class AuthService {
   setUserCredentials(user: User) {
     this.isAuthenticated = user.role === 'user';
     this.user = user;
+    console.log(this.user);
     this.storageService.saveUser(user);
   }
 

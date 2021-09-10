@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-verify-email',
@@ -9,8 +10,10 @@ import { ActivatedRoute } from '@angular/router';
 export class VerifyEmailComponent implements OnInit {
 
   hash:string = '';
+  emailSent:boolean = false;
+  submitted:boolean = false;
   constructor(private activatedRoute: ActivatedRoute,
-              ) { }
+              private authService: AuthService) { }
 
   ngOnInit(): void {
     this.getHash();
@@ -24,5 +27,20 @@ export class VerifyEmailComponent implements OnInit {
        
       })
   }
+
+
+  sendEmail(){
+    this.emailSent = true;
+    this.submitted = true;
+    this.authService.sendVerificationEmail()
+      .then((result) => {
+        this.submitted = false;
+      })
+      .catch(err => {
+        this.submitted = false;
+      })
+  }
+
+
 
 }
