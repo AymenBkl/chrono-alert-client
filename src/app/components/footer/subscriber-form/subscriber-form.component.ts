@@ -52,10 +52,14 @@ export class SubscriberFormComponent implements OnInit {
           }
         })
         .catch((err:LandingPageResponse) => {
-          console.log(err);
-          this.validationErrors = {errcode:0,errmsg:err.msg};
           this.submitted = false;
-          this.landingPageService.showErrorMessage();
+          if (err.error.err && err.error.err.code == 11000 && err.error.err.keyPattern.email){
+            this.validationErrors = {errcode:0,errmsg:'Email Already Exists'};
+          }
+          else {
+            this.validationErrors = {errcode:0,errmsg:err.error.msg};
+            this.landingPageService.showErrorMessage();
+          }
         })
     }
     
