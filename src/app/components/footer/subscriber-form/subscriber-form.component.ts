@@ -41,7 +41,7 @@ export class SubscriberFormComponent implements OnInit {
       this.landingPageService.addSubscriber(this.subscriberForm.value.email)
         .then((result: LandingPageResponse) => {
           this.submitted = false;
-          if (result && result.status == 200){
+          if (result && result.status == 201){
             this.showForm = false;
             this.submitSentSubscriber();
             this.openSuccessModal();

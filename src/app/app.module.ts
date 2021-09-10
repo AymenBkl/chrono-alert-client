@@ -15,6 +15,7 @@ import { NavbarModule } from 'src/app/components/nav/nav.module';
 import { FooterModule } from './components/footer/footer.module';
 import { AuthPageComponent } from './layouts/auth-page/auth-page.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LandingPageService } from './layouts/home-page/services/landing-page.service';
 
 @NgModule({
   imports: [
@@ -37,7 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
     AuthPageComponent,
   ],
   
-  providers: [],
+  providers: [LandingPageService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 

@@ -42,10 +42,12 @@ export class ContactusformComponent implements OnInit {
 
   sendContactUs(){
     if (this.checkValidSentContact()){
+      this.submitted = true;
       this.landingPageService.addContact(this.contactUsForm.value)
         .then((result: LandingPageResponse) => {
-          this.submitted = true;
-          if (result && result.status == 200){
+          console.log(result);
+          this.submitted = false;
+          if (result && result.status == 201){
             this.showForm = false;
             this.openSuccessModal();
             this.submitSentContact();
@@ -56,8 +58,9 @@ export class ContactusformComponent implements OnInit {
           }
         })
         .catch((err:LandingPageResponse) => {
+          console.log(err);
           this.validationErrors = {errcode:0,errmsg:err.msg};
-          this.submitted = true;
+          this.submitted = false;
           this.landingPageService.showErrorMessage();
         })
     }

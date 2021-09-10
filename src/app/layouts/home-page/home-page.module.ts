@@ -59,7 +59,6 @@ import { ErrorModalLandingPageComponent } from "src/app/components/error-modal-l
     SendsuccessComponent,
   ],
   providers:[
-    LandingPageService
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
