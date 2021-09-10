@@ -52,6 +52,12 @@ export class NewPasswordComponent implements OnInit {
           }
         })
         .catch(err => {
+          if (err && err.error.err == "HASH DOSN'T EXIST"){
+            this.validationErrors = {errcode:15001,errmsg:"HASH DOSN'T EXIST"};
+          }
+          else {
+            
+          }
           this.submitted = false;
         })
     }

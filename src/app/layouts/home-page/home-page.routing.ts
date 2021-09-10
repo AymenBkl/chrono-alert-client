@@ -4,12 +4,13 @@ import { AffiliatesComponent } from "src/app/pages/affiliates/affiliates.compone
 import { ContactusComponent } from "src/app/pages/contactus/contactus.component";
 import { FaqComponent } from "src/app/pages/faq/faq.component";
 import { HomeComponent } from "src/app/pages/home/home.component";
+import { UnLoggedGuardService as UnLogged } from '../../services/auth-guard.service';
 
 export const clientRoutes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
-    { path: 'home', component:HomeComponent },
-    { path: 'affiliates', component:AffiliatesComponent },
-    { path: 'aboutus', component:AboutusComponent },
-    { path: 'faq', component:FaqComponent },
-    { path: 'contactus', component:ContactusComponent},
+    { path: 'home', component:HomeComponent,canActivate:[UnLogged] },
+    { path: 'affiliates', component:AffiliatesComponent,canActivate:[UnLogged]  },
+    { path: 'aboutus', component:AboutusComponent,canActivate:[UnLogged]  },
+    { path: 'faq', component:FaqComponent,canActivate:[UnLogged]  },
+    { path: 'contactus', component:ContactusComponent,canActivate:[UnLogged] },
   ];

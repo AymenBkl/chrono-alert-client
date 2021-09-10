@@ -1,5 +1,6 @@
 import { Routes } from "@angular/router";
 import { LoginComponent } from "src/app/auth/login/login.component";
+import { LogoutComponent } from "src/app/auth/logout/logout.component";
 import { RegisterComponent } from "src/app/auth/register/register.component";
 import { ResetPasswordComponent } from "src/app/auth/reset-password/reset-password.component";
 import { VerifyEmailComponent } from "src/app/auth/verify-email/verify-email.component";
@@ -11,5 +12,6 @@ export const authRoutes: Routes = [
     { path: 'login', component:LoginComponent,canActivate:[UnLogged] },
     { path: 'register', component:RegisterComponent,canActivate:[UnLogged] },
     { path: 'reset-password', component:ResetPasswordComponent,canActivate:[UnLogged] },
+    { path: 'logout', component:LogoutComponent, },
     { path: 'verify-email', component:VerifyEmailComponent,canActivate:[AuthGuardVerifyEmail] },
   ];

@@ -20,11 +20,12 @@ export class NavComponent implements OnInit,AfterViewInit {
               private router:Router) { }
 
   ngOnInit() {
+    this.routerChanges();
+
   }
 
   ngAfterViewInit(): void {
     this.landingPageService.initButtons(this.errorModalButton,this.errorCloseModalButton);
-    this.routerChanges();
     console.log('called');
 
   }
@@ -32,21 +33,18 @@ export class NavComponent implements OnInit,AfterViewInit {
 
   routerChanges(){
     if (!this.subscriberRouter){
+      this.checkUser();
       this.router.events.subscribe((val) => {
         if (val instanceof NavigationEnd){
           this.checkUser();
-          
+          this.subscriberRouter = true;
+
         }
     });
     }
-    else {
-      this.checkUser();
-    }
-    
   }
 
   checkUser(){
-    this.subscriberRouter = true;
     this.isLoggedIn = this.authService.isAuthenticated;
     console.log(this.isLoggedIn,this.authService.isAuthenticated);
   }
