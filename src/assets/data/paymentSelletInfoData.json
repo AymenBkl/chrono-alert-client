@@ -1,0 +1,36 @@
+{
+    "listingType": [
+        {
+            "id": "Auction",
+            "type": "listingType",
+            "name": "Auction",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "BuyItNow",
+            "type": "listingType",
+            "name": "Buy now",
+            "checked": false,
+            "show": true
+        }
+    ],
+    "checkoutAvailable": [
+        {
+            "id": "yes",
+            "type": "checkoutAvailable",
+            "name": "Only display listings with processing and payment via Chrono24",
+            "checked": false,
+            "show": true
+        }
+    ],
+    "onlyDealerAds": [
+        {
+            "id": "true",
+            "type": "onlyDealerAds",
+            "name": "Only show listings from commercial dealers",
+            "checked": false,
+            "show": true
+        }
+    ]
+}

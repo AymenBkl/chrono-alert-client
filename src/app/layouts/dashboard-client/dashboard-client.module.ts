@@ -6,16 +6,24 @@ import { AuthService } from "src/app/services/auth.service";
 import { AuthGuardService, AuthGuardVerifyEmailService } from "src/app/services/auth-guard.service";
 import { clientDashboardRoutes } from "./dashboard-client.routing";
 import { HomeClientComponent } from "src/app/dashboard-client/home-client/home-client.component";
+import { FilterUrlComponent } from "src/app/dashboard-client/home-client/filter-url/filter-url.component";
+import { KeysCasePipe, KeysPipe } from "src/app/dashboard-client/pipes/keys.pipe";
+import { SearchFilterPipe } from "src/app/dashboard-client/pipes/search-filter.pipe";
+import { NgxSliderModule } from "@angular-slider/ngx-slider";
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(clientDashboardRoutes),
     FormsModule,
     ReactiveFormsModule,
-    
+    NgxSliderModule
   ],
   declarations: [
-      HomeClientComponent
+      HomeClientComponent,
+      FilterUrlComponent,
+      KeysPipe,
+      SearchFilterPipe,
+      KeysCasePipe
   ],
   providers:[
     

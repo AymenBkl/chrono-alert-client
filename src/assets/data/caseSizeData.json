@@ -1,0 +1,3760 @@
+{
+    "caseDiameter": [
+        {
+            "type": "caseDiameter",
+            "name": "00",
+            "id": "00",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "08",
+            "id": "08",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "10",
+            "id": "10",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "11",
+            "id": "11",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "12",
+            "id": "12",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "13",
+            "id": "13",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "14",
+            "id": "14",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "15",
+            "id": "15",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "16",
+            "id": "16",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "17",
+            "id": "17",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "18",
+            "id": "18",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "19",
+            "id": "19",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "20",
+            "id": "20",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "21",
+            "id": "21",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "22",
+            "id": "22",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "23",
+            "id": "23",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "24",
+            "id": "24",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "25",
+            "id": "25",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "26",
+            "id": "26",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "27",
+            "id": "27",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "28",
+            "id": "28",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "29",
+            "id": "29",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "30",
+            "id": "30",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "31",
+            "id": "31",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "32",
+            "id": "32",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "33",
+            "id": "33",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "34",
+            "id": "34",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "35",
+            "id": "35",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "36",
+            "id": "36",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "37",
+            "id": "37",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "38",
+            "id": "38",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "39",
+            "id": "39",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "40",
+            "id": "40",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "41",
+            "id": "41",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "42",
+            "id": "42",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "43",
+            "id": "43",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "44",
+            "id": "44",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "45",
+            "id": "45",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "46",
+            "id": "46",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "47",
+            "id": "47",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "48",
+            "id": "48",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "49",
+            "id": "49",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "50",
+            "id": "50",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "51",
+            "id": "51",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "52",
+            "id": "52",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "53",
+            "id": "53",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "54",
+            "id": "54",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "55",
+            "id": "55",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "56",
+            "id": "56",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "57",
+            "id": "57",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "58",
+            "id": "58",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "59",
+            "id": "59",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "60",
+            "id": "60",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "61",
+            "id": "61",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "62",
+            "id": "62",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "63",
+            "id": "63",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "64",
+            "id": "64",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "65",
+            "id": "65",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "66",
+            "id": "66",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "67",
+            "id": "67",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "68",
+            "id": "68",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "69",
+            "id": "69",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "70",
+            "id": "70",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "71",
+            "id": "71",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "72",
+            "id": "72",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "73",
+            "id": "73",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "74",
+            "id": "74",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "75",
+            "id": "75",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "76",
+            "id": "76",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "77",
+            "id": "77",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "78",
+            "id": "78",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "79",
+            "id": "79",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "80",
+            "id": "80",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "81",
+            "id": "81",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "82",
+            "id": "82",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "83",
+            "id": "83",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "84",
+            "id": "84",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "85",
+            "id": "85",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "86",
+            "id": "86",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "87",
+            "id": "87",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "88",
+            "id": "88",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "89",
+            "id": "89",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "90",
+            "id": "90",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "91",
+            "id": "91",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "92",
+            "id": "92",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "93",
+            "id": "93",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "94",
+            "id": "94",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "95",
+            "id": "95",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "96",
+            "id": "96",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "97",
+            "id": "97",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "98",
+            "id": "98",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "99",
+            "id": "99",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "100",
+            "id": "100",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "101",
+            "id": "101",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "102",
+            "id": "102",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "103",
+            "id": "103",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "104",
+            "id": "104",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "105",
+            "id": "105",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "106",
+            "id": "106",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "107",
+            "id": "107",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "108",
+            "id": "108",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "109",
+            "id": "109",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "110",
+            "id": "110",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "111",
+            "id": "111",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "112",
+            "id": "112",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "113",
+            "id": "113",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "114",
+            "id": "114",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "115",
+            "id": "115",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "116",
+            "id": "116",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "117",
+            "id": "117",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "118",
+            "id": "118",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "119",
+            "id": "119",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "120",
+            "id": "120",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "121",
+            "id": "121",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "122",
+            "id": "122",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "123",
+            "id": "123",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "124",
+            "id": "124",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "125",
+            "id": "125",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "126",
+            "id": "126",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "127",
+            "id": "127",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "128",
+            "id": "128",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "129",
+            "id": "129",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "130",
+            "id": "130",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "131",
+            "id": "131",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "132",
+            "id": "132",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "133",
+            "id": "133",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "134",
+            "id": "134",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "135",
+            "id": "135",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "136",
+            "id": "136",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "138",
+            "id": "138",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "139",
+            "id": "139",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "140",
+            "id": "140",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "141",
+            "id": "141",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "142",
+            "id": "142",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "143",
+            "id": "143",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "145",
+            "id": "145",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "146",
+            "id": "146",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "147",
+            "id": "147",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "148",
+            "id": "148",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "150",
+            "id": "150",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "151",
+            "id": "151",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "152",
+            "id": "152",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "153",
+            "id": "153",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "155",
+            "id": "155",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "156",
+            "id": "156",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "157",
+            "id": "157",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "158",
+            "id": "158",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "160",
+            "id": "160",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "162",
+            "id": "162",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "163",
+            "id": "163",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "164",
+            "id": "164",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "165",
+            "id": "165",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "167",
+            "id": "167",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "168",
+            "id": "168",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "169",
+            "id": "169",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "170",
+            "id": "170",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "172",
+            "id": "172",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "173",
+            "id": "173",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "174",
+            "id": "174",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "175",
+            "id": "175",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "176",
+            "id": "176",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "177",
+            "id": "177",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "178",
+            "id": "178",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "180",
+            "id": "180",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "181",
+            "id": "181",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "183",
+            "id": "183",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "184",
+            "id": "184",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "185",
+            "id": "185",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "187",
+            "id": "187",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "189",
+            "id": "189",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "190",
+            "id": "190",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "192",
+            "id": "192",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "195",
+            "id": "195",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "197",
+            "id": "197",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "199",
+            "id": "199",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "200",
+            "id": "200",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "202",
+            "id": "202",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "204",
+            "id": "204",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "205",
+            "id": "205",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "210",
+            "id": "210",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "211",
+            "id": "211",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "213",
+            "id": "213",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "215",
+            "id": "215",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "220",
+            "id": "220",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "222",
+            "id": "222",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "223",
+            "id": "223",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "225",
+            "id": "225",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "230",
+            "id": "230",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "233",
+            "id": "233",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "235",
+            "id": "235",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "240",
+            "id": "240",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "243",
+            "id": "243",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "244",
+            "id": "244",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "245",
+            "id": "245",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "246",
+            "id": "246",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "248",
+            "id": "248",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "250",
+            "id": "250",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "251",
+            "id": "251",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "252",
+            "id": "252",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "254",
+            "id": "254",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "255",
+            "id": "255",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "257",
+            "id": "257",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "260",
+            "id": "260",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "265",
+            "id": "265",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "269",
+            "id": "269",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "270",
+            "id": "270",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "275",
+            "id": "275",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "278",
+            "id": "278",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "280",
+            "id": "280",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "285",
+            "id": "285",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "292",
+            "id": "292",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "293",
+            "id": "293",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "296",
+            "id": "296",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "300",
+            "id": "300",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "302",
+            "id": "302",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "303",
+            "id": "303",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "304",
+            "id": "304",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "305",
+            "id": "305",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "310",
+            "id": "310",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "312",
+            "id": "312",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "315",
+            "id": "315",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "320",
+            "id": "320",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "322",
+            "id": "322",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "323",
+            "id": "323",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "324",
+            "id": "324",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "325",
+            "id": "325",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "328",
+            "id": "328",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "330",
+            "id": "330",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "335",
+            "id": "335",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "340",
+            "id": "340",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "342",
+            "id": "342",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "345",
+            "id": "345",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "348",
+            "id": "348",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "350",
+            "id": "350",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "355",
+            "id": "355",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "360",
+            "id": "360",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "363",
+            "id": "363",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "365",
+            "id": "365",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "366",
+            "id": "366",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "370",
+            "id": "370",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "374",
+            "id": "374",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "375",
+            "id": "375",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "380",
+            "id": "380",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "381",
+            "id": "381",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "385",
+            "id": "385",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "390",
+            "id": "390",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "392",
+            "id": "392",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "394",
+            "id": "394",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "395",
+            "id": "395",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "396",
+            "id": "396",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "400",
+            "id": "400",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "403",
+            "id": "403",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "404",
+            "id": "404",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "405",
+            "id": "405",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "408",
+            "id": "408",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "409",
+            "id": "409",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "410",
+            "id": "410",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "411",
+            "id": "411",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "413",
+            "id": "413",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "414",
+            "id": "414",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "420",
+            "id": "420",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "422",
+            "id": "422",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "423",
+            "id": "423",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "424",
+            "id": "424",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "425",
+            "id": "425",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "432",
+            "id": "432",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "433",
+            "id": "433",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "435",
+            "id": "435",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "440",
+            "id": "440",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "443",
+            "id": "443",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "444",
+            "id": "444",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "445",
+            "id": "445",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "450",
+            "id": "450",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "454",
+            "id": "454",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "455",
+            "id": "455",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "456",
+            "id": "456",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "465",
+            "id": "465",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "467",
+            "id": "467",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "480",
+            "id": "480",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "484",
+            "id": "484",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "500",
+            "id": "500",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "504",
+            "id": "504",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "510",
+            "id": "510",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "514",
+            "id": "514",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "516",
+            "id": "516",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "520",
+            "id": "520",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "524",
+            "id": "524",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "543",
+            "id": "543",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "544",
+            "id": "544",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "546",
+            "id": "546",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "550",
+            "id": "550",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "554",
+            "id": "554",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "555",
+            "id": "555",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "595",
+            "id": "595",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "600",
+            "id": "600",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "610",
+            "id": "610",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "615",
+            "id": "615",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "620",
+            "id": "620",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "625",
+            "id": "625",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "626",
+            "id": "626",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "649",
+            "id": "649",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "650",
+            "id": "650",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "655",
+            "id": "655",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "665",
+            "id": "665",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "680",
+            "id": "680",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "700",
+            "id": "700",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "720",
+            "id": "720",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "850",
+            "id": "850",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "950",
+            "id": "950",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "caseDiameter",
+            "name": "NODATA",
+            "id": "NODATA",
+            "show": true,
+            "checked": false
+        }
+    ],
+    "lugWidth": [
+        {
+            "type": "lugWidth",
+            "name": "1",
+            "id": "1",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "2",
+            "id": "2",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "3",
+            "id": "3",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "4",
+            "id": "4",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "5",
+            "id": "5",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "6",
+            "id": "6",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "7",
+            "id": "7",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "8",
+            "id": "8",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "9",
+            "id": "9",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "10",
+            "id": "10",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "11",
+            "id": "11",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "12",
+            "id": "12",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "13",
+            "id": "13",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "14",
+            "id": "14",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "15",
+            "id": "15",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "16",
+            "id": "16",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "17",
+            "id": "17",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "18",
+            "id": "18",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "19",
+            "id": "19",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "20",
+            "id": "20",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "21",
+            "id": "21",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "22",
+            "id": "22",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "23",
+            "id": "23",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "24",
+            "id": "24",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "25",
+            "id": "25",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "26",
+            "id": "26",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "27",
+            "id": "27",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "28",
+            "id": "28",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "29",
+            "id": "29",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "30",
+            "id": "30",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "31",
+            "id": "31",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "32",
+            "id": "32",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "33",
+            "id": "33",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "34",
+            "id": "34",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "35",
+            "id": "35",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "36",
+            "id": "36",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "37",
+            "id": "37",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "38",
+            "id": "38",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "39",
+            "id": "39",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "40",
+            "id": "40",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "41",
+            "id": "41",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "42",
+            "id": "42",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "43",
+            "id": "43",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "44",
+            "id": "44",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "45",
+            "id": "45",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "46",
+            "id": "46",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "47",
+            "id": "47",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "48",
+            "id": "48",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "49",
+            "id": "49",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "50",
+            "id": "50",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "51",
+            "id": "51",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "52",
+            "id": "52",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "55",
+            "id": "55",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "59",
+            "id": "59",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "60",
+            "id": "60",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "65",
+            "id": "65",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "75",
+            "id": "75",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "85",
+            "id": "85",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "92",
+            "id": "92",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "100",
+            "id": "100",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "105",
+            "id": "105",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "106",
+            "id": "106",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "115",
+            "id": "115",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "119",
+            "id": "119",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "120",
+            "id": "120",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "123",
+            "id": "123",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "124",
+            "id": "124",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "125",
+            "id": "125",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "128",
+            "id": "128",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "133",
+            "id": "133",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "135",
+            "id": "135",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "138",
+            "id": "138",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "140",
+            "id": "140",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "141",
+            "id": "141",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "145",
+            "id": "145",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "150",
+            "id": "150",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "155",
+            "id": "155",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "157",
+            "id": "157",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "159",
+            "id": "159",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "160",
+            "id": "160",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "162",
+            "id": "162",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "163",
+            "id": "163",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "165",
+            "id": "165",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "170",
+            "id": "170",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "174",
+            "id": "174",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "175",
+            "id": "175",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "176",
+            "id": "176",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "177",
+            "id": "177",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "178",
+            "id": "178",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "179",
+            "id": "179",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "180",
+            "id": "180",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "181",
+            "id": "181",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "182",
+            "id": "182",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "185",
+            "id": "185",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "188",
+            "id": "188",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "190",
+            "id": "190",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "195",
+            "id": "195",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "200",
+            "id": "200",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "201",
+            "id": "201",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "203",
+            "id": "203",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "205",
+            "id": "205",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "209",
+            "id": "209",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "211",
+            "id": "211",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "213",
+            "id": "213",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "214",
+            "id": "214",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "215",
+            "id": "215",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "220",
+            "id": "220",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "222",
+            "id": "222",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "224",
+            "id": "224",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "225",
+            "id": "225",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "227",
+            "id": "227",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "229",
+            "id": "229",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "230",
+            "id": "230",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "234",
+            "id": "234",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "235",
+            "id": "235",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "245",
+            "id": "245",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "247",
+            "id": "247",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "250",
+            "id": "250",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "257",
+            "id": "257",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "258",
+            "id": "258",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "265",
+            "id": "265",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "267",
+            "id": "267",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "272",
+            "id": "272",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "285",
+            "id": "285",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "292",
+            "id": "292",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "294",
+            "id": "294",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "296",
+            "id": "296",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "299",
+            "id": "299",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "304",
+            "id": "304",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "310",
+            "id": "310",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "313",
+            "id": "313",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "315",
+            "id": "315",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "362",
+            "id": "362",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "385",
+            "id": "385",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "440",
+            "id": "440",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "469",
+            "id": "469",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "505",
+            "id": "505",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "850",
+            "id": "850",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "920",
+            "id": "920",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "1163",
+            "id": "1163",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "1250",
+            "id": "1250",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "1513",
+            "id": "1513",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "1550",
+            "id": "1550",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "1600",
+            "id": "1600",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "1624",
+            "id": "1624",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "1650",
+            "id": "1650",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "1690",
+            "id": "1690",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "1700",
+            "id": "1700",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "1750",
+            "id": "1750",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "1769",
+            "id": "1769",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "1800",
+            "id": "1800",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "1825",
+            "id": "1825",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "1830",
+            "id": "1830",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "1850",
+            "id": "1850",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "1865",
+            "id": "1865",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "1880",
+            "id": "1880",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "1900",
+            "id": "1900",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "1912",
+            "id": "1912",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "1950",
+            "id": "1950",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "1994",
+            "id": "1994",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "2000",
+            "id": "2000",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "2050",
+            "id": "2050",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "2115",
+            "id": "2115",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "2150",
+            "id": "2150",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "2200",
+            "id": "2200",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "2222",
+            "id": "2222",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "2240",
+            "id": "2240",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "2250",
+            "id": "2250",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "2320",
+            "id": "2320",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "2342",
+            "id": "2342",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "2350",
+            "id": "2350",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "2400",
+            "id": "2400",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "2437",
+            "id": "2437",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "2445",
+            "id": "2445",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "2500",
+            "id": "2500",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "3018",
+            "id": "3018",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "18170",
+            "id": "18170",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "lugWidth",
+            "name": "0",
+            "id": "0",
+            "show": true,
+            "checked": false
+        }
+    ],
+    "thickness": [
+        {
+            "type": "thickness",
+            "name": "4",
+            "id": "4",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "5",
+            "id": "5",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "6",
+            "id": "6",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "7",
+            "id": "7",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "8",
+            "id": "8",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "9",
+            "id": "9",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "10",
+            "id": "10",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "11",
+            "id": "11",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "12",
+            "id": "12",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "13",
+            "id": "13",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "14",
+            "id": "14",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "15",
+            "id": "15",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "16",
+            "id": "16",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "17",
+            "id": "17",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "18",
+            "id": "18",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "19",
+            "id": "19",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "20",
+            "id": "20",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "21",
+            "id": "21",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "22",
+            "id": "22",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "23",
+            "id": "23",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "24",
+            "id": "24",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "25",
+            "id": "25",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "26",
+            "id": "26",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "27",
+            "id": "27",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "28",
+            "id": "28",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "29",
+            "id": "29",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "30",
+            "id": "30",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "31",
+            "id": "31",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "32",
+            "id": "32",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "33",
+            "id": "33",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "34",
+            "id": "34",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "35",
+            "id": "35",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "36",
+            "id": "36",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "37",
+            "id": "37",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "38",
+            "id": "38",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "39",
+            "id": "39",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "40",
+            "id": "40",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "41",
+            "id": "41",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "42",
+            "id": "42",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "43",
+            "id": "43",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "44",
+            "id": "44",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "45",
+            "id": "45",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "46",
+            "id": "46",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "47",
+            "id": "47",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "48",
+            "id": "48",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "49",
+            "id": "49",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "50",
+            "id": "50",
+            "show": true,
+            "checked": false
+        },
+        {
+            "type": "thickness",
+            "name": "0",
+            "id": "0",
+            "show": true,
+            "checked": false
+        }
+    ]
+}

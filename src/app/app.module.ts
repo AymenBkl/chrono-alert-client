@@ -20,13 +20,13 @@ import { DashboardClientComponent } from './layouts/dashboard-client/dashboard-c
 import { InterceptorService, UnauthorizedInterceptor } from './services/interceptor.service';
 import { AuthService } from './services/auth.service';
 import { AuthGuardService, AuthGuardVerifyEmailService, UnLoggedGuardService } from './services/auth-guard.service';
-import { NavbarClientModule } from './dashboard-client/nav/nav.module'; 
+import { NavbarClientModule } from './dashboard-client/nav/nav.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    BrowserAnimationsModule,
     BrowserModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(AppRoutes, {
       useHash: false
     }),

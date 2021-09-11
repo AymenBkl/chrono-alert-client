@@ -1,0 +1,353 @@
+{
+    "braceletMaterial": [
+        {
+            "id": "414",
+            "type": "braceletMaterial",
+            "name": "Aluminium",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Aluminium.jpg"
+        },
+        {
+            "id": "401",
+            "type": "braceletMaterial",
+            "name": "Calf skin",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/CalfSkin.jpg"
+
+        },
+        {
+            "id": "421",
+            "type": "braceletMaterial",
+            "name": "Ceramic",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Ceramic.jpg"
+
+        },
+        {
+            "id": "403",
+            "type": "braceletMaterial",
+            "name": "Crocodile skin",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/CrocodileSkin.jpg"
+        },
+        {
+            "id": "410",
+            "type": "braceletMaterial",
+            "name": "Gold/Steel",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/GoldAndSteel.jpg"
+
+        },
+        {
+            "id": "404",
+            "type": "braceletMaterial",
+            "name": "Leather",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Leather.jpg"
+
+        },
+        {
+            "id": "422",
+            "type": "braceletMaterial",
+            "name": "Lizard skin",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Lizard.jpg"
+
+        },
+        {
+            "id": "402",
+            "type": "braceletMaterial",
+            "name": "Ostrich skin",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Ostrichskin.jpg"
+
+        },
+        {
+            "id": "406",
+            "type": "braceletMaterial",
+            "name": "Plastic",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Plastic.jpg"
+
+        },
+        {
+            "id": "415",
+            "type": "braceletMaterial",
+            "name": "Platinum",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Platinum.jpg"
+
+        },
+        {
+            "id": "412",
+            "type": "braceletMaterial",
+            "name": "Red gold",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/RedGold.jpg"
+
+        },
+        {
+            "id": "411",
+            "type": "braceletMaterial",
+            "name": "Red gold",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/RedGold.jpg"
+
+        },
+        {
+            "id": "418",
+            "type": "braceletMaterial",
+            "name": "Rubber",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Rubber.jpg"
+
+        },
+        {
+            "id": "420",
+            "type": "braceletMaterial",
+            "name": "Satin",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Satin.jpg"
+
+        },
+        {
+            "id": "419",
+            "type": "braceletMaterial",
+            "name": "Satin",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Satin.jpg"
+
+        },
+        {
+            "id": "423",
+            "type": "braceletMaterial",
+            "name": "Shark skin",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/SharkSkin.jpg"
+
+        },
+        {
+            "id": "417",
+            "type": "braceletMaterial",
+            "name": "Silicon",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Silicon.jpg"
+
+        },
+        {
+            "id": "405",
+            "type": "braceletMaterial",
+            "name": "Silver",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Silver.jpg"
+
+        },
+        {
+            "id": "407",
+            "type": "braceletMaterial",
+            "name": "Snake skin",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/SnakeSkin.jpg"
+
+        },
+        {
+            "id": "2017",
+            "type": "braceletMaterial",
+            "name": "Steel",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Steel.jpg"
+
+        },
+        {
+            "id": "409",
+            "type": "braceletMaterial",
+            "name": "Textile",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Textile.jpg"
+
+        },
+        {
+            "id": "416",
+            "type": "braceletMaterial",
+            "name": "Titanium",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Titanium.jpg"
+
+        },
+        {
+            "id": "413",
+            "type": "braceletMaterial",
+            "name": "White gold",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/WhiteGold.jpg"
+
+        },
+        {
+            "id": "0",
+            "type": "braceletMaterial",
+            "name": "No details ",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/0.jpg"
+
+        }
+    ],
+    "braceletColor": [
+        {
+            "id": "606",
+            "type": "braceletColor",
+            "name": "Beige",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "601",
+            "type": "braceletColor",
+            "name": "Black",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "607",
+            "type": "braceletColor",
+            "name": "Blue",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "608",
+            "type": "braceletColor",
+            "name": "Bordeaux",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "609",
+            "type": "braceletColor",
+            "name": "Bronze",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "602",
+            "type": "braceletColor",
+            "name": "Brown",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "604",
+            "type": "braceletColor",
+            "name": "Gold",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "620",
+            "type": "braceletColor",
+            "name": "Gold/Steel",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "612",
+            "type": "braceletColor",
+            "name": "Green",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "611",
+            "type": "braceletColor",
+            "name": "Grey",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "615",
+            "type": "braceletColor",
+            "name": "Orange",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "619",
+            "type": "braceletColor",
+            "name": "Pink",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "617",
+            "type": "braceletColor",
+            "name": "Purple",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "616",
+            "type": "braceletColor",
+            "name": "Red",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "603",
+            "type": "braceletColor",
+            "name": "Silver",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "605",
+            "type": "braceletColor",
+            "name": "Steel",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "618",
+            "type": "braceletColor",
+            "name": "White",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "610",
+            "type": "braceletColor",
+            "name": "Yellow",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "0",
+            "type": "braceletColor",
+            "name": "No details",
+            "checked": false,
+            "show": true
+        }
+    ]
+}

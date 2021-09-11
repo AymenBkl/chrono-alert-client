@@ -1,0 +1,517 @@
+{
+    "caseMaterials": [
+        {
+            "id": "6",
+            "type": "caseMaterials",
+            "name": "Aluminum",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Aluminium.jpg"
+        },
+        {
+            "id": "18",
+            "type": "caseMaterials",
+            "name": "Bronze",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Bronze.jpg"
+        },
+        {
+            "id": "17",
+            "type": "caseMaterials",
+            "name": "Carbon",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Carbon.jpg"
+        },
+        {
+            "id": "13",
+            "type": "caseMaterials",
+            "name": "Ceramic",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Ceramic.jpg"
+        },
+        {
+            "id": "9",
+            "type": "caseMaterials",
+            "name": "Gold/Steel",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/GoldAndSteel.jpg"
+
+        },
+        {
+            "id": "14",
+            "type": "caseMaterials",
+            "name": "Palladium",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Palladium.jpg"
+
+        },
+        {
+            "id": "12",
+            "type": "caseMaterials",
+            "name": "Plastic",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Plastic.jpg"
+
+        },
+        {
+            "id": "7",
+            "type": "caseMaterials",
+            "name": "Platinum",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Platinum.jpg"
+
+        },
+        {
+            "id": "2",
+            "type": "caseMaterials",
+            "name": "Red gold",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/RedGold.jpg"
+
+        },
+        {
+            "id": "1",
+            "type": "caseMaterials",
+            "name": "Rose gold",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/PinkGold.jpg"
+
+        },
+        {
+            "id": "10",
+            "type": "caseMaterials",
+            "name": "Silver",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Silver.jpg"
+
+        },
+        {
+            "id": "4",
+            "type": "caseMaterials",
+            "name": "Steel",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Steel.jpg"
+
+        },
+        {
+            "id": "16",
+            "type": "caseMaterials",
+            "name": "Tantalum",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Tantalum.jpg"
+
+        },
+        {
+            "id": "5",
+            "type": "caseMaterials",
+            "name": "Titanium",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Titanium.jpg"
+
+        },
+        {
+            "id": "15",
+            "type": "caseMaterials",
+            "name": "Tungsten",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Tungsten.jpg"
+
+        },
+        {
+            "id": "8",
+            "type": "caseMaterials",
+            "name": "White gold",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/WhiteGold.jpg"
+
+        },
+        {
+            "id": "3",
+            "type": "caseMaterials",
+            "name": "Yellow gold",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/YellowGold.jpg"
+
+        },
+        {
+            "id": "0",
+            "type": "caseMaterials",
+            "name": "No details",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/0.jpg"
+        }
+    ],
+    "bezelMaterial": [
+        {
+            "id": "1601",
+            "type": "bezelMaterial",
+            "name": "Aluminum",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1617",
+            "type": "bezelMaterial",
+            "name": "Bronze",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1602",
+            "type": "bezelMaterial",
+            "name": "Carbon",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1603",
+            "type": "bezelMaterial",
+            "name": "Ceramic",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1604",
+            "type": "bezelMaterial",
+            "name": "Gold/Steel",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1605",
+            "type": "bezelMaterial",
+            "name": "Palladium",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1607",
+            "type": "bezelMaterial",
+            "name": "Plastic",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1608",
+            "type": "bezelMaterial",
+            "name": "Platinum",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1609",
+            "type": "bezelMaterial",
+            "name": "Red gold",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1606",
+            "type": "bezelMaterial",
+            "name": "Rose gold",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1610",
+            "type": "bezelMaterial",
+            "name": "Silver",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1611",
+            "type": "bezelMaterial",
+            "name": "Steel",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1612",
+            "type": "bezelMaterial",
+            "name": "Tantalum",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1613",
+            "type": "bezelMaterial",
+            "name": "Titanium",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1614",
+            "type": "bezelMaterial",
+            "name": "Tungsten",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1615",
+            "type": "bezelMaterial",
+            "name": "White gold",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1616",
+            "type": "bezelMaterial",
+            "name": "Yellow gold",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "0",
+            "type": "bezelMaterial",
+            "name": "No details",
+            "checked": false,
+            "show": true
+        }
+    ],
+    "glass": [
+        {
+            "id": "203",
+            "type": "glass",
+            "name": "Glass",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "204",
+            "type": "glass",
+            "name": "Mineral Glass",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "201",
+            "type": "glass",
+            "name": "Plastic",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "202",
+            "type": "glass",
+            "name": "Plexiglass",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "205",
+            "type": "glass",
+            "name": "Sapphire crystal",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "0",
+            "type": "glass",
+            "name": "No details",
+            "checked": false,
+            "show": true
+        }
+    ],
+    "waterproof": [
+        {
+            "id": "901",
+            "type": "waterproof",
+            "name": "Not water resistant",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "902",
+            "type": "waterproof",
+            "name": "1 ATM",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "903",
+            "type": "waterproof",
+            "name": "2 ATM",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1350",
+            "type": "waterproof",
+            "name": "2.5 ATM",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "904",
+            "type": "waterproof",
+            "name": "3 ATM",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "905",
+            "type": "waterproof",
+            "name": "4 ATM",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "906",
+            "type": "waterproof",
+            "name": "5 ATM",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "907",
+            "type": "waterproof",
+            "name": "6 ATM",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "908",
+            "type": "waterproof",
+            "name": "7 ATM",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "909",
+            "type": "waterproof",
+            "name": "8 ATM",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "910",
+            "type": "waterproof",
+            "name": "9 ATM",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "911",
+            "type": "waterproof",
+            "name": "10 ATM",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1351",
+            "type": "waterproof",
+            "name": "15 ATM",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "912",
+            "type": "waterproof",
+            "name": "20 ATM",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "913",
+            "type": "waterproof",
+            "name": "30 ATM",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "914",
+            "type": "waterproof",
+            "name": "40 ATM",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "915",
+            "type": "waterproof",
+            "name": "50 ATM",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "916",
+            "type": "waterproof",
+            "name": "60 ATM",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "917",
+            "type": "waterproof",
+            "name": "70 ATM",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "918",
+            "type": "waterproof",
+            "name": "80 ATM",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "919",
+            "type": "waterproof",
+            "name": "90 ATM",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "920",
+            "type": "waterproof",
+            "name": "100 ATM",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "921",
+            "type": "waterproof",
+            "name": "110 ATM",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "922",
+            "type": "waterproof",
+            "name": "120 ATM",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "923",
+            "type": "waterproof",
+            "name": "Over 120 ATM",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "0",
+            "type": "waterproof",
+            "name": "No details",
+            "checked": false,
+            "show": true
+        }
+    ]
+}

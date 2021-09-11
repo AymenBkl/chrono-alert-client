@@ -1,0 +1,501 @@
+<div class="row">
+    <button type="button" class="btn  close-btn"><i class="fas fa-times" (click)="closeDialog()"></i></button>
+    <div class="col-md-2 col-lg-4 col-0 d-none d-sm-block main-div-tabs">
+      <ul class="main-list list-group">
+        <li class="list-item list-group-item list-group-item-action "  *ngFor='let tab of tabs;let i = index' (click)="selectTab(i)" [class.selected]='selectedIndex == i'>
+          {{tab}}
+        </li>
+      </ul>
+    </div>
+    <div class="col-12 d-block d-md-none">
+      <button type="button" class="btn nav-button" (click)="slideTabs()"><i class="fas fa-bars"></i></button>
+      <div class="tabs-navigation" id="navigation-tabs" *ngIf="showTabs" [@slideInOut]>
+        <ul class="main-list list-group">
+          <li class="list-item list-group-item list-group-item-action "  *ngFor='let tab of tabs;let i = index' (click)="selectTab(i)" [class.selected]='selectedIndex == i'>
+            {{tab}}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-10 col-lg-8 col-12 main-filters" *ngIf="!showTabs">
+      <div class="header">
+        <span>{{tabs[selectedIndex]}}</span>
+      </div>
+      <div class="filters" *ngIf="selectedIndex == 0 && loaded" [@slideInOut]>
+        <div class="search-box-filter">
+          <h6>All brands</h6>
+          <div class="input-group mb-3 input-search">
+            <input type="text" class="form-control" placeholder="Search For A Specific Brand" (keyup)="onSearchChange($event.target.value)" >
+              <span class="icon-search"><i class="fas fa-search"></i></span>
+          </div>
+        </div>
+        <div class="main-filter-content">
+        <div class="filters-checkbox row" *ngFor='let brand of allFilterData[0] | keys'>
+          <div class="filter-first-letter col-2">
+            <p>{{brand}}</p>
+          </div>
+          <div class="main-filters-checkboxes col-10 row">
+            <div class="checkbox-div col-md-6 col-12" *ngFor="let brandName of allFilterData[0][brand] | searchFilter" >
+              <div class="form-check" >
+                <input class="form-check-input" type="checkbox" value="{{brandName.id}}" id="{{brandName.type}}-{{brandName.id}}" [(ngModel)]="brandName.checked" (change)="addFilter($event,brandName)">
+                <label class="form-check-label" for="{{brandName.type}}-{{brandName.id}}">
+                  {{brandName.name}}
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="filters" *ngIf="selectedIndex == 1 && loaded" [@slideInOut]>
+      <div class="search-box-filter">
+        <h6>All models</h6>
+        <div class="input-group mb-3 input-search">
+          <input type="text" class="form-control" placeholder="Search For A Specific Model" (keyup)="onSearchChange($event.target.value)" >
+            <span class="icon-search"><i class="fas fa-search"></i></span>
+        </div>
+      </div>
+      <div class="main-filter-content">
+      <div class="filters-checkbox row" *ngFor='let model of allFilterData[1] | keys'>
+        <div class="filter-first-letter col-2">
+          <p>{{model}}</p>
+        </div>
+        <div class="main-filters-checkboxes col-10 row">
+          <div class="checkbox-div col-md-6 col-12" *ngFor="let modelName of allFilterData[1][model] | searchFilter" >
+            <div class="form-check" >
+              <input class="form-check-input" type="checkbox" value="{{modelName .id}}" id="{{modelName .type}}-{{modelName .id}}" [(ngModel)]='modelName.checked' (change)="addFilter($event,modelName)">
+              <label class="form-check-label" for="{{modelName .type}}-{{modelName .id}}">
+                {{modelName .name}}
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="filters" *ngIf="selectedIndex == 2 && loaded" [@slideInOut]>
+   <div class="price-holder-price">
+    <ngx-slider [(value)]="minPriceValue" [(highValue)]="maxPriceValue" [options]="options" class="slider-ngx"></ngx-slider>
+    <div class="input-price-filter">
+      <div class="form-group col-xs-4 col-md-4 left-input">
+        <label for="minum-price" class="control-label">Minimum Price</label>
+        <input type="text" value='' class="form-control" id="minum-price" placeholder="0.00 €" [(ngModel)]='minPriceValue'>
+    </div>
+    <div class="form-group col-xs-4 col-md-4 right-input">
+      <label for="maximum-price" class="control-label">Maximum Price</label>
+      <input type="text" value='' class="form-control" id="maximum-price" placeholder="150000 €" [(ngModel)]='maxPriceValue'> 
+  </div>
+    </div>
+   </div>
+  </div>
+  <div class="filters case-sizes" *ngIf="selectedIndex == 3 && loaded" [@slideInOut]>
+    <div class="main-filter-content">
+    <div class="filters-checkbox row" *ngFor='let size of allFilterData[3] | keysCase'>
+      <div class="search-box-filter">
+        <h6>{{caseSizeHeader(size)}}</h6>
+        <div class="input-group mb-3 input-search">
+          <input type="text" class="form-control" placeholder="Search For Case {{caseSizeHeader(size)}}" (keyup)="onSearchChangeCaseSize($event.target.value,size)" >
+            <span class="icon-search"><i class="fas fa-search"></i></span>
+        </div>
+      </div>
+      <div class="main-filters-checkboxes col-12 row">
+        <div class="checkbox-div col-md-6 col-12" *ngFor="let caseSize of allFilterData[3][size] | searchFilter" >
+          <div class="form-check" >
+            <input class="form-check-input" type="checkbox" value="{{caseSize.id}}" id="{{caseSize.type}}-{{caseSize.id}}" [(ngModel)]='caseSize.checked' (change)="addFilter($event,caseSize)">
+            <label class="form-check-label" for="{{caseSize.type}}-{{caseSize.id}}">
+              {{caseSize.name}}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="filters years" *ngIf="selectedIndex == 4 && loaded" [@slideInOut]>
+    <div class="main-filter-content">
+    <div class="filters-checkbox row" *ngFor='let year of allFilterData[4] | keys'>
+      <div class="search-box-filter">
+        <h6>All models</h6>
+        <div class="input-group mb-3 input-search">
+          <input type="text" class="form-control" placeholder="Search For A Specific Model" (keyup)="onSearchChange($event.target.value)" >
+            <span class="icon-search"><i class="fas fa-search"></i></span>
+        </div>
+      </div>
+      <div class="main-filters-checkboxes col-12 row">
+        <div class="checkbox-div col-md-6 col-12" *ngFor="let yearName of allFilterData[4][year] | searchFilter" >
+          <div class="form-check" >
+            <input class="form-check-input" type="checkbox" value="{{yearName.id}}" id="{{yearName.type}}-{{yearName.id}}" [(ngModel)]='yearName.checked' (change)="addFilter($event,yearName)">
+            <label class="form-check-label" for="{{yearName.type}}-{{yearName.id}}">
+              {{yearName.name}}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="filters years" *ngIf="selectedIndex == 5 && loaded" [@slideInOut]>
+    <div class="main-filter-content">
+    <div class="filters-checkbox row" *ngFor='let location of allFilterData[5] | keys'>
+      <div class="search-box-filter">
+        <h6>All years</h6>
+        <div class="input-group mb-3 input-search">
+          <input type="text" class="form-control" placeholder="Search For A Specific Model" (keyup)="onSearchChange($event.target.value)" >
+            <span class="icon-search"><i class="fas fa-search"></i></span>
+        </div>
+      </div>
+      <div class="main-filters-checkboxes col-12 row">
+        <div class="checkbox-div col-md-6 col-12" *ngFor="let locationName of allFilterData[5][location] | searchFilter" >
+          <div class="form-check" >
+            <input class="form-check-input" type="checkbox" value="{{locationName.id}}" id="{{locationName.type}}-{{locationName.id}}" [(ngModel)]='locationName.checked' (change)="addFilter($event,locationName)">
+            <label class="form-check-label" for="{{locationName.type}}-{{locationName.id}}">
+              <img [src]='locationName.flagUrl'>{{locationName.name}}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="filters case-sizes" *ngIf="selectedIndex == 6 && loaded" [@slideInOut]>
+    <div class="main-filter-content">
+    <div class="filters-checkbox row" *ngFor='let condition of allFilterData[6] | keysCase'>
+      <div class="search-box-filter">
+        <h6 class="delivery-size">{{conditionHeader(condition)}}</h6>
+      </div>
+      <div class="main-filters-checkboxes col-12 row" *ngIf="condition == 'specials'">
+        <div class="col-md-6 col-12 main-holder-delivery" *ngFor="let special of allFilterData[6][condition]">
+        <div class="container-checkbox" [class.selected]='special.checked' (click)="checkDivImage(special)">
+          <img [src]="special.imageUrl" /> 
+          <div class="check-mark-border" *ngIf="special.checked">
+            <div class="check-mark-holder" >
+              <i class="fas fa-check" ></i>
+            </div>
+          </div>
+          
+      </div>
+      <div class="name-special">
+        <p>{{special.name}}</p>
+      </div>
+    </div>
+      </div>
+      <div class="main-filters-checkboxes col-12 row" *ngIf="condition != 'specials'">
+        <div class="checkbox-div col-md-6 col-12" *ngFor="let conditionName of allFilterData[6][condition]" >
+          <div class="form-check" >
+            <input class="form-check-input" type="checkbox" value="{{conditionName.id}}" id="{{conditionName.type}}-{{conditionName.id}}" [(ngModel)]='conditionName.checked' (change)="addFilter($event,conditionName)">
+            <label class="form-check-label" for="{{conditionName.type}}-{{conditionName.id}}">
+              {{conditionName.name}}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  <div class="filters case-sizes" *ngIf="selectedIndex == 7 && loaded" [@slideInOut]>
+    <div class="main-filter-content">
+    <div class="filters-checkbox row" *ngFor='let payment of allFilterData[7] | keysCase'>
+      <div class="search-box-filter">
+        <h6 class="delivery-size">{{paymentHeader(payment )}}</h6>
+      </div>
+      <div class="main-filters-checkboxes col-12 row">
+        <div class="checkbox-div col-md-6 col-12" *ngFor="let paymentName of allFilterData[7][payment]" >
+          <div class="form-check" >
+            <input class="form-check-input" type="checkbox" value="{{paymentName.id}}" id="{{paymentName.type}}-{{paymentName.id}}" [(ngModel)]='paymentName.checked' (change)="addFilter($event,paymentName)">
+            <label class="form-check-label" for="{{paymentName.type}}-{{paymentName.id}}">
+              {{paymentName.name}}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="filters case-sizes" *ngIf="selectedIndex == 8 && loaded" [@slideInOut]>
+    <div class="main-filter-content">
+    <div class="filters-checkbox row" *ngFor='let watch of allFilterData[8] | keysCase'>
+      <div class="search-box-filter">
+        <h6 class="delivery-size">{{watchHeader(watch)}}</h6>
+      </div>
+      <div class="main-filters-checkboxes col-12 row" *ngIf="watch == 'gender'">
+        <div class="col-md-6 col-12 main-holder-delivery" *ngFor="let special of allFilterData[8][watch]">
+        <div class="container-checkbox" [class.selected]='special.checked' (click)="checkDivImage(special)">
+          <img [src]="special.imageUrl" />
+          <div class="check-mark-border" *ngIf="special.checked">
+            <div class="check-mark-holder" >
+              <i class="fas fa-check" ></i>
+            </div>
+          </div>
+      </div>
+      <div class="name-special">
+        <p>{{special.name}}</p>
+      </div>
+    </div>
+      </div>
+      <div class="main-filters-checkboxes col-12 row" *ngIf="watch != 'gender'">
+        <div class="checkbox-div col-md-6 col-12" *ngFor="let watchName of allFilterData[8][watch]" >
+          <div class="form-check" >
+            <input class="form-check-input" type="checkbox" value="{{watchName.id}}" id="{{watchName.type}}-{{watchName.id}}" [(ngModel)]='watchName.checked' (change)="addFilter($event,watchName)">
+            <label class="form-check-label" for="{{watchName.type}}-{{watchName.id}}">
+              {{watchName.name}}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="filters years" *ngIf="selectedIndex == 9 && loaded" [@slideInOut]>
+    <div class="main-filter-content">
+    <div class="filters-checkbox row" *ngFor='let referenceNumber of allFilterData[9] | keys'>
+      <div class="search-box-filter">
+        <h6>All reference numbers</h6>
+        <div class="input-group mb-3 input-search">
+          <input type="text" class="form-control" placeholder="Search For A Specific Model" (keyup)="onSearchChange($event.target.value)" >
+            <span class="icon-search"><i class="fas fa-search"></i></span>
+        </div>
+      </div>
+      <div class="main-filters-checkboxes col-12 row">
+        <div class="checkbox-div col-md-6 col-12" *ngFor="let referenceNumberName of allFilterData[9][referenceNumber] | searchFilter" >
+          <div class="form-check" >
+            <input class="form-check-input" type="checkbox" value="{{referenceNumberName.id}}" id="{{referenceNumberName.type}}-{{referenceNumberName.id}}" [(ngModel)]='referenceNumberName.checked' (change)="addFilter($event,referenceNumberName)">
+            <label class="form-check-label" for="{{referenceNumberName.type}}-{{referenceNumberName.id}}">
+              {{referenceNumberName.name}}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="filters case-sizes" *ngIf="selectedIndex == 10 && loaded" [@slideInOut]>
+    <div class="main-filter-content">
+    <div class="filters-checkbox row" *ngFor='let movement of allFilterData[10] | keysCase'>
+      <div class="search-box-filter">
+        <h6 class="delivery-size">{{movementHeader(movement )}}</h6>
+      </div>
+      <div class="main-filters-checkboxes col-12 row">
+        <div class="checkbox-div col-md-6 col-12" *ngFor="let movementName of allFilterData[10][movement]" >
+          <div class="form-check" >
+            <input class="form-check-input" type="checkbox" value="{{movementName.id}}" id="{{movementName.type}}-{{movementName.id}}" [(ngModel)]='movementName.checked' (change)="addFilter($event,movementName)">
+            <label class="form-check-label" for="{{movementName.type}}-{{movementName.id}}">
+              {{movementName.name}}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="filters case-sizes" *ngIf="selectedIndex == 11 && loaded" [@slideInOut]>
+    <div class="main-filter-content">
+    <div class="filters-checkbox row" *ngFor='let dial of allFilterData[11] | keysCase'>
+      <div class="search-box-filter">
+        <h6 class="delivery-size">{{dialHeader(dial)}}</h6>
+      </div>
+      <div class="main-filters-checkboxes col-12 row" *ngIf="dial== 'dialNumbers'">
+        <div class="col-md-6 col-12 main-holder-delivery" *ngFor="let special of allFilterData[11][dial]">
+        <div class="container-checkbox" [class.selected]='special.checked' (click)="checkDivImage(special)">
+          <img [src]="special.imageUrl" />
+          <div class="check-mark-border" *ngIf="special.checked">
+            <div class="check-mark-holder" >
+              <i class="fas fa-check" ></i>
+            </div>
+          </div>
+      </div>
+      <div class="name-special">
+        <p>{{special.name}}</p>
+      </div>
+    </div>
+      </div>
+      <div class="main-filters-checkboxes col-12 row" *ngIf="dial!= 'dialNumbers'">
+        <div class="checkbox-div col-md-6 col-12" *ngFor="let dialName of allFilterData[11][dial]" >
+          <div class="form-check" >
+            <input class="form-check-input" type="checkbox" value="{{dialName.id}}" id="{{dialName.type}}-{{dialName.id}}" [(ngModel)]='dialName.checked' (change)="addFilter($event,dialName)">
+            <label class="form-check-label" for="{{dialName.type}}-{{dialName.id}}">
+              {{dialName.name}}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  <div class="filters case-sizes" *ngIf="selectedIndex == 12 && loaded" [@slideInOut]>
+    <div class="main-filter-content">
+    <div class="filters-checkbox row" *ngFor='let case of allFilterData[12] | keysCase'>
+      <div class="search-box-filter">
+        <h6 class="delivery-size">{{caseMaterialHeader(case)}}</h6>
+      </div>
+      <div class="main-filters-checkboxes col-12 row" *ngIf="case == 'caseMaterials'">
+        <div class="col-md-4 col-6 main-holder-delivery main-caseMaterial" *ngFor="let special of allFilterData[12][case]">
+        <div class="container-checkbox main-holder-caseDelivery" [class.selected]='special.checked' (click)="checkDivImage(special)">
+          <img [src]="special.imageUrl" />
+          <div class="check-mark-border" *ngIf="special.checked">
+            <div class="check-mark-holder" >
+              <i class="fas fa-check" ></i>
+            </div>
+          </div>
+      </div>
+      <div class="name-special">
+        <p>{{special.name}}</p>
+      </div>
+    </div>
+      </div>
+      <div class="main-filters-checkboxes col-12 row" *ngIf="case != 'caseMaterials'">
+        <div class="checkbox-div col-md-6 col-12" *ngFor="let caseMaterialName of allFilterData[12][case]" >
+          <div class="form-check" >
+            <input class="form-check-input" type="checkbox" value="{{caseMaterialName.id}}" id="{{caseMaterialName.type}}-{{caseMaterialName.id}}" [(ngModel)]='caseMaterialName.checked' (change)="addFilter($event,caseMaterialName)">
+            <label class="form-check-label" for="{{caseMaterialName.type}}-{{caseMaterialName.id}}">
+              {{caseMaterialName.name}}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="filters case-sizes" *ngIf="selectedIndex == 13 && loaded" [@slideInOut]>
+    <div class="main-filter-content">
+    <div class="filters-checkbox row" *ngFor='let braclet of allFilterData[13] | keysCase'>
+      <div class="search-box-filter">
+        <h6 class="delivery-size">{{bracletHeader(braclet)}}</h6>
+      </div>
+      <div class="main-filters-checkboxes col-12 row" *ngIf="braclet == 'braceletMaterial'">
+        <div class="col-md-4 col-6 main-holder-delivery main-caseMaterial" *ngFor="let special of allFilterData[13][braclet]">
+        <div class="container-checkbox main-holder-caseDelivery" [class.selected]='special.checked' (click)="checkDivImage(special)">
+          <img [src]="special.imageUrl" />
+          <div class="check-mark-border" *ngIf="special.checked">
+            <div class="check-mark-holder" >
+              <i class="fas fa-check" ></i>
+            </div>
+          </div>
+      </div>
+      <div class="name-special">
+        <p>{{special.name}}</p>
+      </div>
+    </div>
+      </div>
+      <div class="main-filters-checkboxes col-12 row" *ngIf="braclet != 'braceletMaterial'">
+        <div class="checkbox-div col-md-6 col-12" *ngFor="let bracletName of allFilterData[13][braclet]" >
+          <div class="form-check" >
+            <input class="form-check-input" type="checkbox" value="{{bracletName.id}}" id="{{bracletName.type}}-{{bracletName.id}}" [(ngModel)]='bracletName.checked' (change)="addFilter($event,bracletName)">
+            <label class="form-check-label" for="{{bracletName.type}}-{{bracletName.id}}">
+              {{bracletName.name}}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="filters case-sizes " *ngIf="selectedIndex == 14 && loaded" [@slideInOut]> 
+    <div class="main-filter-content">
+    <div class="filters-checkbox row" *ngFor='let clasp of allFilterData[14] | keysCase'>
+      <div class="search-box-filter">
+        <h6 class="delivery-size">{{claspHeader(clasp)}}</h6>
+      </div>
+      <div class="main-filters-checkboxes col-12 row" *ngIf="clasp == 'claspMaterial'">
+        <div class="col-md-4 col-6 main-holder-delivery main-caseMaterial" *ngFor="let special of allFilterData[14][clasp]">
+        <div class="container-checkbox main-holder-caseDelivery" [class.selected]='special.checked' (click)="checkDivImage(special)">
+          <img [src]="special.imageUrl" />
+          <div class="check-mark-border" *ngIf="special.checked">
+            <div class="check-mark-holder" >
+              <i class="fas fa-check" ></i>
+            </div>
+          </div>
+      </div>
+      <div class="name-special">
+        <p>{{special.name}}</p>
+      </div>
+    </div>
+      </div>
+      <div class="main-filters-checkboxes col-12 row" *ngIf="clasp != 'claspMaterial'">
+        <div class="checkbox-div col-md-6 col-12" *ngFor="let claspName of allFilterData[14][clasp]" >
+          <div class="form-check" >
+            <input class="form-check-input" type="checkbox" value="{{claspName.id}}" id="{{claspName.type}}-{{claspName.id}}" [(ngModel)]='claspName.checked' (change)="addFilter($event,claspName)">
+            <label class="form-check-label" for="{{claspName.type}}-{{claspName.id}}">
+              {{claspName.name}}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="filters case-sizes filter-notification " *ngIf="selectedIndex == 15 && loaded" [@slideInOut]>
+    <div class="main-filter-content">
+    <div class="filters-checkbox row" *ngFor='let notification of allFilterData[15] | keysCase'>
+      <div class="search-box-filter">
+        <h6 class="delivery-size">{{notificationHeader(notification)}}</h6>
+      </div>
+      <div class="main-filters-checkboxes col-12 row">
+        <div class="checkbox-div col-md-6 col-12" *ngFor="let notificationName of allFilterData[15][notification]" >
+          <div class="form-check" >
+            <input class="form-check-input" type="checkbox"   id="{{notification}}-{{notificationName.name}}" [(ngModel)]="notificationName.checked" (change)="notificationFilter(notification,notificationName)">
+            <label class="form-check-label" for="{{notification}}-{{notificationName.name}}">
+              {{notificationName.name}}
+            </label>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    <div class="trusted-value-holder">
+      <div class="search-box-filter">
+        <h6 class="delivery-size">Trusted Value</h6>
+      </div>
+      <ngx-slider [(value)]="minTrustedValue" [(highValue)]="maxTrustedValue" [options]="optionsTrusted" class="slider-ngx"></ngx-slider>
+      <div class="input-price-filter">
+        <div class="form-group col-xs-4 col-md-4 left-input">
+          <label for="minum-trusted-value" class="control-label">Minimum Trusted Value</label>
+          <input type="text" value='' class="form-control" id="minum-trusted-value" placeholder="0" [(ngModel)]='minTrustedValue'>
+      </div>
+      <div class="form-group col-xs-4 col-md-4 right-input">
+        <label for="maximum-trusted-value" class="control-label">Maximum Trusted Value</label>
+        <input type="text" value='' class="form-control" id="maximum-trusted-value" placeholder="1000" [(ngModel)]='maxTrustedValue'> 
+    </div>
+      </div>
+     </div>
+  </div>
+  </div>
+  <div class="filters case-sizes" *ngIf="selectedIndex == 16 && loaded" [@slideInOut]>
+    <div class="main-filter-content">
+    <div class="filters-checkbox row" *ngFor='let others of allFilterData[16] | keysCase'>
+      <div class="main-filters-checkboxes col-12 row">
+        <div class="checkbox-div col-md-6 col-12" *ngFor="let othersName of allFilterData[16][others]" >
+          <div class="form-check" >
+            <input class="form-check-input" type="checkbox" value="{{othersName.id}}" id="{{othersName.type}}-{{othersName.id}}" [(ngModel)]='othersName.checked' (change)="addFilter($event,othersName)">
+            <label class="form-check-label" for="{{othersName.type}}-{{othersName.id}}">
+              {{othersName.name}}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+    </div>
+  </div>
+  <div class="row" *ngIf="!showTabs">
+    <div class="col-12 div-bottom">
+      <div class="button-apply">
+        <button class="btn btn-lg btn-primary" (click)='constructUrl()'><i class="fas fa-filter"></i>{{'Apply Filters' | uppercase}}</button>
+      </div>
+    </div>
+    
+  </div>
+  
+  <ngx-spinner
+    bdColor="rgba(51,51,51,0.8)"
+    size="medium"
+    color="#fff"
+    type="ball-beat"
+    *ngIf="!loaded"
+  >
+    <p style="font-size: 20px; color: white">Loading...</p>
+  </ngx-spinner>
+  
+  

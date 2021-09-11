@@ -1,0 +1,185 @@
+{
+    "dialNumbers": [
+        {
+            "id": "801",
+            "type": "dialNumbers",
+            "name": "Arabic numerals",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://www.chrono24.com/images/default/filter/illustrations/dialNumbers/ArabicNumerals.svg"
+        },
+        {
+            "id": "803",
+            "type": "dialNumbers",
+            "name": "No numerals",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://www.chrono24.com/images/default/filter/illustrations/dialNumbers/NoNumerals.svg"
+        },
+        {
+            "id": "802",
+            "type": "dialNumbers",
+            "name": "Roman numerals ",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://www.chrono24.com/images/default/filter/illustrations/dialNumbers/RomanNumerals.svg"
+        },
+        {
+            "id": "0",
+            "type": "dialNumbers",
+            "name": "No details",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://www.chrono24.com/images/default/filter/illustrations/dialNumbers/0.svg"
+        }
+    ],
+    "dialColor": [
+        {
+            "id": "702",
+            "type": "dialColor",
+            "name": "Black",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "710",
+            "type": "dialColor",
+            "name": "Blue",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "711",
+            "type": "dialColor",
+            "name": "Bordeaux",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "712",
+            "type": "dialColor",
+            "name": "Bronze",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "723",
+            "type": "dialColor",
+            "name": "Brown",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "709",
+            "type": "dialColor",
+            "name": "Champagne",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "714",
+            "type": "dialColor",
+            "name": "Gold",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "705",
+            "type": "dialColor",
+            "name": "Gold (solid)",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "716",
+            "type": "dialColor",
+            "name": "Green",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "715",
+            "type": "dialColor",
+            "name": "Grey",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "707",
+            "type": "dialColor",
+            "name": "Mother of pearl",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "719",
+            "type": "dialColor",
+            "name": "Orange",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "722",
+            "type": "dialColor",
+            "name": "Pink",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "721",
+            "type": "dialColor",
+            "name": "Purple",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "720",
+            "type": "dialColor",
+            "name": "Red",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "708",
+            "type": "dialColor",
+            "name": "Silver",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "706",
+            "type": "dialColor",
+            "name": "Silver (solid)",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "704",
+            "type": "dialColor",
+            "name": "Transparent",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "701",
+            "type": "dialColor",
+            "name": "White",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "713",
+            "type": "dialColor",
+            "name": "Yellow",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "0",
+            "type": "dialColor",
+            "name": "No details",
+            "checked": false,
+            "show": true
+        }
+    ]
+}

@@ -1,0 +1,139 @@
+{
+    "specials": [
+        {
+            "id": "102",
+            "type": "specials",
+            "name": "Watch with original box and original papers",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://www.chrono24.com/images/default/filter/illustrations/specials/WithBoxAndPapers.svg"
+        },
+        {
+            "id": "104",
+            "type": "specials",
+            "name": "Watch with original papers",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://www.chrono24.com/images/default/filter/illustrations/specials/WithPapers.svg"
+        },
+        {
+            "id": "103",
+            "type": "specials",
+            "name": "Watch with original box ",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://www.chrono24.com/images/default/filter/illustrations/specials/WithBox.svg"
+        }
+    ],
+    "availability": [
+        {
+            "id": "Immediately",
+            "type": "availability",
+            "name": "Available now",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "OneWeek",
+            "type": "availability",
+            "name": "Ready to ship in 3-5 days",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "TwoWeeks",
+            "type": "availability",
+            "name": "Ready to ship in 6-10 days",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "OnRequest",
+            "type": "availability",
+            "name": "On request",
+            "checked": false,
+            "show": true
+        }
+    ],
+    "usedOrNew": [
+        {
+            "id": "new",
+            "type": "usedOrNew",
+            "name": "New/unworn",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "used",
+            "type": "usedOrNew",
+            "name": "Pre-owned",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "NODATA",
+            "type": "usedOrNew",
+            "name": "No details",
+            "checked": false,
+            "show": true
+        }
+    ],
+    "condition": [
+        {
+            "id": "101",
+            "type": "condition",
+            "name": "New",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1301",
+            "type": "condition",
+            "name": "Unworn",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1302",
+            "type": "condition",
+            "name": "Very good",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1306",
+            "type": "condition",
+            "name": "Good",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1303",
+            "type": "condition",
+            "name": "Fair",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1304",
+            "type": "condition",
+            "name": "Poor",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1305",
+            "type": "condition",
+            "name": "Incomplete",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "0",
+            "type": "condition",
+            "name": "No details",
+            "checked": false,
+            "show": true
+        }
+    ]
+}
