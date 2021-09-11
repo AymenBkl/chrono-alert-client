@@ -6,16 +6,29 @@
       <div class="collapse navbar-collapse" id="navBarClientDashboard" >
         <ul class="navbar-nav list-links">
           <li class="nav-item" >
-            <a class="nav-link active" aria-current="page" [routerLink]="['/home']" [routerLinkActive]="['is-active']">New Alert</a>
+            
+            <a class="nav-link active" aria-current="page" [routerLink]="['/dashboard-client/home']" [routerLinkActive]="['is-active']">
+              <img src="../../../assets/img/client-dashboard/add_alert.svg">
+              <span>New Alert</span>
+            </a>
           </li>
           <li class="nav-item" >
-            <a class="nav-link" [routerLink]="['/aboutus']" [routerLinkActive]="['is-active']">My Alerts</a>
+            <a class="nav-link" [routerLink]="['/aboutus']" [routerLinkActive]="['is-active']">
+              <img src="../../../assets/img/client-dashboard/my_alerts.svg">
+              <span>My Alerts</span></a>
           </li>
           <li class="nav-item" >
-            <a class="nav-link active" aria-current="page"  [routerLink]="['/affiliates']" [routerLinkActive]="['is-active']">Pricing</a>
+            <a class="nav-link active" aria-current="page"  [routerLink]="['/affiliates']" [routerLinkActive]="['is-active']">
+              <img src="../../../assets/img/client-dashboard/pricing.svg">
+              <span>Pricing</span>
+              
+            </a>
           </li>
           <li class="nav-item" >
-            <a class="nav-link" [routerLink]="['/faq']" [routerLinkActive]="['is-active']">Setting</a>
+            <a class="nav-link" [routerLink]="['/faq']" [routerLinkActive]="['is-active']">
+              <img src="../../../assets/img/client-dashboard/settings.svg">
+              <span>Settings</span>
+            </a>
           </li>
           
         </ul>

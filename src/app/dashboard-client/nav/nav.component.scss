@@ -7,4 +7,29 @@
 .list-links  li {
     display: table-cell;
     text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.list-links  li a {
+    color: black;
+    display: inline-block;
+    font: normal normal normal 19px/24px Roboto;
+    letter-spacing: 0px;
+}
+
+.list-links  li img {
+    display: inline-block;
+    width: 19px;
+    height: 61px;
+    margin-right: 13px;
+}
+
+.is-active {
+    color: #004FD4 !important;
+}
+
+.is-active  img {
+    filter: invert(26%) sepia(72%) saturate(3371%) hue-rotate(211deg) brightness(80%) contrast(111%);
 }
