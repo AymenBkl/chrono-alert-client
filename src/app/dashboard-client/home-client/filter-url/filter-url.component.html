@@ -1,4 +1,30 @@
-<div class="row">
+
+  <div class="row filter-horizontal">
+    <div class="col-12">
+      <ul class="list-modals">
+        <li>
+          <span>Model</span>
+        </li>
+        <li>
+          <span>Brand</span>
+        </li>
+        <li>
+          <span>Price</span>
+        </li>
+        <li>
+          <span>Case Size</span>
+        </li>
+        <li>
+          <span>Year</span>
+        </li>
+        <li>
+          <span>Location</span>
+        </li>
+      </ul>
+    </div>
+    
+  </div>
+<div class="row" *ngIf="start">
     <button type="button" class="btn  close-btn"><i class="fas fa-times" (click)="closeDialog()"></i></button>
     <div class="col-md-2 col-lg-4 col-0 d-none d-sm-block main-div-tabs">
       <ul class="main-list list-group">
@@ -479,7 +505,7 @@
   </div>
     </div>
   </div>
-  <div class="row" *ngIf="!showTabs">
+  <div class="row" *ngIf="!showTabs && start">
     <div class="col-12 div-bottom">
       <div class="button-apply">
         <button class="btn btn-lg btn-primary" (click)='constructUrl()'><i class="fas fa-filter"></i>{{'Apply Filters' | uppercase}}</button>
@@ -487,7 +513,6 @@
     </div>
     
   </div>
-  
   <ngx-spinner
     bdColor="rgba(51,51,51,0.8)"
     size="medium"

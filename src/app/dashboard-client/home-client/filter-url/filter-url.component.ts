@@ -16,6 +16,7 @@ import { NgxSpinnerService } from "ngx-spinner";
 })
 export class FilterUrlComponent implements OnInit {
 
+  start:boolean = false;
   loaded:boolean = false;
   selectedIndex = 0;
   allFilterData = [];

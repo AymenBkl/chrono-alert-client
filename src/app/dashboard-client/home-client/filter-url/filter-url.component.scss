@@ -1,8 +1,4 @@
-div,ul,input,li,button,span,label,p,h1,h2,h3,h4,h5,h6{
-    font-family: 'Lato', Arial, Helvetica, sans-serif;
-  
-  }
-  
+
   .main-list {
     width: 100%;
     display: block;
@@ -21,6 +17,7 @@ div,ul,input,li,button,span,label,p,h1,h2,h3,h4,h5,h6{
     border:none;
     border-radius: 0px;
     padding-left: 21px;
+    font: normal normal normal 12px/16px Roboto;
   }
   
   .list-item.selected {
@@ -414,4 +411,35 @@ div,ul,input,li,button,span,label,p,h1,h2,h3,h4,h5,h6{
   .main-holder-caseDelivery img {
     width: 100% !important;
     height: 28px;
+  }
+
+  .filter-horizontal {
+    text-align: left;
+    margin-top: 30px;
+  }
+
+  .list-modals {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    padding-right: 15px !important;
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+  }
+
+  .list-modals li {
+    display: table-cell;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #8B8B8B;
+    font: normal normal normal 12px/16px Roboto;
+  }
+
+  .list-modals li:hover {
+    cursor: pointer;
   }

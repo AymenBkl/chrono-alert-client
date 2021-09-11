@@ -6,14 +6,13 @@
 
 .list-links  li {
     display: table-cell;
-    text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
 }
 
 .list-links  li a {
-    color: black;
+    color: #606060;
     display: inline-block;
     font: normal normal normal 19px/24px Roboto;
     letter-spacing: 0px;
@@ -24,6 +23,8 @@
     width: 19px;
     height: 61px;
     margin-right: 13px;
+    filter: invert(38%) sepia(0%) saturate(11%) hue-rotate(289deg) brightness(98%) contrast(98%);
+
 }
 
 .is-active {
@@ -31,5 +32,5 @@
 }
 
 .is-active  img {
-    filter: invert(26%) sepia(72%) saturate(3371%) hue-rotate(211deg) brightness(80%) contrast(111%);
+    filter: invert(26%) sepia(72%) saturate(3371%) hue-rotate(211deg) brightness(80%) contrast(111%) !important;
 }
