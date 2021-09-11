@@ -20,7 +20,7 @@ import { DashboardClientComponent } from './layouts/dashboard-client/dashboard-c
 import { InterceptorService, UnauthorizedInterceptor } from './services/interceptor.service';
 import { AuthService } from './services/auth.service';
 import { AuthGuardService, AuthGuardVerifyEmailService, UnLoggedGuardService } from './services/auth-guard.service';
-import { NewPasswordComponent } from './auth/reset-password/new-password/new-password.component';
+import { NavbarClientModule } from './dashboard-client/nav/nav.module'; 
 
 @NgModule({
   imports: [
@@ -35,6 +35,7 @@ import { NewPasswordComponent } from './auth/reset-password/new-password/new-pas
     CarouselModule,
     NavbarModule,
     FooterModule,
+    NavbarClientModule,
     HttpClientModule
   ],
   declarations: [

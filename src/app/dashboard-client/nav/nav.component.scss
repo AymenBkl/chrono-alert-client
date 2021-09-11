@@ -1,0 +1,10 @@
+.list-links {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.list-links  li {
+    display: table-cell;
+    text-align: center;
+}

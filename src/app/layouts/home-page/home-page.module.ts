@@ -24,9 +24,7 @@ import { ContactusformComponent } from "src/app/pages/contactus/contactusform/co
 import { FaqHolderComponent } from 'src/app/pages/faq/faq-holder/faq-holder.component';
 import { SearchFaqPipe } from './pipes/search-faq.pipe';
 import { SendsuccessComponent } from "src/app/pages/contactus/sendsuccess/sendsuccess.component";
-import { LandingPageService } from "./services/landing-page.service";
 import { HttpClientModule } from '@angular/common/http'
-import { ErrorModalLandingPageComponent } from "src/app/components/error-modal-landing-page/error-modal-landing-page.component";
 @NgModule({
   imports: [
     CommonModule,
