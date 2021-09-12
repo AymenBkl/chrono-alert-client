@@ -21,6 +21,12 @@
         <span>x</span>
       </span>
     </div>
+    <div class="chip-container" >
+      <span class="badge rounded-pill bg-secondary chip-filter" (click)="removeAppliedFilterPrice()" *ngIf="(appliedFilterPrice.minPrice != 0 || appliedFilterPrice.maxPrice != 150000)">
+        <span>{{appliedFilterPrice.minPrice}} - {{appliedFilterPrice.maxPrice}}</span>
+        <span>x</span>
+      </span>
+    </div>
   </div>
 </div>
 <div class="row filter-container" *ngIf="start">
@@ -103,11 +109,11 @@
     <div class="input-price-filter">
       <div class="form-group col-xs-4 col-md-4 left-input">
         <label for="minum-price" class="control-label">Minimum Price</label>
-        <input type="text" value='' class="form-control" id="minum-price" placeholder="0.00 €" [(ngModel)]='minPriceValue'>
+        <input type="text" value='' class="form-control" id="minum-price" placeholder="0.00 €" (change)="affectAppliedFilterPrice()" [(ngModel)]='minPriceValue'>
     </div>
     <div class="form-group col-xs-4 col-md-4 right-input">
       <label for="maximum-price" class="control-label">Maximum Price</label>
-      <input type="text" value='' class="form-control" id="maximum-price" placeholder="150000 €" [(ngModel)]='maxPriceValue'> 
+      <input type="text" value='' class="form-control" id="maximum-price" placeholder="150000 €" (change)="affectAppliedFilterPrice()" [(ngModel)]='maxPriceValue'> 
   </div>
     </div>
    </div>

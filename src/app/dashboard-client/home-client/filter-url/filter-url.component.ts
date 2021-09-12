@@ -40,6 +40,7 @@ export class FilterUrlComponent implements OnInit {
       }
     }
   };
+  appliedFilterPrice : {minPrice:number,maxPrice:number} = {minPrice:this.minPriceValue,maxPrice:this.maxPriceValue};
   minTrustedValue: number = 0;
   maxTrustedValue: number = 150000;
   optionsTrusted: Options = {
@@ -63,7 +64,17 @@ export class FilterUrlComponent implements OnInit {
               private httpClient: HttpClient) { }
 
   ngOnInit() {
-   
+  }
+
+
+  affectAppliedFilterPrice(){
+    this.appliedFilterPrice.minPrice = this.minPriceValue;
+    this.appliedFilterPrice.maxPrice = this.maxPriceValue;
+  }
+  removeAppliedFilterPrice(){
+    this.maxPriceValue = 150000;
+    this.minPriceValue = 0;
+    this.appliedFilterPrice = {minPrice:this.minPriceValue,maxPrice:this.maxPriceValue};
   }
 
   startFilter(){
@@ -373,7 +384,9 @@ export class FilterUrlComponent implements OnInit {
     params = params.set('priceTo',this.maxPriceValue.toString());
     params = params.set('showpage','1');   
     this.appliedFiters.map(filter => {
-      params = params.append(`${filter.type}`,`${filter.id}`);
+      if (filter.type && filter.id){
+        params = params.append(`${filter.type}`,`${filter.id}`);
+      }
     })
     if (this.appliedFiters.length > 0){
       this.closeDialog({url:'https://www.chrono24.com/search/index.htm?' + params.toString(),filterData:this.constructNotificationFilters(), email:'aymenxyz6@gmail.com',user:'6115d35deb40681b395131b4'})
