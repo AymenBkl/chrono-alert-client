@@ -28,4 +28,34 @@
         </div>
     </div>
 </div>
+<div class="col-12 payments">
+    <div class="col-12 col-lg-6 payments-holder">
+        <div class="payment-holder" *ngFor="let payment of payments" (click)="selectPayment(payment)">
+            <div class="payment-holder-logo">
+                <img [src]="payment.img">
+            </div>
+            <div class="payment-holder-text">
+                <span>{{payment.paymentType}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-lg-6 card payment-viewer-holder">
+        <div class="payment-viewer-title">
+            <span>{{selectedPayment.paymentType}}</span>
+        </div>
+        <div class="payment-viewer-checkout">
+            <div class="payments-block">
+                <div class="payment-viewer-image">
+                    <img [src]="selectedPayment.img">
+                </div>
+                <div class="payment-viewer-button">
+                    <button class="btn">
+                        Check Out
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
 
