@@ -51,10 +51,35 @@
   }
 
   .selection-image img {
-      width: 80%;
+      width: 300px;
   }
 
   .selection-image-holder {
       display: flex;
       align-items: center;
+  }
+
+  .selection-buttons {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: right;
+  }
+
+  .edit-filter {
+    width: 111px;
+    height: 28px;
+    background: #DDDDDD 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    font: normal normal normal 10px/13px Roboto;
+    color: #414141;
+    margin-right: 10px;
+  }
+
+  .confirm-filter {
+    width: 111px;
+    height: 28px;
+    background: #0164F8 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    font: normal normal normal 10px/13px Roboto;
+    color: #FFFFFF;
   }

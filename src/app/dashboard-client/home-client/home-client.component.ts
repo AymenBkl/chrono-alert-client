@@ -20,8 +20,13 @@ export class HomeClientComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  filtersApplied() {
-    console.log(this.notificationFilters);
+  filtersApplied(event) {
+    console.log(event);
+    this.maxPriceValue = event.maxPrice;
+    this.minPriceValue = event.minPrice;
+    this.minTrustedValue = event.minTrustValue;
+    this.maxTrustedValue = event.maxTrustValue;
+    console.log(this.minPriceValue,this.maxPriceValue);
     this.notificationFilter = this.constructNotificationFilters();
     this.step = 2;
     

@@ -13,12 +13,10 @@
         <div class="col-12 filter-holder">
             <app-filter-url 
             [appliedFiters]='appliedFiters' 
-            [minPriceValue]='minPriceValue' 
-            [maxPriceValue]='maxPriceValue' 
             [notificationFilters]='notificationFilters'
             [minTrustedValue]='minTrustedValue'
             [maxTrustedValue]='maxTrustedValue'
-            (filtersApplied)='filtersApplied()'
+            (filtersApplied)='filtersApplied($event)'
             >
         </app-filter-url>
         </div>

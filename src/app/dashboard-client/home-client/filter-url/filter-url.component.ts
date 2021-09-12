@@ -24,8 +24,8 @@ export class FilterUrlComponent implements OnInit {
   @Input('appliedFiters') appliedFiters = [];
   tabsHor = ['Brand','Model','Price','Case Size','Year','Location'];
   tabs = ['Brand','Model','Price','Case Size','Year','Location','Condition & Delivery Contents','Payment & Seller Info','Watch Type','Reference Number','Movement & Functions','Dial','Case','Strap/Bracelet','Clasp','Notification','Others'];
-  @Input('minPriceValue') minPriceValue: number = 0;
-  @Input('maxPriceValue') maxPriceValue: number = 150000;
+  minPriceValue: number = 0;
+  maxPriceValue: number = 150000;
   options: Options = {
     floor: 0,
     ceil: 150000,
@@ -41,8 +41,8 @@ export class FilterUrlComponent implements OnInit {
     }
   };
   appliedFilterPrice : {minPrice:number,maxPrice:number} = {minPrice:this.minPriceValue,maxPrice:this.maxPriceValue};
-  @Input('minTrustedValue') minTrustedValue: number = 0;
-  @Input('maxTrustedValue') maxTrustedValue: number = 150000;
+  minTrustedValue: number = 0;
+  maxTrustedValue: number = 150000;
   optionsTrusted: Options = {
     floor: 0,
     ceil: 1000,
@@ -59,7 +59,7 @@ export class FilterUrlComponent implements OnInit {
   };
   @Input('notificationFilters') notificationFilters = [];
   dataPaths = [];
-  @Output('filtersApplied') filtersAppliedEmitter: EventEmitter<boolean> = new EventEmitter<boolean>(false);
+  @Output('filtersApplied') filtersAppliedEmitter: EventEmitter<any> = new EventEmitter<any>(false);
   constructor(private dataService: DataService,
               private spinner: NgxSpinnerService,
               private httpClient: HttpClient) { }
@@ -374,31 +374,9 @@ export class FilterUrlComponent implements OnInit {
   }
   constructUrl() {
     console.log('here');
-    
-    this.filtersAppliedEmitter.emit(true);
+    this.filtersAppliedEmitter.emit({maxPrice:this.maxPriceValue,minPrice:this.minPriceValue,minTrustValue:this.minTrustedValue,maxTrustValue:this.maxTrustedValue});
   }
 
-  constructNotificationFilters() {
-    var sellerFilters = new Set();
-    var availabilityArticleFilters = new Set();
-    var shipingFilter = new Set();
-    this.notificationFilters.map(notificationFilter => {
-      if (notificationFilter.type == 'shipping'){
-        shipingFilter.add(notificationFilter.value);
-      }
-      else if (notificationFilter.type == 'sellerType') {
-        if (notificationFilter.name != 'Sold by Chrono24'){
-          sellerFilters.add(notificationFilter.value.replace('"',"'"));
-        }
-        else {
-          sellerFilters.add(notificationFilter.value);
-        }
-      }
-      else if (notificationFilter.type == 'articleAvailability') {
-        availabilityArticleFilters.add(notificationFilter.value);
-      }
-    })
-    return {shippingFilter:Array.from(shipingFilter),sellterTypeFilter:Array.from(sellerFilters),availabilityArticleFilters:Array.from(availabilityArticleFilters),trustedMin:this.minTrustedValue,trustedMax:this.maxTrustedValue};
-  }
+  
 
 }

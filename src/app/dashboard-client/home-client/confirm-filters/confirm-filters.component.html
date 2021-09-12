@@ -14,7 +14,7 @@
           </div>
           <div class="chip-container" >
             <span class="badge rounded-pill  chip-filter" (click)="removeAppliedFilterPrice()" *ngIf="(minPriceValue != 0 || maxPriceValue != 150000)">
-              <span>{{minPriceValue}} - {{maxPriceValue}}</span>
+              <span>{{minPriceValue}}€ - {{maxPriceValue}}€</span>
               <span>x</span>
             </span>
           </div>
@@ -23,6 +23,14 @@
             <div class="selection-image">
                 <img src="../../../../assets/img/client-dashboard/confirmation_watch.svg">
             </div>
+        </div>
+        <div class="col-12 selection-buttons">
+            <button class="btn edit-filter">
+                EDIT FILTER
+            </button>
+            <button class="btn confirm-filter" [disabled]="appliedFiters && ((appliedFiters.length < 5 && minPriceValue == 0 && maxPriceValue== 150000) || (appliedFiters.length < 4 && (minPriceValue != 0 || maxPriceValue != 150000)))">
+                CONFIRM FILTER
+            </button>
         </div>
       </div>
 </div>
