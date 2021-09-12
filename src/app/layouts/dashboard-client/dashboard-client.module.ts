@@ -12,6 +12,9 @@ import { SearchFilterPipe } from "src/app/dashboard-client/pipes/search-filter.p
 import { NgxSliderModule } from "@angular-slider/ngx-slider";
 import { ConfirmFiltersComponent } from "src/app/dashboard-client/home-client/confirm-filters/confirm-filters.component";
 import { NotifiedViaComponent } from "src/app/dashboard-client/home-client/notified-via/notified-via.component";
+import { PricingComponent } from "src/app/dashboard-client/pricing/pricing.component";
+import { SettingsComponent } from "src/app/dashboard-client/settings/settings.component";
+import { AlertsComponent } from "src/app/dashboard-client/alerts/alerts.component";
 @NgModule({
   imports: [
     CommonModule,
@@ -25,6 +28,9 @@ import { NotifiedViaComponent } from "src/app/dashboard-client/home-client/notif
       FilterUrlComponent,
       ConfirmFiltersComponent,
       NotifiedViaComponent,
+      PricingComponent,
+      SettingsComponent,
+      AlertsComponent,
       KeysPipe,
       SearchFilterPipe,
       KeysCasePipe
