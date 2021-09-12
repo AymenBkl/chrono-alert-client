@@ -15,6 +15,7 @@ import { NotifiedViaComponent } from "src/app/dashboard-client/home-client/notif
 import { PricingComponent } from "src/app/dashboard-client/pricing/pricing.component";
 import { SettingsComponent } from "src/app/dashboard-client/settings/settings.component";
 import { AlertsComponent } from "src/app/dashboard-client/alerts/alerts.component";
+import { PricingPlanComponent } from "src/app/dashboard-client/pricing/pricing-plan/pricing-plan.component";
 @NgModule({
   imports: [
     CommonModule,
@@ -31,6 +32,7 @@ import { AlertsComponent } from "src/app/dashboard-client/alerts/alerts.componen
       PricingComponent,
       SettingsComponent,
       AlertsComponent,
+      PricingPlanComponent,
       KeysPipe,
       SearchFilterPipe,
       KeysCasePipe
