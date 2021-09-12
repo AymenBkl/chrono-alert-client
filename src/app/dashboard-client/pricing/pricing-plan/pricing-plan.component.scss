@@ -4,6 +4,11 @@
     border-radius: 10px;
 }
 
+.pricing-plans-holder {
+    border-bottom: 1px solid gainsboro;
+    padding-bottom: 13px;
+}
+
 .pricing-holder {
     margin-top: 10px;
     display: inline-block;
@@ -55,4 +60,34 @@
     letter-spacing: 0px;
     color: #FFFFFF;
     margin-top: 20px;
+}
+
+.pricing-plans-feature {
+    display: inline-block;
+    padding: 30px;
+    text-align: center;
+    border-bottom: 1px solid gainsboro;
+}
+
+.plan-feature {
+    display: inline-block;
+    text-align: center;
+    padding-right: 59px;
+}
+
+.plan-feature img {
+    width: 20px;
+    filter: invert(32%) sepia(60%) saturate(5209%) hue-rotate(208deg) brightness(93%) contrast(110%);
+
+}
+
+.plan-feature span {
+    letter-spacing: 0px;
+    color: #333333;
+    font: normal normal normal 12px/15px Roboto;
+}
+
+.cancel span {
+    font: normal normal normal 20px/22px Roboto !important;
+    color: #333333 !important;
 }
