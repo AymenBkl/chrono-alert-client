@@ -68,6 +68,10 @@ export class FilterUrlComponent implements OnInit {
     }, 0);
   }
 
+  startFilter(){
+    this.start = true;
+  }
+
 
 
   selectTab(index) {

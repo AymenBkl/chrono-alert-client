@@ -22,10 +22,13 @@
         </li>
       </ul>
     </div>
-    
+    <div class="col-12 start-button-filter" *ngIf="!start" (click)="startFilter()">
+      <button class="btn" >
+        <span>START HERE</span>
+      </button>
+    </div>
   </div>
-<div class="row" *ngIf="start">
-    <button type="button" class="btn  close-btn"><i class="fas fa-times" (click)="closeDialog()"></i></button>
+<div class="row filter-container" *ngIf="start">
     <div class="col-md-2 col-lg-4 col-0 d-none d-sm-block main-div-tabs">
       <ul class="main-list list-group">
         <li class="list-item list-group-item list-group-item-action "  *ngFor='let tab of tabs;let i = index' (click)="selectTab(i)" [class.selected]='selectedIndex == i'>
