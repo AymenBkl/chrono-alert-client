@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, Input, OnInit, Output,EventEmitter} from '@angular/core';
 import { DataService } from '../../services/data.service';
 declare var $: any;
 import { Options, LabelType } from '@angular-slider/ngx-slider';
@@ -21,11 +21,11 @@ export class FilterUrlComponent implements OnInit {
   selectedIndex = 0;
   allFilterData = [];
   showTabs = false;
-  appliedFiters = [];
+  @Input('appliedFiters') appliedFiters = [];
   tabsHor = ['Brand','Model','Price','Case Size','Year','Location'];
   tabs = ['Brand','Model','Price','Case Size','Year','Location','Condition & Delivery Contents','Payment & Seller Info','Watch Type','Reference Number','Movement & Functions','Dial','Case','Strap/Bracelet','Clasp','Notification','Others'];
-  minPriceValue: number = 0;
-  maxPriceValue: number = 150000;
+  @Input('minPriceValue') minPriceValue: number = 0;
+  @Input('maxPriceValue') maxPriceValue: number = 150000;
   options: Options = {
     floor: 0,
     ceil: 150000,
@@ -41,8 +41,8 @@ export class FilterUrlComponent implements OnInit {
     }
   };
   appliedFilterPrice : {minPrice:number,maxPrice:number} = {minPrice:this.minPriceValue,maxPrice:this.maxPriceValue};
-  minTrustedValue: number = 0;
-  maxTrustedValue: number = 150000;
+  @Input('minTrustedValue') minTrustedValue: number = 0;
+  @Input('maxTrustedValue') maxTrustedValue: number = 150000;
   optionsTrusted: Options = {
     floor: 0,
     ceil: 1000,
@@ -57,8 +57,9 @@ export class FilterUrlComponent implements OnInit {
       }
     }
   };
-  notificationFilters = [];
+  @Input('notificationFilters') notificationFilters = [];
   dataPaths = [];
+  @Output('filtersApplied') filtersAppliedEmitter: EventEmitter<boolean> = new EventEmitter<boolean>(false);
   constructor(private dataService: DataService,
               private spinner: NgxSpinnerService,
               private httpClient: HttpClient) { }
@@ -372,28 +373,9 @@ export class FilterUrlComponent implements OnInit {
     })
   }
   constructUrl() {
-    let params = new HttpParams();
-    params = params.set('sortorder','5');
-    params = params.set('dosearch','true');
-    params = params.set('redirectToSearchIndex',"true");
-    params = params.set('resultview','block');
-    params = params.set('pageSize','120');
-    params = params.set('maxAgeInDays','0');
-    params = params.set('currencyId',this.notificationFilters[this.notificationFilters.indexOf(this.notificationFilters.filter(notificationFilter => notificationFilter && notificationFilter.type == 'currency')[0])].name);
-    params = params.set('priceFrom',this.minPriceValue.toString());
-    params = params.set('priceTo',this.maxPriceValue.toString());
-    params = params.set('showpage','1');   
-    this.appliedFiters.map(filter => {
-      if (filter.type && filter.id){
-        params = params.append(`${filter.type}`,`${filter.id}`);
-      }
-    })
-    if (this.appliedFiters.length > 0){
-      this.closeDialog({url:'https://www.chrono24.com/search/index.htm?' + params.toString(),filterData:this.constructNotificationFilters(), email:'aymenxyz6@gmail.com',user:'6115d35deb40681b395131b4'})
-    }
-    else {
-      this.closeDialog();
-    }
+    console.log('here');
+    
+    this.filtersAppliedEmitter.emit(true);
   }
 
   constructNotificationFilters() {

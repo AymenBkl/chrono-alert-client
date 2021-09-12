@@ -10,6 +10,7 @@ import { FilterUrlComponent } from "src/app/dashboard-client/home-client/filter-
 import { KeysCasePipe, KeysPipe } from "src/app/dashboard-client/pipes/keys.pipe";
 import { SearchFilterPipe } from "src/app/dashboard-client/pipes/search-filter.pipe";
 import { NgxSliderModule } from "@angular-slider/ngx-slider";
+import { ConfirmFiltersComponent } from "src/app/dashboard-client/home-client/confirm-filters/confirm-filters.component";
 @NgModule({
   imports: [
     CommonModule,
@@ -21,6 +22,7 @@ import { NgxSliderModule } from "@angular-slider/ngx-slider";
   declarations: [
       HomeClientComponent,
       FilterUrlComponent,
+      ConfirmFiltersComponent,
       KeysPipe,
       SearchFilterPipe,
       KeysCasePipe

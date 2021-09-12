@@ -516,7 +516,7 @@
             <button 
             class="btn" 
             [disabled]="appliedFiters && ((appliedFiters.length < 5 && appliedFilterPrice.minPrice == 0 && appliedFilterPrice.maxPrice == 150000) || (appliedFiters.length < 4 && (appliedFilterPrice.minPrice != 0 || appliedFilterPrice.maxPrice != 150000)))"
-            
+            (click)="constructUrl()"
             >
             {{'APPLY FILTER(s)' | uppercase}}</button>
           </div>
