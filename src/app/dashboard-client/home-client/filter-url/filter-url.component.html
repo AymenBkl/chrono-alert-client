@@ -13,6 +13,16 @@
       </button>
     </div>
   </div>
+<div class="row applied-filter-chips" *ngIf="start">
+  <div class="col-12">
+    <div class="chip-container" *ngFor="let appliedFilter of appliedFiters">
+      <span class="badge rounded-pill bg-secondary chip-filter" (click)="addFilter($event,appliedFilter)">
+        <span>{{appliedFilter.name}}</span>
+        <span>x</span>
+      </span>
+    </div>
+  </div>
+</div>
 <div class="row filter-container" *ngIf="start">
     <div class="col-md-2 col-lg-4 col-0 d-none d-sm-block main-div-tabs">
       <ul class="main-list list-group">

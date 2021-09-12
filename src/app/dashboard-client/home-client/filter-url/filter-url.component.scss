@@ -271,9 +271,9 @@
   
   }
   
-  .form-check-input:checked[type=checkbox] {
-    /**filter: invert(0%) sepia(73%) saturate(0%) hue-rotate(146deg) brightness(90%) contrast(104%);**/
-  }
+ /** .form-check-input:checked[type=checkbox] {
+    filter: invert(0%) sepia(73%) saturate(0%) hue-rotate(146deg) brightness(90%) contrast(104%);
+  }**/
 
   .form-check-input:checked {
     background-color: #0164F8 !important;
@@ -536,3 +536,32 @@ Not supports in Firefox and IE */
 body{background-color:#babac0}
 
 .overflow{min-height: 450px}
+
+
+.applied-filter-chips {
+  margin-top: 0px;
+}
+
+.chip-container {
+  width:auto;
+  margin-bottom: 12px;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+
+.chip-filter {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font: normal normal normal 13px/16px Roboto;
+  text-align: center;
+  min-width: 60px;
+}
+
+.chip-filter span:first-child{
+  margin-right: 5px;
+}
+
+.chip-filter:hover {
+  cursor: pointer;
+}
