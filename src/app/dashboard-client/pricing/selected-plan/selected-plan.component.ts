@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-selected-plan',
@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SelectedPlanComponent implements OnInit {
 
   @Input('plan') plan;
+  @Output('back') backEmitter:EventEmitter<boolean> = new EventEmitter<boolean>(false);
   payments = [{
     paymentType:'Paypal',
     img:'../../../../assets/img/client-dashboard/paypal.svg',
@@ -37,6 +38,10 @@ export class SelectedPlanComponent implements OnInit {
     this.payments.map(payment => payment.selected = false);
     paymentToSelect.selected = true;
     this.selectedPayment = paymentToSelect;
+  }
+
+  back(){
+    this.backEmitter.emit(true);
   }
 
 }

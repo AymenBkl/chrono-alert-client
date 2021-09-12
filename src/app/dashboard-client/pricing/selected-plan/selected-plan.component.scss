@@ -157,3 +157,20 @@
     border-radius: 10px;
     font: normal normal bold 15px/17px Roboto;
 }
+
+.back-button {
+    text-align: right;
+    padding-right: 19px;
+    padding-bottom: 35px;
+    padding-top: 23px;
+}
+
+.back-button button {
+    width: 135px;
+    height: 32px;
+    background: #DDDDDD 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    letter-spacing: 0px;
+    color: #414141;
+    font: normal normal bold 13px/17px Roboto;
+}

@@ -83,5 +83,5 @@
 </div>
 
 <div class="row card card-selected-plan-holder" *ngIf="selectedPlan">
-    <app-selected-plan [plan]='selectedPlan'></app-selected-plan>
+    <app-selected-plan [plan]='selectedPlan' (back)='selectPlan(null)'></app-selected-plan>
 </div>

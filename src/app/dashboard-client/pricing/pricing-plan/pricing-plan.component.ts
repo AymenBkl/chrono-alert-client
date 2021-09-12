@@ -30,8 +30,9 @@ export class PricingPlanComponent implements OnInit {
   }
 
   selectPlan(plan){
+    console.log(plan);
     this.selectedPlan = plan;
-    console.log('xd',this.selectedPlan)
   }
+
 
 }
