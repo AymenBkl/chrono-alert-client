@@ -1,3 +1,5 @@
+import { Plan } from "../dashboard-client/interfaces";
+
 export interface User {
     _id:string
     firstName: string;
@@ -13,6 +15,7 @@ export interface User {
     role:string;
     status:string;
     emailVerified:boolean;
+    plan:Plan;
     createdAt:string;
   }
   

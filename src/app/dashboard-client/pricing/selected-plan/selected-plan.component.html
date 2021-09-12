@@ -49,8 +49,11 @@
                     <img [src]="selectedPayment.img">
                 </div>
                 <div class="payment-viewer-button">
-                    <button class="btn">
-                        Check Out
+                    <button class="btn" (click)="addPlan()" [disabled]="this.submitted">
+                        <span *ngIf="!submitted">Check Out</span>
+                          <div class="spinner-border" role="status" *ngIf="submitted">
+                            <span class="visually-hidden">Loading...</span>
+                          </div>
                     </button>
                 </div>
             </div>
@@ -60,7 +63,7 @@
 </div>
 
 <div class="col-12 back-button">
-    <button class="btn" (click)="back()">
+    <button class="btn" (click)="back()" [disabled]="submitted">
         BACK
     </button>
 </div>

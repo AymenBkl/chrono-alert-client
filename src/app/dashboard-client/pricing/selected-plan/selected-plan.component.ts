@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-selected-plan',
@@ -29,7 +30,8 @@ export class SelectedPlanComponent implements OnInit {
     selected:false
   }];
   selectedPayment:any = this.payments[0];
-  constructor() { }
+  submitted:boolean = false;
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
   }
@@ -41,7 +43,21 @@ export class SelectedPlanComponent implements OnInit {
   }
 
   back(){
-    this.backEmitter.emit(true);
+    if (!this.submitted){
+      this.backEmitter.emit(true);
+    }
+  }
+
+  addPlan(){
+    this.plan.paymentType = this.selectedPayment.paymentType;
+    this.submitted = true;
+    this.userService.addPlan(this.plan)
+      .then((result) => {
+        this.submitted = false;
+      })
+      .catch(err => {
+        this.submitted = false;
+      })
   }
 
 }

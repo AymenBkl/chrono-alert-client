@@ -17,11 +17,14 @@ import { SettingsComponent } from "src/app/dashboard-client/settings/settings.co
 import { AlertsComponent } from "src/app/dashboard-client/alerts/alerts.component";
 import { PricingPlanComponent } from "src/app/dashboard-client/pricing/pricing-plan/pricing-plan.component";
 import { SelectedPlanComponent } from "src/app/dashboard-client/pricing/selected-plan/selected-plan.component";
+import { UserService } from "src/app/dashboard-client/services/user.service";
+import { HttpClientModule } from "@angular/common/http";
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(clientDashboardRoutes),
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     NgxSliderModule
   ],
