@@ -65,6 +65,9 @@ export class FilterUrlComponent implements OnInit {
               private httpClient: HttpClient) { }
 
   ngOnInit() {
+    if(this.appliedFiters.length > 0){
+      this.startFilter();
+    }
   }
 
 

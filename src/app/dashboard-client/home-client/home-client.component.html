@@ -8,7 +8,7 @@
             <span>{{step}}/4 Select your watch</span>
         </div>
     </div>
-    <div class="row step-holder" *ngIf="step == 1">
+    <div class="row step-holder" *ngIf="step == 1 || step == 2" [ngClass]='{"hide-step-holder":step  == 2}'>
         
         <div class="col-12 filter-holder">
             <app-filter-url 
@@ -21,15 +21,15 @@
         </app-filter-url>
         </div>
     </div>
-    <div class="row step-holder" *ngIf="step == 2">
+    <div class="row step-holder" *ngIf="step == 2 || step == 1" [ngClass]='{"hide-step-holder":step  == 1}'> 
         <div class="col-12 filter-holder">
             <app-confirm-filters
             [appliedFiters]='appliedFiters' 
             [minPriceValue]='minPriceValue' 
             [maxPriceValue]='maxPriceValue' 
             [notificationFilter]='notificationFilter'
+            (stepProgress)="nextStep($event)"
             >
-
             </app-confirm-filters>
         </div>
     </div>

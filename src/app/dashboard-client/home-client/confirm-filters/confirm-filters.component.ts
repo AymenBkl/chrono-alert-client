@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-confirm-filters',
@@ -11,6 +11,7 @@ export class ConfirmFiltersComponent implements OnInit {
   @Input('minPriceValue') minPriceValue: number;
   @Input('maxPriceValue') maxPriceValue: number;
   @Input('notificationFilter') notificationFilters;
+  @Output('stepProgress') stepProgress: EventEmitter<any> = new EventEmitter<any>(false);
   constructor() { }
 
   ngOnInit(): void {
@@ -31,6 +32,15 @@ export class ConfirmFiltersComponent implements OnInit {
       this.appliedFiters.splice(indexOfItem,1);
     }
     console.log(this.appliedFiters);
+  }
+
+  nextStep(step:number){
+    if (step == 3 && !(this.appliedFiters && ((this.appliedFiters.length < 5 && this.minPriceValue == 0 && this.maxPriceValue== 150000) || (this.appliedFiters.length < 4 && (this.minPriceValue != 0 || this.maxPriceValue != 150000))))){
+      this.stepProgress.emit(step);
+    }
+    else if (step == 1){
+      this.stepProgress.emit(step);
+    }
   }
 
 }

@@ -29,7 +29,10 @@ export class HomeClientComponent implements OnInit {
     console.log(this.minPriceValue,this.maxPriceValue);
     this.notificationFilter = this.constructNotificationFilters();
     this.step = 2;
-    
+  }
+
+  nextStep(event){
+    this.step = event;
   }
 
   constructNotificationFilters() {
