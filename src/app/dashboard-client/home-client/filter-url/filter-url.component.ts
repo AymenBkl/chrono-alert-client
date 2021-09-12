@@ -105,6 +105,7 @@ export class FilterUrlComponent implements OnInit {
       this.appliedFiters.push(item);
     }
     else {
+      item.checked = false;
       this.appliedFiters.splice(indexOfItem,1);
     }
     console.log(this.appliedFiters);
