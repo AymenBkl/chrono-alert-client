@@ -1,0 +1,63 @@
+.lock-holder {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+}
+
+.lock-holder img {
+    width: 130px;
+}
+
+.main-selected-price-plan-holder {
+    display: inline-block;
+}
+
+.selected-price-plan-holder {
+    display: inline-block;
+}
+
+.selected-price-payment {
+    letter-spacing: 0px;
+    color: #414141;
+    font: normal normal normal 21px/19px Roboto;
+    position: absolute;
+    top: 28px;
+}
+
+
+.selected-price-plan-title {
+    text-align: center;
+    letter-spacing: 0px;
+    color: black;
+    font: normal normal bold 21px/24px Roboto;
+}
+
+.selected-price-plan-price {
+    margin-top: 20px;
+    text-align: center;
+    letter-spacing: 0px;
+    color: black;
+    font: normal normal bold 25px/27px Roboto;
+}
+
+.selected-price-plan-holder {
+    display: inline-block;
+}
+
+.selected-price-plan-period {
+    margin-top: 20px;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #333333;
+    font: normal normal normal 12px/15px Roboto;
+}
+
+.card-price {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 6px 6px #00000029;
+    border-radius: 10px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}

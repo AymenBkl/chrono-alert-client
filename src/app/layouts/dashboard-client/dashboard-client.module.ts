@@ -16,6 +16,7 @@ import { PricingComponent } from "src/app/dashboard-client/pricing/pricing.compo
 import { SettingsComponent } from "src/app/dashboard-client/settings/settings.component";
 import { AlertsComponent } from "src/app/dashboard-client/alerts/alerts.component";
 import { PricingPlanComponent } from "src/app/dashboard-client/pricing/pricing-plan/pricing-plan.component";
+import { SelectedPlanComponent } from "src/app/dashboard-client/pricing/selected-plan/selected-plan.component";
 @NgModule({
   imports: [
     CommonModule,
@@ -33,6 +34,7 @@ import { PricingPlanComponent } from "src/app/dashboard-client/pricing/pricing-p
       SettingsComponent,
       AlertsComponent,
       PricingPlanComponent,
+      SelectedPlanComponent,
       KeysPipe,
       SearchFilterPipe,
       KeysCasePipe

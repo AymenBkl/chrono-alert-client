@@ -1,4 +1,4 @@
-<div class="row card card-pricing-plans">
+<div class="row card card-pricing-plans" *ngIf="!selectedPlan">
     <div class="col-12 pricing-plans-holder">
         <div class="col-12 col-lg-3 pricing-holder">
             <div class="lock-holder">
@@ -17,7 +17,7 @@
                     per {{pricePlan.period}}
                 </div>
                 <div class="price-plan-button">
-                    <button class="btn">
+                    <button class="btn" (click)="selectPlan(pricePlan)">
                         Get This Plan
                     </button>
                 </div>
@@ -80,5 +80,8 @@
             <img src="../../../../assets/img/client-dashboard/check_mark.svg">
         </div>
     </div>
-    
+</div>
+
+<div class="row card card-selected-plan-holder" *ngIf="selectedPlan">
+    <app-selected-plan [plan]='selectedPlan'></app-selected-plan>
 </div>

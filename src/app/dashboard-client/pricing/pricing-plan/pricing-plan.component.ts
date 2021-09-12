@@ -22,10 +22,16 @@ export class PricingPlanComponent implements OnInit {
     price:19.99,
     currency:'€',
     period:'month'
-  }]
+  }];
+  selectedPlan:any;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  selectPlan(plan){
+    this.selectedPlan = plan;
+    console.log('xd',this.selectedPlan)
   }
 
 }
