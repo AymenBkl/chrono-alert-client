@@ -134,9 +134,12 @@ export class FilterUrlComponent implements OnInit {
       
     }
     else {
-      this.appendNotificationFilters();
-      this.spinner.hide();
-      this.loaded = true;
+      setTimeout(() => {
+        this.appendNotificationFilters();
+        this.spinner.hide();
+        this.loaded = true;
+      })
+      
     }
     
   }

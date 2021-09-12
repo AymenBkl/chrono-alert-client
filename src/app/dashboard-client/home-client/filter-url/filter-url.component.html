@@ -52,7 +52,7 @@
       </div>
       <div class="filters" *ngIf="selectedIndex == 0 && loaded" [@slideInOut]>
         <div class="search-box-filter">
-          <h6>All brands</h6>
+          <!--<h6>All brands</h6>-->
           <div class="input-group mb-3 input-search">
             <input type="text" class="form-control" placeholder="Search For A Specific Brand" (keyup)="onSearchChange($event.target.value)" >
               <span class="icon-search"><i class="fas fa-search"></i></span>
@@ -78,7 +78,7 @@
     </div>
     <div class="filters" *ngIf="selectedIndex == 1 && loaded" [@slideInOut]>
       <div class="search-box-filter">
-        <h6>All models</h6>
+        <!--<h6>All models</h6>-->
         <div class="input-group mb-3 input-search">
           <input type="text" class="form-control" placeholder="Search For A Specific Model" (keyup)="onSearchChange($event.target.value)" >
             <span class="icon-search"><i class="fas fa-search"></i></span>
@@ -121,7 +121,7 @@
     <div class="main-filter-content">
     <div class="filters-checkbox row" *ngFor='let size of allFilterData[3] | keysCase'>
       <div class="search-box-filter">
-        <h6>{{caseSizeHeader(size)}}</h6>
+        <!--<h6>{{caseSizeHeader(size)}}</h6>-->
         <div class="input-group mb-3 input-search">
           <input type="text" class="form-control" placeholder="Search For Case {{caseSizeHeader(size)}}" (keyup)="onSearchChangeCaseSize($event.target.value,size)" >
             <span class="icon-search"><i class="fas fa-search"></i></span>
@@ -144,7 +144,7 @@
     <div class="main-filter-content">
     <div class="filters-checkbox row" *ngFor='let year of allFilterData[4] | keys'>
       <div class="search-box-filter">
-        <h6>All models</h6>
+        <!--<h6>All models</h6>-->
         <div class="input-group mb-3 input-search">
           <input type="text" class="form-control" placeholder="Search For A Specific Model" (keyup)="onSearchChange($event.target.value)" >
             <span class="icon-search"><i class="fas fa-search"></i></span>
@@ -167,7 +167,7 @@
     <div class="main-filter-content">
     <div class="filters-checkbox row" *ngFor='let location of allFilterData[5] | keys'>
       <div class="search-box-filter">
-        <h6>All years</h6>
+        <!--<h6>All years</h6>-->
         <div class="input-group mb-3 input-search">
           <input type="text" class="form-control" placeholder="Search For A Specific Model" (keyup)="onSearchChange($event.target.value)" >
             <span class="icon-search"><i class="fas fa-search"></i></span>
@@ -279,7 +279,7 @@
     <div class="main-filter-content">
     <div class="filters-checkbox row" *ngFor='let referenceNumber of allFilterData[9] | keys'>
       <div class="search-box-filter">
-        <h6>All reference numbers</h6>
+        <!--<h6>All reference numbers</h6>-->
         <div class="input-group mb-3 input-search">
           <input type="text" class="form-control" placeholder="Search For A Specific Model" (keyup)="onSearchChange($event.target.value)" >
             <span class="icon-search"><i class="fas fa-search"></i></span>
@@ -507,15 +507,17 @@
   </div>
   </div>
     </div>
-  </div>
-  <div class="row" *ngIf="!showTabs && start">
-    <div class="col-12 div-bottom">
-      <div class="button-apply">
-        <button class="btn btn-lg btn-primary" (click)='constructUrl()'><i class="fas fa-filter"></i>{{'Apply Filters' | uppercase}}</button>
+    <div class="col-12">
+      <div *ngIf="!showTabs && start">
+        <div class="div-bottom">
+          <div class="button-apply">
+            <button class="btn" (click)='constructUrl()'><i class="fas fa-filter"></i>{{'APPLY FILTER(s)' | uppercase}}</button>
+          </div>
+        </div>
       </div>
     </div>
-    
   </div>
+ 
   <ngx-spinner
     bdColor="rgba(51,51,51,0.8)"
     size="medium"

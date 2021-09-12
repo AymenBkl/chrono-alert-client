@@ -16,8 +16,9 @@
     font-size: 15px;
     border:none;
     border-radius: 0px;
-    padding-left: 21px;
-    font: normal normal normal 15px/16px Roboto;
+    padding-left: 10px;
+    color: #8B8B8B;
+    font: normal normal normal 13px/16px Roboto;
   }
   
   .list-item.selected {
@@ -28,10 +29,12 @@
   .main-div-tabs {
     border-right: 1px solid #d3d3d4;
     padding-right: 0px;
+    height: 450px;
+    overflow-y: scroll;
   }
   
   .main-filters {
-    height: 850px;
+    height: 450px;
     overflow-y: scroll;
     padding-left: 50px;
   
@@ -72,6 +75,13 @@
   input.form-control,
   [contenteditable].form-control {
     border:1px solid gainsboro;
+    border-radius: 10px !important;
+  }
+
+  ::placeholder {
+    font: normal normal normal 18px/33px Roboto;
+    letter-spacing: 0px;
+    color: #808080;
   }
   
   .input-search {
@@ -86,27 +96,28 @@
   }
 
   .input-group {
-    border-radius: 10px;
+    border-radius: 10px !important;
   }
   
   .main-filter-content {
-    padding-top: 40px;
+    padding-top: 16px;
     width: 100%;
   }
   
   .filter-first-letter {
-    color:#c39052;
-    line-height: .7em;
+    font: normal normal normal 28px/37px Roboto;
+    letter-spacing: 0px;
+    color: #0164F8;
     padding-top: 28px;
     font-size: 32px;
   }
   
   .checkbox-div .form-check {
-    padding-top: 15px;
+    padding-top: 13px;
   }
   
   .checkbox-div .form-check-input {
-    font-size: 20px;
+    font-size: 14px;
     border-radius: 0px;
     vertical-align: middle;
   }
@@ -114,21 +125,26 @@
   .checkbox-div label {
     vertical-align: middle;
     font-size: 14px;
+    font: normal normal normal 14px/17px Roboto;
+    letter-spacing: 0px;
   }
   
   .button-apply {
-    padding-right: 18px;
-    float: right;
-    padding-top: 6px;
-    padding-bottom: 6px;
+    width: 100%;
+    text-align: right;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 10px;
   }
   
   .button-apply button {
-    background-color: #c39052;
-      font-size: 16px;
-      width: 200px;
-      margin-top: 9px;
-    
+    background: #0164F8 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    width: 150px;
+    height: 30px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    font: normal normal normal 13px/15px Roboto;
   }
   .button-apply button i {
     padding-right: 5px;
@@ -150,6 +166,7 @@
   
   .div-bottom {
     border-top: 1px solid #d3d3d4;
+    margin-top: 18px;
   }
   
   .close-btn {
@@ -251,7 +268,12 @@
   }
   
   .form-check-input:checked[type=checkbox] {
-    filter: invert(0%) sepia(73%) saturate(0%) hue-rotate(146deg) brightness(90%) contrast(104%);
+    /**filter: invert(0%) sepia(73%) saturate(0%) hue-rotate(146deg) brightness(90%) contrast(104%);**/
+  }
+
+  .form-check-input:checked {
+    background-color: #0164F8 !important;
+    border-color: #0164F8 !important;
   }
   
   .price-holder-price {
@@ -471,4 +493,42 @@
     margin-top: -6px;
     border: 1px solid gainsboro;
     border-radius: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
+
+  /* Customize website's scrollbar like Mac OS
+Not supports in Firefox and IE */
+
+/* total width */
+.main-div-tabs::-webkit-scrollbar,.main-filters::-webkit-scrollbar {
+  background-color:#fff;
+  width:16px
+}
+
+/* background of the scrollbar except button or resizer */
+.main-div-tabs::-webkit-scrollbar-track,.main-filters::-webkit-scrollbar-track {
+  background-color:#fff
+}
+.main-div-tabs::-webkit-scrollbar-track:hover,.main-filters::-webkit-scrollbar-track:hover {
+  background-color:#f4f4f4
+}
+
+/* scrollbar itself */
+.main-div-tabs::-webkit-scrollbar-thumb,.main-filters::-webkit-scrollbar-thumb {
+  background-color:#babac0;
+  border-radius:16px;
+  border:5px solid #fff
+}
+.main-div-tabs::-webkit-scrollbar-thumb:hover,.main-filters::-webkit-scrollbar-thumb:hover {
+  background-color:#a0a0a5;
+  border:4px solid #f4f4f4
+}
+
+/* set button(top and bottom of the scrollbar) */
+.main-div-tabs::-webkit-scrollbar-button,.main-filters::-webkit-scrollbar-button {display:none}
+
+/* div box */
+body{background-color:#babac0}
+
+.overflow{min-height: 450px}
