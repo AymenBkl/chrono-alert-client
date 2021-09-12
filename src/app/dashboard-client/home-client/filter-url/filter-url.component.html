@@ -2,23 +2,8 @@
   <div class="row filter-horizontal">
     <div class="col-12">
       <ul class="list-modals">
-        <li>
-          <span>Model</span>
-        </li>
-        <li>
-          <span>Brand</span>
-        </li>
-        <li>
-          <span>Price</span>
-        </li>
-        <li>
-          <span>Case Size</span>
-        </li>
-        <li>
-          <span>Year</span>
-        </li>
-        <li>
-          <span>Location</span>
+        <li *ngFor="let tabHor of tabsHor;let i = index" (click)="selectTab(i)">
+          <span>{{tabHor}}</span>
         </li>
       </ul>
     </div>

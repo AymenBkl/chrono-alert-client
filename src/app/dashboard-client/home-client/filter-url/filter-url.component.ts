@@ -22,6 +22,7 @@ export class FilterUrlComponent implements OnInit {
   allFilterData = [];
   showTabs = false;
   appliedFiters = [];
+  tabsHor = ['Brand','Model','Price','Case Size','Year','Location'];
   tabs = ['Brand','Model','Price','Case Size','Year','Location','Condition & Delivery Contents','Payment & Seller Info','Watch Type','Reference Number','Movement & Functions','Dial','Case','Strap/Bracelet','Clasp','Notification','Others'];
   minPriceValue: number = 0;
   maxPriceValue: number = 150000;
@@ -62,21 +63,25 @@ export class FilterUrlComponent implements OnInit {
               private httpClient: HttpClient) { }
 
   ngOnInit() {
+   
+  }
+
+  startFilter(){
+    this.start = true;
     setTimeout(() => {
       this.spinner.show();
       this.initData();
     }, 0);
   }
 
-  startFilter(){
-    this.start = true;
-  }
-
 
 
   selectTab(index) {
-    this.selectedIndex = index;
-    this.showTabs = false;
+    if (this.start){
+      this.selectedIndex = index;
+      this.showTabs = false;
+    }
+    
   }
 
   addFilter(event,item) {
@@ -134,11 +139,9 @@ export class FilterUrlComponent implements OnInit {
       
     }
     else {
-      setTimeout(() => {
-        this.appendNotificationFilters();
-        this.spinner.hide();
-        this.loaded = true;
-      })
+      this.appendNotificationFilters();
+      this.spinner.hide();
+      this.loaded = true;
       
     }
     
