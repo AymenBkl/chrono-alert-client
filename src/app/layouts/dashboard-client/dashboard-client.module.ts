@@ -11,6 +11,7 @@ import { KeysCasePipe, KeysPipe } from "src/app/dashboard-client/pipes/keys.pipe
 import { SearchFilterPipe } from "src/app/dashboard-client/pipes/search-filter.pipe";
 import { NgxSliderModule } from "@angular-slider/ngx-slider";
 import { ConfirmFiltersComponent } from "src/app/dashboard-client/home-client/confirm-filters/confirm-filters.component";
+import { NotifiedViaComponent } from "src/app/dashboard-client/home-client/notified-via/notified-via.component";
 @NgModule({
   imports: [
     CommonModule,
@@ -23,6 +24,7 @@ import { ConfirmFiltersComponent } from "src/app/dashboard-client/home-client/co
       HomeClientComponent,
       FilterUrlComponent,
       ConfirmFiltersComponent,
+      NotifiedViaComponent,
       KeysPipe,
       SearchFilterPipe,
       KeysCasePipe

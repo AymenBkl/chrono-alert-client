@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeClientComponent implements OnInit {
 
-  step:number = 1;
+  step:number = 3;
   appliedFiters= [];
   minPriceValue: number = 0;
   maxPriceValue: number = 150000;

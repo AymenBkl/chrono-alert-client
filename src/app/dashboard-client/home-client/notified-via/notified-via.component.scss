@@ -1,0 +1,55 @@
+
+.card-selection {
+    min-height: 300px;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.notified-via-title {
+    margin-top: 15px;
+    text-align: left;
+    font: normal normal normal 20px/24px Roboto;
+    letter-spacing: 0px;
+    color: #414141;
+}
+
+.items-alert {
+    display: inline-block;
+}
+
+.alert-holder {
+    margin-top: 26px;
+    text-align: center;
+    display: inline-block;
+}
+
+.selectedAlert {
+    background: #CCDEFA 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+}
+
+.image-alert-holder {
+    text-align: center;
+    display: block;
+    padding: 36px;
+}
+
+.image-alert-holder img {
+    width: 100px;
+}
+
+.image-alert-holder img:hover {
+    cursor: pointer;
+}
+
+.text-alert-holder {
+    text-align: center;
+    display: block;
+    letter-spacing: 0px;
+    color: #333333;
+    font: normal normal normal 17px/24px Roboto;
+    padding-right: 20px;
+    padding-left: 20px;
+}
