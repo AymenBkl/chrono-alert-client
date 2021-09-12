@@ -1,0 +1,60 @@
+.confirm-selection-title {
+    margin-top: 15px;
+    text-align: left;
+    font: normal normal normal 20px/24px Roboto;
+    letter-spacing: 0px;
+    color: #414141;
+}
+
+.card-selection {
+    min-height: 300px;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.applied-filter-chips {
+    margin-top: 40px;
+  }
+  
+  .chip-container {
+    width:auto;
+    margin-bottom: 12px;
+    display: inline-block;
+    margin-right: 8px;
+  }
+  
+  
+  .chip-filter {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font: normal normal normal 13px/16px Roboto;
+    text-align: center;
+    min-width: 60px;
+    color:black;
+    background: #E6EAEC;
+    border: 1px solid #9EAEB3;
+  }
+  
+  .chip-filter span:first-child{
+    margin-right: 5px;
+  }
+  
+  .chip-filter:hover {
+    cursor: pointer;
+  }
+
+  .selection-image {
+      width: 100%;
+      text-align: center;
+  }
+
+  .selection-image img {
+      width: 80%;
+  }
+
+  .selection-image-holder {
+      display: flex;
+      align-items: center;
+  }

@@ -14,14 +14,40 @@ export class HomeClientComponent implements OnInit {
   notificationFilters = [];
   minTrustedValue: number = 0;
   maxTrustedValue: number = 150000;
+  notificationFilter:any;
   constructor() { }
 
   ngOnInit(): void {
   }
 
   filtersApplied() {
+    console.log(this.notificationFilters);
+    this.notificationFilter = this.constructNotificationFilters();
     this.step = 2;
-    console.log(this.appliedFiters,this.notificationFilters);
+    
+  }
+
+  constructNotificationFilters() {
+    var sellerFilters = new Set();
+    var availabilityArticleFilters = new Set();
+    var shipingFilter = new Set();
+    this.notificationFilters.map(notificationFilter => {
+      if (notificationFilter.type == 'shipping'){
+        shipingFilter.add(notificationFilter.value);
+      }
+      else if (notificationFilter.type == 'sellerType') {
+        if (notificationFilter.name != 'Sold by Chrono24'){
+          sellerFilters.add(notificationFilter.value.replace('"',"'"));
+        }
+        else {
+          sellerFilters.add(notificationFilter.value);
+        }
+      }
+      else if (notificationFilter.type == 'articleAvailability') {
+        availabilityArticleFilters.add(notificationFilter.value);
+      }
+    })
+    return {shippingFilter:Array.from(shipingFilter),sellterTypeFilter:Array.from(sellerFilters),availabilityArticleFilters:Array.from(availabilityArticleFilters),trustedMin:this.minTrustedValue,trustedMax:this.maxTrustedValue,currency:this.notificationFilters.filter(filter => filter.type == 'currency')[0]};
   }
 
 }

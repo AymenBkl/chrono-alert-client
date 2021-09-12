@@ -1,12 +1,15 @@
 
 <div class="container">
-    <div class="row step-holder" *ngIf="step == 1">
+    <div class="row step-holder">
         <div class="col-6 big-title">
             <span>Create New Alert</span>
         </div>
         <div class="col-6 step-number">
             <span>{{step}}/4 Select your watch</span>
         </div>
+    </div>
+    <div class="row step-holder" *ngIf="step == 1">
+        
         <div class="col-12 filter-holder">
             <app-filter-url 
             [appliedFiters]='appliedFiters' 
@@ -18,6 +21,18 @@
             (filtersApplied)='filtersApplied()'
             >
         </app-filter-url>
+        </div>
+    </div>
+    <div class="row step-holder" *ngIf="step == 2">
+        <div class="col-12 filter-holder">
+            <app-confirm-filters
+            [appliedFiters]='appliedFiters' 
+            [minPriceValue]='minPriceValue' 
+            [maxPriceValue]='maxPriceValue' 
+            [notificationFilter]='notificationFilter'
+            >
+
+            </app-confirm-filters>
         </div>
     </div>
 </div>

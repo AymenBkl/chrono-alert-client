@@ -16,13 +16,13 @@
 <div class="row applied-filter-chips" *ngIf="start">
   <div class="col-12">
     <div class="chip-container" *ngFor="let appliedFilter of appliedFiters">
-      <span class="badge rounded-pill bg-secondary chip-filter" (click)="addFilter($event,appliedFilter)">
+      <span class="badge rounded-pill  chip-filter" (click)="addFilter($event,appliedFilter)">
         <span>{{appliedFilter.name}}</span>
         <span>x</span>
       </span>
     </div>
     <div class="chip-container" >
-      <span class="badge rounded-pill bg-secondary chip-filter" (click)="removeAppliedFilterPrice()" *ngIf="(appliedFilterPrice.minPrice != 0 || appliedFilterPrice.maxPrice != 150000)">
+      <span class="badge rounded-pill  chip-filter" (click)="removeAppliedFilterPrice()" *ngIf="(appliedFilterPrice.minPrice != 0 || appliedFilterPrice.maxPrice != 150000)">
         <span>{{appliedFilterPrice.minPrice}} - {{appliedFilterPrice.maxPrice}}</span>
         <span>x</span>
       </span>

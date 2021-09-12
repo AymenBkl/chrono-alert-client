@@ -1,1 +1,28 @@
-<p>confirm-filters works!</p>
+<div class="row card card-selection">
+    <div class="col-12">
+        <div class="confirm-selection-title">
+            <span>Confirm your selections :</span>
+        </div>
+    </div>
+    <div class="row applied-filter-chips">
+        <div class="col-12 col-lg-6">
+          <div class="chip-container" *ngFor="let appliedFilter of appliedFiters">
+            <span class="badge rounded-pill chip-filter" (click)="removeFilter($event,appliedFilter)">
+              <span>{{appliedFilter.name}}</span>
+              <span>x</span>
+            </span>
+          </div>
+          <div class="chip-container" >
+            <span class="badge rounded-pill  chip-filter" (click)="removeAppliedFilterPrice()" *ngIf="(minPriceValue != 0 || maxPriceValue != 150000)">
+              <span>{{minPriceValue}} - {{maxPriceValue}}</span>
+              <span>x</span>
+            </span>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 selection-image-holder">
+            <div class="selection-image">
+                <img src="../../../../assets/img/client-dashboard/confirmation_watch.svg">
+            </div>
+        </div>
+      </div>
+</div>
