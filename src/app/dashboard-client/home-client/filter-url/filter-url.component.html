@@ -511,8 +511,14 @@
     <div class="col-12">
       <div *ngIf="!showTabs && start">
         <div class="div-bottom">
-          <div class="button-apply">
-            <button class="btn" (click)='constructUrl()'><i class="fas fa-filter"></i>{{'APPLY FILTER(s)' | uppercase}}</button>
+
+          <div class="button-apply" data-bs-toggle="tooltip" data-bs-placement="top" title="Select at least 5 filters" tabindex="0">
+            <button 
+            class="btn" 
+            [disabled]="appliedFiters && ((appliedFiters.length < 5 && appliedFilterPrice.minPrice == 0 && appliedFilterPrice.maxPrice == 150000) || (appliedFiters.length < 4 && (appliedFilterPrice.minPrice != 0 || appliedFilterPrice.maxPrice != 150000)))"
+            
+            >
+            {{'APPLY FILTER(s)' | uppercase}}</button>
           </div>
         </div>
       </div>
