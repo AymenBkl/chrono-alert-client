@@ -18,3 +18,153 @@
     color: #888888;
     margin-left: 5px;
 }
+
+.alerts-table {
+    margin-top: 15px;
+}
+
+.table {
+    table-layout:fixed;
+}
+
+.table-head {
+    background: #EDEDED 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    
+}
+
+.table-head tr th {
+    font: normal normal normal 18px/37px Roboto;
+    letter-spacing: 0px;
+    color: #333333;
+    border-bottom: none;
+}
+
+.table-head-active {
+    width: 15%;
+    text-align: center;
+    
+}
+
+.table-head-filter {
+    width: 30%;
+}
+
+.table-head-notification {
+    width: 35;
+}
+
+.table-head-detail {
+    width: 15%;
+}
+
+.table-body {
+    
+}
+
+
+.row-table-alert {
+
+}
+
+.table-body td {
+    font: normal normal normal 13px/42px Roboto;
+    letter-spacing: 0px;
+    color: #909090;
+    border-bottom: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.first-item {
+    text-align: center;
+}
+
+.first-item .form-check {
+    padding-left: 4.5em;
+    padding-top: 7px;
+}
+
+.first-item .form-check input {
+    text-align: center;
+    width: 54px;
+    height: 25px;
+}
+
+.filter-item {
+    text-align: left;
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    width: 89%;
+    text-overflow: ellipsis;
+}
+
+.social-logos {
+    width: 100%;
+    display: inline-block;
+}
+
+.social-logo {
+    display: inline-block;
+    width: 20%;
+    margin-right: 8px;
+}
+
+.social-logo img {
+    width: 20px;
+    display: block;
+}
+
+.social-logo span {
+    display: block;
+    padding-left: 7px;
+}
+
+.logo-application.active img{
+    filter: invert(32%) sepia(77%) saturate(2318%) hue-rotate(350deg) brightness(101%) contrast(91%);
+}
+
+.logo-application.active span {
+    color:#F44C23;
+}
+
+.logo-email.active img  {
+    filter: invert(36%) sepia(76%) saturate(7174%) hue-rotate(344deg) brightness(62%) contrast(111%);
+}
+
+.logo-email.active span {
+    color: #A00A14;
+}
+
+.logo-telegram.active img {
+    filter: invert(16%) sepia(64%) saturate(4625%) hue-rotate(215deg) brightness(98%) contrast(101%);
+}
+
+.logo-telegram.active span {
+    color:#004CCD;
+}
+
+.logo-whatsapp.active img {
+    filter: invert(54%) sepia(94%) saturate(361%) hue-rotate(84deg) brightness(89%) contrast(86%);
+
+}
+
+.logo-whatsapp.active span {
+    color:#32B355;
+}
+
+.alert-detail-div {
+    width: 100%;
+    text-align: center;
+}
+
+.alert-detail-div button {
+    width: 80px;
+    height: 35px;
+    background: #015AE7 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    font: normal normal bold 11px/19px Roboto;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
