@@ -14,6 +14,7 @@ export interface User {
     description:string;
     role:string;
     status:string;
+    urls:any[];
     emailVerified:boolean;
     plan:Plan;
     createdAt:string;

@@ -1,1 +1,41 @@
-<p>email works!</p>
+<div class="col-12 card card-email">
+    <div class="col-12 email-title" [@slideInOut]>
+        <span>Setup ChronoAlerts email</span>
+    </div>
+    <div class="col-4 email-logo-holder" [@slideInOut]>
+        <div class="logo-holder">
+            <img src="../../../../assets/img/client-dashboard/email.svg">
+        </div>
+        <div class="logo-title">
+            ChronoAlerts Email
+        </div>
+    </div>
+    <div class="col-6 email-instructions" [@slideInOut]>
+        <div class="email-add-title">
+            <span>Your Email : </span>
+            <span>{{user.email}}</span>
+        </div>
+        <div class="email-input" [ngClass]='{"addemail":!disabledUserInput}'>
+            <div class="form-group">
+                <label>Add Emails:</label>
+                <input type="email" class="form-control input-email" id="inputEmail"
+                    aria-describedby="emailError" placeholder="E-mail Address" [disabled]='disabledUserInput' [(ngModel)]='userEmail'>
+            </div>
+            
+        </div>
+        <div class="email-upgrade" *ngIf="disabledUserInput">
+            <button class="btn">
+                UPGRADE TO {{plan | uppercase}}
+            </button>
+        </div>
+        
+    </div>
+    <div class="col-12 email-buttons" (click)="emitEmailInstruction(-1)" [@slideInOut]>
+        <button class="btn edit-filter">
+            BACK
+        </button>
+        <button class="btn confirm-filter" (click)="emitEmailInstruction(1)">
+            FORWARD
+        </button>
+    </div>
+</div>

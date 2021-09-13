@@ -38,6 +38,7 @@ export class NotifiedViaComponent implements OnInit {
   }];
   userPlan:string = 'free';
   valid:boolean = false;
+  user:User;
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
@@ -52,6 +53,8 @@ export class NotifiedViaComponent implements OnInit {
   }
 
   checkUserPlan(){
+    this.user = this.authService.user;
+    console.log(this.user);
     if (this.authService.user.plan && this.authService.user.plan != null){
       var userPlan:Plan = this.authService.user.plan;
       var date = new Date().getTime();
@@ -75,7 +78,8 @@ export class NotifiedViaComponent implements OnInit {
     this.stepProgress.emit(step);
   }
 
-  nextStepNotification(forward:boolean){
+  nextStepNotification(data:any){
+    console.log(data)
     if (this.valid){
       this.step += 1;
     }

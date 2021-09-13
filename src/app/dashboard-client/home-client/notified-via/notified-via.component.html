@@ -30,6 +30,10 @@
     </div>
 </div>
 
-<div class="row" [ngClass]='{"hidden-row":step != 2}'>
-    <app-app (appFilter)='nextStepNotification($event)'></app-app>
+<div class="row" *ngIf="step == 2">
+    <app-app (appInstruction)='nextStepNotification($event)'></app-app>
+</div>
+
+<div class="row" *ngIf="step == 3">
+    <app-email [user]='user' (emailInstruction)="nextStepNotification($event)"></app-email>
 </div>

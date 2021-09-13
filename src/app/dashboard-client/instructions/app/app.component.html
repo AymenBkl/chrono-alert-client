@@ -1,8 +1,8 @@
 <div class="col-12 card card-app">
-    <div class="col-12 app-title">
+    <div class="col-12 app-title" [@slideInOut]>
         <span>Setup ChronoAlerts app</span>
     </div>
-    <div class="col-3 app-logo-holder">
+    <div class="col-3 app-logo-holder" [@slideInOut]>
         <div class="logo-holder">
             <img src="../../../../assets/img/client-dashboard/app.svg">
         </div>
@@ -10,7 +10,7 @@
             ChronoAlerts App
         </div>
     </div>
-    <div class="col-7 app-instructions">
+    <div class="col-7 app-instructions" [@slideInOut]>
         <ul class="list-instructions">
             <li class="instruction-item">
                 <span>1. Scan QR code to get the app link</span>
@@ -26,7 +26,7 @@
             </li>
         </ul>
     </div>
-    <div class="col-3 app-logo-holder hidden-instructions" [ngClass]="{'show-instructions':viewInstructions}">
+    <div class="col-3 app-logo-holder hidden-instructions" [ngClass]="{'show-instructions':viewInstructions}" [@slideInOut]>
         <div class="logo-holder">
             <img src="../../../../assets/img/client-dashboard/app.svg">
         </div>
@@ -34,7 +34,7 @@
             ChronoAlerts App
         </div>
     </div>
-    <div class="col-7 app-instructions hidden-instructions" [ngClass]="{'show-instructions':viewInstructions}">
+    <div class="col-7 app-instructions hidden-instructions" [ngClass]="{'show-instructions':viewInstructions}" [@slideInOut]>
         <ul class="list-instructions">
             <li class="instruction-item">
                 <span>1. Scan QR code to get the app link</span>
@@ -50,7 +50,7 @@
             </li>
         </ul>
     </div>
-    <div class="app-qr-code">
+    <div class="app-qr-code" [@slideInOut]>
         <div class="qr-code-image">
             <img src="../../../../assets/img/client-dashboard/app-qr-code.svg">
         </div>
@@ -58,7 +58,7 @@
             <span>Scan to download <span class="blue-text">ChronoAlerts</span> app</span>
         </div>
     </div>
-    <div class="need-help">
+    <div class="need-help" [@slideInOut]>
         <div class="help-logo">
             <img src="../../../../assets/img/client-dashboard/little_guide.svg">
         </div>
@@ -68,11 +68,11 @@
             <span class="help-small-text" (click)="viewInstructionsClick(false)" *ngIf="viewInstructions">Hide instructions</span>
         </div>
     </div>
-    <div class="col-12 app-buttons">
-        <button class="btn edit-filter" (click)="emmitAppFilter(false)">
+    <div class="col-12 app-buttons" [@slideInOut]>
+        <button class="btn edit-filter" (click)="emmitappInstruction(-1)">
             BACK
         </button>
-        <button class="btn confirm-filter" (click)="emmitAppFilter(true)" >
+        <button class="btn confirm-filter" (click)="emmitappInstruction(1)" >
             FORWARD
         </button>
     </div>
