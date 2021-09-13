@@ -19,6 +19,10 @@ import { PricingPlanComponent } from "src/app/dashboard-client/pricing/pricing-p
 import { SelectedPlanComponent } from "src/app/dashboard-client/pricing/selected-plan/selected-plan.component";
 import { UserService } from "src/app/dashboard-client/services/user.service";
 import { HttpClientModule } from "@angular/common/http";
+import { EmailComponent } from "src/app/dashboard-client/instructions/email/email.component";
+import { AppComponent } from "src/app/dashboard-client/instructions/app/app.component";
+import { TelegramComponent } from "src/app/dashboard-client/instructions/telegram/telegram.component";
+import { WhatsappComponent } from "src/app/dashboard-client/instructions/whatsapp/whatsapp.component";
 @NgModule({
   imports: [
     CommonModule,
@@ -38,6 +42,10 @@ import { HttpClientModule } from "@angular/common/http";
       AlertsComponent,
       PricingPlanComponent,
       SelectedPlanComponent,
+      EmailComponent,
+      AppComponent,
+      TelegramComponent,
+      WhatsappComponent,
       KeysPipe,
       SearchFilterPipe,
       KeysCasePipe
