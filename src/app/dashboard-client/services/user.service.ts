@@ -24,4 +24,15 @@ export class UserService {
         })
     })
   }
+
+  addUrl(url:any){
+    return new Promise((resolve,reject) => {
+      this.httpClient.post(environment.baseUrl + 'user/addurl',url)
+        .subscribe((result) => {
+          resolve(result);
+        },err => {
+          reject(err);
+        })
+    })
+  }
 }

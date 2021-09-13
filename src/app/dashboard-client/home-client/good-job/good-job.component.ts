@@ -1,6 +1,10 @@
 import { HttpParams } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthResponse } from 'src/app/interfaces/response';
+import { AuthService } from 'src/app/services/auth.service';
 import { slideInOut } from '../../animations/slideIn';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-good-job',
@@ -18,19 +22,19 @@ export class GoodJobComponent implements OnInit {
   @Input('notificationFilter') notificationFilters;
   @Input('minPriceValue') minPriceValue;
   @Input('maxPriceValue') maxPriceValue;
-  @Input('user') user;
-  constructor() { }
+  submitted:boolean = false;
+  apiResponse:{success:boolean,msg:string};
+  constructor(private userService: UserService,
+              private authService:AuthService,
+              private router:Router) { }
 
   ngOnInit(): void {
-    this.constructUrl();
   }
 
-  constructUrlV1(){
-    console.log(this.alerts);
-    console.log(this.appliedFilters);
-    console.log(this.urlEmail);
-    console.log(this.notificationFilters);
-    console.log(this.user);
+  goToAlerts(){
+    if (this.apiResponse && this.apiResponse.success){
+      this.router.navigate(['/dashboard-client/alerts']);
+    }
   }
 
   constructUrl() {
@@ -49,10 +53,36 @@ export class GoodJobComponent implements OnInit {
       params = params.append(`${filter.type}`,`${filter.id}`);
     })
     if (this.appliedFilters.length > 0){
-      console.log('https://www.chrono24.com/search/index.htm?' + params.toString())
-      //this.closeDialog({url:'https://www.chrono24.com/search/index.htm?' + params.toString(),filterData:this.constructNotificationFilters(), email:'aymenxyz6@gmail.com',user:'6115d35deb40681b395131b4'})
-    }
-    else {
+      this.submitted = true;
+      var url = 'https://www.chrono24.com/search/index.htm?' + params.toString();
+      this.userService.addUrl({url:url,
+        filterData:this.appliedFilters,
+        minPrice:this.minPriceValue,
+        maxPrice:this.maxPriceValue,
+        filterNotifcationData:this.notificationFilters,
+        emailActive:this.alerts[1].selected,
+        telegramActive:this.alerts[2].selected,
+        whatsappActive:this.alerts[3].selected,
+        applicationActive:this.alerts[0].selected,
+        email:this.urlEmail ? this.urlEmail : this.authService.user.email,
+        status:'active'
+      })
+        .then((result:AuthResponse) => {
+          this.submitted = false;
+          if (result && result.status == 200){
+            this.apiResponse = {success:true,msg:result.msg};
+            
+          }
+          else {
+            this.apiResponse = {success:false,msg:'Something Went Wrong !'};
+            
+          }
+        })
+        .catch(err => {
+          this.apiResponse = {success:false,msg:'Something Went Wrong !'};
+          this.submitted = false;
+          console.log(err);
+        })
     }
   }
 

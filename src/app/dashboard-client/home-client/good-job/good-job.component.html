@@ -1,10 +1,36 @@
 <div class="row card card-good-job" >
-    <div class="col-4 good-job-image" [@slideInOut]>
+    
+    <div class="col-4 good-job-image" [@slideInOut] *ngIf="!apiResponse">
         <img src="../../../../assets/img/client-dashboard/Great_job.svg">
     </div>
-    <div class="col-8 good-job-text-holder" [@slideInOut]>
-        <div class="big-title">Great Job</div>
-        <div class="small-title">ChronoAlerts Will notify you when your watch is available</div>
-        <button class="btn">{{'All Good!,Setup Url'|uppercase}}</button>
+    <div class="col-4 good-job-image error-image" *ngIf="apiResponse && apiResponse.success">
+        <img src="../../../../assets/img/client-dashboard/succes.svg">
+    </div>
+    <div class="col-4 good-job-image error-image" *ngIf="apiResponse && !apiResponse.success">
+        <img src="../../../../assets/img/client-dashboard/error.svg">
+    </div>
+    <div class="col-8 good-job-text-holder" [@slideInOut] [ngClass]='{"error-image":apiResponse}'>
+        <div class="big-title" *ngIf="!apiResponse || (apiResponse && apiResponse.success)">Great Job</div>
+        <div class="big-title" *ngIf="apiResponse && !apiResponse.success">Ooops</div>
+        <div class="small-title" *ngIf="!apiResponse">ChronoAlerts Will notify you when your watch is available</div>
+        <div class="small-title" *ngIf="apiResponse">{{apiResponse.msg}}</div>
+        <button class="btn" [disabled]='submitted' (click)='constructUrl()' *ngIf="!apiResponse">
+            <span *ngIf="!submitted">{{'All Good!,Setup Url'|uppercase}}</span>
+            <div class="spinner-border" role="status" *ngIf="submitted">
+              <span class="visually-hidden">Loading...</span>
+            </div> 
+        </button>
+        <button class="btn" [disabled]='submitted' (click)='constructUrl()' *ngIf="apiResponse && !apiResponse.success">
+            <span *ngIf="!submitted">{{'Try Again'|uppercase}}</span>
+            <div class="spinner-border" role="status" *ngIf="submitted">
+              <span class="visually-hidden">Loading...</span>
+            </div> 
+        </button>
+        <button class="btn" [disabled]='submitted' (click)='goToAlerts()' *ngIf="apiResponse && apiResponse.success">
+            <span *ngIf="!submitted">{{'My Alerts'|uppercase}}</span>
+            <div class="spinner-border" role="status" *ngIf="submitted">
+              <span class="visually-hidden">Loading...</span>
+            </div> 
+        </button>
     </div>
 </div>

@@ -4,7 +4,7 @@
     border-radius: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    display: inline-block;
+    display: block;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -55,4 +55,14 @@
     height: 47px;
     width: 250px;
 
+}
+
+.error-image {
+    min-height: 150px;
+    margin-top: 60px;
+}
+
+.error-text {
+    min-height: 150px;
+    margin-top: 60px;
 }
