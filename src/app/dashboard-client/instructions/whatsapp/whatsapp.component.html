@@ -1,1 +1,79 @@
-<p>whatsapp works!</p>
+<div class="col-12 card card-whatsapp">
+    <div class="col-12 whatsapp-title" [@slideInOut]>
+        <span>Setup ChronoAlerts Whatsapp</span>
+    </div>
+    <div class="col-4 whatsapp-logo-holder" [@slideInOut]>
+        <div class="logo-holder">
+            <img src="../../../../assets/img/client-dashboard/whatsapp.svg">
+        </div>
+        <div class="logo-title">
+            ChronoAlerts Whatsapp
+        </div>
+    </div>
+    <div class="col-7 whatsapp-instructions" [@slideInOut]>
+        <ul class="list-instructions">
+            <li class="instruction-item">
+                <span>1. Scan QR code to visit our whatsapp</span>
+            </li>
+            <li class="instruction-item">
+                <span>2. Start Messaging</span>
+            </li>
+            <li class="instruction-item">
+                <span>3. Send your email to our whatsapp</span>
+            </li>
+            <li class="instruction-item">
+                <span>4. Enjoy Getting notifications </span>
+            </li>
+        </ul>
+    </div>
+    <div class="col-3 whatsapp-logo-holder hidden-instructions" [ngClass]="{'show-instructions':viewInstructions}" [@slideInOut]>
+        <div class="logo-holder">
+            <img src="../../../../assets/img/client-dashboard/whatsapp.svg">
+        </div>
+        <div class="logo-title">
+            ChronoAlerts Whatsapp
+        </div>
+    </div>
+    <div class="col-7 whatsapp-instructions hidden-instructions" [ngClass]="{'show-instructions':viewInstructions}" [@slideInOut]>
+        <ul class="list-instructions">
+            <li class="instruction-item">
+                <span>1. Scan QR code to visit our whatsapp</span>
+            </li>
+            <li class="instruction-item">
+                <span>2. Start Messaging</span>
+            </li>
+            <li class="instruction-item">
+                <span>3. Send your email to our whatsapp</span>
+            </li>
+            <li class="instruction-item">
+                <span>4. Enjoy Getting notifications </span>
+            </li>
+        </ul>
+    </div>
+    <div class="whatsapp-qr-code" [@slideInOut]>
+        <div class="qr-code-image">
+            <img src="../../../../assets/img/client-dashboard/whatsapp-qr-code.svg">
+        </div>
+        <div class="qr-code-text">
+            <span>Scan to Visit <span class="blue-text">ChronoAlerts</span> whatsapp</span>
+        </div>
+    </div>
+    <div class="need-help" [@slideInOut]>
+        <div class="help-logo">
+            <img src="../../../../assets/img/client-dashboard/little_guide.svg">
+        </div>
+        <div class="text-information">
+            <span class="help-big-text">Need Help ?</span>
+            <span class="help-small-text" (click)="viewInstructionsClick(true)" *ngIf="!viewInstructions">View instructions with image</span>
+            <span class="help-small-text" (click)="viewInstructionsClick(false)" *ngIf="viewInstructions">Hide instructions</span>
+        </div>
+    </div>
+    <div class="col-12 whatsapp-buttons" [@slideInOut]>
+        <button class="btn edit-filter" (click)="emitWhatsappInstruction({step:3})">
+            BACK
+        </button>
+        <button class="btn confirm-filter" (click)="emitWhatsappInstruction({step:5})" >
+            FORWARD
+        </button>
+    </div>
+</div>

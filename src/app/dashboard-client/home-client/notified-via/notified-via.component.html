@@ -24,7 +24,7 @@
         <button class="btn edit-filter" (click)="nextStep(2)">
             EDIT FILTER
         </button>
-        <button class="btn confirm-filter" (click)="nextStepNotification(true)" [disabled]='!valid' >
+        <button class="btn confirm-filter" (click)="nextStepNotification({step:1})" [disabled]='!valid' >
             CONFIRM FILTER
         </button>
     </div>
@@ -36,4 +36,13 @@
 
 <div class="row" *ngIf="step == 3">
     <app-email [user]='user' (emailInstruction)="nextStepNotification($event)"></app-email>
+</div>
+
+<div class="row" *ngIf="step == 4">
+    <app-telegram  (telegramInstruction)="nextStepNotification($event)"></app-telegram>
+</div>
+
+
+<div class="row" *ngIf="step == 5">
+    <app-whatsapp  (whatsappInstruction)="nextStepNotification($event)"></app-whatsapp>
 </div>

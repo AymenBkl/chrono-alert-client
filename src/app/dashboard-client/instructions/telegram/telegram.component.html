@@ -1,1 +1,79 @@
-<p>telegram works!</p>
+<div class="col-12 card card-telegram">
+    <div class="col-12 telegram-title" [@slideInOut]>
+        <span>Setup ChronoAlerts Telegram</span>
+    </div>
+    <div class="col-4 telegram-logo-holder" [@slideInOut]>
+        <div class="logo-holder">
+            <img src="../../../../assets/img/client-dashboard/telegram.svg">
+        </div>
+        <div class="logo-title">
+            ChronoAlerts Telegram
+        </div>
+    </div>
+    <div class="col-7 telegram-instructions" [@slideInOut]>
+        <ul class="list-instructions">
+            <li class="instruction-item">
+                <span>1. Scan QR code to visit our telegram</span>
+            </li>
+            <li class="instruction-item">
+                <span>2. Start Messaging</span>
+            </li>
+            <li class="instruction-item">
+                <span>3. Send your email to our telegram</span>
+            </li>
+            <li class="instruction-item">
+                <span>4. Enjoy Getting notifications </span>
+            </li>
+        </ul>
+    </div>
+    <div class="col-3 telegram-logo-holder hidden-instructions" [ngClass]="{'show-instructions':viewInstructions}" [@slideInOut]>
+        <div class="logo-holder">
+            <img src="../../../../assets/img/client-dashboard/telegram.svg">
+        </div>
+        <div class="logo-title">
+            ChronoAlerts Telegram
+        </div>
+    </div>
+    <div class="col-7 telegram-instructions hidden-instructions" [ngClass]="{'show-instructions':viewInstructions}" [@slideInOut]>
+        <ul class="list-instructions">
+            <li class="instruction-item">
+                <span>1. Scan QR code to visit our telegram</span>
+            </li>
+            <li class="instruction-item">
+                <span>2. Start Messaging</span>
+            </li>
+            <li class="instruction-item">
+                <span>3. Send your email to our telegram</span>
+            </li>
+            <li class="instruction-item">
+                <span>4. Enjoy Getting notifications </span>
+            </li>
+        </ul>
+    </div>
+    <div class="telegram-qr-code" [@slideInOut]>
+        <div class="qr-code-image">
+            <img src="../../../../assets/img/client-dashboard/telegram-qr-code.svg">
+        </div>
+        <div class="qr-code-text">
+            <span>Scan to Visit <span class="blue-text">ChronoAlerts</span> telegram</span>
+        </div>
+    </div>
+    <div class="need-help" [@slideInOut]>
+        <div class="help-logo">
+            <img src="../../../../assets/img/client-dashboard/little_guide.svg">
+        </div>
+        <div class="text-information">
+            <span class="help-big-text">Need Help ?</span>
+            <span class="help-small-text" (click)="viewInstructionsClick(true)" *ngIf="!viewInstructions">View instructions with image</span>
+            <span class="help-small-text" (click)="viewInstructionsClick(false)" *ngIf="viewInstructions">Hide instructions</span>
+        </div>
+    </div>
+    <div class="col-12 telegram-buttons" [@slideInOut]>
+        <button class="btn edit-filter" (click)="emitTelegramInstruction({step:2})">
+            BACK
+        </button>
+        <button class="btn confirm-filter" (click)="emitTelegramInstruction({step:4})" >
+            FORWARD
+        </button>
+    </div>
+</div>

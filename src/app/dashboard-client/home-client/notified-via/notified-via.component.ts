@@ -79,9 +79,23 @@ export class NotifiedViaComponent implements OnInit {
   }
 
   nextStepNotification(data:any){
-    console.log(data)
-    if (this.valid){
-      this.step += 1;
+    console.log(data);
+    if (this.valid && data.step < 5){
+      if (data.step == 1 && this.alerts[0].selected){
+        this.step = 2;
+      }
+      else if (data.step == 2 && this.alerts[1].selected){
+        this.step = 3;
+      }
+      else if (data.step == 3 && this.alerts[2].selected){
+        this.step = 4;
+      }
+      else if (data.step == 4 && this.alerts[3].selected){
+        this.step = 5;
+      }
+      else {
+        this.nextStepNotification({step:data.step + 1});
+      }
     }
   }
 
