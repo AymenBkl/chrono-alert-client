@@ -1,4 +1,4 @@
-import { Component, OnInit, Output,EventEmitter } from '@angular/core';
+import { Component, OnInit, Output,EventEmitter, Input } from '@angular/core';
 import { User } from 'src/app/interfaces/user';
 import { AuthService } from 'src/app/services/auth.service';
 import { Plan } from '../../interfaces';
@@ -12,30 +12,8 @@ export class NotifiedViaComponent implements OnInit {
 
   step:number = 1;
   @Output('stepProgress') stepProgress: EventEmitter<any> = new EventEmitter<any>(false);
-  alerts = [{
-    img:'../../../../assets/img/client-dashboard/app.svg',
-    name:'ChronoAlerts App',
-    plan:'Free',
-    selected:false,
-  },
-  {
-    img:'../../../../assets/img/client-dashboard/email.svg',
-    name:'Email',
-    plan:'Free',
-    selected:false,
-  },
-  {
-    img:'../../../../assets/img/client-dashboard/telegram.svg',
-    name:'Telegram',
-    plan:'Standard',
-    selected:false,
-  },
-  {
-    img:'../../../../assets/img/client-dashboard/whatsapp.svg',
-    name:'Whatsapp',
-    plan:'Pro',
-    selected:false,
-  }];
+  @Input('alerts') alerts;
+  @Input('urlEmail') urlEmail:string;
   userPlan:string = 'free';
   valid:boolean = false;
   user:User;
@@ -87,6 +65,9 @@ export class NotifiedViaComponent implements OnInit {
           this.step = 2;
         }
         else if (data.step == 2 && this.alerts[1].selected){
+          if (data && data.email){
+            this.urlEmail = data.email;
+          }
           this.step = 3;
         }
         else if (data.step == 3 && this.alerts[2].selected){
@@ -103,6 +84,9 @@ export class NotifiedViaComponent implements OnInit {
       else if (data.step == 0){
         this.step = 1;
       }
+      else if (data.step == 5){
+        this.nextStep(4);
+      }
     }
   }
 
@@ -113,6 +97,9 @@ export class NotifiedViaComponent implements OnInit {
         this.step = 4;
       }
       else if (data.step == 2 && this.alerts[1].selected){
+        if (data && data.email){
+          this.urlEmail = data.email;
+        }
         this.step = 3;
       }
       else if (data.step == 1 && this.alerts[0].selected){

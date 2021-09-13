@@ -1,4 +1,6 @@
+import { Url } from "url";
 import { Plan } from "../dashboard-client/interfaces";
+import { Telegram } from "./usersResponse";
 
 export interface User {
     _id:string
@@ -14,7 +16,8 @@ export interface User {
     description:string;
     role:string;
     status:string;
-    urls:any[];
+    urls:Url[];
+    telegram:Telegram[];
     emailVerified:boolean;
     plan:Plan;
     createdAt:string;

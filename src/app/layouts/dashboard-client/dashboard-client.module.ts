@@ -23,6 +23,7 @@ import { EmailComponent } from "src/app/dashboard-client/instructions/email/emai
 import { AppComponent } from "src/app/dashboard-client/instructions/app/app.component";
 import { TelegramComponent } from "src/app/dashboard-client/instructions/telegram/telegram.component";
 import { WhatsappComponent } from "src/app/dashboard-client/instructions/whatsapp/whatsapp.component";
+import { GoodJobComponent } from "src/app/dashboard-client/home-client/good-job/good-job.component";
 @NgModule({
   imports: [
     CommonModule,
@@ -46,6 +47,7 @@ import { WhatsappComponent } from "src/app/dashboard-client/instructions/whatsap
       AppComponent,
       TelegramComponent,
       WhatsappComponent,
+      GoodJobComponent,
       KeysPipe,
       SearchFilterPipe,
       KeysCasePipe

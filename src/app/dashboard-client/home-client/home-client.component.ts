@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeClientComponent implements OnInit {
 
-  step:number = 3;
+  step:number = 1;
   appliedFiters= [];
   minPriceValue: number = 0;
   maxPriceValue: number = 150000;
@@ -15,6 +15,31 @@ export class HomeClientComponent implements OnInit {
   minTrustedValue: number = 0;
   maxTrustedValue: number = 150000;
   notificationFilter:any;
+  alerts = [{
+    img:'../../../../assets/img/client-dashboard/app.svg',
+    name:'ChronoAlerts App',
+    plan:'Free',
+    selected:false,
+  },
+  {
+    img:'../../../../assets/img/client-dashboard/email.svg',
+    name:'Email',
+    plan:'Free',
+    selected:false,
+  },
+  {
+    img:'../../../../assets/img/client-dashboard/telegram.svg',
+    name:'Telegram',
+    plan:'Standard',
+    selected:false,
+  },
+  {
+    img:'../../../../assets/img/client-dashboard/whatsapp.svg',
+    name:'Whatsapp',
+    plan:'Pro',
+    selected:false,
+  }];
+  urlEmail:string;
   constructor() { }
 
   ngOnInit(): void {
