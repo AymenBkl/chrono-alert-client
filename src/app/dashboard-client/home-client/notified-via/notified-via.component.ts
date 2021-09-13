@@ -10,7 +10,7 @@ import { Plan } from '../../interfaces';
 })
 export class NotifiedViaComponent implements OnInit {
 
-  step:number = 0;
+  step:number = 1;
   @Output('stepProgress') stepProgress: EventEmitter<any> = new EventEmitter<any>(false);
   alerts = [{
     img:'../../../../assets/img/client-dashboard/app.svg',
@@ -77,7 +77,7 @@ export class NotifiedViaComponent implements OnInit {
 
   nextStepNotification(step:number){
     if (this.valid){
-      
+      this.step = step;
     }
   }
 
