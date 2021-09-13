@@ -39,7 +39,7 @@ export class HomeClientComponent implements OnInit {
     plan:'Pro',
     selected:false,
   }];
-  urlEmail:string;
+  urlEmail:string = '';
   constructor() { }
 
   ngOnInit(): void {
@@ -54,6 +54,10 @@ export class HomeClientComponent implements OnInit {
     console.log(this.minPriceValue,this.maxPriceValue);
     this.notificationFilter = this.constructNotificationFilters();
     this.step = 2;
+  }
+
+  emailApplied(email:string){
+    this.urlEmail = email;
   }
 
   nextStep(event){

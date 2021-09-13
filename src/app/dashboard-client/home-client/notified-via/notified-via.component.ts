@@ -12,8 +12,9 @@ export class NotifiedViaComponent implements OnInit {
 
   step:number = 1;
   @Output('stepProgress') stepProgress: EventEmitter<any> = new EventEmitter<any>(false);
+  @Output('emailSet') emailSet: EventEmitter<string> = new EventEmitter;
   @Input('alerts') alerts;
-  @Input('urlEmail') urlEmail:string;
+  @Input('urlEmail') urlEmail;
   userPlan:string = 'free';
   valid:boolean = false;
   user:User;
@@ -59,25 +60,25 @@ export class NotifiedViaComponent implements OnInit {
   nextStepNotification(data:any){
     console.log(data,this.step);
     if (data.step > 0){
-      console.log('heretrue');
       if (this.valid && data.step < 5){
         if (data.step == 1 && this.alerts[0].selected){
           this.step = 2;
         }
         else if (data.step == 2 && this.alerts[1].selected){
-          if (data && data.email){
-            this.urlEmail = data.email;
-          }
+          
           this.step = 3;
         }
         else if (data.step == 3 && this.alerts[2].selected){
+          if (data && data.email){
+            this.emailSet.emit(data.email);
+            this.urlEmail = data.email;
+          }
           this.step = 4;
         }
         else if (data.step == 4 && this.alerts[3].selected){
           this.step = 5;
         }
         else {
-          console.log('here');
           this.nextStepNotification({step:data.step + 1});
         }
       }
@@ -98,11 +99,15 @@ export class NotifiedViaComponent implements OnInit {
       }
       else if (data.step == 2 && this.alerts[1].selected){
         if (data && data.email){
+          this.emailSet.emit(data.email);
           this.urlEmail = data.email;
         }
         this.step = 3;
       }
       else if (data.step == 1 && this.alerts[0].selected){
+        if (data && data.email){
+          this.urlEmail = data.email;
+        }
         this.step = 2;
       }
       else if (data.step == 0){

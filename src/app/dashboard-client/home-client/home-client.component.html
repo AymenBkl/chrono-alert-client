@@ -35,7 +35,7 @@
     </div>
     <div class="row step-holder" *ngIf="step == 3"> 
         <div class="col-12 filter-holder">
-            <app-notified-via [alerts]='alerts' (stepProgress)="nextStep($event)"></app-notified-via>
+            <app-notified-via (emailSet)='emailApplied($event)' [alerts]='alerts' [urlEmail]='urlEmail' (stepProgress)="nextStep($event)"></app-notified-via>
         </div>
     </div>
     <div class="row step-holder" *ngIf="step == 4"> 
