@@ -24,12 +24,12 @@
         <button class="btn edit-filter" (click)="nextStep(2)">
             EDIT FILTER
         </button>
-        <button class="btn confirm-filter" (click)="nextStepNotification(2)" [disabled]='!valid' >
+        <button class="btn confirm-filter" (click)="nextStepNotification(true)" [disabled]='!valid' >
             CONFIRM FILTER
         </button>
     </div>
 </div>
 
 <div class="row" [ngClass]='{"hidden-row":step != 2}'>
-    <app-app></app-app>
+    <app-app (appFilter)='nextStepNotification($event)'></app-app>
 </div>

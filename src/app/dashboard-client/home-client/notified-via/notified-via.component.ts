@@ -75,9 +75,9 @@ export class NotifiedViaComponent implements OnInit {
     this.stepProgress.emit(step);
   }
 
-  nextStepNotification(step:number){
+  nextStepNotification(forward:boolean){
     if (this.valid){
-      this.step = step;
+      this.step += 1;
     }
   }
 
