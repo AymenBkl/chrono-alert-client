@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-app',
@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
+  @Output('appFilter') appFilter: EventEmitter<boolean> = new EventEmitter<boolean>(false);
+  viewInstructions:boolean = false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  viewInstructionsClick(view:boolean){
+    this.viewInstructions = view;
+  }
+
+  emmitAppFilter(forward:boolean) {
+    this.appFilter.emit(forward)
   }
 
 }

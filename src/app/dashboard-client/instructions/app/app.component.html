@@ -26,6 +26,30 @@
             </li>
         </ul>
     </div>
+    <div class="col-3 app-logo-holder hidden-instructions" [ngClass]="{'show-instructions':viewInstructions}">
+        <div class="logo-holder">
+            <img src="../../../../assets/img/client-dashboard/app.svg">
+        </div>
+        <div class="logo-title">
+            ChronoAlerts App
+        </div>
+    </div>
+    <div class="col-7 app-instructions hidden-instructions" [ngClass]="{'show-instructions':viewInstructions}">
+        <ul class="list-instructions">
+            <li class="instruction-item">
+                <span>1. Scan QR code to get the app link</span>
+            </li>
+            <li class="instruction-item">
+                <span>2. Download,install and open the ChronoAlerts App</span>
+            </li>
+            <li class="instruction-item">
+                <span>3. Register into your account</span>
+            </li>
+            <li class="instruction-item">
+                <span>4. Go to settings and activate the app</span>
+            </li>
+        </ul>
+    </div>
     <div class="app-qr-code">
         <div class="qr-code-image">
             <img src="../../../../assets/img/client-dashboard/app-qr-code.svg">
@@ -33,5 +57,23 @@
         <div class="qr-code-text">
             <span>Scan to download <span class="blue-text">ChronoAlerts</span> app</span>
         </div>
+    </div>
+    <div class="need-help">
+        <div class="help-logo">
+            <img src="../../../../assets/img/client-dashboard/little_guide.svg">
+        </div>
+        <div class="text-information">
+            <span class="help-big-text">Need Help ?</span>
+            <span class="help-small-text" (click)="viewInstructionsClick(true)" *ngIf="!viewInstructions">View instructions with image</span>
+            <span class="help-small-text" (click)="viewInstructionsClick(false)" *ngIf="viewInstructions">Hide instructions</span>
+        </div>
+    </div>
+    <div class="col-12 app-buttons">
+        <button class="btn edit-filter" (click)="emmitAppFilter(false)">
+            BACK
+        </button>
+        <button class="btn confirm-filter" (click)="emmitAppFilter(true)" >
+            FORWARD
+        </button>
     </div>
 </div>

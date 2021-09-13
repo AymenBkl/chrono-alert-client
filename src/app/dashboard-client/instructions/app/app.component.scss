@@ -1,5 +1,5 @@
 .card-app {
-    min-height: 300px;
+    min-height: 400px;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 10px;
     padding-left: 20px;
@@ -62,8 +62,8 @@
 .app-qr-code {
     width: 100px;
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 5px;
+    right: 5px;
 
 }
 
@@ -84,5 +84,88 @@
 .blue-text {
     color:#0164F8 !important;
 }
+
+.need-help {
+    position: absolute;
+    display: inline-block;
+    width: 170px;
+    bottom: 80px;
+    right: 10px;
+    text-align: left;
+}
+
+.help-logo {
+    display: inline-block;
+    width: 50px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.help-logo img {
+    width: 40px;
+}
+
+.text-information {
+    display: inline-block;
+    width: 120px;
+    padding-left: 10px;
+    vertical-align: middle;
+}
+
+.help-big-text {
+    font: normal normal bold 15px/22px Roboto;
+    letter-spacing: 0px;
+    color: black;
+    display: block;
+}
+
+.help-small-text {
+    font: normal normal bold 11px/22px Roboto;
+    letter-spacing: 0px;
+    color: #0164F8;
+    display: block;
+}
+
+.app-buttons {
+    margin-top: 150px;
+    margin-bottom: 20px;
+    text-align: right;
+  }
+
+  .edit-filter {
+    width: 111px;
+    height: 28px;
+    background: #DDDDDD 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    font: normal normal normal 10px/13px Roboto;
+    color: #414141;
+    margin-right: 10px;
+  }
+
+  .confirm-filter {
+    width: 111px;
+    height: 28px;
+    background: #0164F8 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    font: normal normal normal 10px/13px Roboto;
+    color: #FFFFFF;
+}
+
+.hidden-instructions {
+    display: none;
+}
+
+.show-instructions {
+    display: inline-block !important;
+}
+
+.help-small-text:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+
+
 
 
