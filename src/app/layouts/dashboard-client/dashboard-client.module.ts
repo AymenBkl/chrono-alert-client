@@ -24,6 +24,7 @@ import { AppComponent } from "src/app/dashboard-client/instructions/app/app.comp
 import { TelegramComponent } from "src/app/dashboard-client/instructions/telegram/telegram.component";
 import { WhatsappComponent } from "src/app/dashboard-client/instructions/whatsapp/whatsapp.component";
 import { GoodJobComponent } from "src/app/dashboard-client/home-client/good-job/good-job.component";
+import { AllAlertsComponent } from "src/app/dashboard-client/alerts/all-alerts/all-alerts.component";
 @NgModule({
   imports: [
     CommonModule,
@@ -48,6 +49,7 @@ import { GoodJobComponent } from "src/app/dashboard-client/home-client/good-job/
       TelegramComponent,
       WhatsappComponent,
       GoodJobComponent,
+      AllAlertsComponent,
       KeysPipe,
       SearchFilterPipe,
       KeysCasePipe
