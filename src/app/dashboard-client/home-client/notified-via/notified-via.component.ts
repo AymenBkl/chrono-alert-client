@@ -79,25 +79,54 @@ export class NotifiedViaComponent implements OnInit {
   }
 
   nextStepNotification(data:any){
-    console.log(data);
-    if (this.valid && data.step < 5){
-      if (data.step == 1 && this.alerts[0].selected){
-        this.step = 2;
+    console.log(data,this.step);
+    if (data.step > 0){
+      console.log('heretrue');
+      if (this.valid && data.step < 5){
+        if (data.step == 1 && this.alerts[0].selected){
+          this.step = 2;
+        }
+        else if (data.step == 2 && this.alerts[1].selected){
+          this.step = 3;
+        }
+        else if (data.step == 3 && this.alerts[2].selected){
+          this.step = 4;
+        }
+        else if (data.step == 4 && this.alerts[3].selected){
+          this.step = 5;
+        }
+        else {
+          console.log('here');
+          this.nextStepNotification({step:data.step + 1});
+        }
+      }
+      else if (data.step == 0){
+        this.step = 1;
+      }
+    }
+  }
+
+  prevouisStepNotification(data:any){
+    console.log(data,this.step);
+    if (this.valid && data.step >= 0){
+      if (data.step == 3 && this.alerts[2].selected){
+        this.step = 4;
       }
       else if (data.step == 2 && this.alerts[1].selected){
         this.step = 3;
       }
-      else if (data.step == 3 && this.alerts[2].selected){
-        this.step = 4;
+      else if (data.step == 1 && this.alerts[0].selected){
+        this.step = 2;
       }
-      else if (data.step == 4 && this.alerts[3].selected){
-        this.step = 5;
+      else if (data.step == 0){
+        this.step = 1;
       }
       else {
-        this.nextStepNotification({step:data.step + 1});
+        this.prevouisStepNotification({step:data.step -1});
       }
     }
   }
 
 
-}
+}  
+

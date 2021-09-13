@@ -11,7 +11,8 @@ import { slideInOut } from '../../animations/slideIn';
 })
 export class AppComponent implements OnInit {
 
-  @Output('appInstruction') appInstruction: EventEmitter<any> = new EventEmitter;
+  @Output('appInstructionNext') appInstructionNext: EventEmitter<any> = new EventEmitter;
+  @Output('appInstructionPrev') appInstructionPrev: EventEmitter<any> = new EventEmitter;
   viewInstructions:boolean = false;
   constructor() { }
 
@@ -22,8 +23,12 @@ export class AppComponent implements OnInit {
     this.viewInstructions = view;
   }
 
-  emmitappInstruction(step:number) {
-    this.appInstruction.emit({step:step});
+  emmitappInstructionNext(step:number) {
+    this.appInstructionNext.emit({step:step});
+  }
+  emmitappInstructionPrev(step:number) {
+    console.log(step);
+    this.appInstructionPrev.emit({step:step});
   }
 
 }

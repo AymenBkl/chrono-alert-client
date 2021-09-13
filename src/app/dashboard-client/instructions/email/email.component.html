@@ -30,11 +30,11 @@
         </div>
         
     </div>
-    <div class="col-12 email-buttons" (click)="emitEmailInstruction(1)" [@slideInOut]>
+    <div class="col-12 email-buttons" (click)="emitEmailInstructionPrev(1)" [@slideInOut]>
         <button class="btn edit-filter">
             BACK
         </button>
-        <button class="btn confirm-filter" (click)="emitEmailInstruction(3)">
+        <button class="btn confirm-filter" (click)="emitEmailInstructionNext(3)">
             FORWARD
         </button>
     </div>

@@ -11,7 +11,8 @@ import { slideInOut } from '../../animations/slideIn';
 })
 export class WhatsappComponent implements OnInit {
 
-  @Output('whatsappInstruction') whatsappInstruction: EventEmitter<any> = new EventEmitter;
+  @Output('whatsappInstructionNext') whatsappInstructionNext: EventEmitter<any> = new EventEmitter;
+  @Output('whatsappInstructionPrev') whatsappInstructionPrev: EventEmitter<any> = new EventEmitter;
   viewInstructions:boolean = false;
   constructor() { }
 
@@ -23,8 +24,12 @@ export class WhatsappComponent implements OnInit {
   }
 
 
-  emitWhatsappInstruction(step:number){
-    this.whatsappInstruction.emit({step:step})
+  emitWhatsappInstructionNext(step:number){
+    this.whatsappInstructionNext.emit({step:step})
+  }
+
+  emitWhatsappInstructionPrev(step:number){
+    this.whatsappInstructionPrev.emit({step:step})
   }
 
 }

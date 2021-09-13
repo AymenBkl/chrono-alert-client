@@ -69,10 +69,10 @@
         </div>
     </div>
     <div class="col-12 whatsapp-buttons" [@slideInOut]>
-        <button class="btn edit-filter" (click)="emitWhatsappInstruction({step:3})">
+        <button class="btn edit-filter" (click)="emitWhatsappInstructionPrev(3)">
             BACK
         </button>
-        <button class="btn confirm-filter" (click)="emitWhatsappInstruction({step:5})" >
+        <button class="btn confirm-filter" (click)="emitWhatsappInstructionNext(5)" >
             FORWARD
         </button>
     </div>

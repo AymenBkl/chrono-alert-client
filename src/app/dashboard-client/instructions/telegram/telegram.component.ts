@@ -10,7 +10,8 @@ import { slideInOut } from '../../animations/slideIn';
   ]
 })
 export class TelegramComponent implements OnInit {
-  @Output('telegramInstruction') telegramInstruction: EventEmitter<any> = new EventEmitter;
+  @Output('telegramInstructionNext') telegramInstructionNext: EventEmitter<any> = new EventEmitter;
+  @Output('telegramInstructionPrev') telegramInstructionPrev: EventEmitter<any> = new EventEmitter;
   viewInstructions:boolean = false;
   constructor() { }
 
@@ -23,8 +24,12 @@ export class TelegramComponent implements OnInit {
   }
 
 
-  emitTelegramInstruction(step:number){
-    this.telegramInstruction.emit({step:step})
+  emitTelegramInstructionNext(step:number){
+    this.telegramInstructionNext.emit({step:step})
+  }
+
+  emitTelegramInstructionPrev(step:number){
+    this.telegramInstructionPrev.emit({step:step})
   }
 
 }

@@ -14,7 +14,8 @@ import { Plan } from '../../interfaces';
 export class EmailComponent implements OnInit {
 
   @Input('user') user:User;
-  @Output('emailInstruction') emailInstruction: EventEmitter<any> = new EventEmitter;
+  @Output('emailInstructionNext') emailInstructionNext: EventEmitter<any> = new EventEmitter;
+  @Output('emailInstructionPrev') emailInstructionPrev: EventEmitter<any> = new EventEmitter;
   userEmail:string;
   disabledUserInput:boolean = true;
   plan:string='Standard Or Pro';
@@ -49,28 +50,53 @@ export class EmailComponent implements OnInit {
   }
   }
 
-  emitEmailInstruction(step:number){
+  emitEmailInstructionNext(step:number){
     if (this.user && this.user.plan){
       var userPlan:Plan = this.user.plan;
       var date = new Date().getTime();
       var monthDate = new Date(userPlan.expires).getTime(); 
       var urlsLength = this.user.urls ? this.user.urls.length : 0;
     if (this.user && this.user.plan.name == 'Free'){
-      this.emailInstruction.emit({step:step,email:this.user.email});
+      this.emailInstructionNext.emit({step:step,email:this.user.email});
     }
     else if (userPlan && userPlan.name == 'Pro' && monthDate - date < 30*24*60*60*1000){
-      this.emailInstruction.emit({step:step,email:this.userEmail});
+      this.emailInstructionNext.emit({step:step,email:this.userEmail});
 
     }
     else if (userPlan && userPlan.name == 'Standard' && monthDate - date < 30*24*60*60*1000 && urlsLength < 5){
-      this.emailInstruction.emit({step:step,email:this.userEmail});
+      this.emailInstructionNext.emit({step:step,email:this.userEmail});
     }
     else {
-      this.emailInstruction.emit({step:step,email:this.user.email});
+      this.emailInstructionNext.emit({step:step,email:this.user.email});
     }
   }
   else {
-    this.emailInstruction.emit({step:step,email:this.user.email});
+    this.emailInstructionNext.emit({step:step,email:this.user.email});
+  }
+  }
+
+  emitEmailInstructionPrev(step:number){
+    if (this.user && this.user.plan){
+      var userPlan:Plan = this.user.plan;
+      var date = new Date().getTime();
+      var monthDate = new Date(userPlan.expires).getTime(); 
+      var urlsLength = this.user.urls ? this.user.urls.length : 0;
+    if (this.user && this.user.plan.name == 'Free'){
+      this.emailInstructionPrev.emit({step:step,email:this.user.email});
+    }
+    else if (userPlan && userPlan.name == 'Pro' && monthDate - date < 30*24*60*60*1000){
+      this.emailInstructionPrev.emit({step:step,email:this.userEmail});
+
+    }
+    else if (userPlan && userPlan.name == 'Standard' && monthDate - date < 30*24*60*60*1000 && urlsLength < 5){
+      this.emailInstructionPrev.emit({step:step,email:this.userEmail});
+    }
+    else {
+      this.emailInstructionPrev.emit({step:step,email:this.user.email});
+    }
+  }
+  else {
+    this.emailInstructionPrev.emit({step:step,email:this.user.email});
   }
   }
 

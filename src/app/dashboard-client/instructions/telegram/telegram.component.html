@@ -69,10 +69,10 @@
         </div>
     </div>
     <div class="col-12 telegram-buttons" [@slideInOut]>
-        <button class="btn edit-filter" (click)="emitTelegramInstruction({step:2})">
+        <button class="btn edit-filter" (click)="emitTelegramInstructionPrev(2)">
             BACK
         </button>
-        <button class="btn confirm-filter" (click)="emitTelegramInstruction({step:4})" >
+        <button class="btn confirm-filter" (click)="emitTelegramInstructionNext(4)" >
             FORWARD
         </button>
     </div>
