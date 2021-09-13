@@ -5,7 +5,7 @@
             <span>Create New Alert</span>
         </div>
         <div class="col-6 step-number">
-            <span>{{step}}/4 Select your watch</span>
+            <span>{{step}}/4 {{step == 1 || step == 2 ? 'Select your watch':'Select type notification'}}</span>
         </div>
     </div>
     <div class="row step-holder" *ngIf="step == 1 || step == 2" [ngClass]='{"hide-step-holder":step  == 2}'>
@@ -35,7 +35,7 @@
     </div>
     <div class="row step-holder" *ngIf="step == 3"> 
         <div class="col-12 filter-holder">
-            <app-notified-via></app-notified-via>
+            <app-notified-via (stepProgress)="nextStep($event)"></app-notified-via>
         </div>
     </div>
 </div>

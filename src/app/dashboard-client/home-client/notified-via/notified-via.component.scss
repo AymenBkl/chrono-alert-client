@@ -17,7 +17,19 @@
 
 .items-alert {
     display: inline-block;
+    position: relative;
 }
+.no-select .notificion-via-button-upgrade {
+    display: none !important;
+}
+
+
+
+.notificion-via-button-upgrade {
+    display: none;
+}
+
+
 
 .alert-holder {
     margin-top: 26px;
@@ -30,6 +42,8 @@
     border-radius: 10px;
 }
 
+
+
 .image-alert-holder {
     text-align: center;
     display: block;
@@ -38,6 +52,34 @@
 
 .image-alert-holder img {
     width: 100px;
+}
+
+
+
+.notificion-via-button-upgrade {
+    position: absolute;
+    top: 103px;
+    left: 17px;
+    opacity: 3;
+}
+
+.notificion-via-button-upgrade button {
+    color: white;
+    border-radius: 10px;
+    font: normal normal normal 14px/13px Roboto;
+    background: #0164F8 0% 0% no-repeat padding-box;
+}
+
+.no-select {
+    opacity: 0.2;
+}
+
+.no-select:hover .notificion-via-button-upgrade{
+    display: block !important;
+}
+
+.no-select .image-alert-holder img:hover {
+    cursor: default !important;
 }
 
 .image-alert-holder img:hover {
@@ -53,3 +95,28 @@
     padding-right: 20px;
     padding-left: 20px;
 }
+
+.selection-buttons {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: right;
+  }
+
+  .edit-filter {
+    width: 111px;
+    height: 28px;
+    background: #DDDDDD 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    font: normal normal normal 10px/13px Roboto;
+    color: #414141;
+    margin-right: 10px;
+  }
+
+  .confirm-filter {
+    width: 111px;
+    height: 28px;
+    background: #0164F8 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    font: normal normal normal 10px/13px Roboto;
+    color: #FFFFFF;
+  }

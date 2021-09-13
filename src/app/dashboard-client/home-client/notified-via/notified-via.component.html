@@ -3,16 +3,29 @@
         <div class="notified-via-title">
             <span>Get Notification Via :</span>
         </div>
-        <div class="col-6 col-lg-3 items-alert" *ngFor="let alertItem of alerts" (click)="selectAlert(alertItem)" >
-            <div class="alert-holder" [class.selectedAlert]="alertItem.selected">
+        <div class="col-6 col-lg-3 items-alert" *ngFor="let alertItem of alerts" (click)="selectAlert(alertItem)"  >
+            <div class="alert-holder" [class.selectedAlert]="alertItem.selected" [ngClass]='{"canSelect":(alertItem.plan == userPlan) || (alertItem.plan == "Free") || (userPlan == "Pro" && alertItem.plan == "Standard"),"no-select":!((alertItem.plan == userPlan) || (alertItem.plan == "Free") || (userPlan == "Pro" && alertItem.plan == "Standard"))}'>
                 <div class="image-alert-holder" >
                     <img [src]="alertItem.img">
                 </div>
                 <div class="text-alert-holder">
                     <span>{{alertItem.name}}</span>
                 </div>
+                <div class="notificion-via-button-upgrade">
+                    <button class="btn">
+                        UPGRADE {{alertItem.plan | uppercase}}
+                    </button>
+                </div>
             </div>
             
         </div>
+    </div>
+    <div class="col-12 selection-buttons">
+        <button class="btn edit-filter" (click)="nextStep(2)">
+            EDIT FILTER
+        </button>
+        <button class="btn confirm-filter" (click)="nextStep(4)" [disabled]='!valid' >
+            CONFIRM FILTER
+        </button>
     </div>
 </div>
