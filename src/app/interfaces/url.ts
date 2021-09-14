@@ -27,6 +27,15 @@ export interface Url {
     createdAt:string;
 };
 
+export interface UrlResponse {
+    err: any;
+    success: boolean;
+    token: string;
+    msg: string;
+    status: number;
+    url:Url;
+} 
+
 export interface UrlNotificationResponse {
     err: any;
     success: boolean;

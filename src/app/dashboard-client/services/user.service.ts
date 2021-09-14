@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AuthResponse } from 'src/app/interfaces/response';
-import { UrlNotificationResponse } from 'src/app/interfaces/url';
+import { UrlNotificationResponse, UrlResponse } from 'src/app/interfaces/url';
 import { environment } from 'src/environments/environment';
 import { Plan } from '../interfaces';
 
@@ -40,6 +40,17 @@ export class UserService {
   getUrls(){
     return new Promise((resolve,reject) => {
       this.httpClient.get<UrlNotificationResponse>(environment.baseUrl + 'user/urls')
+        .subscribe((result) => {
+          resolve(result);
+        },err => {
+          reject(err);
+        })
+    })
+  }
+
+  blockUrl(status:any,urlId:string,type:string){
+    return new Promise((resolve,reject) => {
+      this.httpClient.post<UrlResponse>(environment.baseUrl + 'user/manipulateurl?type=' + type,{status:status,urlId:urlId})
         .subscribe((result) => {
           resolve(result);
         },err => {
