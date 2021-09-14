@@ -2,6 +2,7 @@ import { CommonModule } from "@angular/common";
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
+import { AuthService } from "src/app/services/auth.service";
 import { clientDashboardRoutes } from "./dashboard-client.routing";
 import { HomeClientComponent } from "src/app/dashboard-client/home-client/home-client.component";
 import { FilterUrlComponent } from "src/app/dashboard-client/home-client/filter-url/filter-url.component";
@@ -55,7 +56,7 @@ import { FilterDataToStringPipe } from "src/app/dashboard-client/pipes/filter-da
       FilterDataToStringPipe
   ],
   providers:[
-    UserService
+    
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

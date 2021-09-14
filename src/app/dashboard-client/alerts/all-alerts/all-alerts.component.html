@@ -7,17 +7,20 @@
             Alerts
         </span>
     </div>
-    <div class="col-4 allalert-info">
+    <div class="col-4 allalert-info" *ngIf="urls">
         <span class="alert-info-big">
-            1
+            {{urlActive}}
         </span>
         <span class="alert-info-small">
-            of 2 Active
+            of {{urls.length}} Active
         </span>
     </div>
-    <div class="col-4 allalert-info">
-        <span class="alert-info-big">
-            1
+    <div class="col-4 allalert-info" *ngIf="urls">
+        <span class="alert-info-big" *ngIf="urls && urls.length > 0">
+            {{urls.length - urlActive}}
+        </span>
+        <span class="alert-info-big" *ngIf="!urls || (urls && urls.length == 0)">
+            0
         </span>
         <span class="alert-info-small">
             Found
@@ -40,7 +43,7 @@
                         <input class="form-check-input" type="checkbox" [checked]='url.status == "active"'>
                     </div>
                 </td>
-                <td class="filter-item">{{url.filterData | filterDateToString}}</td>
+                <td class="filter-item">{{url.filterData | filterDataToString}}</td>
                 <td>
                     <div class="social-logos">
                         <div class="social-logo logo-application" [ngClass]='{"active":url.applicationActive}'>
@@ -70,14 +73,10 @@
                 </div></td>
               </tr>
             </tbody>
-            <tbody class="table-body" *ngIf="urls && urls.length == 0">
-                <tr *ngIf="apiResponse">
-                    <td class="error-holder">
-                        <span>{{apiResponse.msg}}</span>
-                    </td>
-                </tr>
-            </tbody>
           </table>
+          <div class="error-holder" *ngIf="apiResponse">
+            <span *ngIf="apiResponse">{{apiResponse.msg}}</span>
+          </div>
     </div>
 </div>
 

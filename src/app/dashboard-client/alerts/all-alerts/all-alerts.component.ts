@@ -12,6 +12,7 @@ export class AllAlertsComponent implements OnInit {
 
   urls:UrlNotification[];
   apiResponse:{msg:string,code:number};
+  urlActive:number = 0;
   constructor(private userService: UserService,
               private ngxSpinner: NgxSpinnerService) { }
 
@@ -21,13 +22,19 @@ export class AllAlertsComponent implements OnInit {
 
 
   getUrls() {
-    this.ngxSpinner.show('alertsSpinner');
+    this.ngxSpinner.show("mySpinner", {
+      type: "line-scale-party",
+      size: "large",
+      bdColor: "rgba(0, 0, 0, 1)",
+      color: "white",
+      template: "<img src='https://media.giphy.com/media/o8igknyuKs6aY/giphy.gif' />"
+    });
     this.userService.getUrls()
       .then((result:UrlNotificationResponse) => {
         this.ngxSpinner.hide('alertsSpinner');
         if (result && result.status == 200){
           this.urls = result.url;
-          console.log(this.urls);
+          this.urlActive = this.urls.filter(url => url.status == 'active').length;
         }
         else if (result && result.status == 404){
           this.urls = [];

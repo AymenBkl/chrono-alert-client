@@ -21,6 +21,7 @@ import { InterceptorService, UnauthorizedInterceptor } from './services/intercep
 import { AuthService } from './services/auth.service';
 import { AuthGuardService, AuthGuardVerifyEmailService, UnLoggedGuardService } from './services/auth-guard.service';
 import { NavbarClientModule } from './dashboard-client/nav/nav.module';
+import { UserService } from './dashboard-client/services/user.service';
 
 
 @NgModule({
@@ -52,6 +53,7 @@ import { NavbarClientModule } from './dashboard-client/nav/nav.module';
     AuthGuardVerifyEmailService,
     UnLoggedGuardService,
     LandingPageService,
+    UserService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: InterceptorService,
