@@ -15,7 +15,6 @@ import { SettingsComponent } from "src/app/dashboard-client/settings/settings.co
 import { AlertsComponent } from "src/app/dashboard-client/alerts/alerts.component";
 import { PricingPlanComponent } from "src/app/dashboard-client/pricing/pricing-plan/pricing-plan.component";
 import { SelectedPlanComponent } from "src/app/dashboard-client/pricing/selected-plan/selected-plan.component";
-import { UserService } from "src/app/dashboard-client/services/user.service";
 import { HttpClientModule } from "@angular/common/http";
 import { EmailComponent } from "src/app/dashboard-client/instructions/email/email.component";
 import { AppComponent } from "src/app/dashboard-client/instructions/app/app.component";
@@ -25,6 +24,7 @@ import { GoodJobComponent } from "src/app/dashboard-client/home-client/good-job/
 import { AllAlertsComponent } from "src/app/dashboard-client/alerts/all-alerts/all-alerts.component";
 import { NumberPipePipe } from "src/app/dashboard-client/pipes/number-pipe.pipe";
 import { FilterDataToStringPipe } from "src/app/dashboard-client/pipes/filter-data-to-string.pipe";
+import { NgxSpinnerModule } from "ngx-spinner";
 @NgModule({
   imports: [
     CommonModule,
@@ -32,6 +32,7 @@ import { FilterDataToStringPipe } from "src/app/dashboard-client/pipes/filter-da
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    NgxSpinnerModule
   ],
   declarations: [
       HomeClientComponent,

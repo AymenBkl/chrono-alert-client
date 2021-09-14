@@ -22,6 +22,7 @@ import { AuthService } from './services/auth.service';
 import { AuthGuardService, AuthGuardVerifyEmailService, UnLoggedGuardService } from './services/auth-guard.service';
 import { NavbarClientModule } from './dashboard-client/nav/nav.module';
 import { UserService } from './dashboard-client/services/user.service';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { UserService } from './dashboard-client/services/user.service';
     NavbarModule,
     FooterModule,
     NavbarClientModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxSpinnerModule
   ],
   declarations: [
     AppComponent,

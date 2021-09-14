@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { UrlNotification, UrlNotificationResponse } from 'src/app/interfaces/url';
 import { UserService } from '../../services/user.service';
@@ -8,27 +8,24 @@ import { UserService } from '../../services/user.service';
   templateUrl: './all-alerts.component.html',
   styleUrls: ['./all-alerts.component.scss']
 })
-export class AllAlertsComponent implements OnInit {
+export class AllAlertsComponent implements OnInit,AfterViewInit {
 
   urls:UrlNotification[];
   apiResponse:{msg:string,code:number};
   urlActive:number = 0;
   constructor(private userService: UserService,
-              private ngxSpinner: NgxSpinnerService) { }
+              private ngxSpinner: NgxSpinnerService,
+              ) { }
+  ngAfterViewInit(): void {
+    this.getUrls();
+  }
 
   ngOnInit(): void {
-    this.getUrls();
   }
 
 
   getUrls() {
-    this.ngxSpinner.show("mySpinner", {
-      type: "line-scale-party",
-      size: "large",
-      bdColor: "rgba(0, 0, 0, 1)",
-      color: "white",
-      template: "<img src='https://media.giphy.com/media/o8igknyuKs6aY/giphy.gif' />"
-    });
+    this.ngxSpinner.show("alertsSpinner");
     this.userService.getUrls()
       .then((result:UrlNotificationResponse) => {
         this.ngxSpinner.hide('alertsSpinner');
@@ -49,7 +46,14 @@ export class AllAlertsComponent implements OnInit {
       .catch(err => {
         this.ngxSpinner.hide('alertsSpinner');
         this.urls = [];
-        this.apiResponse = {msg:'Oops something went wrong',code:500};
+        if (err && err.status == 404){
+          this.apiResponse = {msg:'You have no url',code:404};
+        }
+        else {
+          this.apiResponse = {msg:'Oops something went wrong',code:500};
+
+        }
+        
         console.log(err);
       })
   }
