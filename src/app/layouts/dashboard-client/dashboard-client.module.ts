@@ -2,14 +2,11 @@ import { CommonModule } from "@angular/common";
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
-import { AuthService } from "src/app/services/auth.service";
-import { AuthGuardService, AuthGuardVerifyEmailService } from "src/app/services/auth-guard.service";
 import { clientDashboardRoutes } from "./dashboard-client.routing";
 import { HomeClientComponent } from "src/app/dashboard-client/home-client/home-client.component";
 import { FilterUrlComponent } from "src/app/dashboard-client/home-client/filter-url/filter-url.component";
 import { KeysCasePipe, KeysPipe } from "src/app/dashboard-client/pipes/keys.pipe";
 import { SearchFilterPipe } from "src/app/dashboard-client/pipes/search-filter.pipe";
-import { NgxSliderModule } from "@angular-slider/ngx-slider";
 import { ConfirmFiltersComponent } from "src/app/dashboard-client/home-client/confirm-filters/confirm-filters.component";
 import { NotifiedViaComponent } from "src/app/dashboard-client/home-client/notified-via/notified-via.component";
 import { PricingComponent } from "src/app/dashboard-client/pricing/pricing.component";
@@ -25,6 +22,8 @@ import { TelegramComponent } from "src/app/dashboard-client/instructions/telegra
 import { WhatsappComponent } from "src/app/dashboard-client/instructions/whatsapp/whatsapp.component";
 import { GoodJobComponent } from "src/app/dashboard-client/home-client/good-job/good-job.component";
 import { AllAlertsComponent } from "src/app/dashboard-client/alerts/all-alerts/all-alerts.component";
+import { NumberPipePipe } from "src/app/dashboard-client/pipes/number-pipe.pipe";
+import { FilterDataToStringPipe } from "src/app/dashboard-client/pipes/filter-data-to-string.pipe";
 @NgModule({
   imports: [
     CommonModule,
@@ -32,7 +31,6 @@ import { AllAlertsComponent } from "src/app/dashboard-client/alerts/all-alerts/a
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    NgxSliderModule
   ],
   declarations: [
       HomeClientComponent,
@@ -52,10 +50,12 @@ import { AllAlertsComponent } from "src/app/dashboard-client/alerts/all-alerts/a
       AllAlertsComponent,
       KeysPipe,
       SearchFilterPipe,
-      KeysCasePipe
+      KeysCasePipe,
+      NumberPipePipe,
+      FilterDataToStringPipe
   ],
   providers:[
-    
+    UserService
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

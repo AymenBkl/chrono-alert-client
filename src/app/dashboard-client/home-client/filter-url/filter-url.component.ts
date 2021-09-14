@@ -84,7 +84,7 @@ export class FilterUrlComponent implements OnInit {
   startFilter(){
     this.start = true;
     setTimeout(() => {
-      this.spinner.show();
+      this.spinner.show('filterSpinner');
       this.initData();
     }, 0);
   }
@@ -156,7 +156,7 @@ export class FilterUrlComponent implements OnInit {
     }
     else {
       this.appendNotificationFilters();
-      this.spinner.hide();
+      this.spinner.hide('filterSpinner');
       this.loaded = true;
       
     }
