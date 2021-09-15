@@ -15,10 +15,19 @@ import { UserService } from '../services/user.service';
 export class SettingsComponent implements OnInit {
 
   user:User;
+  modalToShow:string = '';
   constructor(private authService: AuthService ) { }
 
   ngOnInit(): void {
     this.getUser();
+  }
+
+  showModal(modalToShow:string){
+    this.modalToShow = modalToShow;
+  }
+
+  modalClosed(){
+    this.modalToShow = '';
   }
 
   getUser(){

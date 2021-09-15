@@ -37,7 +37,7 @@
                     <div class="setting-buttons">
                         <span *ngIf="user && user.whatsapp && user.whatsapp.length > 0 && user.whatsapp[0]">Block Whatsapp</span>
                         <span *ngIf="user && user.whatsapp && user.whatsapp.length > 0 && user.whatsapp[0]">Delete Whatsapp</span>
-                        <span *ngIf="user && (!user.whatsapp || (user.whatsapp && user.whatsapp.length == 0) || (user.whatsapp && user.whatsapp.length == 0 && user.whatsapp[0]))">Active Whatsapp</span>
+                        <span *ngIf="user && (!user.whatsapp || (user.whatsapp && user.whatsapp.length == 0) || (user.whatsapp && user.whatsapp.length == 0 && user.whatsapp[0]))" (click)='showModal("whatsappInstruction")'>Active Whatsapp</span>
                     </div>
                 </div>
                 <div class="col-12 setting-holder-item">
@@ -50,10 +50,15 @@
                     <div class="setting-buttons">
                         <span *ngIf="user && user.telegram && user.telegram.length > 0 && user.telegram[0]">Block Telegram</span>
                         <span *ngIf="user && user.telegram && user.telegram.length > 0 && user.telegram[0]">Delete Telegram</span>
-                        <span *ngIf="user && (!user.telegram || (user.telegram && user.telegram.length == 0) || (user.telegram && user.telegram.length == 0 && !user.telegram[0]))">Active Telegram</span>
+                        <span *ngIf="user && (!user.telegram || (user.telegram && user.telegram.length == 0) || (user.telegram && user.telegram.length == 0 && !user.telegram[0]))" (click)='showModal("telegramInstruction")'>Active Telegram</span>
                     </div>
                 </div>
              </div>  
         </div>
     </div>
 </div>
+
+
+<app-modal-telegram-instructions (modalClosed)='modalClosed()' *ngIf="modalToShow == 'telegramInstruction'"></app-modal-telegram-instructions>
+
+<app-modal-whatsapp-instructions *ngIf="modalToShow == 'whatsappInstruction'"></app-modal-whatsapp-instructions>
