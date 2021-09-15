@@ -1,5 +1,7 @@
 import { Component, ElementRef, OnInit, Output, ViewChild ,EventEmitter, AfterViewInit} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthResponse } from 'src/app/interfaces/response';
+import { AuthService } from 'src/app/services/auth.service';
 import { MustMatch } from './must-matchValdiator';
 import { onValueChanged } from './valueChanges';
 
@@ -18,7 +20,8 @@ export class ModalResetPasswordComponent implements OnInit,AfterViewInit {
   submitted = false;
   validationErrors: {errmsg , errcode};
   hide = true;
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,
+              private authService: AuthService) { }
 
   ngOnInit(): void {
     this.buildChangePasswordForm();
@@ -56,6 +59,30 @@ export class ModalResetPasswordComponent implements OnInit,AfterViewInit {
   }
 
   changePassword(){
-
+    if (!this.submitted && this.changePasswordForm.valid){
+      this.submitted = true;
+      this.authService.changePassword(this.changePasswordForm.value.oldpassword,this.changePasswordForm.value.password)
+        .then((result:AuthResponse) => {
+          console.log(result);
+          this.submitted = false;
+          if (result && result.status == 200){
+            this.validationErrors = {errcode:3200,errmsg:'Password changed successfully'};
+          }
+          else {
+            this.validationErrors = {errcode:3001,errmsg:'Something Went Wrong'};
+          }
+        })
+        .catch(err => {
+          if (err && err.error && err.error.err){
+            this.validationErrors = err.error.err;
+          }
+          else {
+            this.validationErrors = {errcode:3001,errmsg:'Something Went Wrong'};
+          }
+          console.log(err);
+          this.submitted = false;
+        })
+    }
+    
   }
 }

@@ -62,12 +62,7 @@ export class AuthService {
       this.destroyChangePasswordSub();
       this.changePasswordSub = this.httpClient.post<AuthResponse>(environment.baseUrl + 'auth/changepassword', { oldPassword: oldPassword, newPassword: newPassword })
         .subscribe(response => {
-          if (response && response.status == 200) {
-            resolve(response.user);
-          }
-          else {
-            resolve(false);
-          }
+          resolve(response)
         }, err => {
           reject(err);
         });
