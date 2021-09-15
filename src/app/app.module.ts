@@ -23,7 +23,6 @@ import { AuthGuardService, AuthGuardVerifyEmailService, UnLoggedGuardService } f
 import { NavbarClientModule } from './dashboard-client/nav/nav.module';
 import { UserService } from './dashboard-client/services/user.service';
 import { NgxSpinnerModule } from "ngx-spinner";
-import { UpdateemailComponent } from './dashboard-client/settings/updateemail/updateemail.component';
 
 
 @NgModule({

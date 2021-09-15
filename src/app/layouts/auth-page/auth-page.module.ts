@@ -13,6 +13,7 @@ import { VerifyNowComponent } from "src/app/auth/verify-email/verify-now/verify-
 import { SendSuccessComponent } from "src/app/auth/verify-email/send-success/send-success.component";
 import { LogoutComponent } from "src/app/auth/logout/logout.component";
 import { NewPasswordComponent } from "src/app/auth/reset-password/new-password/new-password.component";
+import { VerifyChangeEmailComponent } from "src/app/auth/verify-change-email/verify-change-email.component";
 @NgModule({
   imports: [
     CommonModule,
@@ -29,7 +30,8 @@ import { NewPasswordComponent } from "src/app/auth/reset-password/new-password/n
     VerifyNowComponent,
     SendSuccessComponent,
     LogoutComponent,
-    NewPasswordComponent
+    NewPasswordComponent,
+    VerifyChangeEmailComponent
   ],
   providers:[
   ],
