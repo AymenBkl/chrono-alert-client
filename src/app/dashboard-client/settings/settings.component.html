@@ -37,7 +37,8 @@
                     <div class="setting-buttons">
                         <span *ngIf="user && user.whatsapp && user.whatsapp.length > 0 && user.whatsapp[0]">Block Whatsapp</span>
                         <span *ngIf="user && user.whatsapp && user.whatsapp.length > 0 && user.whatsapp[0]">Delete Whatsapp</span>
-                        <span *ngIf="user && (!user.whatsapp || (user.whatsapp && user.whatsapp.length == 0) || (user.whatsapp && user.whatsapp.length == 0 && user.whatsapp[0]))" (click)='showModal("whatsappInstruction")'>Active Whatsapp</span>
+                        <span *ngIf="user && (userPlan == 'Pro') && (!user.whatsapp || (user.whatsapp && user.whatsapp.length == 0) || (user.whatsapp && user.whatsapp.length == 0 && user.whatsapp[0]))" (click)='showModal("whatsappInstruction")'>Active Whatsapp</span>
+                        <span *ngIf="(userPlan == 'Standard' || userPlan ==' Free')" (click)='goToPricing()'>Upgrade Pro</span>
                     </div>
                 </div>
                 <div class="col-12 setting-holder-item">
@@ -50,7 +51,8 @@
                     <div class="setting-buttons">
                         <span *ngIf="user && user.telegram && user.telegram.length > 0 && user.telegram[0]">Block Telegram</span>
                         <span *ngIf="user && user.telegram && user.telegram.length > 0 && user.telegram[0]">Delete Telegram</span>
-                        <span *ngIf="user && (!user.telegram || (user.telegram && user.telegram.length == 0) || (user.telegram && user.telegram.length == 0 && !user.telegram[0]))" (click)='showModal("telegramInstruction")'>Active Telegram</span>
+                        <span *ngIf="user && (userPlan != 'Free') && (!user.telegram || (user.telegram && user.telegram.length == 0) || (user.telegram && user.telegram.length == 0 && !user.telegram[0]))" (click)='showModal("telegramInstruction")'>Active Telegram</span>
+                        <span *ngIf="(userPlan == 'Free')" (click)='goToPricing()'>Upgrade Standard or Pro</span>
                     </div>
                 </div>
              </div>  
