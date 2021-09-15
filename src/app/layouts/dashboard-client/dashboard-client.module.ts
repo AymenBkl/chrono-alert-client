@@ -28,6 +28,9 @@ import { AllAlertsComponent } from "src/app/dashboard-client/alerts/all-alerts/a
 import { NumberPipePipe } from "src/app/dashboard-client/pipes/number-pipe.pipe";
 import { FilterDataToStringPipe } from "src/app/dashboard-client/pipes/filter-data-to-string.pipe";
 import { NgxSpinnerModule } from "ngx-spinner";
+import { ModalTelegramInstructionsComponent } from "src/app/dashboard-client/settings/modal-telegram-instructions/modal-telegram-instructions.component";
+import { ModalWhatsappInstructionsComponent } from "src/app/dashboard-client/settings/modal-whatsapp-instructions/modal-whatsapp-instructions.component";
+import { ModalResetPasswordComponent } from "src/app/dashboard-client/settings/modal-reset-password/modal-reset-password.component";
 @NgModule({
   imports: [
     CommonModule,
@@ -54,6 +57,9 @@ import { NgxSpinnerModule } from "ngx-spinner";
       WhatsappComponent,
       GoodJobComponent,
       AllAlertsComponent,
+      ModalTelegramInstructionsComponent,
+      ModalWhatsappInstructionsComponent,
+      ModalResetPasswordComponent,
       KeysPipe,
       SearchFilterPipe,
       KeysCasePipe,
