@@ -1,6 +1,6 @@
 import { Url } from "url";
 import { Plan } from "../dashboard-client/interfaces";
-import { Telegram } from "./usersResponse";
+import { Telegram } from "./telegram";
 
 export interface User {
     _id:string

@@ -49,7 +49,7 @@
                         <span data-toggle="tooltip" data-placement="right" title="{{user.telegram[0].username}}">{{user.telegram[0].id}}@{{user.telegram[0].username}}</span>
                     </div>
                     <div class="setting-buttons">
-                        <span *ngIf="user && user.telegram && user.telegram.length > 0 && user.telegram[0]">Block Telegram</span>
+                        <span *ngIf="user && user.telegram && user.telegram.length > 0 && user.telegram[0]" (click)='openModal("telegram")'>{{user.telegram[0].status == 'active' ? 'Block Telegram' : 'Active Telegram'}}</span>
                         <span *ngIf="user && user.telegram && user.telegram.length > 0 && user.telegram[0]">Delete Telegram</span>
                         <span *ngIf="user && (userPlan != 'Free') && (!user.telegram || (user.telegram && user.telegram.length == 0) || (user.telegram && user.telegram.length == 0 && !user.telegram[0]))" (click)='showModal("telegramInstruction")'>Active Telegram</span>
                         <span *ngIf="(userPlan == 'Free')" (click)='goToPricing()'>Upgrade Standard or Pro</span>
@@ -66,3 +66,57 @@
 <app-modal-whatsapp-instructions (modalClosed)='modalClosed()' *ngIf="modalToShow == 'whatsappInstruction'"></app-modal-whatsapp-instructions>
 
 <app-modal-reset-password (modalClosed)='modalClosed()' *ngIf="modalToShow == 'changepassword'"></app-modal-reset-password>
+
+
+<ngx-spinner
+name='settingSpinner'
+bdColor="rgba(51,51,51,0.8)"
+size="medium"
+color="#fff"
+type="ball-beat"
+>
+<p style="font-size: 20px; color: white">Please Wait</p>
+</ngx-spinner>
+
+
+<button #confirmButton id="confirmButton" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmDialog" hidden>
+    
+</button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="confirmDialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="confirmDialogLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="confirmDialogLabel">Alert</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <span *ngIf='userAction'>{{userAction}}</span>
+          <span *ngIf='!userAction'>Do you want to perform this action</span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="dissmissModal()">Close</button>
+          <button type="button" class="btn btn-primary" (click)='updateSocial()' data-bs-dismiss="modal">Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="position-fixed bottom-0 start-0 p-3" style="z-index: 11" *ngIf="canShowToast">
+    <div id="toastRequest" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <img src="../../../../assets/img/client-dashboard/succes.svg" class="rounded me-2" alt="..." *ngIf="apiResponse && apiResponse.code == 1200">
+        <img src="../../../../assets/img/client-dashboard/cancel.svg" class="rounded me-2" alt="..." *ngIf="apiResponse && apiResponse.code == 1001">
+        <img src="../../../../assets/img/client-dashboard/error.svg" class="rounded me-2" alt="..." *ngIf="apiResponse && apiResponse.code == 1000">
+        <strong class="me-auto" *ngIf="apiResponse && apiResponse.code == 1200">Success</strong>
+        <strong class="me-auto" *ngIf="apiResponse && apiResponse.code == 1000">Warning</strong>
+        <strong class="me-auto" *ngIf="apiResponse && apiResponse.code == 1001">Error</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close" (click)='canShowToast = false'></button>
+      </div>
+      <div class="toast-body">
+        {{apiResponse.msg}}
+      </div>
+    </div>
+  </div>

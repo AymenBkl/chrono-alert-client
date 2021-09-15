@@ -58,4 +58,16 @@ export class UserService {
         })
     })
   }
+
+  socialUpdate(social:string){
+    return new Promise((resolve,reject) => {
+      this.httpClient.get<UrlResponse>(environment.baseUrl + 'user/manipulatesocial?social=' + social)
+      .subscribe((result) => {
+        resolve(result);
+      },err => {
+        reject(err);
+      })
+    })
+    
+  }
 }
