@@ -104,8 +104,13 @@ export class SettingsComponent implements OnInit {
           })
           .catch(err => {
             this.ngxSpinnerService.hide('settingSpinner');
+            if (err && err.error && err.error.status == 409){
+              this.apiResponse = {msg:err.error.err,code:1000};
+            }
+            else {
+              this.apiResponse = {msg:"Error Sending Email",code:1001};
+            }
             this.emailSent = false;
-            this.apiResponse = {msg:"Error Sending Email",code:1001};
             this.showToast();
           })
     }
