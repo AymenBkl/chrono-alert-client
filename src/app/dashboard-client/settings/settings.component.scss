@@ -1,0 +1,68 @@
+.setting-holder {
+    margin-top: 35px;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+
+
+.big-title {
+    display: inline-block;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #004FD4;
+    font: normal normal normal 30px/24px Roboto;
+}
+
+.card-setting {
+    min-height: 400px;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: inherit;
+    position: relative;
+}
+
+.setting-title {
+    font: normal normal bold 19px/41px Roboto;
+    letter-spacing: 0px;
+    color: #030303;
+    max-width: 150px;
+    min-width: 180px;
+    display: inline-block;
+}
+
+.setting-content {
+    font: normal normal normal 18px/41px Roboto;
+    letter-spacing: 0px;
+    color: #606060;
+    max-width: 200px;
+    min-width: 160px;
+    display: inline-block;
+
+}
+
+.setting-buttons {
+    font: normal normal normal 12px/41px Roboto;
+    letter-spacing: 0px;
+    color: #0161F3;
+    display: inline-block;
+}
+
+.setting-buttons span {
+    max-width: 100px;
+    min-width: 100px;
+    display: inline-block;
+}
+.setting-buttons span:hover {
+    cursor: pointer;
+}
+
+.setting-holder-item:first-child {
+    margin-top: 40px;
+}
+
+.setting-holder-item {
+    margin-top: 15px;
+}
