@@ -23,7 +23,7 @@
                     <div class="setting-title">
                         <span>Login Password:</span>
                     </div>
-                    <div class="setting-buttons">
+                    <div class="setting-buttons" (click)='showModal("changepassword")'>
                         <span>Change Password</span>
                     </div>
                 </div>
@@ -62,3 +62,5 @@
 <app-modal-telegram-instructions (modalClosed)='modalClosed()'  *ngIf="modalToShow == 'telegramInstruction'"></app-modal-telegram-instructions>
 
 <app-modal-whatsapp-instructions (modalClosed)='modalClosed()' *ngIf="modalToShow == 'whatsappInstruction'"></app-modal-whatsapp-instructions>
+
+<app-modal-reset-password (modalClosed)='modalClosed()' *ngIf="modalToShow == 'changepassword'"></app-modal-reset-password>
