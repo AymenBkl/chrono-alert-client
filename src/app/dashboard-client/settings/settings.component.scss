@@ -43,6 +43,14 @@
 
 }
 
+.setting-content span {
+    overflow: hidden;
+    display: inline-flex;
+    white-space: nowrap;
+    width: 89%;
+    text-overflow: ellipsis;
+}
+
 .setting-buttons {
     font: normal normal normal 12px/41px Roboto;
     letter-spacing: 0px;

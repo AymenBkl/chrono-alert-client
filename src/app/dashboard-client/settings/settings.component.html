@@ -7,13 +7,13 @@
     <div class="row setting-holder">
         
         <div class="col-12">
-            <div class="col-12 card card-setting">
+            <div class="col-12 card card-setting" *ngIf="user">
                 <div class="col-12 setting-holder-item">
                     <div class="setting-title">
                         <span>Login Email:</span>
                     </div>
                     <div class="setting-content">
-                        <span>lorem@email.com</span>
+                        <span>{{user.email}}</span>
                     </div>
                     <div class="setting-buttons">
                         <span>Change Email</span>
@@ -31,24 +31,26 @@
                     <div class="setting-title">
                         <span>WhatsApp Chat:</span>
                     </div>
-                    <div class="setting-content">
-                        <span>1254789654</span>
+                    <div class="setting-content" *ngIf="user && user.whatsapp && user.whatsapp.length > 0 && user.whatsapp[0]">
+                        <span>{{user.whatsapp[0]}}</span>
                     </div>
                     <div class="setting-buttons">
-                        <span>Block Whatsapp</span>
-                        <span>Delete Whatsapp</span>
+                        <span *ngIf="user && user.whatsapp && user.whatsapp.length > 0 && user.whatsapp[0]">Block Whatsapp</span>
+                        <span *ngIf="user && user.whatsapp && user.whatsapp.length > 0 && user.whatsapp[0]">Delete Whatsapp</span>
+                        <span *ngIf="user && (!user.whatsapp || (user.whatsapp && user.whatsapp.length == 0) || (user.whatsapp && user.whatsapp.length == 0 && user.whatsapp[0]))">Active Whatsapp</span>
                     </div>
                 </div>
                 <div class="col-12 setting-holder-item">
                     <div class="setting-title">
                         <span>Telegram Config:</span>
                     </div>
-                    <div class="setting-content">
-                        <span>1265877412</span>
+                    <div class="setting-content" *ngIf="user && user.telegram && user.telegram.length > 0 && user.telegram[0]">
+                        <span>{{user.telegram[0]}}</span>
                     </div>
                     <div class="setting-buttons">
-                        <span>Block Telegram</span>
-                        <span>Delete Telegram</span>
+                        <span *ngIf="user && user.telegram && user.telegram.length > 0 && user.telegram[0]">Block Telegram</span>
+                        <span *ngIf="user && user.telegram && user.telegram.length > 0 && user.telegram[0]">Delete Telegram</span>
+                        <span *ngIf="user && (!user.telegram || (user.telegram && user.telegram.length == 0) || (user.telegram && user.telegram.length == 0 && !user.telegram[0]))">Active Telegram</span>
                     </div>
                 </div>
              </div>  
