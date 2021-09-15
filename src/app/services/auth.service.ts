@@ -113,6 +113,7 @@ export class AuthService {
 
   sendVerificationEmail(){
     return new Promise((resolve,reject) => {
+      console.log('user',this.user);
       if (this.user && this.user.emailVerified == false){
         this.httpClient.get<AuthService>(environment.baseUrl + 'auth/sendverificationemail')
           .subscribe(result => {
@@ -122,6 +123,26 @@ export class AuthService {
           })
       }
       else {
+        console.log('wow');
+        this.router.navigate(['/dashboard-client']);
+      }
+    })
+    
+  }
+
+  sendVerificationUpdateEmail(){
+    return new Promise((resolve,reject) => {
+      console.log('user',this.user);
+      if (this.user && this.user.newEmail && this.user.newEmail.emailVerified == false){
+        this.httpClient.get<AuthService>(environment.baseUrl + 'auth/sendverificationupdateemail')
+          .subscribe(result => {
+            resolve(result);
+          },err => {
+            reject(err);
+          })
+      }
+      else {
+        console.log('wow');
         this.router.navigate(['/dashboard-client']);
       }
     })
@@ -197,6 +218,17 @@ export class AuthService {
           reject(err);
         });
 
+    })
+  }
+
+  updateEmail(newEmail:string){
+    return new Promise((resolve,reject) => {
+      this.httpClient.post<AuthResponse>(environment.baseUrl + 'auth/updateemail',{email:newEmail})
+        .subscribe((result) => {
+          resolve(result);
+        },err => {
+          reject(err);
+        })
     })
   }
 

@@ -35,20 +35,22 @@ export class VerifyEmailComponent implements OnInit {
 
 
   sendEmail(){
-    this.emailSent = true;
     this.submitted = true;
     this.authService.sendVerificationEmail()
       .then((result:AuthResponse) => {
         this.submitted = false;
+
         if (result && result.status == 200){
           this.openSuccessModal();
         }
         else {
+          this.emailSent = true;
           this.landingPageService.showErrorMessage();
         }
       })
       .catch(err => {
         this.submitted = false;
+        this.emailSent = true;
         this.landingPageService.showErrorMessage();
       })
   }

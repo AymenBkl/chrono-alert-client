@@ -20,6 +20,10 @@ export interface User {
     telegram:Telegram[];
     emailVerified:boolean;
     plan:Plan;
+    newEmail:{
+      email:string;
+      emailVerified:boolean;
+    }
     createdAt:string;
   }
   

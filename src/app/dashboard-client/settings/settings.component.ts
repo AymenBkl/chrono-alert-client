@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { AuthResponse } from 'src/app/interfaces/response';
 import { SocialResponse } from 'src/app/interfaces/telegram';
 import { User } from 'src/app/interfaces/user';
 import { AuthService } from 'src/app/services/auth.service';
@@ -27,10 +28,11 @@ export class SettingsComponent implements OnInit {
   canShowToast:boolean = false;
   apiResponse:{msg:string,code:number};
   userMethod:string = '';
+  emailSent:boolean = false;
   constructor(private authService: AuthService,
               private router: Router,
               private userService: UserService,
-              private ngxSpinnerService: NgxSpinnerService) { }
+              private ngxSpinnerService: NgxSpinnerService,) { }
 
   ngOnInit(): void {
     this.getUser();
@@ -81,6 +83,31 @@ export class SettingsComponent implements OnInit {
         this.userAction = 'Do you want to delete telegram ?';
         this.confirmButton.nativeElement.click();
       }
+    }
+  }
+
+  resendVerificationEmail(){
+    if (!this.emailSent){
+      this.emailSent = true;
+      this.ngxSpinnerService.show('settingSpinner');
+      this.authService.sendVerificationUpdateEmail()
+          .then((result:AuthResponse) => {
+            this.emailSent = false;
+            this.ngxSpinnerService.hide('settingSpinner');
+            if (result && result.status == 200){
+              this.apiResponse = {msg:"Email sent successfully",code:1200};
+            }
+            else {
+              this.apiResponse = {msg:"Error Sending Email",code:1001};
+            }
+            this.showToast();
+          })
+          .catch(err => {
+            this.ngxSpinnerService.hide('settingSpinner');
+            this.emailSent = false;
+            this.apiResponse = {msg:"Error Sending Email",code:1001};
+            this.showToast();
+          })
     }
   }
 

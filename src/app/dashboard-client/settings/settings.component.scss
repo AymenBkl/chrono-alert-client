@@ -44,7 +44,16 @@
 
 }
 
-.setting-content span {
+.setting-new-email-content {
+    font: normal normal normal 13px/41px Roboto;
+    letter-spacing: 0px;
+    color: #606060;
+    max-width: 120px;
+    min-width: 106px;
+    display: inline-block;
+}
+
+.setting-content span,.setting-new-email-content span {
     overflow: hidden;
     display: inline-flex;
     white-space: nowrap;
@@ -61,7 +70,7 @@
 
 .setting-buttons span {
     max-width: 100px;
-    min-width: 100px;
+    min-width: 58px;
     display: inline-block;
 }
 .setting-buttons span:hover {

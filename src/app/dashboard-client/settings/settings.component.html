@@ -15,7 +15,11 @@
                     <div class="setting-content">
                         <span data-placement="right" title="{{user.email}}">{{user.email}}</span>
                     </div>
+                    <div class="setting-new-email-content" *ngIf="user.newEmail && user.newEmail.email">
+                        <span data-placement="right" title="{{user.newEmail.email}}">({{user.newEmail.email}})</span>
+                    </div>
                     <div class="setting-buttons">
+                        <span (click)="resendVerificationEmail()" *ngIf="user.newEmail && user.newEmail.email">Re Send</span>
                         <span (click)="showModal('updateEmail')">Change Email</span>
                     </div>
                 </div>
