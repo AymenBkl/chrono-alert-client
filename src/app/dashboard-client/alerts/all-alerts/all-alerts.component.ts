@@ -21,7 +21,6 @@ export class AllAlertsComponent implements OnInit,AfterViewInit {
   userAction:string = '';
   urlUpdate : {urlId:string,type:string,status:any};
   userPlan:string = 'Free';
-  user:User;
   canShowToast:boolean = false;
   constructor(private userService: UserService,
               private ngxSpinner: NgxSpinnerService,
@@ -75,7 +74,7 @@ export class AllAlertsComponent implements OnInit,AfterViewInit {
       this.userAction = 'Do you want to block this url ?'
     }
     else {
-      this.userAction = 'Do you want to unlock this url ?'
+      this.userAction = 'Do you want to activate this url ?'
     }
     this.urlUpdate = {urlId:urlId,status:values.currentTarget.checked,type:'blockUrl'};
     this.confirmButton.nativeElement.click();
@@ -99,11 +98,11 @@ export class AllAlertsComponent implements OnInit,AfterViewInit {
     var activate:boolean;
     console.log(activeEmail)
     if (activeEmail == true){
-      this.userAction = 'Do you want to active notification in your email ?';
+      this.userAction = 'Do you want to block notification in your email ?';
       activate = false;
     }
     else {
-      this.userAction = 'Do you want to block notification in your email ?';
+      this.userAction = 'Do you want to activate notification in your email ?';
       activate = true;
     }
     this.urlUpdate = {urlId:urlId,status:activate,type:'blockEmail'};
@@ -114,7 +113,7 @@ export class AllAlertsComponent implements OnInit,AfterViewInit {
     console.log('here');
     var activate:boolean;
     if (this.userPlan == 'Standard' || this.userPlan == 'Pro'){
-      if (activeTelegram == true){
+      if (activeTelegram){
         this.userAction = 'Do you want to block notification in your telegram ?';
         activate = false;
       }
@@ -130,7 +129,7 @@ export class AllAlertsComponent implements OnInit,AfterViewInit {
   updateWhatsappActive(urlId:string,activeWhatsapp:boolean){
     var activate:boolean;
     if (this.userPlan == 'Pro'){
-      if (activeWhatsapp == true){
+      if (activeWhatsapp){
         this.userAction = 'Do you want to block notification in your whatsapp ?';
         activate = false;
       }
@@ -230,8 +229,6 @@ export class AllAlertsComponent implements OnInit,AfterViewInit {
   }
 
   checkUserPlan(){
-    this.user = this.authService.user;
-    console.log(this.user);
     if (this.authService.user.plan && this.authService.user.plan != null){
       var userPlan:Plan = this.authService.user.plan;
       var date = new Date().getTime();
@@ -249,6 +246,7 @@ export class AllAlertsComponent implements OnInit,AfterViewInit {
     else {
       this.userPlan = 'Free';
     }
+    this.userPlan = 'Pro'
   }
 
 }

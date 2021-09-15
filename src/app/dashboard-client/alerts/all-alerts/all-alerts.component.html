@@ -50,16 +50,16 @@
                             <img src="../../../../assets/img/client-dashboard/s_app.svg">
                             <span>0</span>
                         </div>
-                        <div class="social-logo logo-email" [ngClass]='{"active":url.emailActive}' (click)="updateEmailActive(url._id,url.applicationActive)">
+                        <div class="social-logo logo-email" [ngClass]='{"active":url.emailActive}' (click)="updateEmailActive(url._id,url.emailActive)">
                             <img src="../../../../assets/img/client-dashboard/s_email.svg">
                             <span *ngIf="url && url.totalemails && url.totalemails.length > 0">{{url.totalemails[0].total | numberPipe:2}}</span>
                             <span *ngIf="!url || !(url && url.totalemails) || !(url && url.totalemails && url.totalemails.length > 0)">0</span>
                         </div>
-                        <div class="social-logo logo-telegram" [ngClass]='{"active":url.telegramActive,"upgrade":(userPlan != "Standard" && userPlan != "Pro")}' data-bs-toggle="tooltip" data-bs-placement="bottom" [title]='(userPlan != "Standard" && userPlan != "Pro") ? "Upgrade To Standard" : ""' (click)="updateTelegramActive(url._id,url.applicationActive)">
+                        <div class="social-logo logo-telegram" [ngClass]='{"active":url.telegramActive,"upgrade":(userPlan != "Standard" && userPlan != "Pro")}' data-bs-toggle="tooltip" data-bs-placement="bottom" [title]='(userPlan != "Standard" && userPlan != "Pro") ? "Upgrade To Standard" : ""' (click)="updateTelegramActive(url._id,url.telegramActive)">
                             <img src="../../../../assets/img/client-dashboard/s_telegram.svg">
                             <span *ngIf="url && url.totaltelegrams && url.totaltelegrams.length > 0">{{url.totaltelegrams[0].total | numberPipe:2}}</span>
                             <span *ngIf="!url || !(url && url.totaltelegrams) || !(url && url.totaltelegrams && url.totaltelegrams.length > 0)">0</span>                        </div>
-                        <div class="social-logo logo-whatsapp" [ngClass]='{"active":url.whatsappActive,"upgrade":userPlan != "Pro"}' data-bs-toggle="tooltip" data-bs-placement="bottom" [title]="userPlan != 'Pro' ? 'Upgrade To Pro' : ''" (click)="updateWhatsappActive(url._id,url.applicationActive)">
+                        <div class="social-logo logo-whatsapp" [ngClass]='{"active":url.whatsappActive,"upgrade":userPlan != "Pro"}' data-bs-toggle="tooltip" data-bs-placement="bottom" [title]="userPlan != 'Pro' ? 'Upgrade To Pro' : ''" (click)="updateWhatsappActive(url._id,url.whatsappActive)">
                             <img src="../../../../assets/img/client-dashboard/s_whatsapp.svg">
                             <span>0</span>
                         </div>
