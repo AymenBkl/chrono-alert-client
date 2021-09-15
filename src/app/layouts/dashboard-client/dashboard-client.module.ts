@@ -31,6 +31,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
 import { ModalTelegramInstructionsComponent } from "src/app/dashboard-client/settings/modal-telegram-instructions/modal-telegram-instructions.component";
 import { ModalWhatsappInstructionsComponent } from "src/app/dashboard-client/settings/modal-whatsapp-instructions/modal-whatsapp-instructions.component";
 import { ModalResetPasswordComponent } from "src/app/dashboard-client/settings/modal-reset-password/modal-reset-password.component";
+import { UpdateemailComponent } from "src/app/dashboard-client/settings/updateemail/updateemail.component";
 @NgModule({
   imports: [
     CommonModule,
@@ -60,6 +61,7 @@ import { ModalResetPasswordComponent } from "src/app/dashboard-client/settings/m
       ModalTelegramInstructionsComponent,
       ModalWhatsappInstructionsComponent,
       ModalResetPasswordComponent,
+      UpdateemailComponent,
       KeysPipe,
       SearchFilterPipe,
       KeysCasePipe,

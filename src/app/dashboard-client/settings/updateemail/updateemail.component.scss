@@ -1,0 +1,60 @@
+.modal-content {
+    border-radius: 20px;
+}
+
+.modal-update-email-instruction {
+    min-height: 250px;
+}
+
+.text-center {
+    width: 90%;
+}
+
+.update-email-form {
+    width: 100%;
+    margin-top: 38px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.input-group,.form-group,.half-width,.third-width {
+    height: 80px;
+}
+
+.input-group {
+    width: auto !important;
+    border-radius: 10px !important;
+    position: relative ;
+}
+
+.update-email-form button {
+    width: 191px;
+    height: 47px;
+    background: #015AE7 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    font: normal normal bold 16px/19px Roboto;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+.input-update-email {
+    height: 50px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 10px !important;
+    width: 100%;
+}
+
+.update-email-div {
+    width: 100%;
+    text-align: center;
+    margin-top: 0px;
+}
+
+
+
+
+
+small {
+    font: normal normal normal 16px/19px Roboto;
+    letter-spacing: 0px;
+}

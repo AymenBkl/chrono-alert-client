@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthResponse } from 'src/app/interfaces/response';
 import { AuthService } from 'src/app/services/auth.service';
 import { MustMatch } from './must-matchValdiator';
-import { onValueChanged } from './valueChanges';
+import { onValueChanged } from '../updateemail/valueChanges';
 
 @Component({
   selector: 'app-modal-reset-password',

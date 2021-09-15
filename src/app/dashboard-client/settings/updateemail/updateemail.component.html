@@ -1,0 +1,39 @@
+<button #updateEmailModelButton type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#update-email-InstructionModel" hidden>
+</button>
+
+<!-- Modal Success Sent -->
+<div  class="modal fade" id="update-email-InstructionModel" data-bs-backdrop="true" data-bs-keyboard="false" tabindex="-1" aria-labelledby="update-email-InstructionModelLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title text-center" id="confirmDialogLabel">Update Email</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #closeButton  (click)='closeModal()'></button>
+        </div>
+      <div class="modal-body modal-update-email-instruction">
+        <div class="update-email-form">
+
+        <form novalidate [formGroup]="updateEmailForm">
+            <div class="form-group">
+                <input type="email" class="form-control input-register" id="inputEmail"
+                    aria-describedby="emailError" placeholder="E-mail Address"  formControlName="email"  [ngClass]="{'error-border':formErrors && formErrors.email}">
+                <small id="emailError" class="form-text text-danger" *ngIf="(formErrors && formErrors.email)">{{formErrors.email}}</small>
+                <small class="form-text text-danger" *ngIf="validationErrors && validationErrors.errcode == 11000">{{validationErrors.errmsg}}</small>
+            </div>
+            <small class="form-text text-danger" *ngIf="validationErrors && (validationErrors.errcode == 3000 || validationErrors.errcode == 3001)">{{validationErrors.errmsg}}</small>
+            <small class="form-text text-success" *ngIf="validationErrors && (validationErrors.errcode == 3200)">{{validationErrors.errmsg}}</small>
+            <div class="update-email-div" >
+                <button type="submit" class="btn" [disabled]="submitted || updateEmailForm.invalid" (click)="changePassword()" *ngIf="!validationErrors || (validationErrors && validationErrors.errcode != 3200)"> 
+                    <span *ngIf="!submitted">UPDATE EMAIL</span>
+                  <div class="spinner-border" role="status" *ngIf="submitted">
+                    <span class="visually-hidden">Loading...</span>
+                  </div> 
+                 </button>
+            </div>
+        </form>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>

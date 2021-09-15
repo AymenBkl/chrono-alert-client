@@ -16,7 +16,7 @@
                         <span data-placement="right" title="{{user.email}}">{{user.email}}</span>
                     </div>
                     <div class="setting-buttons">
-                        <span>Change Email</span>
+                        <span (click)="showModal('updateEmail')">Change Email</span>
                     </div>
                 </div>
                 <div class="col-12 setting-holder-item">
@@ -67,6 +67,7 @@
 
 <app-modal-reset-password (modalClosed)='modalClosed()' *ngIf="modalToShow == 'changepassword'"></app-modal-reset-password>
 
+<app-updateemail (modalClosed)='modalClosed()' *ngIf="modalToShow == 'updateEmail'"> </app-updateemail>
 
 <ngx-spinner
 name='settingSpinner'

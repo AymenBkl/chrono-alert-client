@@ -2,34 +2,22 @@ import { FormGroup } from '@angular/forms';
 
 // tslint:disable-next-line: prefer-const
 let formErrors = {
-    password:'',
-    confirmPassword:'',
-    oldPassword:'',  
+    email:'',  
 };
 
 // tslint:disable-next-line: prefer-const
 let validationMessages = {
-    oldpassword : {
-        required: 'Old Password is required.',
-        minlength: 'Old Password must be at least 6 characters long.',
+    email : {
+        required: 'Email is required',
+        email:'Please Enter A Valid Email'
     },
-    password : {
-        required: 'Password is required.',
-        minlength: 'Password must be at least 6 characters long.',
-        mustMatch : 'Passwords do not match'
-    },
-    confirmPassword : {
-        required: 'Password is required',
-        minlength: 'Password must be at least 6 characters long.',
-        mustMatch : 'Passwords do not match'
-    }
 
 
 };
 
-export function onValueChanged(data: any, changePasswordForm: FormGroup) {
-    if (!changePasswordForm) { return; }
-    const form = changePasswordForm;
+export function onValueChanged(data: any, updateEmailForm: FormGroup) {
+    if (!updateEmailForm) { return; }
+    const form = updateEmailForm;
     for (const field in formErrors) {
         if (formErrors.hasOwnProperty(field)) {
             // clear previous error message (if any)
