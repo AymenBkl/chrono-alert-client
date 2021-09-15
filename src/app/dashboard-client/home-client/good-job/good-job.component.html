@@ -1,27 +1,13 @@
 <div class="row card card-good-job" >
     
-    <div class="col-4 good-job-image" [@slideInOut] *ngIf="!apiResponse">
+    <div class="col-4 good-job-image" [@slideInOut]>
         <img src="../../../../assets/img/client-dashboard/Great_job.svg">
     </div>
-    <div class="col-4 good-job-image error-image" *ngIf="apiResponse && apiResponse.success">
-        <img src="../../../../assets/img/client-dashboard/succes.svg">
-    </div>
-    <div class="col-4 good-job-image error-image" *ngIf="apiResponse && !apiResponse.success">
-        <img src="../../../../assets/img/client-dashboard/error.svg">
-    </div>
-    <div class="col-8 good-job-text-holder" [@slideInOut] [ngClass]='{"error-image":apiResponse}'>
-        <div class="big-title" *ngIf="!apiResponse || (apiResponse && apiResponse.success)">Great Job</div>
-        <div class="big-title" *ngIf="apiResponse && !apiResponse.success">Ooops</div>
-        <div class="small-title" *ngIf="!apiResponse">ChronoAlerts Will notify you when your watch is available</div>
-        <div class="small-title" *ngIf="apiResponse">{{apiResponse.msg}}</div>
-        <button class="btn" [disabled]='submitted' (click)='constructUrl()' *ngIf="!apiResponse">
+    <div class="col-8 good-job-text-holder" [@slideInOut]>
+        <div class="big-title">Great Job</div>
+        <div class="small-title" >ChronoAlerts Will notify you when your watch is available</div>
+        <button class="btn" [disabled]='submitted' (click)='constructUrl()' *ngIf="!apiResponse || (apiResponse && !apiResponse.success)">
             <span *ngIf="!submitted">{{'All Good!,Setup Url'|uppercase}}</span>
-            <div class="spinner-border" role="status" *ngIf="submitted">
-              <span class="visually-hidden">Loading...</span>
-            </div> 
-        </button>
-        <button class="btn" [disabled]='submitted' (click)='constructUrl()' *ngIf="apiResponse && !apiResponse.success">
-            <span *ngIf="!submitted">{{'Try Again'|uppercase}}</span>
             <div class="spinner-border" role="status" *ngIf="submitted">
               <span class="visually-hidden">Loading...</span>
             </div> 
@@ -34,3 +20,20 @@
         </button>
     </div>
 </div>
+
+<div class="position-fixed bottom-0 start-0 p-3" style="z-index: 11" *ngIf="canShowToast">
+    <div id="toastRequest" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <img src="../../../../assets/img/client-dashboard/succes.svg" class="rounded me-2" alt="..." *ngIf="apiResponse && apiResponse.code == 1200">
+        <img src="../../../../assets/img/client-dashboard/cancel.svg" class="rounded me-2" alt="..." *ngIf="apiResponse && apiResponse.code == 1001">
+        <img src="../../../../assets/img/client-dashboard/error.svg" class="rounded me-2" alt="..." *ngIf="apiResponse && apiResponse.code == 1000">
+        <strong class="me-auto" *ngIf="apiResponse && apiResponse.code == 1200">Success</strong>
+        <strong class="me-auto" *ngIf="apiResponse && apiResponse.code == 1000">Warning</strong>
+        <strong class="me-auto" *ngIf="apiResponse && apiResponse.code == 1001">Error</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close" (click)='canShowToast = false'></button>
+      </div>
+      <div class="toast-body">
+        {{apiResponse.msg}}
+      </div>
+    </div>
+  </div>

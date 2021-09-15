@@ -26,20 +26,20 @@ export class EmailComponent implements OnInit {
   }
 
   disabledAddEmail(){
-    if (this.user && this.user.plan){
+    if (this.user != null && this.user.plan != null){
       var userPlan:Plan = this.user.plan;
       var date = new Date().getTime();
       var monthDate = new Date(userPlan.expires).getTime(); 
       var urlsLength = this.user.urls ? this.user.urls.length : 0;
-    if (this.user && this.user.plan.name == 'Free'){
+    if (userPlan.name == 'Free'){
       this.disabledUserInput = true;
       this.plan = 'Standard Or Pro';
     }
-    else if (userPlan && userPlan.name == 'Pro' && monthDate - date < 30*24*60*60*1000){
+    else if (userPlan && userPlan.name == 'Pro' && (monthDate - date < 30*24*60*60*1000)){
       this.disabledUserInput = false;
       this.plan = '';
     }
-    else if (userPlan && userPlan.name == 'Standard' && monthDate - date < 30*24*60*60*1000 && urlsLength < 5){
+    else if (userPlan && userPlan.name == 'Standard' && (monthDate - date < 30*24*60*60*1000) && urlsLength > 5){
       this.disabledUserInput = false;
       this.plan = 'Pro'
     }
@@ -47,6 +47,7 @@ export class EmailComponent implements OnInit {
   else {
     this.plan = 'Standard Or Pro';
     this.disabledUserInput = true;
+
   }
   }
 

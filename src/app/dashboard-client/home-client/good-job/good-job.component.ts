@@ -23,7 +23,12 @@ export class GoodJobComponent implements OnInit {
   @Input('minPriceValue') minPriceValue;
   @Input('maxPriceValue') maxPriceValue;
   submitted:boolean = false;
-  apiResponse:{success:boolean,msg:string};
+  apiResponse:{success:boolean,msg:string,code:number};
+  urlActive:number = 0;
+  userAction:string = '';
+  urlUpdate : {urlId:string,type:string,status:any};
+  userPlan:string = 'Free';
+  canShowToast:boolean = false;
   constructor(private userService: UserService,
               private authService:AuthService,
               private router:Router) { }
@@ -35,6 +40,13 @@ export class GoodJobComponent implements OnInit {
     if (this.apiResponse && this.apiResponse.success){
       this.router.navigate(['/dashboard-client/alerts']);
     }
+  }
+
+  showToast(){
+    this.canShowToast = true;
+    setTimeout(() => {
+      this.canShowToast = false;
+    },3000)
   }
 
   constructUrl() {
@@ -70,17 +82,19 @@ export class GoodJobComponent implements OnInit {
         .then((result:AuthResponse) => {
           this.submitted = false;
           if (result && result.status == 200){
-            this.apiResponse = {success:true,msg:result.msg};
+            this.apiResponse = {success:true,msg:result.msg,code:1200};
             
           }
           else {
-            this.apiResponse = {success:false,msg:'Something Went Wrong !'};
+            this.apiResponse = {success:false,msg:'Something Went Wrong !',code:1001};
             
           }
+          this.showToast();
         })
         .catch(err => {
-          this.apiResponse = {success:false,msg:'Something Went Wrong !'};
+          this.apiResponse = {success:false,msg:'Something Went Wrong !',code:1001};
           this.submitted = false;
+          this.showToast();
           console.log(err);
         })
     }

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output,EventEmitter} from '@angular/core';
+import { Component, Input, OnInit, Output,EventEmitter, AfterViewInit} from '@angular/core';
 import { DataService } from '../../services/data.service';
 declare var $: any;
 import { Options, LabelType } from '@angular-slider/ngx-slider';
@@ -14,7 +14,7 @@ import { NgxSpinnerService } from "ngx-spinner";
     slideInOut
   ]
 })
-export class FilterUrlComponent implements OnInit {
+export class FilterUrlComponent implements OnInit,AfterViewInit{
 
   start:boolean = false;
   loaded:boolean = false;
@@ -63,8 +63,13 @@ export class FilterUrlComponent implements OnInit {
   constructor(private dataService: DataService,
               private spinner: NgxSpinnerService,
               private httpClient: HttpClient) { }
+  
 
   ngOnInit() {
+    
+  }
+
+  ngAfterViewInit(): void {
     if(this.appliedFiters.length > 0){
       this.startFilter();
     }

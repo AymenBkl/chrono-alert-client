@@ -14,7 +14,6 @@ import { UserService } from '../../services/user.service';
 export class AllAlertsComponent implements OnInit,AfterViewInit {
 
   @ViewChild('confirmButton') confirmButton: ElementRef;
-  @ViewChild('toastRequestBtn') toastRequestBtn:ElementRef;
   urls:UrlNotification[];
   apiResponse:{msg:string,code:number};
   urlActive:number = 0;
