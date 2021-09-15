@@ -22,6 +22,7 @@ export class AllAlertsComponent implements OnInit,AfterViewInit {
   urlUpdate : {urlId:string,type:string,status:any};
   userPlan:string = 'Free';
   user:User;
+  canShowToast:boolean = false;
   constructor(private userService: UserService,
               private ngxSpinner: NgxSpinnerService,
               private authService: AuthService,
@@ -29,7 +30,6 @@ export class AllAlertsComponent implements OnInit,AfterViewInit {
   ngAfterViewInit(): void {
     this.checkUserPlan();
     this.getUrls();
-    this.showToast();
   }
 
   ngOnInit(): void {
@@ -83,12 +83,12 @@ export class AllAlertsComponent implements OnInit,AfterViewInit {
 
   updateApplicationActive(urlId:string,activeApplication:boolean){
     var activate:boolean;
-    if (activeApplication){
-      this.userAction = 'Do you want to active notification in your application ?';
+    if (activeApplication == true){
+      this.userAction = 'Do you want to block notification in your application ?';
       activate = false;
     }
     else {
-      this.userAction = 'Do you want to block notification in your application ?';
+      this.userAction = 'Do you want to activate notification in your application ?';
       activate = true;
     }
     this.urlUpdate = {urlId:urlId,status:activate,type:'blockApplication'};
@@ -97,7 +97,8 @@ export class AllAlertsComponent implements OnInit,AfterViewInit {
 
   updateEmailActive(urlId:string,activeEmail:boolean){
     var activate:boolean;
-    if (activeEmail){
+    console.log(activeEmail)
+    if (activeEmail == true){
       this.userAction = 'Do you want to active notification in your email ?';
       activate = false;
     }
@@ -113,12 +114,12 @@ export class AllAlertsComponent implements OnInit,AfterViewInit {
     console.log('here');
     var activate:boolean;
     if (this.userPlan == 'Standard' || this.userPlan == 'Pro'){
-      if (activeTelegram){
-        this.userAction = 'Do you want to active notification in your telegram ?';
+      if (activeTelegram == true){
+        this.userAction = 'Do you want to block notification in your telegram ?';
         activate = false;
       }
       else {
-        this.userAction = 'Do you want to block notification in your telegram ?';
+        this.userAction = 'Do you want to activate notification in your telegram ?';
         activate = true;
       }
       this.urlUpdate = {urlId:urlId,status:activate,type:'blockTelegram'};
@@ -129,12 +130,12 @@ export class AllAlertsComponent implements OnInit,AfterViewInit {
   updateWhatsappActive(urlId:string,activeWhatsapp:boolean){
     var activate:boolean;
     if (this.userPlan == 'Pro'){
-      if (activeWhatsapp){
-        this.userAction = 'Do you want to active notification in your whatsapp ?';
+      if (activeWhatsapp == true){
+        this.userAction = 'Do you want to block notification in your whatsapp ?';
         activate = false;
       }
       else {
-        this.userAction = 'Do you want to block notification in your whatsapp ?';
+        this.userAction = 'Do you want to activate notification in your whatsapp ?';
         activate = true;
       }
       this.urlUpdate = {urlId:urlId,status:activate,type:'blockWhatsapp'};
@@ -148,16 +149,10 @@ export class AllAlertsComponent implements OnInit,AfterViewInit {
 
 
   showToast(){
-    this.toastRequestBtn.nativeElement.click();
-    document.getElementById("toastRequestBtn").onclick = function() {
-      var toastElList = [].slice.call(document.querySelectorAll('.toast'))
-      var toastList = toastElList.map(function(toastEl) {
-      // Creates an array of toasts (it only initializes them)
-        return new bootstrap.Toast(toastEl) // No need for options; use the default options
-      });
-     toastList.forEach(toast => toast.show()); // This show them
- 
-      console.log(toastList); 
+    this.canShowToast = true;
+    setTimeout(() => {
+      this.canShowToast = false;
+    },3000)
   }
 
 
@@ -166,26 +161,69 @@ export class AllAlertsComponent implements OnInit,AfterViewInit {
       this.ngxSpinner.show('alertReqSpinner');
       this.userService.blockUrl(this.urlUpdate.status,this.urlUpdate.urlId,this.urlUpdate.type)
         .then((result:UrlResponse) => {
+          this.ngxSpinner.hide('alertReqSpinner');
           if (result && result.status) {
             if (this.urlUpdate.type == 'blockUrl'){
+              if (result.url.status == 'active'){
+                this.apiResponse = {msg:'Url activated successfully',code:1200};
+              }
+              else {
+                this.apiResponse = {msg:'Url blocked successfully',code:1200};
+              }
               this.urls.filter(url => url._id == result.url._id)[0].status = result.url.status;
             }
             else if (this.urlUpdate.type == 'blockEmail'){
+              if (result.url.emailActive){
+                this.apiResponse = {msg:'Email activated successfully',code:1200};
+              }
+              else {
+                this.apiResponse = {msg:'Email blocked successfully',code:1200};
+              }
               this.urls.filter(url => url._id == result.url._id)[0].emailActive = result.url.emailActive;
             }
             else if (this.urlUpdate.type == 'blockTelegram'){
+              if (result.url.telegramActive){
+                this.apiResponse = {msg:'Telegram activated successfully',code:1200};
+              }
+              else {
+                this.apiResponse = {msg:'Telegram blocked successfully',code:1200};
+              }
               this.urls.filter(url => url._id == result.url._id)[0].telegramActive = result.url.telegramActive;
             }
             else if (this.urlUpdate.type == 'blockWhatsapp'){
+              if (result.url.whatsappActive){
+                this.apiResponse = {msg:'Whatsapp activated successfully',code:1200};
+              }
+              else {
+                this.apiResponse = {msg:'Whatsapp blocked successfully',code:1200};
+              }
+              this.urls.filter(url => url._id == result.url._id)[0].whatsappActive = result.url.whatsappActive;
+            }
+            else if (this.urlUpdate.type == 'blockApplication'){
+              if (result.url.applicationActive){
+                this.apiResponse = {msg:'Application activated successfully',code:1200};
+              }
+              else {
+                this.apiResponse = {msg:'Application blocked successfully',code:1200};
+              }
               this.urls.filter(url => url._id == result.url._id)[0].whatsappActive = result.url.whatsappActive;
             }
           }
-          this.ngxSpinner.hide('alertReqSpinner');
-          console.log(result);
+          else {
+            this.apiResponse = {msg:'Something Went Wrong',code:1001};
+          }
+          this.showToast();
         })
         .catch(err => {
           this.ngxSpinner.hide('alertReqSpinner');
+          if (err && err.error.status == 401){
+            this.apiResponse = {msg:err.error.msg,code:1000};
+          }
+          else {
+            this.apiResponse = {msg:'Something Went Wrong',code:1001};
+          }
           console.log(err);
+          this.showToast();
         })
     }
     
