@@ -26,6 +26,7 @@ export class SettingsComponent implements OnInit {
   socialPath:string = '';
   canShowToast:boolean = false;
   apiResponse:{msg:string,code:number};
+  userMethod:string = '';
   constructor(private authService: AuthService,
               private router: Router,
               private userService: UserService,
@@ -60,6 +61,7 @@ export class SettingsComponent implements OnInit {
     if (social == 'telegram'){
       if (this.user.telegram && this.user.telegram.length > 0 && this.user.telegram[0]){
         this.socialPath = 'telegram';
+        this.userMethod = 'block';
         if (this.user.telegram[0].status == 'active'){
           this.userAction = 'Do you want to block notification from telegram';
         }
@@ -71,15 +73,73 @@ export class SettingsComponent implements OnInit {
     }
   }
 
+  openModalDelete(social:string){
+    if (social == 'telegram'){
+      if (this.user.telegram && this.user.telegram.length > 0 && this.user.telegram[0]){
+        this.socialPath = 'telegram';
+        this.userMethod = 'delete';
+        this.userAction = 'Do you want to delete telegram ?';
+        this.confirmButton.nativeElement.click();
+      }
+    }
+  }
+
+  do(){
+    if (this.userMethod == 'block'){
+      this.updateSocial();
+    }
+    else if (this.userMethod == 'delete'){
+      this.deleteSocial();
+    }
+  }
   updateSocial(){
     if (this.socialPath == 'telegram' || this.socialPath == 'whatsapp'){
       this.ngxSpinnerService.show('settingSpinner');
+      var socialPath = this.socialPath;
       this.userService.socialUpdate(this.socialPath)
         .then((result:SocialResponse) => {
           this.ngxSpinnerService.hide('settingSpinner');
           this.showToast();
           if (result && result.status == 200 ) {
             this.apiResponse = {msg:result.msg,code:1200};
+            if (this.socialPath == 'telegram'){
+              console.log('true',result.social)
+              this.user.telegram[0] = result.social;
+            }
+          }
+          else {
+            this.apiResponse = {msg:'Something Went Wrong !',code:1001};
+          }
+          console.log(result);
+        })
+        .catch(err => {
+          this.showToast();
+          this.ngxSpinnerService.hide('settingSpinner');
+          if (err && err.error.status == 401){
+            this.apiResponse = {msg:err.error.msg,code:1000};
+          }
+          else {
+            this.apiResponse = {msg:'Something Went Wrong',code:1001};
+          }
+          console.log(err)
+        })
+    }
+    
+  }
+
+  deleteSocial(){
+    if (this.socialPath == 'telegram' || this.socialPath == 'whatsapp'){
+      this.ngxSpinnerService.show('settingSpinner');
+      this.userService.socialDelete(this.socialPath)
+        .then((result:SocialResponse) => {
+          this.ngxSpinnerService.hide('settingSpinner');
+          this.showToast();
+          if (result && result.status == 200 ) {
+            this.apiResponse = {msg:result.msg,code:1200};
+            if (this.socialPath == 'telegram'){
+              this.user.telegram[0] = result.social;
+              console.log(this.user.telegram[0])
+            }
           }
           else {
             this.apiResponse = {msg:'Something Went Wrong !',code:1001};

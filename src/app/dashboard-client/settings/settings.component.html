@@ -50,7 +50,7 @@
                     </div>
                     <div class="setting-buttons">
                         <span *ngIf="user && user.telegram && user.telegram.length > 0 && user.telegram[0]" (click)='openModal("telegram")'>{{user.telegram[0].status == 'active' ? 'Block Telegram' : 'Active Telegram'}}</span>
-                        <span *ngIf="user && user.telegram && user.telegram.length > 0 && user.telegram[0]">Delete Telegram</span>
+                        <span *ngIf="user && user.telegram && user.telegram.length > 0 && user.telegram[0]" (click)='openModalDelete("telegram")'>Delete Telegram</span>
                         <span *ngIf="user && (userPlan != 'Free') && (!user.telegram || (user.telegram && user.telegram.length == 0) || (user.telegram && user.telegram.length == 0 && !user.telegram[0]))" (click)='showModal("telegramInstruction")'>Active Telegram</span>
                         <span *ngIf="(userPlan == 'Free')" (click)='goToPricing()'>Upgrade Standard or Pro</span>
                     </div>
@@ -97,7 +97,7 @@ type="ball-beat"
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="dissmissModal()">Close</button>
-          <button type="button" class="btn btn-primary" (click)='updateSocial()' data-bs-dismiss="modal">Continue</button>
+          <button type="button" class="btn btn-primary" (click)='do()' data-bs-dismiss="modal">Continue</button>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AuthResponse } from 'src/app/interfaces/response';
+import { SocialResponse } from 'src/app/interfaces/telegram';
 import { UrlNotificationResponse, UrlResponse } from 'src/app/interfaces/url';
 import { environment } from 'src/environments/environment';
 import { Plan } from '../interfaces';
@@ -61,7 +62,18 @@ export class UserService {
 
   socialUpdate(social:string){
     return new Promise((resolve,reject) => {
-      this.httpClient.get<UrlResponse>(environment.baseUrl + 'user/manipulatesocial?social=' + social)
+      this.httpClient.get<SocialResponse>(environment.baseUrl + 'user/manipulatesocial?social=' + social)
+      .subscribe((result) => {
+        resolve(result);
+      },err => {
+        reject(err);
+      })
+    })
+  }
+
+  socialDelete(social:string){
+    return new Promise((resolve,reject) => {
+      this.httpClient.delete<SocialResponse>(environment.baseUrl + 'user/deletesocial?social=' + social)
       .subscribe((result) => {
         resolve(result);
       },err => {
