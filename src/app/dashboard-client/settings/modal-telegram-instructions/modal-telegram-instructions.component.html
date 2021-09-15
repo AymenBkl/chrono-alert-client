@@ -4,10 +4,14 @@
 <!-- Modal Success Sent -->
 <div  class="modal fade" id="telegramInstructionModel" data-bs-backdrop="true" data-bs-keyboard="false" tabindex="-1" aria-labelledby="telegramInstructionModelLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
+    
     <div class="modal-content">
-      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #closeButton hidden (click)='closeModal()'></button>
-      <div class="modal-body">
-        <app-telegram></app-telegram>
+        <div class="modal-header">
+            <h5 class="modal-title" id="confirmDialogLabel">Telegram Instructions</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #closeButton  (click)='closeModal()'></button>
+        </div>
+      <div class="modal-body modal-telegram-instruction">
+        <app-telegram [modal]='true'></app-telegram>
       </div>
       
     </div>

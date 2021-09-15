@@ -1,4 +1,4 @@
-<div class="col-12 card card-telegram">
+<div class="col-12" [ngClass]='{"card card-telegram":!modal}'>
     <div class="col-12 telegram-title" [@slideInOut]>
         <span>Setup ChronoAlerts Telegram</span>
     </div>
@@ -68,7 +68,7 @@
             <span class="help-small-text" (click)="viewInstructionsClick(false)" *ngIf="viewInstructions">Hide instructions</span>
         </div>
     </div>
-    <div class="col-12 telegram-buttons" [@slideInOut]>
+    <div class="col-12 telegram-buttons" [@slideInOut] *ngIf="!modal">
         <button class="btn edit-filter" (click)="emitTelegramInstructionPrev(2)">
             BACK
         </button>
