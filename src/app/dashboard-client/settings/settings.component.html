@@ -61,4 +61,4 @@
 
 <app-modal-telegram-instructions (modalClosed)='modalClosed()'  *ngIf="modalToShow == 'telegramInstruction'"></app-modal-telegram-instructions>
 
-<app-modal-whatsapp-instructions *ngIf="modalToShow == 'whatsappInstruction'"></app-modal-whatsapp-instructions>
+<app-modal-whatsapp-instructions (modalClosed)='modalClosed()' *ngIf="modalToShow == 'whatsappInstruction'"></app-modal-whatsapp-instructions>

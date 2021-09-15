@@ -165,6 +165,28 @@
     text-decoration: underline;
 }
 
+.button-next-telegram {
+    position: absolute;
+    letter-spacing: 0px;
+    color: #414141;
+    font: normal normal bold 12px/13px Roboto;
+    right: 216px;
+    bottom: 149px;
+}
+
+.button-prev-telegram {
+    bottom: 149px;
+    left:271px;
+    position: absolute;
+    letter-spacing: 0px;
+    color: #414141;
+    font: normal normal bold 12px/13px Roboto;
+}
+
+.button-next-telegram:hover,.button-prev-telegram:hover {
+    cursor: pointer;
+}
+
 
 
 

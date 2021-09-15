@@ -1,8 +1,8 @@
-<div class="col-12 card card-whatsapp">
+<div class="col-12" [ngClass]='{"card card-whatsapp":!modal}'>
     <div class="col-12 whatsapp-title" [@slideInOut]>
         <span>Setup ChronoAlerts Whatsapp</span>
     </div>
-    <div class="col-4 whatsapp-logo-holder" [@slideInOut]>
+    <div class="col-4 whatsapp-logo-holder" [@slideInOut] >
         <div class="logo-holder">
             <img src="../../../../assets/img/client-dashboard/whatsapp.svg">
         </div>
@@ -10,7 +10,7 @@
             ChronoAlerts Whatsapp
         </div>
     </div>
-    <div class="col-7 whatsapp-instructions" [@slideInOut]>
+    <div class="col-7 whatsapp-instructions" [@slideInOut] *ngIf="!viewInstructions">
         <ul class="list-instructions">
             <li class="instruction-item">
                 <span>1. Scan QR code to visit our whatsapp</span>
@@ -26,15 +26,13 @@
             </li>
         </ul>
     </div>
-    <div class="col-3 whatsapp-logo-holder hidden-instructions" [ngClass]="{'show-instructions':viewInstructions}" [@slideInOut]>
-        <div class="logo-holder">
-            <img src="../../../../assets/img/client-dashboard/whatsapp.svg">
-        </div>
-        <div class="logo-title">
-            ChronoAlerts Whatsapp
-        </div>
+    <div class="button-next-telegram" *ngIf="viewInstructions && stepInstruction < 3" (click)="nextInstruction()">
+        <span>Next &gt;</span>
     </div>
-    <div class="col-7 whatsapp-instructions hidden-instructions" [ngClass]="{'show-instructions':viewInstructions}" [@slideInOut]>
+    <div class="button-prev-telegram" *ngIf="viewInstructions && stepInstruction > 1" (click)="prevInstruction()">
+        <span>&lt; Prev</span>
+    </div>
+    <div class="col-7 whatsapp-instructions" *ngIf="viewInstructions && stepInstruction == 1" [@slideInOut]>
         <ul class="list-instructions">
             <li class="instruction-item">
                 <span>1. Scan QR code to visit our whatsapp</span>
@@ -49,6 +47,44 @@
                 <span>4. Enjoy Getting notifications </span>
             </li>
         </ul>
+    </div>
+    <div class="col-7 whatsapp-instructions" *ngIf="viewInstructions && stepInstruction == 2" [@slideInOut]>
+        <ul class="list-instructions">
+            <li class="instruction-item">
+                <span>1. Scan QR code to visit our whatsapp</span>
+            </li>
+            <li class="instruction-item">
+                <span>2. Start Messaging</span>
+            </li>
+            <li class="instruction-item">
+                <span>3. Send your email to our whatsapp</span>
+            </li>
+            <li class="instruction-item">
+                <span>4. Enjoy Getting notifications </span>
+            </li>
+        </ul>
+    </div>
+    <div class="col-7 whatsapp-instructions" *ngIf="viewInstructions && stepInstruction == 3" [@slideInOut]>
+        <ul class="list-instructions">
+            <li class="instruction-item">
+                <span>1. Scan QR code to visit our whatsapp</span>
+            </li>
+            <li class="instruction-item">
+                <span>2. Start Messaging</span>
+            </li>
+            <li class="instruction-item">
+                <span>3. Send your email to our whatsapp</span>
+            </li>
+            <li class="instruction-item">
+                <span>4. Enjoy Getting notifications </span>
+            </li>
+        </ul>
+    </div>
+    <div class="button-next-telegram" *ngIf="viewInstructions && stepInstruction < 3" (click)="nextInstruction()">
+        <span>Next &gt;</span>
+    </div>
+    <div class="button-prev-telegram" *ngIf="viewInstructions && stepInstruction > 1" (click)="prevInstruction()">
+        <span>&lt; Prev</span>
     </div>
     <div class="whatsapp-qr-code" [@slideInOut]>
         <div class="qr-code-image">
@@ -68,7 +104,7 @@
             <span class="help-small-text" (click)="viewInstructionsClick(false)" *ngIf="viewInstructions">Hide instructions</span>
         </div>
     </div>
-    <div class="col-12 whatsapp-buttons" [@slideInOut]>
+    <div class="col-12 whatsapp-buttons" [@slideInOut] *ngIf="!modal">
         <button class="btn edit-filter" (click)="emitWhatsappInstructionPrev(3)">
             BACK
         </button>
