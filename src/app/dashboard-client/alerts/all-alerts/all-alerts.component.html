@@ -46,20 +46,20 @@
                 <td class="filter-item">{{url.filterData | filterDataToString}}</td>
                 <td>
                     <div class="social-logos">
-                        <div class="social-logo logo-application" [ngClass]='{"active":url.applicationActive}'>
+                        <div class="social-logo logo-application" [ngClass]='{"active":url.applicationActive}' (click)="updateApplicationActive(url._id,url.applicationActive)">
                             <img src="../../../../assets/img/client-dashboard/s_app.svg">
                             <span>0</span>
                         </div>
-                        <div class="social-logo logo-email" [ngClass]='{"active":url.emailActive}'>
+                        <div class="social-logo logo-email" [ngClass]='{"active":url.emailActive}' (click)="updateEmailActive(url._id,url.applicationActive)">
                             <img src="../../../../assets/img/client-dashboard/s_email.svg">
                             <span *ngIf="url && url.totalemails && url.totalemails.length > 0">{{url.totalemails[0].total | numberPipe:2}}</span>
                             <span *ngIf="!url || !(url && url.totalemails) || !(url && url.totalemails && url.totalemails.length > 0)">0</span>
                         </div>
-                        <div class="social-logo logo-telegram" [ngClass]='{"active":url.telegramActive}'>
+                        <div class="social-logo logo-telegram" [ngClass]='{"active":url.telegramActive,"upgrade":(userPlan != "Standard" && userPlan != "Pro")}' data-bs-toggle="tooltip" data-bs-placement="bottom" [title]='(userPlan != "Standard" && userPlan != "Pro") ? "Upgrade To Standard" : ""' (click)="updateTelegramActive(url._id,url.applicationActive)">
                             <img src="../../../../assets/img/client-dashboard/s_telegram.svg">
                             <span *ngIf="url && url.totaltelegrams && url.totaltelegrams.length > 0">{{url.totaltelegrams[0].total | numberPipe:2}}</span>
                             <span *ngIf="!url || !(url && url.totaltelegrams) || !(url && url.totaltelegrams && url.totaltelegrams.length > 0)">0</span>                        </div>
-                        <div class="social-logo logo-whatsapp" [ngClass]='{"active":url.whatsappActive}'>
+                        <div class="social-logo logo-whatsapp" [ngClass]='{"active":url.whatsappActive,"upgrade":userPlan != "Pro"}' data-bs-toggle="tooltip" data-bs-placement="bottom" [title]="userPlan != 'Pro' ? 'Upgrade To Pro' : ''" (click)="updateWhatsappActive(url._id,url.applicationActive)">
                             <img src="../../../../assets/img/client-dashboard/s_whatsapp.svg">
                             <span>0</span>
                         </div>
@@ -102,16 +102,16 @@ type="ball-beat"
 </ngx-spinner>
 
 
-<button #confirmBlockUrlButton type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmBlockUrl" hidden>
+<button #confirmButton type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmDialog" hidden>
     
 </button>
   
   <!-- Modal -->
-  <div class="modal fade" id="confirmBlockUrl" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="confirmBlockUrlLabel" aria-hidden="true">
+  <div class="modal fade" id="confirmDialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="confirmDialogLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="confirmBlockUrlLabel">Alert</h5>
+          <h5 class="modal-title" id="confirmDialogLabel">Alert</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">

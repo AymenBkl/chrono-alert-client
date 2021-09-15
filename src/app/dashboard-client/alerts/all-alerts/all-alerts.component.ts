@@ -1,6 +1,9 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { UrlNotification, UrlNotificationResponse, UrlResponse } from 'src/app/interfaces/url';
+import { User } from 'src/app/interfaces/user';
+import { AuthService } from 'src/app/services/auth.service';
+import { Plan } from '../../interfaces';
 import { UserService } from '../../services/user.service';
 
 @Component({
@@ -10,16 +13,20 @@ import { UserService } from '../../services/user.service';
 })
 export class AllAlertsComponent implements OnInit,AfterViewInit {
 
-  @ViewChild('confirmBlockUrlButton') confirmBlockUrlButton: ElementRef;
+  @ViewChild('confirmButton') confirmButton: ElementRef;
   urls:UrlNotification[];
   apiResponse:{msg:string,code:number};
   urlActive:number = 0;
   userAction:string = '';
   urlUpdate : {urlId:string,type:string,status:any};
+  userPlan:string = 'Free';
+  user:User;
   constructor(private userService: UserService,
               private ngxSpinner: NgxSpinnerService,
+              private authService: AuthService,
               ) { }
   ngAfterViewInit(): void {
+    this.checkUserPlan();
     this.getUrls();
   }
 
@@ -69,7 +76,68 @@ export class AllAlertsComponent implements OnInit,AfterViewInit {
       this.userAction = 'Do you want to unlock this url ?'
     }
     this.urlUpdate = {urlId:urlId,status:values.currentTarget.checked,type:'blockUrl'};
-    this.confirmBlockUrlButton.nativeElement.click();
+    this.confirmButton.nativeElement.click();
+  }
+
+  updateApplicationActive(urlId:string,activeApplication:boolean){
+    var activate:boolean;
+    if (activeApplication){
+      this.userAction = 'Do you want to active notification in your application ?';
+      activate = false;
+    }
+    else {
+      this.userAction = 'Do you want to block notification in your application ?';
+      activate = true;
+    }
+    this.urlUpdate = {urlId:urlId,status:activate,type:'blockApplication'};
+    this.confirmButton.nativeElement.click();
+  }
+
+  updateEmailActive(urlId:string,activeEmail:boolean){
+    var activate:boolean;
+    if (activeEmail){
+      this.userAction = 'Do you want to active notification in your email ?';
+      activate = false;
+    }
+    else {
+      this.userAction = 'Do you want to block notification in your email ?';
+      activate = true;
+    }
+    this.urlUpdate = {urlId:urlId,status:activate,type:'blockEmail'};
+    this.confirmButton.nativeElement.click();
+  }
+
+  updateTelegramActive(urlId:string,activeTelegram:boolean){
+    console.log('here');
+    var activate:boolean;
+    if (this.userPlan == 'Standard' || this.userPlan == 'Pro'){
+      if (activeTelegram){
+        this.userAction = 'Do you want to active notification in your telegram ?';
+        activate = false;
+      }
+      else {
+        this.userAction = 'Do you want to block notification in your telegram ?';
+        activate = true;
+      }
+      this.urlUpdate = {urlId:urlId,status:activate,type:'blockTelegram'};
+      this.confirmButton.nativeElement.click();
+    }
+  }
+
+  updateWhatsappActive(urlId:string,activeWhatsapp:boolean){
+    var activate:boolean;
+    if (this.userPlan == 'Pro'){
+      if (activeWhatsapp){
+        this.userAction = 'Do you want to active notification in your whatsapp ?';
+        activate = false;
+      }
+      else {
+        this.userAction = 'Do you want to block notification in your whatsapp ?';
+        activate = true;
+      }
+      this.urlUpdate = {urlId:urlId,status:activate,type:'blockWhatsapp'};
+      this.confirmButton.nativeElement.click();
+    }
   }
 
   dissmissModal(){
@@ -107,6 +175,28 @@ export class AllAlertsComponent implements OnInit,AfterViewInit {
         })
     }
     
+  }
+
+  checkUserPlan(){
+    this.user = this.authService.user;
+    console.log(this.user);
+    if (this.authService.user.plan && this.authService.user.plan != null){
+      var userPlan:Plan = this.authService.user.plan;
+      var date = new Date().getTime();
+      var monthDate = new Date(userPlan.expires).getTime();
+      if ((userPlan && userPlan.name == 'Pro' && monthDate - date < 30*24*60*60*1000)){
+        this.userPlan = 'Pro';
+      }
+      else if (userPlan && userPlan.name == 'Standard' && monthDate - date < 30*24*60*60*1000){
+        this.userPlan = 'Standard';
+      }
+      else {
+        this.userPlan = 'Free';
+      }
+    }
+    else {
+      this.userPlan = 'Free';
+    }
   }
 
 }
