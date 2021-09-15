@@ -13,7 +13,7 @@
                         <span>Login Email:</span>
                     </div>
                     <div class="setting-content">
-                        <span>{{user.email}}</span>
+                        <span data-placement="right" title="{{user.email}}">{{user.email}}</span>
                     </div>
                     <div class="setting-buttons">
                         <span>Change Email</span>
@@ -32,7 +32,7 @@
                         <span>WhatsApp Chat:</span>
                     </div>
                     <div class="setting-content" *ngIf="user && user.whatsapp && user.whatsapp.length > 0 && user.whatsapp[0]">
-                        <span>{{user.whatsapp[0]}}</span>
+                        <span data-placement="right" title="{{user.whatsapp[0].username}}">{{user.whatsapp[0].chatId}}</span>
                     </div>
                     <div class="setting-buttons">
                         <span *ngIf="user && user.whatsapp && user.whatsapp.length > 0 && user.whatsapp[0]">Block Whatsapp</span>
@@ -46,7 +46,7 @@
                         <span>Telegram Config:</span>
                     </div>
                     <div class="setting-content" *ngIf="user && user.telegram && user.telegram.length > 0 && user.telegram[0]">
-                        <span>{{user.telegram[0]}}</span>
+                        <span data-toggle="tooltip" data-placement="right" title="{{user.telegram[0].username}}">{{user.telegram[0].id}}@{{user.telegram[0].username}}</span>
                     </div>
                     <div class="setting-buttons">
                         <span *ngIf="user && user.telegram && user.telegram.length > 0 && user.telegram[0]">Block Telegram</span>
