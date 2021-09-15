@@ -14,14 +14,15 @@ export class TelegramComponent implements OnInit {
   @Output('telegramInstructionPrev') telegramInstructionPrev: EventEmitter<any> = new EventEmitter;
   @Input('modal') modal;
   viewInstructions:boolean = false;
+  stepInstruction:number = 1;
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.modal);
   }
 
 
   viewInstructionsClick(show:boolean){
+    this.stepInstruction = 1;
     this.viewInstructions = show;
   }
 
@@ -32,6 +33,18 @@ export class TelegramComponent implements OnInit {
 
   emitTelegramInstructionPrev(step:number){
     this.telegramInstructionPrev.emit({step:step})
+  }
+
+  nextInstruction(){
+    if (this.stepInstruction < 4 && this.stepInstruction > 0){
+      this.stepInstruction += 1
+    }
+  }
+
+  prevInstruction(){
+    if (this.stepInstruction < 4 && this.stepInstruction > 0){
+      this.stepInstruction -= 1
+    }
   }
 
 }

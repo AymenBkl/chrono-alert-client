@@ -10,7 +10,7 @@
             ChronoAlerts Telegram
         </div>
     </div>
-    <div class="col-7 telegram-instructions" [@slideInOut]>
+    <div class="col-7 telegram-instructions" [@slideInOut] *ngIf="!viewInstructions">
         <ul class="list-instructions">
             <li class="instruction-item">
                 <span>1. Scan QR code to visit our telegram</span>
@@ -26,30 +26,62 @@
             </li>
         </ul>
     </div>
-    <div class="col-3 telegram-logo-holder hidden-instructions" [ngClass]="{'show-instructions':viewInstructions}" [@slideInOut]>
-        <div class="logo-holder">
-            <img src="../../../../assets/img/client-dashboard/telegram.svg">
+        <div class="col-7 telegram-instructions" *ngIf="viewInstructions && stepInstruction == 1" [@slideInOut]>
+            <ul class="list-instructions">
+                <li class="instruction-item">
+                    <span>1. Scan QR code to visit our telegram</span>
+                </li>
+                <li class="instruction-item">
+                    <span>2. Start Messaging</span>
+                </li>
+                <li class="instruction-item">
+                    <span>3. Send your email to our telegram</span>
+                </li>
+                <li class="instruction-item">
+                    <span>4. Enjoy Getting notifications </span>
+                </li>
+            </ul>
         </div>
-        <div class="logo-title">
-            ChronoAlerts Telegram
+        <div class="col-7 telegram-instructions" *ngIf="viewInstructions && stepInstruction == 2" [@slideInOut]>
+            <ul class="list-instructions">
+                <li class="instruction-item">
+                    <span>1. Scan QR code to visit our telegram</span>
+                </li>
+                <li class="instruction-item">
+                    <span>2. Start Messaging</span>
+                </li>
+                <li class="instruction-item">
+                    <span>3. Send your email to our telegram</span>
+                </li>
+                <li class="instruction-item">
+                    <span>4. Enjoy Getting notifications </span>
+                </li>
+            </ul>
         </div>
-    </div>
-    <div class="col-7 telegram-instructions hidden-instructions" [ngClass]="{'show-instructions':viewInstructions}" [@slideInOut]>
-        <ul class="list-instructions">
-            <li class="instruction-item">
-                <span>1. Scan QR code to visit our telegram</span>
-            </li>
-            <li class="instruction-item">
-                <span>2. Start Messaging</span>
-            </li>
-            <li class="instruction-item">
-                <span>3. Send your email to our telegram</span>
-            </li>
-            <li class="instruction-item">
-                <span>4. Enjoy Getting notifications </span>
-            </li>
-        </ul>
-    </div>
+        <div class="col-7 telegram-instructions" *ngIf="viewInstructions && stepInstruction == 3" [@slideInOut]>
+            <ul class="list-instructions">
+                <li class="instruction-item">
+                    <span>1. Scan QR code to visit our telegram</span>
+                </li>
+                <li class="instruction-item">
+                    <span>2. Start Messaging</span>
+                </li>
+                <li class="instruction-item">
+                    <span>3. Send your email to our telegram</span>
+                </li>
+                <li class="instruction-item">
+                    <span>4. Enjoy Getting notifications </span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="button-next-telegram" *ngIf="viewInstructions && stepInstruction < 3" (click)="nextInstruction()">
+            <span>Next &gt;</span>
+        </div>
+        <div class="button-prev-telegram" *ngIf="viewInstructions && stepInstruction > 1" (click)="prevInstruction()">
+            <span>&lt; Prev</span>
+        </div>
+   
     <div class="telegram-qr-code" [@slideInOut]>
         <div class="qr-code-image">
             <img src="../../../../assets/img/client-dashboard/telegram-qr-code.svg">
