@@ -14,6 +14,7 @@ import { UserService } from '../../services/user.service';
 export class AllAlertsComponent implements OnInit,AfterViewInit {
 
   @ViewChild('confirmButton') confirmButton: ElementRef;
+  @ViewChild('toastRequestBtn') toastRequestBtn:ElementRef;
   urls:UrlNotification[];
   apiResponse:{msg:string,code:number};
   urlActive:number = 0;
@@ -28,6 +29,7 @@ export class AllAlertsComponent implements OnInit,AfterViewInit {
   ngAfterViewInit(): void {
     this.checkUserPlan();
     this.getUrls();
+    this.showToast();
   }
 
   ngOnInit(): void {
@@ -145,6 +147,18 @@ export class AllAlertsComponent implements OnInit,AfterViewInit {
   }
 
 
+  showToast(){
+    this.toastRequestBtn.nativeElement.click();
+    document.getElementById("toastRequestBtn").onclick = function() {
+      var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+      var toastList = toastElList.map(function(toastEl) {
+      // Creates an array of toasts (it only initializes them)
+        return new bootstrap.Toast(toastEl) // No need for options; use the default options
+      });
+     toastList.forEach(toast => toast.show()); // This show them
+ 
+      console.log(toastList); 
+  }
 
 
   updateUrl(){

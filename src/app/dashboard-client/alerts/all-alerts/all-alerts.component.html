@@ -102,7 +102,7 @@ type="ball-beat"
 </ngx-spinner>
 
 
-<button #confirmButton type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmDialog" hidden>
+<button #confirmButton id="confirmButton" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmDialog" hidden>
     
 </button>
   
@@ -125,3 +125,19 @@ type="ball-beat"
       </div>
     </div>
   </div>
+
+  <button type="button" class="btn btn-primary" id="toastRequestBtn"  #toastRequestBtn>Show</button>
+
+  <div class="" style="z-index: 11">
+    <div id="toastRequest" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="10000" data-bs-autohide="false"  >
+      <div class="toast-header">
+        <img src="../../../../assets/img/client-dashboard/succes.svg" class="rounded me-2" alt="...">
+        <strong class="me-auto">Success</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Url Updated Successfully
+      </div>
+    </div>
+  </div>
+
