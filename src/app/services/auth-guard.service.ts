@@ -15,7 +15,6 @@ export class AuthGuardService implements CanActivate {
     const user = this.storageService.getUser();
     if (user){
       const newUser:any = await Promise.resolve(this.authService.checkJWT(user.email));
-      console.log(newUser);
       if (this.authService.isAuthenticated) {
         if (newUser && newUser != false && newUser.status == 'active'){
         if (newUser && newUser != false && newUser.emailVerified == true){

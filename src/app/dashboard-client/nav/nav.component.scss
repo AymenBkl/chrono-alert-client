@@ -4,10 +4,15 @@
     table-layout: fixed;
 }
 
+.navbar {
+    box-shadow: 0px 3px 6px #00000029;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
 .list-links  li {
     display: table-cell;
     padding-top: 10px;
-    padding-bottom: 10px;
     text-align: center;
 }
 
@@ -29,6 +34,7 @@
 
 .is-active {
     color: #004FD4 !important;
+    border-bottom: 2px solid ;
 }
 
 .is-active  img {
