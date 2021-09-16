@@ -1,0 +1,103 @@
+.logo-footer-client {
+    text-align: left;
+    display: inline-block;
+}
+
+.logo-footer-client img {
+    width: 250px;
+}
+
+.footer-copy-right {
+    color: white;
+    font-family: "Roboto-Regular";
+    font: normal normal normal 15px/18px Roboto;
+    letter-spacing: 0px;
+    margin-top: 12px;
+    display: inline-block;
+    
+}
+
+.social-holder {
+    width: 100%;
+    text-align: left;
+}
+
+.social-holder ul {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.social-holder li {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.social-holder li a {
+    text-decoration: none;
+}
+
+.social-holder li a img {
+    width: 18px;
+    height: 18px;
+}
+
+.col-footer-client {
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+.col-footer-client-logo {
+    width: 39%;
+    display: inline-block;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.col-footer-client-social {
+    width: 16%;
+    display: inline-block;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.col-footer-client-links {
+    width: 22%;
+    display: inline-block;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.col-footer-client-links-privacy {
+    display: inline-block;
+    width: 13%;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+
+.links-holder {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.links-holder ul {
+    display: table;
+    width: 100%;
+    text-align: left;
+    table-layout: fixed;
+    
+}
+.links-holder ul li {
+    display: table-cell;
+    margin-right: 4px;
+}
+.links-holder ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: "Roboto-Regular";
+    font: normal normal normal 13px/18px Roboto;
+    letter-spacing: 0px;
+}
