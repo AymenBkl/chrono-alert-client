@@ -74,7 +74,8 @@ export class ContactusformComponent implements OnInit {
       this.buildContactUsForm();
     }
     else {
-      this.showForm = false;
+      this.showForm = true;
+      this.buildContactUsForm();
     }
   }
 

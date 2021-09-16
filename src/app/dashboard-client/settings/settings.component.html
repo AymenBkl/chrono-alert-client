@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row setting-holder">
-        <div class="col-6 big-title">
+        <div class="col-6 big-title" data-aos="fade-up">
             <span>Account Settings</span>
         </div>
     </div>
@@ -9,36 +9,36 @@
         <div class="col-12">
             <div class="col-12 card card-setting" *ngIf="user">
                 <div class="col-12 setting-holder-item">
-                    <div class="setting-title">
+                    <div class="setting-title" data-aos="fade-up">
                         <span>Login Email:</span>
                     </div>
-                    <div class="setting-content">
+                    <div class="setting-content" data-aos="fade-up">
                         <span data-placement="right" title="{{user.email}}">{{user.email}}</span>
                     </div>
-                    <div class="setting-new-email-content" *ngIf="user.newEmail && user.newEmail.email">
+                    <div class="setting-new-email-content" *ngIf="user.newEmail && user.newEmail.email" data-aos="fade-up">
                         <span data-placement="right" title="{{user.newEmail.email}}">({{user.newEmail.email}})</span>
                     </div>
-                    <div class="setting-buttons">
+                    <div class="setting-buttons" data-aos="fade-up">
                         <span (click)="resendVerificationEmail()" *ngIf="user.newEmail && user.newEmail.email">Re Send</span>
                         <span (click)="showModal('updateEmail')">Change Email</span>
                     </div>
                 </div>
                 <div class="col-12 setting-holder-item">
-                    <div class="setting-title">
+                    <div class="setting-title" data-aos="fade-up">
                         <span>Login Password:</span>
                     </div>
-                    <div class="setting-buttons" (click)='showModal("changepassword")'>
+                    <div class="setting-buttons" (click)='showModal("changepassword")' data-aos="fade-up">
                         <span>Change Password</span>
                     </div>
                 </div>
                 <div class="col-12 setting-holder-item">
-                    <div class="setting-title">
+                    <div class="setting-title" data-aos="fade-up">
                         <span>WhatsApp Chat:</span>
                     </div>
-                    <div class="setting-content" *ngIf="user && user.whatsapp && user.whatsapp.length > 0 && user.whatsapp[0]">
+                    <div class="setting-content" *ngIf="user && user.whatsapp && user.whatsapp.length > 0 && user.whatsapp[0]" data-aos="fade-up">
                         <span data-placement="right" title="{{user.whatsapp[0].username}}">{{user.whatsapp[0].chatId}}</span>
                     </div>
-                    <div class="setting-buttons">
+                    <div class="setting-buttons" data-aos="fade-up">
                         <span *ngIf="user && user.whatsapp && user.whatsapp.length > 0 && user.whatsapp[0]">Block Whatsapp</span>
                         <span *ngIf="user && user.whatsapp && user.whatsapp.length > 0 && user.whatsapp[0]">Delete Whatsapp</span>
                         <span *ngIf="user && (userPlan == 'Pro') && (!user.whatsapp || (user.whatsapp && user.whatsapp.length == 0) || (user.whatsapp && user.whatsapp.length == 0 && user.whatsapp[0]))" (click)='showModal("whatsappInstruction")'>Active Whatsapp</span>
@@ -46,13 +46,13 @@
                     </div>
                 </div>
                 <div class="col-12 setting-holder-item">
-                    <div class="setting-title">
+                    <div class="setting-title" data-aos="fade-up">
                         <span>Telegram Config:</span>
                     </div>
-                    <div class="setting-content" *ngIf="user && user.telegram && user.telegram.length > 0 && user.telegram[0]">
+                    <div class="setting-content" *ngIf="user && user.telegram && user.telegram.length > 0 && user.telegram[0]" data-aos="fade-up">
                         <span data-toggle="tooltip" data-placement="right" title="{{user.telegram[0].username}}">{{user.telegram[0].id}}@{{user.telegram[0].username}}</span>
                     </div>
-                    <div class="setting-buttons">
+                    <div class="setting-buttons" data-aos="fade-up">
                         <span *ngIf="user && user.telegram && user.telegram.length > 0 && user.telegram[0]" (click)='openModal("telegram")'>{{user.telegram[0].status == 'active' ? 'Block Telegram' : 'Active Telegram'}}</span>
                         <span *ngIf="user && user.telegram && user.telegram.length > 0 && user.telegram[0]" (click)='openModalDelete("telegram")'>Delete Telegram</span>
                         <span *ngIf="user && (userPlan != 'Free') && (!user.telegram || (user.telegram && user.telegram.length == 0) || (user.telegram && user.telegram.length == 0 && !user.telegram[0]))" (click)='showModal("telegramInstruction")'>Active Telegram</span>

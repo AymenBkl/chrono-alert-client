@@ -1,8 +1,8 @@
 <div class="col-12" [ngClass]='{"card card-telegram":!modal}'>
-    <div class="col-12 telegram-title" [@slideInOut]>
+    <div class="col-12 telegram-title" data-aos="fade-up">
         <span>Setup ChronoAlerts Telegram</span>
     </div>
-    <div class="col-4 telegram-logo-holder" [@slideInOut]>
+    <div class="col-4 telegram-logo-holder" data-aos="fade-right">
         <div class="logo-holder">
             <img src="../../../../assets/img/client-dashboard/telegram.svg">
         </div>
@@ -10,7 +10,7 @@
             ChronoAlerts Telegram
         </div>
     </div>
-    <div class="col-7 telegram-instructions" [@slideInOut] *ngIf="!viewInstructions">
+    <div class="col-7 telegram-instructions"  *ngIf="!viewInstructions" data-aos="fade-up">
         <ul class="list-instructions">
             <li class="instruction-item">
                 <span>1. Scan QR code to visit our telegram</span>
@@ -26,7 +26,7 @@
             </li>
         </ul>
     </div>
-        <div class="col-7 telegram-instructions" *ngIf="viewInstructions && stepInstruction == 1" [@slideInOut]>
+        <div class="col-7 telegram-instructions" *ngIf="viewInstructions && stepInstruction == 1" data-aos="fade-up">
             <ul class="list-instructions">
                 <li class="instruction-item">
                     <span>1. Scan QR code to visit our telegram</span>
@@ -42,7 +42,7 @@
                 </li>
             </ul>
         </div>
-        <div class="col-7 telegram-instructions" *ngIf="viewInstructions && stepInstruction == 2" [@slideInOut]>
+        <div class="col-7 telegram-instructions" *ngIf="viewInstructions && stepInstruction == 2" data-aos="fade-up">
             <ul class="list-instructions">
                 <li class="instruction-item">
                     <span>1. Scan QR code to visit our telegram</span>
@@ -58,7 +58,7 @@
                 </li>
             </ul>
         </div>
-        <div class="col-7 telegram-instructions" *ngIf="viewInstructions && stepInstruction == 3" [@slideInOut]>
+        <div class="col-7 telegram-instructions" *ngIf="viewInstructions && stepInstruction == 3" data-aos="fade-up">
             <ul class="list-instructions">
                 <li class="instruction-item">
                     <span>1. Scan QR code to visit our telegram</span>
@@ -82,7 +82,7 @@
             <span>&lt; Prev</span>
         </div>
    
-    <div class="telegram-qr-code" [@slideInOut]>
+    <div class="telegram-qr-code" data-aos="fade-up">
         <div class="qr-code-image">
             <img src="../../../../assets/img/client-dashboard/telegram-qr-code.svg">
         </div>
@@ -90,7 +90,7 @@
             <span>Scan to Visit <span class="blue-text">ChronoAlerts</span> telegram</span>
         </div>
     </div>
-    <div class="need-help" [@slideInOut]>
+    <div class="need-help" data-aos="fade-up">
         <div class="help-logo">
             <img src="../../../../assets/img/client-dashboard/little_guide.svg">
         </div>
@@ -100,7 +100,7 @@
             <span class="help-small-text" (click)="viewInstructionsClick(false)" *ngIf="viewInstructions">Hide instructions</span>
         </div>
     </div>
-    <div class="col-12 telegram-buttons" [@slideInOut] *ngIf="!modal">
+    <div class="col-12 telegram-buttons"  *ngIf="!modal">
         <button class="btn edit-filter" (click)="emitTelegramInstructionPrev(2)">
             BACK
         </button>

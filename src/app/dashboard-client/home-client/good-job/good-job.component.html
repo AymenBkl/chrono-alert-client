@@ -1,9 +1,9 @@
 <div class="row card card-good-job" >
     
-    <div class="col-4 good-job-image" [@slideInOut]>
+    <div class="col-4 good-job-image" data-aos="fade-right">
         <img src="../../../../assets/img/client-dashboard/Great_job.svg">
     </div>
-    <div class="col-8 good-job-text-holder" [@slideInOut]>
+    <div class="col-8 good-job-text-holder" data-aos="fade-up" >
         <div class="big-title">Great Job</div>
         <div class="small-title" >ChronoAlerts Will notify you when your watch is available</div>
         <button class="btn" [disabled]='submitted' (click)='constructUrl()' *ngIf="!apiResponse || (apiResponse && !apiResponse.success)">
@@ -12,7 +12,7 @@
               <span class="visually-hidden">Loading...</span>
             </div> 
         </button>
-        <button class="btn" [disabled]='submitted' (click)='goToAlerts()' *ngIf="apiResponse && apiResponse.success">
+        <button class="btn" [disabled]='submitted' (click)='goToAlerts()' *ngIf="apiResponse && apiResponse.success" data-aos="fade-right">
             <span *ngIf="!submitted">{{'My Alerts'|uppercase}}</span>
             <div class="spinner-border" role="status" *ngIf="submitted">
               <span class="visually-hidden">Loading...</span>

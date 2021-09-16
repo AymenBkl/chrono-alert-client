@@ -1,12 +1,12 @@
 <div class="row card card-selection">
     <div class="col-12">
-        <div class="confirm-selection-title">
+        <div class="confirm-selection-title" data-aos="fade-up">
             <span>Confirm your selections :</span>
         </div>
     </div>
     <div class="row applied-filter-chips">
         <div class="col-12 col-lg-6">
-          <div class="chip-container" *ngFor="let appliedFilter of appliedFiters">
+          <div class="chip-container" *ngFor="let appliedFilter of appliedFiters" data-aos="fade-right">
             <span class="badge rounded-pill chip-filter" (click)="removeFilter($event,appliedFilter)">
               <span>{{appliedFilter.name}}</span>
               <span>x</span>
@@ -20,7 +20,7 @@
           </div>
         </div>
         <div class="col-12 col-lg-6 selection-image-holder">
-            <div class="selection-image">
+            <div class="selection-image" data-aos="fade-left">
                 <img src="../../../../assets/img/client-dashboard/confirmation_watch.svg">
             </div>
         </div>

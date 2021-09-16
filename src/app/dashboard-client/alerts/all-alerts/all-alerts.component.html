@@ -1,6 +1,6 @@
 <div class="row allalerts-info">
     <div class="col-4 allalert-info" *ngIf="urls">
-        <span class="alert-info-big">
+        <span class="alert-info-big" data-aos="fade-right">
             {{urls.length}}
         </span>
         <span class="alert-info-small">
@@ -8,26 +8,26 @@
         </span>
     </div>
     <div class="col-4 allalert-info" *ngIf="urls">
-        <span class="alert-info-big">
+        <span class="alert-info-big" data-aos="fade-right">
             {{urlActive}}
         </span>
-        <span class="alert-info-small">
+        <span class="alert-info-small" data-aos="fade-right">
             of {{urls.length}} Active
         </span>
     </div>
     <div class="col-4 allalert-info" *ngIf="urls">
-        <span class="alert-info-big" *ngIf="urls && urls.length > 0">
+        <span class="alert-info-big" *ngIf="urls && urls.length > 0" data-aos="fade-right">
             {{urls.length - urlActive}}
         </span>
-        <span class="alert-info-big" *ngIf="!urls || (urls && urls.length == 0)">
+        <span class="alert-info-big" *ngIf="!urls || (urls && urls.length == 0)" data-aos="fade-right">
             0
         </span>
-        <span class="alert-info-small">
-            Found
+        <span class="alert-info-small" data-aos="fade-right">
+            Active
         </span>
     </div>
     <div class="col-12 alerts-table">
-        <table class="table">
+        <table class="table" data-aos="fade-up">
             <thead class="table-head">
               <tr>
                 <th scope="col-1" class="table-head-active">Active</th>
@@ -37,7 +37,7 @@
               </tr>
             </thead>
             <tbody class="table-body" *ngIf="urls && urls.length > 0">
-              <tr class="row-table-alert" *ngFor="let url of urls">
+              <tr class="row-table-alert" *ngFor="let url of urls" data-aos="fade-up">
                 <td class="first-item">
                     <div class="form-check form-switch">
                         <input class="form-check-input" type="checkbox" [checked]='url.status == "active"' (change)='urlCheckBoxCheck($event,url._id)'>

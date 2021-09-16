@@ -1,8 +1,8 @@
 <div class="col-12 card card-email">
-    <div class="col-12 email-title" [@slideInOut]>
+    <div class="col-12 email-title" data-aos="fade-up">
         <span>Setup ChronoAlerts email</span>
     </div>
-    <div class="col-4 email-logo-holder" [@slideInOut]>
+    <div class="col-4 email-logo-holder" data-aos="fade-right">
         <div class="logo-holder">
             <img src="../../../../assets/img/client-dashboard/email.svg">
         </div>
@@ -10,7 +10,7 @@
             ChronoAlerts Email
         </div>
     </div>
-    <div class="col-6 email-instructions" [@slideInOut]>
+    <div class="col-6 email-instructions" data-aos="fade-up">
         <div class="email-add-title">
             <span>Your Email : </span>
             <span>{{user.email}}</span>
@@ -30,7 +30,7 @@
         </div>
         
     </div>
-    <div class="col-12 email-buttons" (click)="emitEmailInstructionPrev(1)" [@slideInOut]>
+    <div class="col-12 email-buttons" (click)="emitEmailInstructionPrev(1)" >
         <button class="btn edit-filter">
             BACK
         </button>

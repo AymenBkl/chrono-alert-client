@@ -72,7 +72,8 @@ export class SubscriberFormComponent implements OnInit {
       this.buildSubscriberForm();
     }
     else {
-      this.showForm = false;
+      this.showForm = true;
+      this.buildSubscriberForm();
     }
   }
 

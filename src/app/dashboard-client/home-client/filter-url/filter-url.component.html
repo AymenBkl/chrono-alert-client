@@ -2,18 +2,18 @@
   <div class="row filter-horizontal">
     <div class="col-12">
       <ul class="list-modals">
-        <li *ngFor="let tabHor of tabsHor;let i = index" (click)="selectTab(i)">
+        <li *ngFor="let tabHor of tabsHor;let i = index" (click)="selectTab(i)" data-aos="fade-right">
           <span>{{tabHor}}</span>
         </li>
       </ul>
     </div>
     <div class="col-12 start-button-filter" *ngIf="!start" (click)="startFilter()">
-      <button class="btn" >
+      <button class="btn" data-aos="fade-up" >
         <span>START HERE</span>
       </button>
     </div>
   </div>
-<div class="row applied-filter-chips" *ngIf="start">
+<div class="row applied-filter-chips" *ngIf="start" data-aos="fade-right">
   <div class="col-12">
     <div class="chip-container" *ngFor="let appliedFilter of appliedFiters">
       <span class="badge rounded-pill  chip-filter" (click)="addFilter($event,appliedFilter)">

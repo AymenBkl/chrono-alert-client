@@ -1,8 +1,32 @@
 <div class="col-12 card card-app">
-    <div class="col-12 app-title" [@slideInOut]>
+    <div class="col-12 app-title" data-aos="fade-up">
         <span>Setup ChronoAlerts app</span>
     </div>
-    <div class="col-3 app-logo-holder" [@slideInOut]>
+    <div class="col-3 app-logo-holder" data-aos="fade-right" >
+        <div class="logo-holder" >
+            <img src="../../../../assets/img/client-dashboard/app.svg">
+        </div>
+        <div class="logo-title">
+            ChronoAlerts App
+        </div>
+    </div>
+    <div class="col-7 app-instructions" >
+        <ul class="list-instructions">
+            <li class="instruction-item" data-aos="fade-up">
+                <span>1. Scan QR code to get the app link</span>
+            </li>
+            <li class="instruction-item" data-aos="fade-up">
+                <span>2. Download,install and open the ChronoAlerts App</span>
+            </li>
+            <li class="instruction-item" data-aos="fade-up">
+                <span>3. Register into your account</span>
+            </li>
+            <li class="instruction-item" data-aos="fade-up">
+                <span>4. Go to settings and activate the app</span>
+            </li>
+        </ul>
+    </div>
+    <div class="col-3 app-logo-holder hidden-instructions" [ngClass]="{'show-instructions':viewInstructions}" >
         <div class="logo-holder">
             <img src="../../../../assets/img/client-dashboard/app.svg">
         </div>
@@ -10,7 +34,7 @@
             ChronoAlerts App
         </div>
     </div>
-    <div class="col-7 app-instructions" [@slideInOut]>
+    <div class="col-7 app-instructions hidden-instructions" [ngClass]="{'show-instructions':viewInstructions}" >
         <ul class="list-instructions">
             <li class="instruction-item">
                 <span>1. Scan QR code to get the app link</span>
@@ -26,31 +50,7 @@
             </li>
         </ul>
     </div>
-    <div class="col-3 app-logo-holder hidden-instructions" [ngClass]="{'show-instructions':viewInstructions}" [@slideInOut]>
-        <div class="logo-holder">
-            <img src="../../../../assets/img/client-dashboard/app.svg">
-        </div>
-        <div class="logo-title">
-            ChronoAlerts App
-        </div>
-    </div>
-    <div class="col-7 app-instructions hidden-instructions" [ngClass]="{'show-instructions':viewInstructions}" [@slideInOut]>
-        <ul class="list-instructions">
-            <li class="instruction-item">
-                <span>1. Scan QR code to get the app link</span>
-            </li>
-            <li class="instruction-item">
-                <span>2. Download,install and open the ChronoAlerts App</span>
-            </li>
-            <li class="instruction-item">
-                <span>3. Register into your account</span>
-            </li>
-            <li class="instruction-item">
-                <span>4. Go to settings and activate the app</span>
-            </li>
-        </ul>
-    </div>
-    <div class="app-qr-code" [@slideInOut]>
+    <div class="app-qr-code" data-aos="fade-up">
         <div class="qr-code-image">
             <img src="../../../../assets/img/client-dashboard/app-qr-code.svg">
         </div>
@@ -58,7 +58,7 @@
             <span>Scan to download <span class="blue-text">ChronoAlerts</span> app</span>
         </div>
     </div>
-    <div class="need-help" [@slideInOut]>
+    <div class="need-help" data-aos="fade-up" >
         <div class="help-logo">
             <img src="../../../../assets/img/client-dashboard/little_guide.svg">
         </div>
@@ -68,7 +68,7 @@
             <span class="help-small-text" (click)="viewInstructionsClick(false)" *ngIf="viewInstructions">Hide instructions</span>
         </div>
     </div>
-    <div class="col-12 app-buttons" [@slideInOut]>
+    <div class="col-12 app-buttons" >
         <button class="btn edit-filter" (click)="emmitappInstructionPrev(0)">
             BACK
         </button>

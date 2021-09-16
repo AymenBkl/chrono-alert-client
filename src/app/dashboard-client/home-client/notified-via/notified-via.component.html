@@ -1,9 +1,9 @@
 <div class="row card card-selection" [ngClass]='{"hidden-row":step != 1}'>
     <div class="col-12">
-        <div class="notified-via-title">
+        <div class="notified-via-title" data-aos="fade-up">
             <span>Get Notification Via :</span>
         </div>
-        <div class="col-6 col-lg-3 items-alert" *ngFor="let alertItem of alerts" (click)="selectAlert(alertItem)"  >
+        <div class="col-6 col-lg-3 items-alert" *ngFor="let alertItem of alerts" (click)="selectAlert(alertItem)" data-aos="fade-up" >
             <div class="alert-holder" [class.selectedAlert]="alertItem.selected" [ngClass]='{"canSelect":(alertItem.plan == userPlan) || (alertItem.plan == "Free") || (userPlan == "Pro" && alertItem.plan == "Standard"),"no-select":!((alertItem.plan == userPlan) || (alertItem.plan == "Free") || (userPlan == "Pro" && alertItem.plan == "Standard"))}'>
                 <div class="image-alert-holder" >
                     <img [src]="alertItem.img">
