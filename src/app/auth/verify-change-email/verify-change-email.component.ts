@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { AuthResponse } from 'src/app/interfaces/response';
 import { AuthService } from 'src/app/services/auth.service';
 import { StorageService } from 'src/app/services/storage.service';
 
@@ -21,12 +22,10 @@ export class VerifyChangeEmailComponent implements OnInit,AfterViewInit {
   
 
   ngOnInit(): void {
+    this.checkUser();
   }
 
   ngAfterViewInit(): void {
-    setTimeout(() => {
-      this.checkUser();
-    },1000)
   }
 
   getHash(){
@@ -53,7 +52,22 @@ export class VerifyChangeEmailComponent implements OnInit,AfterViewInit {
 
   activateEmail(){
     if (this.hash && this.hash != ''){
-      console.log(true);
+      this.ngxSpinnerService.show('spinnerNewEmail');
+      this.authService.verifyNewEmail(this.hash)
+        .then((result:AuthResponse) => {
+          this.ngxSpinnerService.hide('spinnerNewEmail');
+          if (result && result.status == 200){
+            this.router.navigate(['/dashboard-client/home']);
+          }
+          else {
+            this.apiResponse = {msg:'',code:1001};
+          }
+        })
+        .catch(err => {
+          console.log(err);
+          this.ngxSpinnerService.hide('spinnerNewEmail');
+          this.apiResponse = {msg:'',code:1001};
+        })
     }
   }
 

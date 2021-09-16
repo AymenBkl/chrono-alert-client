@@ -162,6 +162,19 @@ export class AuthService {
     })
   }
 
+  verifyNewEmail(hash:string) {
+    return new Promise((resolve,reject) => {
+      this.httpClient.get<AuthResponse>(environment.baseUrl + 'auth/verifynewemail?hash=' + hash)
+        .subscribe(result => {
+          console.log(result);
+          resolve(result);
+        },err => {
+          reject(err);
+          console.log(err);
+        }) 
+    })
+  }
+
   sendResetPasswordEmail(email:string){
     return new Promise((resolve,reject) => {
       if (!this.isAuthenticated){

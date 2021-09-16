@@ -17,6 +17,7 @@ export class AuthGuardService implements CanActivate {
       const newUser:any = await Promise.resolve(this.authService.checkJWT(user.email));
       console.log(newUser);
       if (this.authService.isAuthenticated) {
+        if (newUser && newUser != false && newUser.status == 'active'){
         if (newUser && newUser != false && newUser.emailVerified == true){
           return Promise.resolve(true);
         }
@@ -28,6 +29,11 @@ export class AuthGuardService implements CanActivate {
           this.router.navigate(['/auth']);
           return Promise.resolve(false);
         }
+      }
+      else {
+        this.router.navigate(['/auth/not-allowed']);
+          return Promise.resolve(false);
+      }
       }
       else {
         this.router.navigate(['/auth']);
@@ -56,17 +62,24 @@ export class UnLoggedGuardService implements CanActivate {
       const newUser:any = await Promise.resolve(this.authService.checkJWT(user.email));
       console.log(newUser);
       if (this.authService.isAuthenticated) {
-        if (newUser && newUser != false && newUser.emailVerified == true){
-          this.router.navigate(['/dashboard-client']);
-          return Promise.resolve(false);
-        }
-        else if (newUser && newUser != false && newUser.emailVerified == false){
-          this.router.navigate(['/auth/verify-email']);
-          return Promise.resolve(false);
+        if (newUser && newUser != false && newUser.status == 'active'){
+          if (newUser && newUser != false && newUser.emailVerified == true){
+            this.router.navigate(['/dashboard-client']);
+            return Promise.resolve(false);
+          }
+          else if (newUser && newUser != false && newUser.emailVerified == false){
+            this.router.navigate(['/auth/verify-email']);
+            return Promise.resolve(false);
+          }
+          else {
+            return Promise.resolve(true);
+          }
         }
         else {
-          return Promise.resolve(true);
+          this.router.navigate(['/auth/not-allowed']);
+            return Promise.resolve(false);
         }
+        
       }
       else {
         return Promise.resolve(true);
@@ -92,16 +105,67 @@ export class AuthGuardVerifyEmailService implements CanActivate {
       const newUser:any = await Promise.resolve(this.authService.checkJWT(user.email));
       console.log(newUser);
       if (this.authService.isAuthenticated) {
-        if (newUser && newUser != false && newUser.emailVerified == true){
-          this.router.navigate(['/dashboard-client']);
-          return Promise.resolve(false);
-        }
-        else if (newUser && newUser != false && newUser.emailVerified == false){
-          return Promise.resolve(true);
+        if (newUser && newUser != false && newUser.status == 'active'){
+          if (newUser && newUser != false && newUser.emailVerified == true){
+            this.router.navigate(['/dashboard-client']);
+            return Promise.resolve(false);
+          }
+          else if (newUser && newUser != false && newUser.emailVerified == false){
+            return Promise.resolve(true);
+          }
+          else {
+            this.router.navigate(['/auth']);
+            return Promise.resolve(false);
+          }
         }
         else {
-          this.router.navigate(['/auth']);
-          return Promise.resolve(false);
+          this.router.navigate(['/auth/not-allowed']);
+            return Promise.resolve(false);
+        }
+        
+      }
+      else {
+        this.router.navigate(['/auth']);
+        return Promise.resolve(false);
+      }
+    }
+    else {
+      this.router.navigate(['/auth']);
+      return Promise.resolve(false);
+    }
+  }
+}
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthGuardBlockedService implements CanActivate {
+
+  constructor(private router: Router,
+    private authService: AuthService,
+    private storageService: StorageService) { }
+
+  async canActivate(): Promise<boolean> {
+    const user = this.storageService.getUser();
+    if (user){
+      const newUser:any = await Promise.resolve(this.authService.checkJWT(user.email));
+      console.log(newUser);
+      if (this.authService.isAuthenticated) {
+        if (newUser && newUser != false && newUser.status == 'active'){
+          if (newUser && newUser != false && newUser.emailVerified == true){
+            this.router.navigate(['/dashboard-client']);
+            return Promise.resolve(false);
+          }
+          else if (newUser && newUser != false && newUser.emailVerified == false){
+            return Promise.resolve(true);
+          }
+          else {
+            this.router.navigate(['/auth']);
+            return Promise.resolve(false);
+          }
+        }
+        else {
+          return Promise.resolve(true);
         }
       }
       else {

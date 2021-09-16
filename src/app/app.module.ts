@@ -19,7 +19,7 @@ import { LandingPageService } from './layouts/home-page/services/landing-page.se
 import { DashboardClientComponent } from './layouts/dashboard-client/dashboard-client.component';
 import { InterceptorService, UnauthorizedInterceptor } from './services/interceptor.service';
 import { AuthService } from './services/auth.service';
-import { AuthGuardService, AuthGuardVerifyEmailService, UnLoggedGuardService } from './services/auth-guard.service';
+import { AuthGuardBlockedService, AuthGuardService, AuthGuardVerifyEmailService, UnLoggedGuardService } from './services/auth-guard.service';
 import { NavbarClientModule } from './dashboard-client/nav/nav.module';
 import { UserService } from './dashboard-client/services/user.service';
 import { NgxSpinnerModule } from "ngx-spinner";
@@ -55,6 +55,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
     AuthGuardVerifyEmailService,
     UnLoggedGuardService,
     LandingPageService,
+    AuthGuardBlockedService,
     UserService,
     {
       provide: HTTP_INTERCEPTORS,

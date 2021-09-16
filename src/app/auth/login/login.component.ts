@@ -65,10 +65,10 @@ export class LoginComponent implements OnInit {
       })
       .catch((err) => {
         this.submitted = false;
-        if (err && (err.error.err.name == 'IncorrectPasswordError' || err.error.err.name == 'IncorrectUsernameError')){
+        if (err && (err.error && err.error.err && (err.error.err.name == 'IncorrectPasswordError' || err.error.err.name == 'IncorrectUsernameError'))){
           this.validationErrors = {errcode:11002,errmsg:err.error.err.message};
         }
-        else if (err && (err.error.err.name == 'AttemptTooSoonError' || err.error.err.name == 'TooManyAttemptsError') ){
+        else if (err && (err.error && err.error.err && (err.error.err.name == 'AttemptTooSoonError' || err.error.err.name == 'TooManyAttemptsError')) ){
           this.validationErrors = {errcode:11003,errmsg:err.error.err.message};
         }
         else {

@@ -14,6 +14,7 @@ import { SendSuccessComponent } from "src/app/auth/verify-email/send-success/sen
 import { LogoutComponent } from "src/app/auth/logout/logout.component";
 import { NewPasswordComponent } from "src/app/auth/reset-password/new-password/new-password.component";
 import { VerifyChangeEmailComponent } from "src/app/auth/verify-change-email/verify-change-email.component";
+import { NotAllowedComponent } from "src/app/auth/not-allowed/not-allowed.component";
 @NgModule({
   imports: [
     CommonModule,
@@ -31,7 +32,8 @@ import { VerifyChangeEmailComponent } from "src/app/auth/verify-change-email/ver
     SendSuccessComponent,
     LogoutComponent,
     NewPasswordComponent,
-    VerifyChangeEmailComponent
+    VerifyChangeEmailComponent,
+    NotAllowedComponent,
   ],
   providers:[
   ],

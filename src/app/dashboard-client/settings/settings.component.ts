@@ -103,8 +103,9 @@ export class SettingsComponent implements OnInit {
             this.showToast();
           })
           .catch(err => {
+            console.log(err);
             this.ngxSpinnerService.hide('settingSpinner');
-            if (err && err.error && err.error.status == 409){
+            if (err && err.error && (err.error.status == 409 || err.error.status == 404)){
               this.apiResponse = {msg:err.error.err,code:1000};
             }
             else {
