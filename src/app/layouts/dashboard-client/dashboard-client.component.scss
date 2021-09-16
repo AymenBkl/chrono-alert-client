@@ -3,8 +3,14 @@
 }
 
 .footer-holder {
-    background-image: linear-gradient(to right,#0043BE, #0168FF);
-    margin-top: 30px;
+    background-image: url('../../../assets/img/client-dashboard/new_footer.svg');
+    height: 300px;
+    width: 1517px;
+    bottom: 0px;
+    clear: both;
+    position: relative;
+    margin-top: 76px;
+    background-repeat: no-repeat;
 }
 
 .navclient-holder {
