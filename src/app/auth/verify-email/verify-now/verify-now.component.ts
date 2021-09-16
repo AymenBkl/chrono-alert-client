@@ -14,6 +14,7 @@ export class VerifyNowComponent implements OnInit {
 
   @Input('hash') hash:string;
   emailSubmitted:boolean = false;
+  apiResponse : {msg:string,code:number};
   constructor(private ngxSpinnerService: NgxSpinnerService,
               private authService: AuthService,
               private landingPageService: LandingPageService,
@@ -34,11 +35,13 @@ export class VerifyNowComponent implements OnInit {
           }
           else {
             this.emailSubmitted = true;
+            this.apiResponse = {msg:'',code:1001};
           }
         })
         .catch(err => {
           this.ngxSpinnerService.hide();
           this.emailSubmitted = true;
+          this.apiResponse = {msg:'',code:1001};
         })
     }
   }

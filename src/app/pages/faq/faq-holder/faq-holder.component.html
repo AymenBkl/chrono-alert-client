@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <div class="faq-title">
+            <div class="faq-title" data-aos="fade-up">
                 <span>FAQ</span>
             </div>
             <div class="faq-image">
@@ -25,8 +25,8 @@
     <div class="row faqs-holder" *ngIf="!selectedFaq">
         <div class="col-12 col-lg-3 faq-col" *ngFor="let faq of faqs | searchFaqPipe:searchFaq" >
             <div class="faq-item-holder">
-                <p class="faq-big-title">{{faq.title}}</p>
-                <p class="faq-sub-title" (click)="selectFaq(faq)">{{faq.subTitle}}</p>
+                <p class="faq-big-title" data-aos="fade-up">{{faq.title}}</p>
+                <p class="faq-sub-title" (click)="selectFaq(faq)" data-aos="fade-up">{{faq.subTitle}}</p>
             </div>
         </div>
     </div>
@@ -34,13 +34,13 @@
         <div class="col-12 col-lg-12">
             <div class="faq-back" (click)="unSelectFaq()">
                 <img src="../../../../assets/img/left-arrow.svg">
-                <p>Back To Faq</p>
+                <p data-aos="fade-up">Back To Faq</p>
             </div>
-            <div class="selected-faq-content">
+            <div class="selected-faq-content" data-aos="fade-up">
                 <p class="faq-big-title">{{selectedFaq.innerTittle}}</p>
                 <p class="faq-inner-sub-title">{{selectedFaq.innerContent}}</p>
             </div>
-            <div class="faq-helpfull">
+            <div class="faq-helpfull" data-aos="fade-right">
                 <span class="helpfull">Was this helpful?</span>
                 <span class="faq-button first">YES</span>
                 <span class="faq-button">NO</span>

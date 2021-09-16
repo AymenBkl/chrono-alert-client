@@ -1,8 +1,8 @@
 
 
 <div class="verify-now">
-    <p class="error-verify-now"> Couldn't Verify Your Email </p>
-    <div class="guid-verify-now">
+    <p class="error-verify-now" *ngIf="hash && hash != '' && apiResponse && apiResponse.code == 1001" data-aos="fade-up"> Couldn't Verify Your Email </p>
+    <div class="guid-verify-now" *ngIf="hash && hash != '' && apiResponse && apiResponse.code == 1001" data-aos="fade-up">
         <ul>
             <li>Need to login with the email we have sent you the link to</li>
             <li>Use the same link we have sent you</li>
