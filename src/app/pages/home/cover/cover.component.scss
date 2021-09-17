@@ -48,3 +48,54 @@
 }
 
 
+@media screen and (max-width: 992px) {
+    .big-text {
+        text-align: left;
+        font: normal normal bold 26pt/54px Roboto;
+        letter-spacing: 0px;
+        display: block;
+        width: 100%;
+        color: white;
+        margin-top: 68px;
+    }
+    
+    .small-text {
+        text-align: left;
+        font: normal normal normal 9pt/22px Roboto;
+        letter-spacing: 0px;
+        display: block;
+        width: 100%;
+        color: white;
+    }
+    
+    .main-content {
+        padding-left: 20px;
+        min-height: 300px;
+    }
+    .cover-image-holder {
+        vertical-align: middle;
+        margin-bottom: 65px;
+    }
+    .cover-image-holder img {
+        width: 100%;
+    }
+    
+    .button-start {
+        margin-top: 51px;
+    }
+    .button-start button {
+        background-color: #0050FC;
+        color: white;
+        font: normal normal bold 22px/27px Roboto;
+        letter-spacing: 0px;
+        padding: 15px;
+        border-radius: 10px;
+        width: 194px;
+    }
+    
+    .cover-text {
+        max-width: 90%;
+        margin-top: 90px;
+    }
+}
+

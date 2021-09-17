@@ -31,3 +31,40 @@
     margin-top: 170px;
     margin-bottom: 100px;
 }
+
+
+@media screen and (max-width: 992px) {
+
+
+.cover-holder {
+    background-image: linear-gradient(to right,#0043BE, #0168FF);
+    padding-top: 20px;
+    border-bottom-left-radius: 50% 10%;
+    border-bottom-right-radius: 50% 10%;
+}
+
+.info-holder {
+    margin-top: 70px;
+}
+
+.app-holder {
+    margin-top: 70px;
+}
+
+.hiw-holder {
+    margin-top: 0px;
+}
+
+.plans-holder {
+    margin-top: 270px;
+}
+
+.mfm-holder {
+    margin-top: 170px;
+}
+
+.best-reviews-holder {
+    margin-top: 170px;
+    margin-bottom: 100px;
+}
+}

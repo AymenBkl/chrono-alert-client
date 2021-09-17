@@ -28,4 +28,51 @@
 
 }
 
+@media screen and (max-width: 992px) {
+    .info-image-holder {
+        display: flex;
+    }
+
+    .col-info:nth-child(3n+2) {
+        height: 100%;
+    }
+
+    .center-watch {
+        position: absolute;
+        top: 31px;
+        width: 100%;
+    }
+    
+    
+    .col-info {
+        text-align: center;
+    }
+
+    .col-info:last-child {
+        margin-top: 20px;
+    }
+    
+    .image-holder {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    .image-holder img {
+        vertical-align: middle;
+        width: 50px;
+    }
+    
+    .text-holder {
+        font-family: "Roboto-Regular";
+        font-size: 10pt;
+        color: black;
+        display: inline-block;
+        margin-left: 21px;
+        width: 150px;
+        vertical-align: middle;
+        text-align: left !important;
+    
+    }
+}
+
 
