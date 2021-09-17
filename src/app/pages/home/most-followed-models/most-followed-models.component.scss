@@ -28,3 +28,36 @@
     margin: 0 auto;
     width: 90%;
 }
+
+@media screen and (max-width: 992px) { 
+    .mfm-title {
+        width: 100%;
+        text-align: center;
+        font: normal normal bold 15pt/34px Roboto;
+        letter-spacing: 0px;
+        color: #0B1834;
+    }
+    
+    .models-holder {
+        text-align: left;
+    }
+    
+    .model-holder {
+        display: inline-flex;
+        text-align: center;
+        background: #E6E7EA;
+        border-radius: 10px; 
+        width: 253px;
+        height: 318px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50px;
+        margin-top: 20px;
+    }
+    
+    .model-holder img {
+        text-align: center;
+        margin: 0 auto;
+        width: 90%;
+    }
+}
