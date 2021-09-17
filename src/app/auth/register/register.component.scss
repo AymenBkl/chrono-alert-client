@@ -93,7 +93,7 @@ small {
 
 
 
-.auth-register-register {
+.auth-login-register {
     width: 100%;
     margin-top: 30px;
     text-align: center;
@@ -105,11 +105,11 @@ small {
 
 }
 
-.auth-register-register span {
+.auth-login-register span {
     display: inline-block;
 }
 
-.auth-register-register a {
+.auth-login-register a {
     display: inline-block;
     color: #015AE7;
 }
@@ -153,5 +153,68 @@ small {
     outline: 0;
     box-shadow: 0 0 0 0.25rem #df4759;
     width: 100% !important;
+}
+
+@media screen and (max-width: 992px) {
+    .register-image img {
+        width: 70%;
+    }
+
+    .register-image {
+        padding-left: 0px;
+    }
+
+    .register-title {
+        font: normal normal bold 14pt/43px Roboto;
+    }
+
+    .register-forget-password {
+        font: normal normal normal 10pt/19px Roboto;
+    }
+
+    .register-forget-password a {
+        font: normal normal normal 10pt/19px Roboto;
+    }
+
+    .register-checkbox {
+        font: normal normal normal 10pt/19px Roboto;
+    }
+
+    .form-group {
+        font: normal normal normal 11pt/19px Roboto;
+    }
+
+    .register-checkbox label {
+        padding-top: 0px;
+    }
+
+    small {
+        font: normal normal normal 10pt/19px Roboto;
+        letter-spacing: 0px;
+    }
+
+    .form-register button {
+        width: 128px;
+        height: 42px;
+        font: normal normal bold 10pt/19px Roboto;
+    }
+
+    .auth-login-register {
+        font: normal normal normal 10pt/19px Roboto;
+    }
+    ::placeholder {
+        font: normal normal normal 11pt/19px Roboto;
+    }
+
+    .form-register {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .half-width {
+        width: 100%;
+        display: block;
+        height: 80px !important;
+    }
 }
 
