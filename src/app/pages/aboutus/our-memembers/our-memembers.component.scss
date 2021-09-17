@@ -37,7 +37,7 @@
 }
 
 .memeber-name {
-    font: normal normal medium 26px/32px Roboto;
+    font: normal normal normal 26px/32px Roboto;
     letter-spacing: 0px;
     color: #0B1834;
 }
@@ -46,5 +46,35 @@
     font: normal normal normal 17px/20px Roboto;
     letter-spacing: 0px;
     color: #727272;
+}
+
+@media screen and (max-width: 992px) {
+    .our-memebers-title {
+        font: normal normal bold 15pt/53px Roboto;
+    }
+    .memeber-name {
+        font: normal normal normal 13pt/1px Roboto;
+    }
+
+    .memeber-position {
+        font: normal normal normal 10pt/20px Roboto;
+    }
+
+    .image-avatar {
+        text-align: center;
+    }
+    .image-avatar img {
+        width: 70%;
+        height: 70%;
+    }
+
+    .memeber-info {
+        margin-top: -20px;
+    }
+
+    .col-memeber {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }
 

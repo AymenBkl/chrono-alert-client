@@ -74,3 +74,34 @@
     filter:  invert(33%) sepia(90%) saturate(7250%) hue-rotate(213deg) brightness(93%) contrast(101%);
 }
 
+@media screen and (max-width: 992px) {
+    .wwa-title {
+        font:normal normal bold 15pt/34px Roboto;
+    }
+    .wwa-image-holder {
+        text-align: center;
+    }
+
+    .wwa-image-holder img {
+        width: 70%;
+    }
+
+    .wwa-big-text {
+        font:normal normal bold 14pt/30px Roboto;
+    }
+
+    .wwa-small-text {
+        margin-top: 10px;
+        font: normal normal normal 10pt/25px Roboto;
+    }
+
+    .wwa-list-goals {
+        margin-left: 10px;
+        font: normal normal normal 9pt/20px Roboto;
+    }
+
+    .wwa-list-goals ul li img {
+        width: 12px;
+    }
+}
+
