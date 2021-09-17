@@ -29,7 +29,7 @@
 
 .start-step {
     text-align: left;
-    font: normal normal medium 20px/24px Roboto;
+    font: normal normal normal 20px/24px Roboto;
     letter-spacing: 0px;
     color: #0B1834;
 }
@@ -57,5 +57,31 @@
     color: #FFFFFF;
     border-radius: 10px;
     background: #015AE7 0% 0% no-repeat padding-box;
+}
+
+@media screen and (max-width: 992px) {
+    .start-title {
+        font: normal normal bold 20pt/54px Roboto;
+    }
+
+    .start-image {
+        text-align: center;
+    }
+
+    .start-image img {
+        width: 80%;
+    }
+
+    .start-text-holder {
+        margin-left: 40px;
+    }
+
+    .start-step {
+        font: normal normal normal 12pt/24px Roboto;
+    }
+
+    .start-description {
+        font: normal normal normal 9pt/15px Roboto;
+    }
 }
 

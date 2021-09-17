@@ -5,3 +5,13 @@
 .start-holder {
     margin-top: 80px;
 }
+
+@media screen and (max-width: 992px) {
+    .program-holder {
+        margin-top: 80px;
+    }
+    
+    .start-holder {
+        margin-top: -74px;
+    }
+}

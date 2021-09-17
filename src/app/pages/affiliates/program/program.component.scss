@@ -74,3 +74,33 @@
     left: -14%;
     opacity: 0.2;
 }
+
+@media screen and (max-width: 992px) {
+  .program-title {
+      font: normal normal bold 15pt/34px Roboto;
+  }
+  .program-image-holder {
+      text-align: center;
+  }
+  .program-image-holder img {
+      width: 70%;
+  }
+  .program-big-text {
+      font: normal normal bold 14pt/53px Roboto;
+  }
+
+  .program-meduim-text {
+      margin-top: 0px;
+      font: normal normal bold 13pt/43px Roboto;    
+  }
+
+  .program-small-text {
+      font: normal normal normal 10pt/25px Roboto;
+  }
+
+  .circle-blue {
+    width: 30%;
+    top: 61%;
+    left: 3%;
+  }
+}
