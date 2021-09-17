@@ -96,3 +96,110 @@
     width: 26px;
     height: 26px;
 }
+
+@media screen and (max-width: 992px) {
+
+.container-footer-client {
+    position: absolute;
+    bottom: 0px;
+}
+.footer-holder {
+    margin-top: 15px;
+}
+
+.logo-holder {
+    width: 100%;
+    text-align: right;
+}
+
+.logo-holder img {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.footer-section p {
+    text-align: left;
+    font: normal normal bold 16px/19px Roboto;
+    letter-spacing: 0px;
+    color: #F7F8F8;
+}
+.footer-sections {
+    margin-left: 0px;
+    margin-top: 20px;
+}
+
+.list-group-item {
+    color: white !important;
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0.5rem 0rem;
+    text-align: left;
+    font: normal normal normal 13px/15px Roboto;
+    letter-spacing: 0px;
+}
+
+.list-group-item a {
+    text-decoration: none;
+    color: white !important;
+}
+.bottom-footer {
+    margin-top: 44px;
+    padding-bottom: 17px;
+    padding-left: 0px;
+}
+.copy-right {
+    color: white;
+    font-family: "Roboto-Regular";
+    font: normal normal normal 15px/18px Roboto;
+    letter-spacing: 0px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.social-holder {
+    width: 100%;
+    text-align: center;
+}
+
+.links-holder {
+    width: 100%;
+    text-align: center;
+}
+
+.links-holder li {
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.links-holder li a {
+    text-decoration: none;
+    color: white;
+    font-family: "Roboto-Regular";
+    font: normal normal normal 15px/18px Roboto;
+    letter-spacing: 0px;
+}
+
+
+.social-holder ul {
+    display: inline-block;
+}
+
+.social-holder li {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.social-holder li a {
+    text-decoration: none;
+}
+
+.social-holder li a img {
+    width: 26px;
+    height: 26px;
+}
+
+.footer-section {
+    padding-left: 15px;
+    margin-top: 20px;
+}
+}

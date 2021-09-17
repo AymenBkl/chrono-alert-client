@@ -1,16 +1,16 @@
 <div class="container" *ngIf="!isLoggedIn">
     <div class="row">
-        <div class="col-12 col-md-5">
+        <div class="col-10 col-md-5">
             <app-subscriber-form></app-subscriber-form>
         </div>
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-md-7 d-none d-md-block">
             <div class="logo-holder">
                 <img src="../../../assets/img/logo.svg">
             </div>
         </div>
     </div>
     <div class="row footer-sections">
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-6 col-lg-3">
             <div class="footer-section">
                 <p>Links</p>
                 <ul class="list-group">
@@ -22,7 +22,7 @@
                   </ul>
             </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-6 col-lg-3">
             <div class="footer-section">
                 <p>Privacy</p>
                 <ul class="list-group">
@@ -32,7 +32,7 @@
                   </ul>
             </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-6 col-lg-3">
             <div class="footer-section">
                 <p>Third Section</p>
                 <ul class="list-group">
@@ -42,7 +42,7 @@
                   </ul>
             </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-6 col-lg-3">
             <div class="footer-section">
             <p>Fourth Section</p>
                 <ul class="list-group">
@@ -54,12 +54,12 @@
         </div>
     </div>
     <div class="row bottom-footer"> 
-        <div class="col-4">
+        <div class="col-md-4 col-12 order-2 order-md-1">
             <div class="copy-right">
                 <p>Copyright {{year}} © CHRONOALERTS</p>
             </div>
         </div>
-        <div class="col-4">
+        <div class="col-md-4 col-12 order-3 order-md-2">
             <div class="social-holder">
                 <ul>
                     <li>
@@ -85,7 +85,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-4">
+        <div class="col-md-4 col-12 order-1 order-md-3">
             <div class="links-holder">
                 <ul>
                     <li>
@@ -99,6 +99,11 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+        </div>
+        <div class="col-12 d-md-none d-block order-4">
+            <div class="logo-holder">
+                <img src="../../../assets/img/logo.svg">
             </div>
         </div>
     </div>
