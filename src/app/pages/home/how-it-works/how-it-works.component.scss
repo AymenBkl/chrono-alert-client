@@ -63,3 +63,79 @@
 .mt-5 {
     margin-top: 6rem !important;
 }
+
+@media screen and (max-width: 992px) { 
+    .hiw-title {
+        font: normal normal bold 15px/34px Roboto;
+        letter-spacing: 0px;
+        color: #0B1834;
+        width: 100%;
+        text-align: center;
+        margin-top: 50px;
+    }
+    
+    .hiw-big-text {
+        display: block;
+        width: 100%;
+        font: normal normal bold 18pt/54px Roboto;
+        letter-spacing: 0px;
+        color: #0B1834;
+        text-align: center;
+    }
+    
+    .hiw-small-text {
+        display: block;
+        width: 100%;
+        font: normal normal normal 9px/24px Roboto;
+        letter-spacing: 0px;
+        color: #808080;
+        text-align: center;
+    }
+    
+    .hiw-step {
+        width: 100%;
+    }
+    
+    .hiw-step-holder {
+        display: flex;
+        align-items: center;
+    }
+    
+    .hiw-step-image {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .ms-30 {
+        text-align: center;
+        margin-left: 0;
+    }
+    
+    .register {
+        width: 300px;
+        height: auto;
+    }
+    
+    .watch-select {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .notification-select {
+        width: 200px;
+        height: 200px;
+    }
+
+    .container {
+        overflow-x: hidden;
+    }
+    
+    .enjoy-hiw {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .mt-5 {
+        margin-top: 1rem !important;
+    }
+}
