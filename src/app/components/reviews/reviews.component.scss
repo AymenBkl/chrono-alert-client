@@ -75,7 +75,6 @@
     letter-spacing: 0px;
     color: #E2E2E2;
     display: inline-block;
-    float: right;
     margin-right: 12px;
     vertical-align: middle;
     width: auto;
@@ -109,6 +108,112 @@
     background: transparent !important;
     width: 37px !important;
     margin-top: 25px;
+}
+@media screen and (max-width: 992px) { 
+    .best-reviews-title {
+        width: 100%;
+        font: normal normal bold 15pt/34px Roboto;
+        letter-spacing: 0px;
+        color: #0B1834;
+        text-align: center;
+    }
+    
+    .best-reviews-subtitle {
+        width: 100%;
+        text-align: center;
+        font: normal normal normal 10pt/17px Roboto;
+        letter-spacing: 0px;
+        color: #0B1834;
+    }
+    
+    .reviews-holder {
+        text-align: left;
+        margin-left: -15px;
+    }
+    
+    .card-review {
+        margin-top: 60px;
+        width: 318px;
+        height: 167px;
+        background: #0240A7 0% 0% no-repeat padding-box;
+        border-radius: 10px;
+        position: relative;
+        margin-left: 30px;
+        display: inline-block;
+    }
+    
+    .image-avatar-user {
+        height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    position: absolute;
+    background: white;
+    top: -38px;
+    left: -35px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    .avatar-user {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        border: 1px solid black;
+    }
+    
+    .avatar-user img {
+        width: 100%;
+        border-radius: 50%;
+        height: 100%;
+    }
+    
+    .review-header {
+        margin-left:31px;
+        margin-top: 20px;
+    
+    }
+    
+    .review-time {
+        font: normal normal normal 8pt/14px Roboto;
+        letter-spacing: 0px;
+        color: #E2E2E2;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    .review-location {
+        font: normal normal normal 9pt/15px Roboto;
+        letter-spacing: 0px;
+        color: #E2E2E2;
+        display: inline-block;
+        margin-right: 12px;
+        vertical-align: middle;
+        width: auto;
+    }
+    
+    .review-description {
+        width: 100%;
+        margin-top: 30px;
+        font: italic normal normal 10pt/17px Roboto;
+        letter-spacing: 0px;
+        color: #F7F8F8;
+        padding-left: 17px;
+    }
+    
+    .review-stars {
+        display: inline-block;
+        margin-top: 13px;
+        padding-left: 16px;
+    }
+    
+    .review-stars img {
+        width: 19px;
+        height: 19px;
+        display: inline-block;
+        margin-right: 5px;
+    }
 }
 
 
