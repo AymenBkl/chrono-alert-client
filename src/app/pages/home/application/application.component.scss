@@ -81,5 +81,101 @@
     margin-left: 60px;
 }
 
+@media screen and (max-width: 992px) { 
+    .apps-holder {
+        display: block;
+        text-align: center;
+    }
+    
+    .apps-image-holder {
+        display: inline-block;
+        width: auto;
+    }
+    
+    .apps-image-holder img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .apps-text {
+        display: inline-block;
+        font: normal normal normal 6pt/11px Roboto;
+        letter-spacing: 0px;
+        color: #2C3E50;
+        margin-top: 17px;
+        
+    }
+
+    .main-info-logos {
+        display: inline-block;
+        vertical-align: middle;
+        padding-left: 18px;
+    }
+    
+    .apps-icons {
+        display: block;
+        margin-top: 0px;
+    }
+    
+    .apps-logo {
+        display: inline-block;
+    }
+    
+    .apps-logo img {
+        width: 25px;
+        height: 18px;
+    }
+    
+    .app-big-text {
+        display: block;
+        font: normal normal bold 22pt/32pt Roboto;
+        letter-spacing: 0px;
+        color: #0B1834;
+        margin-top: -58px;
+    }
+    
+    .app-small-text {
+        font: normal normal normal 8pt/24px Roboto;
+        letter-spacing: 0px;
+        color: #0B1834;
+    }
+    
+    .app-text-holde {
+        vertical-align: middle;
+    }
+    
+    
+    
+    .app-big-image-holder {
+        text-align: right;
+        border-top-left-radius: 1500px 1500px;
+        border-bottom-left-radius: 1500px 1500px;
+        background: #E7E7E8;
+        position: absolute;
+        right: -34px;
+    }
+
+   
+    .app-big-image-holder img {
+        width: 180px;
+        height: 280px;
+    }
+    
+    .col-app {
+        vertical-align: middle;
+        display: flex;
+        align-items: center;
+        height: auto;
+        margin-top: 35px;
+    }
+    .col-app:first-child {
+        margin-top: 0px;
+    }
+    
+    .app-text-holder {
+        margin-left: 5px;
+    }
+}
+
 
 
