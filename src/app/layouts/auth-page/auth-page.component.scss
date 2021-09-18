@@ -1,13 +1,18 @@
 .nav-holder {
     background-image: linear-gradient(to right,#0043BE, #0168FF);
+    overflow-x: hidden;
 }
 
 .footer-holder {
     background-image: linear-gradient(to right,#0043BE, #0168FF);
     margin-top: 30px;
+    overflow-x: hidden;
 }
 
 .auth-holder {
+    overflow-x: hidden;
     margin-top: 120px;
 }
+
+
 
