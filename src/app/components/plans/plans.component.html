@@ -10,11 +10,25 @@
     </div>
     <div class="row">
         <div class="col-12 col-plans" >
-            <div class="card card-plan" [ngClass]="{'big-card-plan': selectedPlan == 0}" (click)="selectPlan(0)" data-aos="flip-left">
-                <div class="card-title" data-aos="fade-up">
+            
+            <div class="card card-plan" [ngClass]="{'big-card-plan': selectedPlan == 1}" (click)="selectPlan(1)" data-aos="flip-left" *ngIf="innerWidth > 481 || (innerWidth <= 481 && selectedPlan == 1)">
+                <div class="plan-arrows">
+                    <div class="right-arrow" *ngIf="selectedPlan < 3">
+                        <button class="btn" (click)="nextPlan()">
+                            <img src="../../../assets/img/right-arrow.svg">
+                        </button>
+                    </div>
+    
+                    <div class="left-arrow" *ngIf="selectedPlan > 1" >
+                        <button class="btn" (click)="prevPlan()">
+                            <img src="../../../assets/img/left-arrow.svg">
+                        </button>
+                    </div>
+                </div>
+                <div class="card-title" [data-aos]="innerWidth > 481 ? 'fade-up' : ''">
                     <p>FREE</p>
                 </div>
-                <div class="card-body" data-aos="fade-up">
+                <div class="card-body" [data-aos]="innerWidth > 481 ? 'fade-up' : ''">
                     <p class="plan-price">$0</p>
                     <p class="plan-price-period">per month</p>
                     <div class="plan-description">
@@ -23,17 +37,31 @@
                     </p>
                 </div>
                 </div>
-                <div class="card-footer" data-aos="fade-up">
+                <div class="card-footer" [data-aos]="innerWidth > 481 ? 'fade-up' : ''">
                     <button class="btn">
                         Get this plan
                     </button>
                 </div>
             </div>
-            <div class="card card-plan" [ngClass]="{'big-card-plan': selectedPlan == 1}" (click)="selectPlan(1)" data-aos="flip-left">
-                <div class="card-title" data-aos="fade-up">
+            
+            <div class="card card-plan" [ngClass]="{'big-card-plan': selectedPlan == 2}" (click)="selectPlan(2)" data-aos="flip-left" *ngIf="innerWidth > 481 || (innerWidth <= 481 && selectedPlan == 2)">
+                <div class="plan-arrows">
+                    <div class="right-arrow" *ngIf="selectedPlan < 3">
+                        <button class="btn" (click)="nextPlan()">
+                            <img src="../../../assets/img/right-arrow.svg">
+                        </button>
+                    </div>
+    
+                    <div class="left-arrow" *ngIf="selectedPlan > 1">
+                        <button class="btn" (click)="prevPlan()">
+                            <img src="../../../assets/img/left-arrow.svg">
+                        </button>
+                    </div>
+                </div>
+                <div class="card-title" [data-aos]="innerWidth > 481 ? 'fade-up' : ''">
                     <p>STANDARD</p>
                 </div>
-                <div class="card-body" data-aos="fade-up">
+                <div class="card-body" [data-aos]="innerWidth > 481 ? 'fade-up' : ''">
                     <p class="plan-price">$9.99</p>
                     <p class="plan-price-period">per month</p>
                     <div class="plan-description">
@@ -42,17 +70,31 @@
                     </p>
                 </div>
                 </div>
-                <div class="card-footer" data-aos="fade-up">
+                <div class="card-footer" [data-aos]="innerWidth > 481 ? 'fade-up' : ''">
                     <button class="btn">
                         Get this plan
                     </button>
                 </div>
+                
             </div>
-            <div class="card card-plan" [ngClass]="{'big-card-plan': selectedPlan == 2}" (click)="selectPlan(2)" data-aos="flip-left">
-                <div class="card-title" data-aos="fade-up">
+            <div class="card card-plan" [ngClass]="{'big-card-plan': selectedPlan == 3}" (click)="selectPlan(3)" data-aos="flip-left" *ngIf="innerWidth > 481 || (innerWidth <= 481 && selectedPlan == 3)">
+                <div class="plan-arrows">
+                    <div class="right-arrow" *ngIf="selectedPlan < 3">
+                        <button class="btn" (click)="nextPlan()">
+                            <img src="../../../assets/img/right-arrow.svg">
+                        </button>
+                    </div>
+    
+                    <div class="left-arrow" *ngIf="selectedPlan > 1">
+                        <button class="btn" (click)="prevPlan()">
+                            <img src="../../../assets/img/left-arrow.svg">
+                        </button>
+                    </div>
+                </div>
+                <div class="card-title" [data-aos]="innerWidth > 481 ? 'fade-up' : ''">
                     <p>PRO</p>
                 </div>
-                <div class="card-body" data-aos="fade-up">
+                <div class="card-body" [data-aos]="innerWidth > 481 ? 'fade-up' : ''">
                     <p class="plan-price">$19.99</p>
                     <p class="plan-price-period">per month</p>
                     <div class="plan-description">
@@ -61,11 +103,12 @@
                     </p>
                 </div>
                 </div>
-                <div class="card-footer" data-aos="fade-up">
+                <div class="card-footer" [data-aos]="innerWidth > 481 ? 'fade-up' : ''">
                     <button class="btn">
                         Get this plan
                     </button>
                 </div>
+                
             </div>
         </div>
     </div>

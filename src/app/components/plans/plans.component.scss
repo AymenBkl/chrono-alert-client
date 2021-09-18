@@ -116,6 +116,10 @@
     color: #FFFFFF;
 }
 
+.plan-arrows {
+    display: none;
+}
+
 @media screen and (max-width: 992px) {
     .plans-title {
         font: normal normal bold 15pt/34px Roboto;
@@ -265,5 +269,29 @@
         font: normal normal bold 8pt/19px Roboto !important;
         width: auto;
         height: 35px;
+    }
+
+    .plan-arrows {
+        display: block;
+        top: 0px;
+        width: 100%;
+        margin-top: 7px;
+        position: absolute;
+    }
+
+    .plan-arrows button:focus {
+        box-shadow: none;
+    }
+
+    .right-arrow {
+        float: right;
+        margin-left: auto;
+    }
+    .left-arrow {
+        float: left;
+    }
+
+    .right-arrow img,.left-arrow img {
+        width: 15px;
     }
 }
