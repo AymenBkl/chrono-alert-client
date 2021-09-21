@@ -13,10 +13,11 @@ export class PlansComponent implements OnInit,AfterViewInit {
  
 
   ngOnInit() {
+    this.innerWidth = window.innerWidth;
+
   }
 
   ngAfterViewInit(): void {
-    this.innerWidth = window.innerWidth;
   }
 
   @HostListener('window:resize', ['$event'])

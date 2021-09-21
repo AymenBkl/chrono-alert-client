@@ -91,20 +91,26 @@ export class SelectedPlanComponent implements OnInit {
   }
 
   showModal(){
-    var date = new Date();
-    var monthDate = new Date(this.authService.user.plan.expires);
-    var days = Math.floor((-Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) + Date.UTC(monthDate.getFullYear(), monthDate.getMonth(), monthDate.getDate()) ) /(1000 * 60 * 60 * 24));
-    if (this.selectedPayment.paymentType == this.authService.user.plan && this.plan.name == this.userPlan){
-      this.userAction = 'You already have this plan and ' + days + ' days remaining. Do you want to create new plan?';
-      this.confirmButton.nativeElement.click();
-    }
-    else if (this.authService.user.plan.name != 'Free'){
-      this.userAction = 'You already have the ' + this.authService.user.plan.name +  ' plan and ' + days + ' days remaining. Do you want to create new plan?';
-      this.confirmButton.nativeElement.click();
+    if (this.authService.user && this.authService.user.plan){
+      var date = new Date();
+      var monthDate = new Date(this.authService.user.plan.expires);
+      var days = Math.floor((-Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) + Date.UTC(monthDate.getFullYear(), monthDate.getMonth(), monthDate.getDate()) ) /(1000 * 60 * 60 * 24));
+      if (this.selectedPayment.paymentType == this.authService.user.plan && this.plan.name == this.userPlan){
+        this.userAction = 'You already have this plan and ' + days + ' days remaining. Do you want to create new plan?';
+        this.confirmButton.nativeElement.click();
+      }
+      else if (this.authService.user.plan.name != 'Free'){
+        this.userAction = 'You already have the ' + this.authService.user.plan.name +  ' plan and ' + days + ' days remaining. Do you want to create new plan?';
+        this.confirmButton.nativeElement.click();
+      }
+      else {
+        this.addPlan();
+      }
     }
     else {
       this.addPlan();
     }
+    
   }
 
   checkUserPlan(){
