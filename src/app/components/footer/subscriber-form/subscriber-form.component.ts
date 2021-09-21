@@ -82,7 +82,7 @@ export class SubscriberFormComponent implements OnInit {
     if (subscriber && subscriber != null){
       var parsedSubscriber = JSON.parse(subscriber);
       if ((new Date().getTime() - parsedSubscriber.date) < (1 * 24 * 60 * 60 * 1000)) {
-        return false;
+        return true;
       }
       else {
         return true;

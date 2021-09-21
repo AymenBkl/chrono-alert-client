@@ -84,7 +84,7 @@ export class ContactusformComponent implements OnInit {
     if (contact && contact != null){
       var parsedContact = JSON.parse(contact);
       if ((new Date().getTime() - parsedContact.date) < (1 * 24 * 60 * 60 * 1000)) {
-        return false;
+        return true;
       }
       else {
         return true;
