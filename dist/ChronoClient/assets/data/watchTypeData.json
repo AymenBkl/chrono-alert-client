@@ -1,0 +1,318 @@
+{
+    "gender": [
+        {
+            "id": "1401",
+            "type": "gender",
+            "name": "Men's watch/Unisex",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://www.chrono24.com/images/default/filter/illustrations/gender/MenUnisex.svg"
+        },
+        {
+            "id": "1402",
+            "type": "gender",
+            "name": "Women's watch",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://www.chrono24.com/images/default/filter/illustrations/gender/Ladies.svg"
+        }
+    ],
+    "styles": [
+        {
+            "id": "1811",
+            "type": "styles",
+            "name": "Automatic watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1809",
+            "type": "styles",
+            "name": "Business watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1821",
+            "type": "styles",
+            "name": "Calendar watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1812",
+            "type": "styles",
+            "name": "Chronographs",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1813",
+            "type": "styles",
+            "name": "Chronometer",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1804",
+            "type": "styles",
+            "name": "Diving watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1805",
+            "type": "styles",
+            "name": "Dress watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1818",
+            "type": "styles",
+            "name": "Flyback chronographs",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1819",
+            "type": "styles",
+            "name": "Large / XXL watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1823",
+            "type": "styles",
+            "name": "Left-handed watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1822",
+            "type": "styles",
+            "name": "Limited edition watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1841",
+            "type": "styles",
+            "name": "Manually-wound watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1824",
+            "type": "styles",
+            "name": "Mechanical watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1807",
+            "type": "styles",
+            "name": "Military watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1825",
+            "type": "styles",
+            "name": "Minute repeater",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1826",
+            "type": "styles",
+            "name": "Moon phase watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1815",
+            "type": "styles",
+            "name": "One-hand watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1816",
+            "type": "styles",
+            "name": "Perpetual calendar watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1803",
+            "type": "styles",
+            "name": "Pilot's watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1827",
+            "type": "styles",
+            "name": "Quartz watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1801",
+            "type": "styles",
+            "name": "Racing watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1842",
+            "type": "styles",
+            "name": "Rectangular watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1828",
+            "type": "styles",
+            "name": "Russian watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1802",
+            "type": "styles",
+            "name": "Sailing watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1829",
+            "type": "styles",
+            "name": "Sapphire glass watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1831",
+            "type": "styles",
+            "name": "Skeleton watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1832",
+            "type": "styles",
+            "name": "Smartwatches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1833",
+            "type": "styles",
+            "name": "Solar watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1806",
+            "type": "styles",
+            "name": "Sports watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1830",
+            "type": "styles",
+            "name": "Swiss watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1837",
+            "type": "styles",
+            "name": "Tachymeter watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1817",
+            "type": "styles",
+            "name": "Thin watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1835",
+            "type": "styles",
+            "name": "Tonneau watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1836",
+            "type": "styles",
+            "name": "Tourbillon watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1810",
+            "type": "styles",
+            "name": "Vintage watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1838",
+            "type": "styles",
+            "name": "Watches from German manufacturers",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1839",
+            "type": "styles",
+            "name": "Watches with a Geneva Seal",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1840",
+            "type": "styles",
+            "name": "Watches with a see-through case back",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1843",
+            "type": "styles",
+            "name": "World time watches",
+            "checked": false,
+            "show": true
+        }
+    ],
+    "watchCategories": [
+        {
+            "id": "301",
+            "type": "watchCategories",
+            "name": "Wristwatch",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "302",
+            "type": "watchCategories",
+            "name": "Pocket watch",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "303",
+            "type": "watchCategories",
+            "name": "Other watch/clock",
+            "checked": false,
+            "show": true
+        }
+    ]
+}

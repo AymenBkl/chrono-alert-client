@@ -1,0 +1,172 @@
+{
+    "clasp": [
+        {
+            "id": "504",
+            "type": "clasp",
+            "name": "Buckle",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "503",
+            "type": "clasp",
+            "name": "Double-fold clasp",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "501",
+            "type": "clasp",
+            "name": "Fold clasp",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "502",
+            "type": "clasp",
+            "name": "Fold clasp, hidden",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "505",
+            "type": "clasp",
+            "name": "Jewelry clasp",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "506",
+            "type": "clasp",
+            "name": "No clasp",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "0",
+            "type": "clasp",
+            "name": "No details",
+            "checked": false,
+            "show": true
+        }
+    ],
+    "claspMaterial": [
+        {
+            "id": "1109",
+            "type": "claspMaterial",
+            "name": "Aluminum",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Aluminum.jpg"
+
+        },
+        {
+            "id": "1112",
+            "type": "claspMaterial",
+            "name": "Bronze",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Bronze.jpg"
+
+        },
+        {
+            "id": "1105",
+            "type": "claspMaterial",
+            "name": "Gold/Steel",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/GoldAndSteel.jpg"
+
+        },
+        {
+            "id": "1101",
+            "type": "claspMaterial",
+            "name": "Plastic",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Plastic.jpg"
+
+        },
+        {
+            "id": "1110",
+            "type": "claspMaterial",
+            "name": "Platinum",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Platinum.jpg"
+
+        },
+        {
+            "id": "1107",
+            "type": "claspMaterial",
+            "name": "Red gold",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/RedGold.jpg"
+
+        },
+        {
+            "id": "1106",
+            "type": "claspMaterial",
+            "name": "Rose Gold",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/PinkGold.jpg"
+
+        },
+        {
+            "id": "1103",
+            "type": "claspMaterial",
+            "name": "Silver",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Silver.jpg"
+
+        },
+        {
+            "id": "1102",
+            "type": "claspMaterial",
+            "name": "Steel",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Steel.jpg"
+
+        },
+        {
+            "id": "1104",
+            "type": "claspMaterial",
+            "name": "Titanium",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/Titanium.jpg"
+
+        },
+        {
+            "id": "1111",
+            "type": "claspMaterial",
+            "name": "White Gold",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/WhiteGold.jpg"
+
+        },
+        {
+            "id": "1108",
+            "type": "claspMaterial",
+            "name": "Yellow gold",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/YellowGold.jpg"
+
+        },
+        {
+            "id": "0",
+            "type": "claspMaterial",
+            "name": "No details",
+            "checked": false,
+            "show": true,
+            "imageUrl":"https://cdn3.chrono24.com/images/default/filter/materials/0.jpg"
+
+        }
+    ]
+}

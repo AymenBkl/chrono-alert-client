@@ -1,0 +1,200 @@
+{
+    "otherAttributes": [
+        {
+            "id": "1201",
+            "type": "otherAttributes",
+            "name": "Central seconds",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1207",
+            "type": "otherAttributes",
+            "name": "Chronometer",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1210",
+            "type": "otherAttributes",
+            "name": "Crown Left",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1215",
+            "type": "otherAttributes",
+            "name": "Display back",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1204",
+            "type": "otherAttributes",
+            "name": "Gemstones and/or diamonds",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1206",
+            "type": "otherAttributes",
+            "name": "Genevian Seal",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1203",
+            "type": "otherAttributes",
+            "name": "Guilloché dial",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1212",
+            "type": "otherAttributes",
+            "name": "Guilloché dial (handwork)",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1218",
+            "type": "otherAttributes",
+            "name": "Helium Valve",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1209",
+            "type": "otherAttributes",
+            "name": "Limited Edition",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1214",
+            "type": "otherAttributes",
+            "name": "Luminous hands",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1222",
+            "type": "otherAttributes",
+            "name": "Luminous indices",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1205",
+            "type": "otherAttributes",
+            "name": "Luminous numerals",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1225",
+            "type": "otherAttributes",
+            "name": "Master Chronometer",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1228",
+            "type": "otherAttributes",
+            "name": "One-hand watches",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1221",
+            "type": "otherAttributes",
+            "name": "Only Original Parts",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1217",
+            "type": "otherAttributes",
+            "name": "Power Reserve Display",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1223",
+            "type": "otherAttributes",
+            "name": "PVD/DLC coating",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1219",
+            "type": "otherAttributes",
+            "name": "Quick Set",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1208",
+            "type": "otherAttributes",
+            "name": "Rotating Bezel",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1211",
+            "type": "otherAttributes",
+            "name": "Screw-Down Crown",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1220",
+            "type": "otherAttributes",
+            "name": "Screw-Down Push-Buttons",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1216",
+            "type": "otherAttributes",
+            "name": "Skeletonized",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1202",
+            "type": "otherAttributes",
+            "name": "Small seconds",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1226",
+            "type": "otherAttributes",
+            "name": "Smartwatch",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1227",
+            "type": "otherAttributes",
+            "name": "Solar watch",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1213",
+            "type": "otherAttributes",
+            "name": "Tempered blue hands",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1224",
+            "type": "otherAttributes",
+            "name": "World time watch",
+            "checked": false,
+            "show": true
+        }
+    ]
+}

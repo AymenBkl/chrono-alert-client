@@ -1,0 +1,268 @@
+{
+    "currency": [
+        {
+            "name": "EUR",
+            "checked": true,
+            "type":"currency"
+        },
+        {
+            "name": "USD",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "GBP",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "CHF",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "AED",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "AUD",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "BRL",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "CAD",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "CLP",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "CNY",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "CZK",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "DKK",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "HKD",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "HRK",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "HUF",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "IDR",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "INR",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "JPY",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "KRW",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "MXN",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "MYR",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "NOK",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "NZD",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "PHP",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "PLN",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "RON",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "RUB",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "SEK",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "SGD",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "THB",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "TRY",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "TWD",
+            "checked": false,
+            "type":"currency"
+        },
+        {
+            "name": "ZAR",
+            "checked": false,
+            "type":"currency"
+        }
+    ],
+    "shipping":[
+        {
+            "name": "All",
+            "checked": true,
+            "type":"shipping",
+            "value":""
+        },
+        {
+            "name": "Free shipping",
+            "checked": true,
+            "type":"shipping",
+            "value":"Free shipping"
+        },
+        {
+            "name": "Estimated price",
+            "checked": true,
+            "type":"shipping",
+            "value":"Estimated price"
+        },
+        {
+            "name": "Empty",
+            "checked": true,
+            "type":"shipping",
+            "value":""
+        }
+    ],
+    "sellerType":[
+        {
+            "name": "All",
+            "checked": true,
+            "type":"sellerType",
+            "value":"Professional dealer"
+        },
+        {
+            "name": "Professional dealer",
+            "checked": true,
+            "type":"sellerType",
+            "value":"Professional dealer"
+        },
+        {
+            "name": "Sotheby\"s",
+            "checked": true,
+            "type":"sellerType",
+            "value":"Sotheby\"s"
+        }
+        ,
+        {
+            "name": "Private Seller",
+            "checked": true,
+            "type":"sellerType",
+            "value":"Private Seller"
+        },
+        {
+            "name": "Sold by Chrono24",
+            "checked": true,
+            "type":"sellerType",
+            "value":"<img src=\"https://static.chrono24.com/images/default/icons/direktverkauf-siegel.svg\" alt=\"\" width=\"36\" height=\"36\" class=\"m-r-1\"><p class=\"seller-chrono\">Sold by Chrono24</p>"
+        }
+        
+    ],
+    "articleAvailability":[
+        {
+            "name": "All",
+            "checked": true,
+            "type":"articleAvailability",
+            "value":""
+        },
+        {
+            "name": "Green",
+            "checked": true,
+            "type":"articleAvailability",
+            "value":"article-availability immediately js-popover"
+        },
+        {
+            "name": "Warn",
+            "checked": true,
+            "type":"articleAvailability",
+            "value":"article-availability status-warn js-popover"
+        },
+        {
+            "name": "Red",
+            "checked": true,
+            "type":"articleAvailability",
+            "value":"article-availability status-error js-popover"
+        },
+        {
+            "name": "Price On Request",
+            "checked": true,
+            "type":"articleAvailability",
+            "value":"article-availability immediately article-price-on-demand js-popover"
+        },
+        {
+            "name": "None",
+            "checked": true,
+            "type":"articleAvailability",
+            "value":""
+        }
+        
+    ]
+}

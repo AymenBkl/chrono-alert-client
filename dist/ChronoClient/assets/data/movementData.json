@@ -1,0 +1,181 @@
+{
+    "movementTypes": [
+        {
+            "id": "1",
+            "type": "movementTypes",
+            "name": "Automatic",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "2",
+            "type": "movementTypes",
+            "name": "Manual winding",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "3",
+            "type": "movementTypes",
+            "name": "Quartz",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "0",
+            "type": "movementTypes",
+            "name": "No details",
+            "checked": false,
+            "show": true
+        }
+    ],
+    "functions": [
+        {
+            "id": "1016",
+            "type": "functions",
+            "name": "4-year calendar",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1018",
+            "type": "functions",
+            "name": "Alarm",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1015",
+            "type": "functions",
+            "name": "Annual calendar",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1019",
+            "type": "functions",
+            "name": "Chiming clock",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1000",
+            "type": "functions",
+            "name": "Chronograph",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1022",
+            "type": "functions",
+            "name": "Date",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1010",
+            "type": "functions",
+            "name": "Double chronograph",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1028",
+            "type": "functions",
+            "name": "Equation of time",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1011",
+            "type": "functions",
+            "name": "Flyback",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1360",
+            "type": "functions",
+            "name": "GMT",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1027",
+            "type": "functions",
+            "name": "Jumping hour",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1021",
+            "type": "functions",
+            "name": "Minute repeater",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1024",
+            "type": "functions",
+            "name": "Month",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1020",
+            "type": "functions",
+            "name": "Moon phase",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1012",
+            "type": "functions",
+            "name": "Panorama date",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1017",
+            "type": "functions",
+            "name": "Perpetual calendar",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1013",
+            "type": "functions",
+            "name": "Repeater",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1026",
+            "type": "functions",
+            "name": "Tachymeter",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1014",
+            "type": "functions",
+            "name": "Tourbillon",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1023",
+            "type": "functions",
+            "name": "Weekday",
+            "checked": false,
+            "show": true
+        },
+        {
+            "id": "1025",
+            "type": "functions",
+            "name": "Year",
+            "checked": false,
+            "show": true
+        }
+    ]
+}
